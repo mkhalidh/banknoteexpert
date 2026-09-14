@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
-    "audit:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-links.ts",
-    "check:data": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-data.ts",
-    "preflight": "npm run lint && npx tsc -p tsconfig.json --noEmit && npx vitest run && npm run build && npm run audit:links && npm run check:data"
+    "audit:links": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-links.ts",
+    "check:data": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-data.ts",
+    "preflight": "npx next typegen && npm run lint && npx tsc -p tsconfig.json --noEmit && npx vitest run && npm run build && npm run audit:links && npm run check:data"
   },
   "dependencies": {
     "next": "16.3.4",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata, SITE_URL } from "@/lib/seo";
-import { AUTHOR_NAME } from "@/config/site";
+import { AUTHOR_NAME, AUTHOR_BIO, AUTHOR_SAME_AS } from "@/config/site";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
@@ -20,6 +20,8 @@ const personSchema: Record<string, unknown> = {
   "@type": "Person",
   name: AUTHOR_NAME,
   url: `${SITE_URL}/about/`,
+  description: AUTHOR_BIO,
+  sameAs: AUTHOR_SAME_AS,
 };
 
 export default function Page() {
