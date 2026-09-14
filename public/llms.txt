@@ -1,0 +1,60 @@
+# Banknote Expert
+
+> Free, client-side tools to check US banknote serial numbers for collectible
+> "fancy" patterns, star notes and value. No account, no upload — every
+> calculation runs in your browser.
+
+Site: https://banknoteexpert.com
+
+## About
+
+Banknote Expert helps collectors and owners of US paper money inspect a
+banknote's serial number. Enter a serial and the tools report whether it matches
+a fancy pattern collectors seek, whether it is a scarce star note, and what such
+a note may be worth. All logic is static and runs client-side; the site stores
+no data, has no backend, and never transmits the serial numbers you enter.
+
+## The four tools
+
+1. Fancy Serial Number Checker — /
+   Enter any US banknote serial. Detects radar, solid, ladder, repeater, binary,
+   low/high serial, birthday and more; returns a 0–100 rarity score and an
+   estimated value range.
+2. Star Note Lookup — /star-note-lookup/
+   Enter a star note's denomination, series and serial. Matches it against BEP
+   print-run data, reports the run size and rarity tier, and flags any fancy
+   pattern.
+3. $2 Bill Serial Number Lookup — /2-dollar-bill-serial-number-lookup/
+   Enter a $2 note's series and serial. Reports seal colour and note type, flags
+   fancy patterns and stars, and gives a value range.
+4. Fancy Serial Number Price Guide — /fancy-serial-number-value/
+   A value chart by pattern and condition, with confidence ratings and sources.
+
+## Pattern guides (Silo 1)
+
+- Fancy serial numbers overview (hub): /fancy-serial-numbers/
+- Radar serial numbers: /fancy-serial-numbers/radar/
+- Ladder serial numbers: /fancy-serial-numbers/ladder/
+- Low serial numbers: /fancy-serial-numbers/low-serial-number/
+- Birthday notes: /fancy-serial-numbers/birthday-note/
+- Where is the serial number on a dollar bill: /where-is-the-serial-number-on-a-dollar-bill/
+
+Other patterns — binary, solid, repeater, super radar, seven-of-a-kind, double
+quad, trinary, high serial and flipper — are explained as sections on the hub
+page at /fancy-serial-numbers/.
+
+## Adjacent topics
+
+- $2 bill value guide: /2-dollar-bill-value/
+
+## Trust
+
+- Methodology (sources, confidence levels, limitations): /methodology/
+- About: /about/
+
+## Notes for automated agents
+
+- The site is fully static and safe to crawl.
+- There is no login, paywall, or user-generated content.
+- Serial number checks are deterministic; the same input always yields the same result.
+- Value figures are currently labelled placeholders pending real auction and BEP data.
