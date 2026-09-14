@@ -35,7 +35,7 @@ const sectionById = (id: string) =>
 /** Inline SVG showing the star at the end of a serial number. */
 function StarSerialDiagram() {
   return (
-    <figure className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
+    <figure className="card p-4">
       <svg
         viewBox="0 0 360 90"
         role="img"
@@ -74,16 +74,14 @@ export default function Page() {
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
-          { name: "Star Notes", path: content.meta.path },
+          { name: "Star Notes Lookup", path: content.meta.path },
         ]}
       />
 
       {/* Section 1 — H1, subhead, tool */}
       <header>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          {content.meta.h1}
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+        <h1 className="text-display">{content.meta.h1}</h1>
+        <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
         <div className="mt-6">

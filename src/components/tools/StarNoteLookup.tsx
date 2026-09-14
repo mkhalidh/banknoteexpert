@@ -12,16 +12,17 @@ import {
   seriesForDenomination,
 } from "@/lib/star-note/lookup";
 import { STAR_NOTE_DATA_UPDATED } from "@/data/star-notes/runs";
+import { AlertIcon, CheckCircleIcon, XIcon } from "@/components/ui/icons";
 
 const DENOMINATIONS = coveredDenominations();
 const DEFAULT_DENOM = String(DENOMINATIONS[0] ?? 1);
 const DEFAULT_SERIES = seriesForDenomination(Number(DEFAULT_DENOM))[0] ?? "";
 
 const RARITY_STYLE: Record<string, string> = {
-  "Very Rare": "text-amber-700 dark:text-amber-400",
-  Rare: "text-violet-700 dark:text-violet-400",
-  Uncommon: "text-sky-700 dark:text-sky-400",
-  Common: "text-zinc-600 dark:text-zinc-400",
+  "Very Rare": "bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-300",
+  Rare: "bg-amber-100 text-amber-900 dark:bg-amber-950/40 dark:text-amber-200",
+  Uncommon: "bg-teal-100 text-teal-800 dark:bg-teal-950/50 dark:text-teal-300",
+  Common: "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300",
 };
 
 function formatInt(n: number): string {
@@ -32,6 +33,7 @@ export function StarNoteLookup() {
   const [denom, setDenom] = useState(DEFAULT_DENOM);
   const [series, setSeries] = useState(DEFAULT_SERIES);
   const [raw, setRaw] = useState("");
+  const [submitted, setSubmitted] = useState("");
   const denomId = useId();
   const seriesId = useId();
   const inputId = useId();
@@ -63,7 +65,10 @@ export function StarNoteLookup() {
     // Honour a URL series verbatim (even if uncovered, so the tool can say so);
     // otherwise default to the first covered series for the denomination.
     setSeries(s ? s : (covered[0] ?? ""));
-    if (serial) setRaw(serial);
+    if (serial) {
+      setRaw(serial);
+      setSubmitted(serial);
+    }
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
@@ -72,32 +77,40 @@ export function StarNoteLookup() {
     const url = new URL(window.location.href);
     url.searchParams.set("denom", denom);
     url.searchParams.set("series", series);
-    const trimmed = raw.trim();
+    const trimmed = submitted.trim();
     if (trimmed) url.searchParams.set("serial", trimmed);
     else url.searchParams.delete("serial");
     window.history.replaceState(null, "", url);
-  }, [denom, series, raw]);
+  }, [denom, series, submitted]);
 
   const result = useMemo(
-    () => lookupStarNote(Number(denom), series, raw.trim() ? raw : ""),
-    [denom, series, raw],
+    () => lookupStarNote(Number(denom), series, submitted.trim() ? submitted : ""),
+    [denom, series, submitted],
   );
 
   const fancy = useMemo(() => {
-    if (!raw.trim()) return null;
-    const parsed = parseSerial(raw);
+    if (!submitted.trim()) return null;
+    const parsed = parseSerial(submitted);
     if (!parsed.ok) return null;
     const score = scoreSerial(parsed);
     return { matches: score.matches, value: estimateValue(score.matches, Number(denom)) };
-  }, [raw, denom]);
+  }, [submitted, denom]);
 
-  const showResult = raw.trim().length > 0;
+  const showResult = submitted.trim().length > 0;
+
+  function clear() {
+    setRaw("");
+    setSubmitted("");
+  }
 
   return (
     <div>
       <form
-        className="grid grid-cols-1 gap-3 sm:grid-cols-[7rem_9rem_1fr]"
-        onSubmit={(event) => event.preventDefault()}
+        className="grid grid-cols-1 gap-3 sm:grid-cols-[7rem_9rem_1fr_auto] sm:items-end"
+        onSubmit={(event) => {
+          event.preventDefault();
+          setSubmitted(raw);
+        }}
         noValidate
       >
         <div>
@@ -108,7 +121,7 @@ export function StarNoteLookup() {
             id={denomId}
             value={denom}
             onChange={(event) => selectDenom(event.target.value)}
-            className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-3 text-lg text-zinc-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="mt-1 w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-3 py-3.5 text-lg text-[var(--foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
           >
             {DENOMINATIONS.map((d) => (
               <option key={d} value={d}>
@@ -125,7 +138,7 @@ export function StarNoteLookup() {
             id={seriesId}
             value={series}
             onChange={(event) => setSeries(event.target.value)}
-            className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-3 py-3 text-lg text-zinc-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="mt-1 w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-3 py-3.5 text-lg text-[var(--foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
           >
             {seriesOptions.map((s) => (
               <option key={s} value={s}>
@@ -138,21 +151,39 @@ export function StarNoteLookup() {
           <label htmlFor={inputId} className="block text-sm font-medium">
             Star serial number
           </label>
-          <input
-            id={inputId}
-            name="serial"
-            type="text"
-            inputMode="numeric"
-            autoComplete="off"
-            spellCheck={false}
-            placeholder="e.g. L00088892*"
-            value={raw}
-            onChange={(event) => setRaw(event.target.value)}
-            aria-describedby={result.status === "invalid-serial" ? errorId : undefined}
-            aria-invalid={result.status === "invalid-serial" ? true : undefined}
-            className="mt-1 w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-lg tracking-wider text-zinc-900 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
-          />
+          <div className="relative mt-1">
+            <input
+              id={inputId}
+              name="serial"
+              type="text"
+              inputMode="numeric"
+              autoComplete="off"
+              spellCheck={false}
+              placeholder="e.g. L00088892*"
+              value={raw}
+              onChange={(event) => setRaw(event.target.value)}
+              aria-describedby={result.status === "invalid-serial" ? errorId : undefined}
+              aria-invalid={result.status === "invalid-serial" ? true : undefined}
+              className="w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-4 py-3.5 font-mono text-lg tracking-wider text-[var(--foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
+            />
+            {raw ? (
+              <button
+                type="button"
+                aria-label="Clear serial number"
+                onClick={clear}
+                className="absolute right-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-700 dark:hover:bg-zinc-800 dark:hover:text-zinc-200"
+              >
+                <XIcon className="h-4 w-4" />
+              </button>
+            ) : null}
+          </div>
         </div>
+        <button
+          type="submit"
+          className="btn-primary h-[52px] shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+        >
+          Check
+        </button>
       </form>
 
       <p className="mt-3 text-xs text-zinc-500">
@@ -162,10 +193,7 @@ export function StarNoteLookup() {
       </p>
 
       {/* Result region: height reserved up front so there is zero layout shift. */}
-      <div
-        aria-live="polite"
-        className="mt-6 min-h-[24rem] rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900/40"
-      >
+      <div aria-live="polite" className="card mt-6 min-h-[24rem] p-5">
         {!showResult ? (
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Enter your star note&rsquo;s serial number to check its print run,
@@ -173,11 +201,17 @@ export function StarNoteLookup() {
             Everything runs in your browser.
           </p>
         ) : result.status === "invalid-serial" ? (
-          <p id={errorId} role="alert" className="text-sm font-medium text-red-700 dark:text-red-400">
+          <p
+            id={errorId}
+            role="alert"
+            key={result.message}
+            className="animate-in flex items-start gap-2 text-sm font-medium text-red-700 dark:text-red-400"
+          >
+            <AlertIcon className="mt-0.5 h-4 w-4 shrink-0" />
             {result.message}
           </p>
         ) : result.status !== "found" ? (
-          <div>
+          <div key={result.status} className="animate-in">
             <p className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
               {result.status === "not-star"
                 ? "Not a star note"
@@ -198,14 +232,14 @@ export function StarNoteLookup() {
             ) : null}
           </div>
         ) : (
-          <div className="flex flex-col gap-5">
+          <div key={submitted.trim()} className="animate-in flex flex-col gap-5">
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               <Fact label="Run size">{formatInt(result.runs[0].runSize)} notes</Fact>
               <Fact label="FRB district">
                 {result.runs[0].frbName} ({result.runs[0].frbLetter})
               </Fact>
               <Fact label="Rarity tier">
-                <span className={RARITY_STYLE[result.rarityTier ?? "Common"]}>
+                <span className={`pill ${RARITY_STYLE[result.rarityTier ?? "Common"]}`}>
                   {result.rarityTier}
                 </span>
               </Fact>
@@ -229,7 +263,7 @@ export function StarNoteLookup() {
                 href={result.runs[0].sourcePdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
+                className="link-accent font-medium"
               >
                 Verify this run in the BEP report it came from
               </a>
@@ -243,9 +277,9 @@ export function StarNoteLookup() {
 
 function Fact({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="rounded-lg border border-zinc-200 bg-white p-3 dark:border-zinc-700 dark:bg-zinc-900">
+    <div className="card p-3">
       <p className="text-xs uppercase tracking-wide text-zinc-500">{label}</p>
-      <p className="mt-1 text-base font-semibold">{children}</p>
+      <p className="mt-1 font-mono text-base font-semibold">{children}</p>
     </div>
   );
 }
@@ -259,17 +293,21 @@ function FancyBlock({
     <div>
       <h3 className="text-sm font-semibold">Fancy pattern in the serial</h3>
       <ul className="mt-2 flex flex-col gap-2">
-        {matches.map((match) => (
-          <li key={match.id} className="text-sm">
-            <Link
-              href={match.href}
-              className="font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-            >
-              {match.name}
-            </Link>
-            <span className="text-zinc-600 dark:text-zinc-400">
-              {" "}
-              &mdash; roughly {match.rarityOdds}
+        {matches.map((match, index) => (
+          <li
+            key={match.id}
+            className="animate-in flex items-start gap-2 text-sm"
+            style={{ animationDelay: `${80 + index * 60}ms` }}
+          >
+            <CheckCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+            <span>
+              <Link href={match.href} className="link-accent font-semibold">
+                {match.name}
+              </Link>
+              <span className="text-zinc-600 dark:text-zinc-400">
+                {" "}
+                &mdash; roughly {match.rarityOdds}
+              </span>
             </span>
           </li>
         ))}

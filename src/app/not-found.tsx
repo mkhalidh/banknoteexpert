@@ -30,23 +30,15 @@ const TOOLS = [
 export default function NotFound() {
   return (
     <div className="py-10">
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-        Page not found
-      </h1>
-      <p className="mt-3 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+      <h1 className="text-display">Page not found</h1>
+      <p className="mt-3 max-w-2xl text-lead">
         We couldn&rsquo;t find that page. It may have moved, or the link may be
         wrong. Try one of our tools instead:
       </p>
       <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         {TOOLS.map((tool) => (
-          <li
-            key={tool.href}
-            className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900"
-          >
-            <Link
-              href={tool.href}
-              className="text-base font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-            >
+          <li key={tool.href} className="card card-hover p-4">
+            <Link href={tool.href} className="link-accent text-base font-semibold">
               {tool.label}
             </Link>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
@@ -56,10 +48,7 @@ export default function NotFound() {
         ))}
       </ul>
       <p className="mt-6 text-sm">
-        <Link
-          href="/fancy-serial-numbers/"
-          className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
-        >
+        <Link href="/fancy-serial-numbers/" className="link-accent">
           Or browse all fancy serial number patterns
         </Link>
       </p>

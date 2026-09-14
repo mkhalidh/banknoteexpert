@@ -13,11 +13,8 @@ export function SourcesBlock({
   note?: string;
 }) {
   return (
-    <section
-      aria-label={title}
-      className="scroll-mt-24 rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900/40"
-    >
-      <h2 className="text-lg font-semibold">{title}</h2>
+    <section aria-label={title} className="card scroll-mt-24 p-5">
+      <h2 className="text-h3">{title}</h2>
       {note ? (
         <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">{note}</p>
       ) : null}
@@ -27,10 +24,7 @@ export function SourcesBlock({
         ))}
       </ul>
       <p className="mt-3 text-sm">
-        <Link
-          href="/methodology/"
-          className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
-        >
+        <Link href="/methodology/" className="link-accent">
           How we estimate value
         </Link>
       </p>

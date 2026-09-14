@@ -9,6 +9,7 @@ import { SerialDiagram } from "@/components/content/SerialDiagram";
 import { PatternGrid } from "@/components/content/PatternGrid";
 import { ValueRangeTable } from "@/components/content/ValueRangeTable";
 import { AllToolsGrid } from "@/components/content/AllToolsGrid";
+import { FaqItem } from "@/components/content/FaqItem";
 
 export const metadata: Metadata = buildMetadata({
   title: "Fancy Serial Number Checker — Free US Dollar Bill Serial Lookup",
@@ -62,10 +63,8 @@ export default function Page() {
     <article className="flex flex-col gap-14">
       {/* Section 1 — H1, subhead, input form (nothing above this) */}
       <header>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Fancy Serial Number Checker
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+        <h1 className="text-display">Fancy Serial Number Checker</h1>
+        <p className="mt-3 max-w-2xl text-lead">
           Paste your bill&rsquo;s 8-digit serial number and see instantly whether
           it matches a collectible pattern, how rare it is, and roughly what it
           may be worth.
@@ -78,7 +77,7 @@ export default function Page() {
 
       {/* Section 3 — where to find the serial number */}
       <section aria-labelledby="find-serial">
-        <h2 id="find-serial" className="text-2xl font-semibold tracking-tight">
+        <h2 id="find-serial" className="text-h2">
           Where to find the serial number on your bill
         </h2>
         <div className="mt-4 grid gap-6 md:grid-cols-2">
@@ -107,7 +106,7 @@ export default function Page() {
               context.{" "}
               <Link
                 href={whereIsSerial.path}
-                className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
+                className="link-accent"
               >
                 {whereIsSerial.title}
               </Link>
@@ -119,10 +118,10 @@ export default function Page() {
 
       {/* Section 4 — pattern card grid from the registry */}
       <section aria-labelledby="patterns">
-        <h2 id="patterns" className="text-2xl font-semibold tracking-tight">
+        <h2 id="patterns" className="text-h2">
           Fancy serial number patterns
         </h2>
-        <p className="mt-3 max-w-3xl text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           A pattern is simply an arrangement of those eight digits that stands
           out from a random sequence. Some are famous, like a radar that reads
           the same in both directions; others, like a low serial number, are
@@ -139,10 +138,10 @@ export default function Page() {
 
       {/* Section 5 — value table */}
       <section aria-labelledby="worth">
-        <h2 id="worth" className="text-2xl font-semibold tracking-tight">
+        <h2 id="worth" className="text-h2">
           What is your bill actually worth
         </h2>
-        <p className="mt-3 max-w-3xl text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           Value depends on far more than the pattern alone. Condition is
           decisive: a crisp, uncirculated note can be worth many times the same
           note after years in a wallet. Denomination, series year, the issuing
@@ -160,10 +159,10 @@ export default function Page() {
 
       {/* Section 6 — star notes */}
       <section aria-labelledby="star">
-        <h2 id="star" className="text-2xl font-semibold tracking-tight">
+        <h2 id="star" className="text-h2">
           Does your bill have a star?
         </h2>
-        <p className="mt-3 max-w-3xl text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           If the serial number ends in a star instead of a letter, you are
           holding a star note. The Bureau of Engraving and Printing prints these
           as replacements when a sheet is damaged or misprinted during
@@ -179,7 +178,7 @@ export default function Page() {
         <p className="mt-4">
           <Link
             href="/star-note-lookup/"
-            className="inline-flex items-center rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="btn-primary text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
           >
             Look up a star note
           </Link>
@@ -188,10 +187,10 @@ export default function Page() {
 
       {/* Section 7 — value by denomination */}
       <section aria-labelledby="denomination">
-        <h2 id="denomination" className="text-2xl font-semibold tracking-tight">
+        <h2 id="denomination" className="text-h2">
           Check value by denomination
         </h2>
-        <p className="mt-3 max-w-3xl text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           Some questions are really about the denomination rather than the
           pattern. The $2 bill is the classic example: most are worth face
           value, but specific series, seals and star notes are worth far more,
@@ -203,14 +202,8 @@ export default function Page() {
         </p>
         <ul className="mt-4 grid gap-4 sm:grid-cols-2">
           {[twoDollarValue, twoDollarLookup].map((route) => (
-            <li
-              key={route.path}
-              className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900"
-            >
-              <Link
-                href={route.path}
-                className="text-base font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-              >
+            <li key={route.path} className="card card-hover p-4">
+              <Link href={route.path} className="link-accent text-base font-semibold">
                 {route.title}
               </Link>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
@@ -223,10 +216,10 @@ export default function Page() {
 
       {/* Section 8 — how we estimate value */}
       <section aria-labelledby="estimate">
-        <h2 id="estimate" className="text-2xl font-semibold tracking-tight">
+        <h2 id="estimate" className="text-h2">
           How we estimate value
         </h2>
-        <p className="mt-3 max-w-3xl text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           Our ranges are built from realised prices, not asking prices. We track
           results from major auction houses including Heritage Auctions and
           Stack&rsquo;s Bowers, watch completed eBay sold listings for the middle
@@ -244,7 +237,7 @@ export default function Page() {
         <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
           <Link
             href="/methodology/"
-            className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
+            className="link-accent"
           >
             Read the full methodology
           </Link>{" "}
@@ -254,130 +247,90 @@ export default function Page() {
 
       {/* Section 9 — FAQ (semantic HTML only; no FAQPage schema by design) */}
       <section aria-labelledby="faq">
-        <h2 id="faq" className="text-2xl font-semibold tracking-tight">
+        <h2 id="faq" className="text-h2">
           Common questions
         </h2>
-        <div className="mt-4 flex max-w-3xl flex-col gap-6 text-zinc-700 dark:text-zinc-300">
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              What is a fancy serial number?
-            </h3>
-            <p className="mt-1">
-              A fancy serial number is one whose eight digits form a recognisable
-              pattern rather than a random string. Radars, repeaters, ladders,
-              solids, binaries and very low numbers are all examples. Collectors
-              pay attention to them because a memorable pattern is scarce and
-              easy to appreciate at a glance. An ordinary note has no such
-              structure, so it is worth face value. The tool at the top of this
-              page reads your digits and tells you which pattern, if any, they
-              match.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              Which patterns are worth the most?
-            </h3>
-            <p className="mt-1">
-              As a rule, the scarcer the pattern, the higher the ceiling. Solid
-              serials, true ladders, super radars and single-digit low numbers
-              sit at the top, while radars and repeaters are more common and more
-              affordable. That said, condition and demand can outweigh rarity: a
-              clean, uncirculated common pattern can beat a heavily worn rare
-              one. Use the value table above to compare patterns side by side
-              across the three condition bands.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              Is this fancy serial number checker free?
-            </h3>
-            <p className="mt-1">
-              Yes. This fancy serial number checker is completely free, with no
-              account, no sign-up and no limit on how many notes you check.
-              Everything runs in your browser, so your serial numbers are never
-              sent to a server or stored. You can bookmark or share a result
-              &mdash; the serial is saved in the page address &mdash; and run as
-              many notes as you like.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              What do the digits mean versus the letters?
-            </h3>
-            <p className="mt-1">
-              The letters and the digits do different jobs. The one or two prefix
-              letters identify the series and the Federal Reserve district; the
-              suffix letter, or star, simply continues the count within a print
-              run. The eight digits in the middle are the serial proper, and they
-              are the only part scored for a pattern. So when people talk about a
-              collectible pattern, they mean those eight digits, not the
-              surrounding letters.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              My note scored highly &mdash; what should I do next?
-            </h3>
-            <p className="mt-1">
-              First, handle it carefully: keep it flat and clean, ideally in a
-              currency sleeve, because condition strongly affects value. Then
-              confirm the pattern and look at recent sold listings for the same
-              pattern and grade to gauge the real market. If it looks genuinely
-              scarce, consider third-party grading from PMG or PCGS, which makes
-              a note easier to sell and often lifts the price. Only then decide
-              whether to hold, sell privately or consign it to auction.
-              Photograph both sides in good light first, so you have a clear
-              record of its condition before it changes hands.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              Do star notes count as fancy?
-            </h3>
-            <p className="mt-1">
-              A star note is not a pattern in itself, but it is collectible for a
-              related reason: it is a replacement note, and fewer of them exist.
-              A star adds to a note&rsquo;s interest and can raise its value,
-              especially from a small print run, and a star note that also
-              carries a fancy pattern is more desirable than either feature
-              alone. Our tool flags a star as soon as it reads one at the end of
-              your serial.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              How accurate are the value estimates?
-            </h3>
-            <p className="mt-1">
-              Treat them as informed guidance, not an appraisal. Paper-money
-              prices move with condition, demand and what happens to sell that
-              month, so any honest figure is a range rather than a single number.
-              We show a confidence label with every row and, where recent sales
-              are scarce, we widen the range or mark it clearly instead of
-              guessing. For a firm valuation, a professional grader or dealer is
-              the right next step.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-              Where can I sell a note with a collectible serial?
-            </h3>
-            <p className="mt-1">
-              The main routes are online marketplaces like eBay, specialist
-              currency dealers, and auction houses such as Heritage Auctions or
-              Stack&rsquo;s Bowers for higher-value notes. Marketplaces reach the
-              most buyers but take fees; dealers are quicker but pay wholesale;
-              auctions suit genuinely scarce material. A currency serial number
-              lookup and a graded holder both help buyers trust what you are
-              selling, which usually improves the price you achieve.
-            </p>
-          </div>
+        <div className="mt-4 flex max-w-3xl flex-col gap-3">
+          <FaqItem question="What is a fancy serial number?">
+            A fancy serial number is one whose eight digits form a recognisable
+            pattern rather than a random string. Radars, repeaters, ladders,
+            solids, binaries and very low numbers are all examples. Collectors
+            pay attention to them because a memorable pattern is scarce and
+            easy to appreciate at a glance. An ordinary note has no such
+            structure, so it is worth face value. The tool at the top of this
+            page reads your digits and tells you which pattern, if any, they
+            match.
+          </FaqItem>
+          <FaqItem question="Which patterns are worth the most?">
+            As a rule, the scarcer the pattern, the higher the ceiling. Solid
+            serials, true ladders, super radars and single-digit low numbers
+            sit at the top, while radars and repeaters are more common and more
+            affordable. That said, condition and demand can outweigh rarity: a
+            clean, uncirculated common pattern can beat a heavily worn rare
+            one. Use the value table above to compare patterns side by side
+            across the three condition bands.
+          </FaqItem>
+          <FaqItem question="Is this fancy serial number checker free?">
+            Yes. This fancy serial number checker is completely free, with no
+            account, no sign-up and no limit on how many notes you check.
+            Everything runs in your browser, so your serial numbers are never
+            sent to a server or stored. You can bookmark or share a result
+            &mdash; the serial is saved in the page address &mdash; and run as
+            many notes as you like.
+          </FaqItem>
+          <FaqItem question="What do the digits mean versus the letters?">
+            The letters and the digits do different jobs. The one or two prefix
+            letters identify the series and the Federal Reserve district; the
+            suffix letter, or star, simply continues the count within a print
+            run. The eight digits in the middle are the serial proper, and they
+            are the only part scored for a pattern. So when people talk about a
+            collectible pattern, they mean those eight digits, not the
+            surrounding letters.
+          </FaqItem>
+          <FaqItem question="My note scored highly — what should I do next?">
+            First, handle it carefully: keep it flat and clean, ideally in a
+            currency sleeve, because condition strongly affects value. Then
+            confirm the pattern and look at recent sold listings for the same
+            pattern and grade to gauge the real market. If it looks genuinely
+            scarce, consider third-party grading from PMG or PCGS, which makes
+            a note easier to sell and often lifts the price. Only then decide
+            whether to hold, sell privately or consign it to auction.
+            Photograph both sides in good light first, so you have a clear
+            record of its condition before it changes hands.
+          </FaqItem>
+          <FaqItem question="Do star notes count as fancy?">
+            A star note is not a pattern in itself, but it is collectible for a
+            related reason: it is a replacement note, and fewer of them exist.
+            A star adds to a note&rsquo;s interest and can raise its value,
+            especially from a small print run, and a star note that also
+            carries a fancy pattern is more desirable than either feature
+            alone. Our tool flags a star as soon as it reads one at the end of
+            your serial.
+          </FaqItem>
+          <FaqItem question="How accurate are the value estimates?">
+            Treat them as informed guidance, not an appraisal. Paper-money
+            prices move with condition, demand and what happens to sell that
+            month, so any honest figure is a range rather than a single number.
+            We show a confidence label with every row and, where recent sales
+            are scarce, we widen the range or mark it clearly instead of
+            guessing. For a firm valuation, a professional grader or dealer is
+            the right next step.
+          </FaqItem>
+          <FaqItem question="Where can I sell a note with a collectible serial?">
+            The main routes are online marketplaces like eBay, specialist
+            currency dealers, and auction houses such as Heritage Auctions or
+            Stack&rsquo;s Bowers for higher-value notes. Marketplaces reach the
+            most buyers but take fees; dealers are quicker but pay wholesale;
+            auctions suit genuinely scarce material. A currency serial number
+            lookup and a graded holder both help buyers trust what you are
+            selling, which usually improves the price you achieve.
+          </FaqItem>
         </div>
       </section>
 
       {/* Section 10 — all tools */}
       <section aria-labelledby="all-tools">
-        <h2 id="all-tools" className="text-2xl font-semibold tracking-tight">
+        <h2 id="all-tools" className="text-h2">
           All tools
         </h2>
         <div className="mt-6">

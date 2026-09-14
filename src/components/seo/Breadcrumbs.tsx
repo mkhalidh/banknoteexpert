@@ -41,10 +41,12 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
                 </span>
               ) : (
                 <>
-                  <Link href={item.path} className="hover:underline">
+                  <Link href={item.path} className="transition-colors hover:text-[var(--accent)]">
                     {item.name}
                   </Link>
-                  <span aria-hidden="true">/</span>
+                  <span aria-hidden="true" className="text-zinc-400">
+                    /
+                  </span>
                 </>
               )}
             </li>

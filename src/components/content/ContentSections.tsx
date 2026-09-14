@@ -14,11 +14,7 @@ function Block({ block }: { block: ContentBlock }) {
           typeof segment === "string" ? (
             <span key={index}>{segment}</span>
           ) : (
-            <Link
-              key={index}
-              href={segment.href}
-              className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
-            >
+            <Link key={index} href={segment.href} className="link-accent">
               {segment.label}
             </Link>
           ),
@@ -27,11 +23,7 @@ function Block({ block }: { block: ContentBlock }) {
     );
   }
   if (block.kind === "subheading") {
-    return (
-      <h3 className="mt-5 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-        {block.text}
-      </h3>
-    );
+    return <h3 className="text-h3 mt-5">{block.text}</h3>;
   }
   const ListTag = block.ordered ? "ol" : "ul";
   return (
@@ -61,10 +53,7 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
           aria-labelledby={`${section.id}-heading`}
           className="scroll-mt-24"
         >
-          <h2
-            id={`${section.id}-heading`}
-            className="text-2xl font-semibold tracking-tight"
-          >
+          <h2 id={`${section.id}-heading`} className="text-h2">
             {section.heading}
           </h2>
           {section.blocks.map((block, index) => (

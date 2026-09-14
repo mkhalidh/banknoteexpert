@@ -16,17 +16,11 @@ export function RelatedPages({
   if (links.length === 0) return null;
   return (
     <section aria-label={title} className="scroll-mt-24">
-      <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
+      <h2 className="text-h2">{title}</h2>
       <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {links.map((link) => (
-          <li
-            key={`${link.href}-${link.label}`}
-            className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900"
-          >
-            <Link
-              href={link.href}
-              className="text-base font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-            >
+          <li key={`${link.href}-${link.label}`} className="card card-hover p-4">
+            <Link href={link.href} className="link-accent text-base font-semibold">
               {link.label}
             </Link>
             {link.description ? (

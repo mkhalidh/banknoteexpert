@@ -24,7 +24,7 @@ export function ComparisonTable({
           {caption}
         </caption>
         <thead>
-          <tr className="border-b border-zinc-300 text-left dark:border-zinc-700">
+          <tr className="border-b border-[var(--border-soft)] text-left">
             {columns.map((column) => (
               <th key={column} scope="col" className="py-2 pr-4 font-semibold">
                 {column}
@@ -36,7 +36,7 @@ export function ComparisonTable({
           {rows.map((row, rowIndex) => (
             <tr
               key={rowIndex}
-              className="border-b border-zinc-100 align-top dark:border-zinc-800"
+              className="border-b border-[var(--border-soft)] align-top"
             >
               {row.map((cell, cellIndex) =>
                 rowHeader && cellIndex === 0 ? (

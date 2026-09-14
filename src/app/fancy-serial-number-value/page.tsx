@@ -35,10 +35,10 @@ export default function Page() {
         ]}
       />
       <header>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="text-display">
           {content.meta.h1}
         </h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
       </header>
@@ -48,7 +48,7 @@ export default function Page() {
 
       {/* Price side leads with the table */}
       <section id="chart" aria-labelledby="chart-heading" className="scroll-mt-24">
-        <h2 id="chart-heading" className="text-2xl font-semibold tracking-tight">
+        <h2 id="chart-heading" className="text-h2">
           Value chart by pattern and condition
         </h2>
         <p className="mt-3 text-zinc-700 dark:text-zinc-300">

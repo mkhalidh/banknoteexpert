@@ -30,10 +30,10 @@ export default function Page() {
         ]}
       />
       <header>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h1 className="text-display">
           {content.meta.h1}
         </h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
         <LastUpdated className="mt-3 text-sm text-zinc-500" />

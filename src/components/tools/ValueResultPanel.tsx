@@ -44,19 +44,16 @@ export function ValueResultPanel({ result }: { result: ValueResult }) {
       </h3>
       <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
         {result.bands.map((band) => (
-          <div
-            key={band.condition}
-            className="rounded-lg border border-zinc-200 bg-white p-3 dark:border-zinc-700 dark:bg-zinc-900"
-          >
+          <div key={band.condition} className="card p-3">
             <dt className="flex items-center justify-between text-xs uppercase tracking-wide text-zinc-500">
               <span>{CONDITION_LABELS[band.condition]}</span>
               {band.confidence === "indicative" ? (
-                <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+                <span className="pill bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
                   indicative
                 </span>
               ) : null}
             </dt>
-            <dd className="mt-1 text-base font-semibold tabular-nums">
+            <dd className="mt-1 font-mono text-base font-semibold tabular-nums">
               {formatUsd(band.low)}&ndash;{formatUsd(band.high)}
             </dd>
             <dd className="mt-0.5 text-xs text-zinc-500">

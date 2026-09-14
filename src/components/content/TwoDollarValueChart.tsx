@@ -20,7 +20,7 @@ function range(low: number | null, high: number | null): string {
 
 function Row({ row }: { row: TwoDollarValue }) {
   return (
-    <tr className="border-b border-zinc-100 align-top dark:border-zinc-800">
+    <tr className="border-b border-[var(--border-soft)] align-top">
       <th scope="row" className="py-2 pr-4 text-left font-medium">
         {row.series}
         {row.correction ? (
@@ -36,7 +36,7 @@ function Row({ row }: { row: TwoDollarValue }) {
         {range(row.uncirculatedLow, row.uncirculatedHigh)}
       </td>
       <td className="py-2">
-        <span className="rounded bg-zinc-100 px-2 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
+        <span className="pill bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
           {row.confidence}
         </span>
       </td>
@@ -52,7 +52,7 @@ function Table({ caption, rows }: { caption: string; rows: TwoDollarValue[] }) {
           {caption}
         </caption>
         <thead>
-          <tr className="border-b border-zinc-300 text-left dark:border-zinc-700">
+          <tr className="border-b border-[var(--border-soft)] text-left">
             <th scope="col" className="py-2 pr-4 font-semibold">Series</th>
             <th scope="col" className="py-2 pr-4 font-semibold">Circulated</th>
             <th scope="col" className="py-2 pr-4 font-semibold">Uncirculated</th>

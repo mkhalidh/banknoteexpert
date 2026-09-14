@@ -12,15 +12,9 @@ export function PatternGrid() {
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {patterns.map((pattern) => {
         return (
-          <li
-            key={pattern.id}
-            className="flex flex-col rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900"
-          >
+          <li key={pattern.id} className="card card-hover flex flex-col p-4">
             <div className="flex items-baseline justify-between gap-2">
-              <Link
-                href={pattern.href}
-                className="text-base font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-              >
+              <Link href={pattern.href} className="link-accent text-base font-semibold">
                 {pattern.name}
               </Link>
               <code className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">

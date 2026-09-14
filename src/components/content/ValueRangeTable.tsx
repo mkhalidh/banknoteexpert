@@ -64,7 +64,7 @@ export function ValueRangeTable() {
             Recorded value ranges by pattern and condition, with sample sizes
           </caption>
           <thead>
-            <tr className="border-b border-zinc-300 text-left dark:border-zinc-700">
+            <tr className="border-b border-[var(--border-soft)] text-left">
               <th scope="col" className="py-2 pr-4 font-semibold">
                 Pattern
               </th>
@@ -77,10 +77,7 @@ export function ValueRangeTable() {
           </thead>
           <tbody>
             {rows.map((pattern) => (
-              <tr
-                key={pattern}
-                className="border-b border-zinc-100 align-top dark:border-zinc-800"
-              >
+              <tr key={pattern} className="border-b border-[var(--border-soft)] align-top">
                 <th scope="row" className="py-2 pr-4 text-left font-medium">
                   {patternLabel(pattern)}
                 </th>

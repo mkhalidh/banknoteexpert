@@ -18,7 +18,7 @@ const IS_SCARCEST = MIN_2003 === GLOBAL_MIN;
 export function ScarcestStarCallout({ cta }: { cta?: { href: string; label: string } }) {
   if (!IS_SCARCEST || DISTRICTS_AT_MIN === 0) return null;
   return (
-    <aside className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm dark:border-amber-700/60 dark:bg-amber-950/30">
+    <aside className="rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm dark:border-amber-700/60 dark:bg-amber-950/30">
       <p className="text-zinc-800 dark:text-zinc-200">
         <strong>The scarcest runs in the dataset are $2 series 2003 stars.</strong>{" "}
         {DISTRICTS_AT_MIN} Federal Reserve districts printed just{" "}
@@ -27,10 +27,7 @@ export function ScarcestStarCallout({ cta }: { cta?: { href: string; label: stri
       </p>
       {cta ? (
         <p className="mt-2">
-          <Link
-            href={cta.href}
-            className="font-semibold text-indigo-700 hover:underline dark:text-indigo-400"
-          >
+          <Link href={cta.href} className="link-accent font-semibold">
             {cta.label}
           </Link>
         </p>

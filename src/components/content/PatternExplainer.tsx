@@ -34,11 +34,9 @@ export function PatternExplainer({
 }: PatternExplainerProps) {
   const hasDedicatedPage = !href.includes("#");
   return (
-    <div id={id} className="scroll-mt-24 border-t border-zinc-200 pt-5 dark:border-zinc-800">
+    <div id={id} className="scroll-mt-24 border-t border-[var(--border-soft)] pt-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          {name}
-        </h3>
+        <h3 className="text-h3">{name}</h3>
         <code className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
           {example}
         </code>
@@ -48,10 +46,7 @@ export function PatternExplainer({
       <p className="mt-2 text-sm text-zinc-500">Rough odds: {rarityOdds}</p>
       {hasDedicatedPage ? (
         <p className="mt-2 text-sm">
-          <Link
-            href={href}
-            className="font-medium text-indigo-700 hover:underline dark:text-indigo-400"
-          >
+          <Link href={href} className="link-accent">
             {linkLabel ?? `Read the full ${name} guide`}
           </Link>
         </p>
