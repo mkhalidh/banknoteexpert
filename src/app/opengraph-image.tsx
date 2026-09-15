@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SITE_NAME } from "@/lib/seo";
 
-export const alt = "Banknote Expert — US Banknote Serial Number Tools";
+export const alt = "Banknote Expert: US Banknote Serial Number Tools";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

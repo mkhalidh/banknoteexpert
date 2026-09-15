@@ -159,8 +159,8 @@ export function TwoDollarSerialLookup() {
         ) : !analysis ? (
           <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
             Enter your note&rsquo;s 8-digit serial number to check it for
-            collectible patterns and a star. Most $2 bills are worth exactly $2
-            &mdash; the tool will tell you honestly if yours is one of them. The
+            collectible patterns and a star. Most $2 bills are worth exactly $2,
+            and the tool will tell you honestly if yours is one of them. The
             check runs entirely in your browser.
           </p>
         ) : (
@@ -189,7 +189,7 @@ export function TwoDollarSerialLookup() {
                         </Link>
                         <span className="text-zinc-600 dark:text-zinc-400">
                           {" "}
-                          &mdash; roughly {match.rarityOdds}
+                          (roughly {match.rarityOdds})
                         </span>
                       </span>
                     </li>
@@ -210,7 +210,7 @@ export function TwoDollarSerialLookup() {
               <div className="flex items-start gap-2 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm dark:border-amber-700/60 dark:bg-amber-950/30">
                 <StarIcon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600 dark:text-amber-400" />
                 <p>
-                  This is a <strong>star note</strong> &mdash; its serial ends in a
+                  This is a <strong>star note</strong>, since its serial ends in a
                   star, marking it a replacement note.{" "}
                   <Link href="/star-note-lookup/" className="link-accent font-semibold">
                     Look it up in our star note tool

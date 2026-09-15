@@ -81,7 +81,7 @@ export function lookupStarNote(
       status: "not-star",
       runs: [],
       message:
-        "That serial has no star. Star notes end in a star (*) in place of the suffix letter — this lookup is for star notes only.",
+        "That serial has no star. Star notes end in a star (*) in place of the suffix letter, and this lookup is for star notes only.",
     };
   }
 

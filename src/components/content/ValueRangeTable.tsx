@@ -93,7 +93,7 @@ export function ValueRangeTable() {
         <p>Last updated {VALUE_UPDATED}.</p>
         <p>
           Bands are the range of recorded sold prices. &ldquo;Indicative&rdquo;
-          marks a small sample — what has been paid, not a reliable market range.
+          marks a small sample: what has been paid, not a reliable market range.
           Blank combinations have no recorded sales and are left empty rather than
           guessed.
         </p>

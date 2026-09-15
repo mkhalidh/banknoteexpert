@@ -8,7 +8,7 @@ export const content: PageContent = {
     h1: "Privacy Policy",
     primaryKeyword: "privacy policy",
     lead:
-      "Serial numbers you enter into the tools on this site are processed entirely in your browser. They are never transmitted to a server, never stored, and never logged. Because the site is static and has no accounts, there is very little data to have a policy about — but here is the full picture.",
+      "Serial numbers you enter into the tools on this site are processed entirely in your browser. They are never transmitted to a server, never stored, and never logged. Because the site is static and has no accounts, there is very little data to have a policy about, but here is the full picture.",
   },
   takeaways: [],
   sections: [

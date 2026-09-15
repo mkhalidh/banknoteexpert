@@ -5,11 +5,11 @@ export const content: PageContent = {
     path: "/fancy-serial-numbers/",
     title: "What Is a Fancy Serial Number? Types & Patterns Explained",
     description:
-      "A fancy serial number is a banknote serial whose eight digits form a collectible pattern. See every type — solid, radar, ladder, binary, repeater and more — with odds and value drivers.",
+      "A fancy serial number is a banknote serial whose eight digits form a collectible pattern. See every type, including solid, radar, ladder, binary, repeater and more, with odds and value drivers.",
     h1: "What Is a Fancy Serial Number?",
     primaryKeyword: "what is a fancy serial number",
     lead:
-      "A fancy serial number is a banknote serial whose eight digits form a recognisable pattern instead of a random string — a solid like 77777777, a radar like 12344321, or a very low number like 00000007. Collectors seek these because a memorable arrangement is scarce and easy to spot.",
+      "A fancy serial number is a banknote serial whose eight digits form a recognisable pattern instead of a random string, such as a solid like 77777777, a radar like 12344321, or a very low number like 00000007. Collectors seek these because a memorable arrangement is scarce and easy to spot.",
   },
   takeaways: [
     "Only the eight digits form the pattern; the prefix and suffix letters do not.",
@@ -25,7 +25,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Every US note carries an eight-digit serial framed by one or two prefix letters and a suffix letter or star. Only those eight digits are judged for a pattern; the letters identify the series and district and play no part. When the digits fall into an ordered shape — all the same, mirrored, sequential, built from just two values, and so on — the note becomes collectible beyond its face value.",
+            "Every US note carries an eight-digit serial framed by one or two prefix letters and a suffix letter or star. Only those eight digits are judged for a pattern; the letters identify the series and district and play no part. When the digits fall into an ordered shape, such as all the same, mirrored, sequential, built from just two values, and so on, the note becomes collectible beyond its face value.",
         },
         {
           kind: "richtext",
@@ -84,13 +84,13 @@ export interface PatternCopy {
 export const patternCopy: Record<string, PatternCopy> = {
   solid: {
     definition:
-      "A solid serial is the purest pattern of all: the same digit eight times over, such as 44444444. There is nothing to interpret — every position matches, so the note reads as a single repeated figure. Only nine solids exist for any given serial run, one for each digit from one to nine, which is why they are among the first patterns any collector learns to recognise and one of the hardest to actually find in the wild.",
+      "A solid serial is the purest pattern of all: the same digit eight times over, such as 44444444. There is nothing to interpret, since every position matches, so the note reads as a single repeated figure. Only nine solids exist for any given serial run, one for each digit from one to nine, which is why they are among the first patterns any collector learns to recognise and one of the hardest to actually find in the wild.",
     valueNote:
       "Solids sit at the very top of the hobby. Their extreme scarcity sets a high ceiling, and a solid in crisp, uncirculated condition can command a strong premium over a worn one. Recent auction results vary widely by digit and grade, so treat a solid as a genuine trophy and confirm any figure against comparable sales.",
   },
   "seven-of-a-kind": {
     definition:
-      "A seven-of-a-kind has seven identical digits and one odd one out, like 44444447. It is the near-miss cousin of the solid — one digit short of perfection — and is far more attainable while still looking striking on the note.",
+      "A seven-of-a-kind has seven identical digits and one odd one out, like 44444447. It is the near-miss cousin of the solid, one digit short of perfection, and is far more attainable while still looking striking on the note.",
     valueNote:
       "These carry a real premium over an ordinary note, though well below a true solid. Where the odd digit sits and the note's grade both nudge the value.",
   },
@@ -103,7 +103,7 @@ export const patternCopy: Record<string, PatternCopy> = {
   },
   radar: {
     definition:
-      "A radar reads the same forwards and backwards — a palindrome such as 12344321, where the first four digits mirror the last four. It is one of the most popular entry points into the hobby.",
+      "A radar reads the same forwards and backwards, making it a palindrome such as 12344321, where the first four digits mirror the last four. It is one of the most popular entry points into the hobby.",
     valueNote:
       "Radars are collectible and mid-range in value; condition and any secondary pattern move the price.",
     linkLabel: "Read the full radar serial number guide",
@@ -118,7 +118,7 @@ export const patternCopy: Record<string, PatternCopy> = {
     definition:
       "A repeater splits the serial into two identical halves, an ABCDABCD shape such as 51835183, where the first four digits play again as the last four. It is one of the more common structured patterns, which is part of why it is so widely recognised, but a clean repeater still reads clearly as something out of the ordinary. Because the two halves can be any four digits, repeaters come in enormous variety, from plain-looking pairs to visually satisfying combinations.",
     valueNote:
-      "Repeaters are affordable and popular, a favourite for collectors starting out. Value climbs when the repeated block is itself memorable — a round number or a date, for instance — and when the note is in high grade. Recent auction results range widely, so a repeater is best valued against similar sold examples rather than a single headline figure.",
+      "Repeaters are affordable and popular, a favourite for collectors starting out. Value climbs when the repeated block is itself memorable, such as a round number or a date, and when the note is in high grade. Recent auction results range widely, so a repeater is best valued against similar sold examples rather than a single headline figure.",
   },
   "double-quad": {
     definition:
@@ -128,7 +128,7 @@ export const patternCopy: Record<string, PatternCopy> = {
   },
   ladder: {
     definition:
-      "A ladder runs the digits in an unbroken sequence — 12345678 up or 87654321 down. A perfect eight-digit run is one of the rarest patterns there is.",
+      "A ladder runs the digits in an unbroken sequence, either 12345678 up or 87654321 down. A perfect eight-digit run is one of the rarest patterns there is.",
     valueNote:
       "True ladders are trophy notes; broken and scrambled versions are far more common and worth much less.",
     linkLabel: "Read the full ladder serial number guide",
@@ -142,7 +142,7 @@ export const patternCopy: Record<string, PatternCopy> = {
   },
   binary: {
     definition:
-      "A binary serial is built from only two different digits across all eight positions, such as 10011010 or 88998989. The name comes from the two-value alphabet, not from actual binary code — any pair of digits qualifies, so long as no third digit appears. The result is a note that looks patterned and deliberate even when the two digits are arranged irregularly, and the tighter and more rhythmic that arrangement, the more eye-catching the note becomes.",
+      "A binary serial is built from only two different digits across all eight positions, such as 10011010 or 88998989. The name comes from the two-value alphabet, not from actual binary code: any pair of digits qualifies, so long as no third digit appears. The result is a note that looks patterned and deliberate even when the two digits are arranged irregularly, and the tighter and more rhythmic that arrangement, the more eye-catching the note becomes.",
     valueNote:
       "Binaries are a broad and accessible category, so most are modestly priced, but the appeal rises sharply with a clean arrangement. A binary that also forms a repeater or a near-solid can jump in desirability, and grade matters as always. Because they are relatively common, binaries reward patience: hold out for a crisp, visually strong example and value it against comparable sold notes rather than optimistic listings.",
   },
@@ -154,14 +154,14 @@ export const patternCopy: Record<string, PatternCopy> = {
   },
   "low-serial-10": {
     definition:
-      "A low serial is a very small number — the engine grades three tiers, under 1000, under 100 and under 10, with 00000001 the ultimate prize. The smaller the number, the scarcer the note.",
+      "A low serial is a very small number. The engine grades three tiers, under 1000, under 100 and under 10, with 00000001 the ultimate prize. The smaller the number, the scarcer the note.",
     valueNote:
       "The lowest tiers command real premiums; higher tiers are more modest and vary by denomination.",
     linkLabel: "Read the full low serial number guide",
   },
   "high-serial": {
     definition:
-      "A high serial sits at the very end of a print run, at 99999900 or above, with 99999999 the ceiling. It is the mirror image of a low serial: instead of the first notes off the press, these are among the last. High serials are scarce for the same structural reason low ones are — only a tiny band of numbers at the top of each run qualifies — but they attract a smaller, more specialist following, so recognition lags behind the famous low numbers.",
+      "A high serial sits at the very end of a print run, at 99999900 or above, with 99999999 the ceiling. It is the mirror image of a low serial: instead of the first notes off the press, these are among the last. High serials are scarce for the same structural reason low ones are, since only a tiny band of numbers at the top of each run qualifies, but they attract a smaller, more specialist following, so recognition lags behind the famous low numbers.",
     valueNote:
       "High serials carry a modest premium that leans heavily on condition and on how close the number sits to the absolute maximum. A note ending in a long tail of nines is more striking, and therefore more wanted, than one merely inside the qualifying band. As with every pattern, check comparable sold listings before settling on a figure rather than assuming the top of the run guarantees a top price.",
   },

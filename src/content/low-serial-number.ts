@@ -9,14 +9,14 @@ export const content: PageContent = {
     h1: "Low Serial Number Dollar Bill",
     primaryKeyword: "low serial number dollar bill",
     lead:
-      "A low serial number dollar bill is a note whose eight-digit serial is a very small number — anything from 00000001 up to roughly 00000999. The digits sit far below the billions of ordinary serials, which is exactly what makes these notes scarce and sought after by collectors.",
+      "A low serial number dollar bill is a note whose eight-digit serial is a very small number, anything from 00000001 up to roughly 00000999. The digits sit far below the billions of ordinary serials, which is exactly what makes these notes scarce and sought after by collectors.",
   },
   takeaways: [
-    "A low serial simply means the eight-digit number is very small, with leading zeros doing most of the work — for example 00000042.",
+    "A low serial simply means the eight-digit number is very small, with leading zeros doing most of the work, for example 00000042.",
     "Collectors sort these notes into three tiers: serials under 10, under 100 and under 1000.",
     "Scarcity climbs sharply as the number shrinks; the closer to 00000001, the fewer notes exist.",
     "00000001 is the trophy of any print run and is treated very differently from an ordinary note.",
-    "Value depends on tier, denomination and condition — most higher-tier notes are modest, and only the lowest serials command real premiums.",
+    "Value depends on tier, denomination and condition. Most higher-tier notes are modest, and only the lowest serials command real premiums.",
   ],
   sections: [
     {
@@ -31,7 +31,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Because the serial field is always eight characters wide, small values are padded with leading zeros. That is why the first note off a run reads 00000001 rather than simply 1, and why 00000042 is a genuine two-digit serial dressed up in zeros. Those zeros are the visual signal collectors look for — a wall of them followed by one or two meaningful digits.",
+            "Because the serial field is always eight characters wide, small values are padded with leading zeros. That is why the first note off a run reads 00000001 rather than simply 1, and why 00000042 is a genuine two-digit serial dressed up in zeros. Those zeros are the visual signal collectors look for: a wall of them followed by one or two meaningful digits.",
         },
         {
           kind: "paragraph",
@@ -68,7 +68,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "If the tiers form a ladder, a low serial number dollar bill 00000001 sits at the very top rung. It is the first note produced in its run — the single lowest serial that can exist — which gives it a status no other note in the run can match. There is exactly one per run, so demand naturally concentrates on it.",
+            "If the tiers form a ladder, a low serial number dollar bill 00000001 sits at the very top rung. It is the first note produced in its run, the single lowest serial that can exist, which gives it a status no other note in the run can match. There is exactly one per run, so demand naturally concentrates on it.",
         },
         {
           kind: "paragraph",
@@ -94,7 +94,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Even so, the system is not airtight. A share of notes with modest low serials — especially in the under-1000 tier — slips through into ordinary circulation and ends up in tills, ATMs and change. That is precisely why it is worth glancing at your notes: the scarce ones that escaped are out there, waiting to be noticed by someone paying attention.",
+            "Even so, the system is not airtight. A share of notes with modest low serials, especially in the under-1000 tier, slips through into ordinary circulation and ends up in tills, ATMs and change. That is precisely why it is worth glancing at your notes: the scarce ones that escaped are out there, waiting to be noticed by someone paying attention.",
         },
       ],
     },
@@ -134,7 +134,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Checking a note takes seconds. Find the eight-digit serial — it appears twice on the face, once upper-right and once lower-left — and read the digits in order. Mentally drop the leading zeros: 00000058 is really 58, which lands in the under-100 tier, while 00000006 is a 6 and reaches the under-10 tier.",
+            "Checking a note takes seconds. Find the eight-digit serial, which appears twice on the face, once upper-right and once lower-left, and read the digits in order. Mentally drop the leading zeros: 00000058 is really 58, which lands in the under-100 tier, while 00000006 is a 6 and reaches the under-10 tier.",
         },
         {
           kind: "richtext",
@@ -180,19 +180,19 @@ export const comparison: {
     [
       "Under 10",
       "00000001–00000009",
-      "Rarest — only nine per print run",
+      "Rarest: only nine per print run",
       "Trophy tier; strong demand, led by 00000001",
     ],
     [
       "Under 100",
       "00000010–00000099",
-      "Very scarce — ninety per print run",
+      "Very scarce: ninety per print run",
       "Highly desirable, especially in top condition",
     ],
     [
       "Under 1000",
       "00000100–00000999",
-      "Scarce — up to 999 per print run",
+      "Scarce: up to 999 per print run",
       "Popular entry point; most likely to reach circulation",
     ],
   ],

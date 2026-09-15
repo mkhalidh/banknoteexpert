@@ -12,7 +12,7 @@ import { AllToolsGrid } from "@/components/content/AllToolsGrid";
 import { FaqItem } from "@/components/content/FaqItem";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Fancy Serial Number Checker — Free US Dollar Bill Serial Lookup",
+  title: "Fancy Serial Number Checker: Free US Dollar Bill Serial Lookup",
   description:
     "Free fancy serial number checker for US dollar bills. Instantly detect radar, repeater, ladder, solid, binary and low serial patterns, get a 0–100 rarity score and an estimated value range.",
   path: "/",
@@ -90,7 +90,7 @@ export default function Page() {
               structure is always the same.
             </p>
             <p className="mt-3">
-              One or two letters come first &mdash; the prefix, which identifies
+              One or two letters come first: the prefix, which identifies
               the series and the Federal Reserve district that issued the note.
               Then come exactly eight digits. Those eight digits are the part
               collectors care about, because the pattern they form is what makes
@@ -168,7 +168,7 @@ export default function Page() {
           as replacements when a sheet is damaged or misprinted during
           production, and it never reissues the exact serial that was spoiled.
           Because far fewer star notes enter circulation than standard notes,
-          they carry a premium in their own right &mdash; and a star note that
+          they carry a premium in their own right, and a star note that
           also happens to hold a fancy pattern is doubly interesting to
           collectors. Print runs vary enormously: some star runs number in the
           millions, others only a few hundred thousand, and the smallest runs
@@ -274,8 +274,8 @@ export default function Page() {
             Yes. This fancy serial number checker is completely free, with no
             account, no sign-up and no limit on how many notes you check.
             Everything runs in your browser, so your serial numbers are never
-            sent to a server or stored. You can bookmark or share a result
-            &mdash; the serial is saved in the page address &mdash; and run as
+            sent to a server or stored. You can bookmark or share a result,
+            since the serial is saved in the page address, and run as
             many notes as you like.
           </FaqItem>
           <FaqItem question="What do the digits mean versus the letters?">
@@ -287,7 +287,7 @@ export default function Page() {
             collectible pattern, they mean those eight digits, not the
             surrounding letters.
           </FaqItem>
-          <FaqItem question="My note scored highly — what should I do next?">
+          <FaqItem question="My note scored highly: what should I do next?">
             First, handle it carefully: keep it flat and clean, ideally in a
             currency sleeve, because condition strongly affects value. Then
             confirm the pattern and look at recent sold listings for the same

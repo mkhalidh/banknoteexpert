@@ -9,11 +9,11 @@ export const content: PageContent = {
     h1: "Where Is the Serial Number on a Dollar Bill?",
     primaryKeyword: "where is the serial number on a dollar bill",
     lead:
-      "The serial number on a dollar bill is printed twice on the front in green ink — once in the upper-right and once in the lower-left. It is a short string of one or two letters, eight digits, and a final letter or star, and every US denomination follows the same layout.",
+      "The serial number on a dollar bill is printed twice on the front in green ink, once in the upper-right and once in the lower-left. It is a short string of one or two letters, eight digits, and a final letter or star, and every US denomination follows the same layout.",
   },
   takeaways: [
     "The serial appears twice on the face: upper-right and lower-left, in green ink.",
-    "Both printings are identical — either one gives you the full number.",
+    "Both printings are identical, so either one gives you the full number.",
     "The structure is prefix letter(s), eight digits, then a suffix letter or star.",
     "Only the eight digits form a collectible pattern; the letters give context.",
     "The layout is the same on $1 through $100, with only minor design differences.",
@@ -47,7 +47,7 @@ export const content: PageContent = {
         {
           kind: "list",
           items: [
-            "Prefix letter(s): the series and issuing district — context, not pattern.",
+            "Prefix letter(s): the series and issuing district, which is context, not pattern.",
             "Eight digits: the part that forms a collectible pattern.",
             "Suffix letter or star: a star marks a replacement note, printed to swap out a spoiled one.",
           ],
@@ -127,7 +127,7 @@ export const denominations: DenominationInfo[] = [
     id: "ten-dollar",
     label: "$10",
     heading: "$10 bill",
-    note: "On the $10 note, Hamilton's portrait is flanked by the same two serial positions. The colour-shifting ink and background tints do not move the number — it stays upper-right and lower-left.",
+    note: "On the $10 note, Hamilton's portrait is flanked by the same two serial positions. The colour-shifting ink and background tints do not move the number, which stays upper-right and lower-left.",
   },
   {
     id: "twenty-dollar",

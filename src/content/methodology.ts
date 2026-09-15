@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/methodology/",
     title: "Methodology: How We Value Fancy Serial Numbers",
     description:
-      "Our sources, confidence levels, the 0–100 rarity score, grading standards and limitations — how Banknote Expert estimates US banknote serial number value, explained honestly.",
+      "Our sources, confidence levels, the 0–100 rarity score, grading standards and limitations: how Banknote Expert estimates US banknote serial number value, explained honestly.",
     h1: "Methodology",
     primaryKeyword: "methodology",
     lead:
@@ -59,7 +59,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Separately, the rarity odds shown for each pattern describe how often that arrangement occurs by chance in an eight-digit serial — a fixed mathematical property, not a market or production figure.",
+            "Separately, the rarity odds shown for each pattern describe how often that arrangement occurs by chance in an eight-digit serial. That is a fixed mathematical property, not a market or production figure.",
         },
       ],
     },
@@ -70,12 +70,12 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            '"Estimate" means the band rests on a reasonable sample — eight or more recorded sales, reported as an interquartile range. "Indicative" means the sample is small, sometimes a single sale: it shows what has been paid, not a reliable market range, and should be read with caution.',
+            '"Estimate" means the band rests on a reasonable sample of eight or more recorded sales, reported as an interquartile range. "Indicative" means the sample is small, sometimes a single sale: it shows what has been paid, not a reliable market range, and should be read with caution.',
         },
         {
           kind: "paragraph",
           text:
-            "Gaps are deliberate. A pattern and condition with no recorded sales is left blank and reported as insufficient data — never filled with a zero, a guess, or a neighbouring grade's figure. We would rather show less than show something we cannot stand behind.",
+            "Gaps are deliberate. A pattern and condition with no recorded sales is left blank and reported as insufficient data, never filled with a zero, a guess, or a neighbouring grade's figure. We would rather show less than show something we cannot stand behind.",
         },
       ],
     },
@@ -86,7 +86,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The rarity score rates how unusual a serial number's pattern is, from 0 for an ordinary number to 100 for the very rarest arrangements. It is deterministic and explainable: the same serial always produces the same score, and the breakdown shows exactly which pattern contributed which points. Where one pattern subsumes another — a solid is trivially also a binary — only the strongest is counted. A star note adds a small documented bonus.",
+            "The rarity score rates how unusual a serial number's pattern is, from 0 for an ordinary number to 100 for the very rarest arrangements. It is deterministic and explainable: the same serial always produces the same score, and the breakdown shows exactly which pattern contributed which points. Where one pattern subsumes another (a solid is trivially also a binary), only the strongest is counted. A star note adds a small documented bonus.",
         },
         {
           kind: "paragraph",

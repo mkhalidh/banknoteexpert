@@ -123,7 +123,7 @@ export function FancySerialChecker() {
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Enter your bill&rsquo;s 8-digit serial number above to see its rarity
             score, any matched patterns and an estimated value range. Nothing is
-            uploaded &mdash; the check runs entirely in your browser.
+            uploaded. The check runs entirely in your browser.
           </p>
         ) : (
           <div key={analysis.normalized} className="animate-in flex flex-col gap-5">
@@ -133,7 +133,7 @@ export function FancySerialChecker() {
               <h3 className="text-sm font-semibold">Matched patterns</h3>
               {analysis.score.matches.length === 0 ? (
                 <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                  No fancy pattern detected &mdash; this looks like an ordinary
+                  No fancy pattern detected. This looks like an ordinary
                   serial number.
                 </p>
               ) : (
@@ -151,7 +151,7 @@ export function FancySerialChecker() {
                         </Link>
                         <span className="text-zinc-600 dark:text-zinc-400">
                           {" "}
-                          &mdash; roughly {match.rarityOdds}
+                          (roughly {match.rarityOdds})
                         </span>
                       </span>
                     </li>

@@ -83,17 +83,17 @@ export function TwoDollarValueChart() {
   return (
     <div className="flex flex-col gap-6">
       <Table
-        caption="Red seal — Legal Tender Notes (1928–1963), a genuine collector market"
+        caption="Red seal: Legal Tender Notes (1928–1963), a genuine collector market"
         rows={red}
       />
       <div>
         <p className="mb-2 text-sm text-zinc-700 dark:text-zinc-300">
           The green-seal series below still circulate and are normally worth
           exactly <strong>$2</strong>. The figures show occasional small premiums
-          on crisp, uncirculated examples — not a collector market.
+          on crisp, uncirculated examples, not a collector market.
         </p>
         <Table
-          caption="Green seal — Federal Reserve Notes (1976 onward), still in circulation"
+          caption="Green seal: Federal Reserve Notes (1976 onward), still in circulation"
           rows={green}
         />
       </div>

@@ -5,18 +5,18 @@ export const content: PageContent = {
     path: "/2-dollar-bill-value/",
     title: "How Much Is a $2 Bill Worth? Value Chart by Series",
     description:
-      "Most $2 bills are worth exactly $2. See an honest $2 bill value chart by series and seal colour, what actually makes one valuable, and how to check yours — no hype, sources cited.",
+      "Most $2 bills are worth exactly $2. See an honest $2 bill value chart by series and seal colour, what actually makes one valuable, and how to check yours, with no hype and sources cited.",
     h1: "How Much Is a $2 Bill Worth?",
     primaryKeyword: "how much is a 2 dollar bill worth",
     lead:
-      "Most $2 bills are worth exactly $2. The vast majority in circulation, including every ordinary 1976 note, trade at face value. A $2 bill is worth more only when it has something specific — an early red-seal series in top grade, a star note, a low or fancy serial, or a printing error. Here is the honest breakdown.",
+      "Most $2 bills are worth exactly $2. The vast majority in circulation, including every ordinary 1976 note, trade at face value. A $2 bill is worth more only when it has something specific: an early red-seal series in top grade, a star note, a low or fancy serial, or a printing error. Here is the honest breakdown.",
   },
   takeaways: [
-    "The honest answer for almost every note is $2 — face value.",
+    "The honest answer for almost every note is $2, its face value.",
     "The $2 bill is not rare; the government still prints it and it stays in production.",
     "Premiums come from early red-seal series, star notes, low or fancy serials, and errors.",
     "Condition is decisive: an uncirculated note can be worth well above a worn one.",
-    "Every figure here is sourced and shown as a range — we do not invent prices.",
+    "Every figure here is sourced and shown as a range, because we do not invent prices.",
   ],
   sections: [
     {
@@ -36,7 +36,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "One habit is worth building before you read any chart: separate the note's face value from its collectible value. Face value never changes — a $2 note is always worth at least $2 and can be spent as legal tender. Collectible value is the extra a buyer will pay on top, and it exists only when a specific, verifiable feature is present. Most of the two dollar bill worth questions people ask resolve to face value once that distinction is made, and the chart is only about the collectible layer on top.",
+            "One habit is worth building before you read any chart: separate the note's face value from its collectible value. Face value never changes: a $2 note is always worth at least $2 and can be spent as legal tender. Collectible value is the extra a buyer will pay on top, and it exists only when a specific, verifiable feature is present. Most of the two dollar bill worth questions people ask resolve to face value once that distinction is made, and the chart is only about the collectible layer on top.",
         },
       ],
     },
@@ -57,7 +57,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "None of that means a $2 bill can never be valuable — some genuinely are. It means the starting assumption should be face value, with the burden of proof on finding a specific feature that lifts it. If you have heard that $2 bills are being discontinued or are secretly rare, both ideas are myths: production continues, and the notes are common by any collector's measure.",
+            "None of that means a $2 bill can never be valuable, since some genuinely are. It means the starting assumption should be face value, with the burden of proof on finding a specific feature that lifts it. If you have heard that $2 bills are being discontinued or are secretly rare, both ideas are myths: production continues, and the notes are common by any collector's measure.",
         },
       ],
     },
@@ -78,7 +78,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The denomination returned in 1976 as a green-seal Federal Reserve Note for the United States bicentennial, with a new reverse depicting the signing of the Declaration of Independence. It has been printed intermittently ever since, in later series such as 1995, 2003, 2009, 2013 and 2017A. Because those modern runs are large, the notes from them are common — the history explains why a $2 bill feels special without making an ordinary one valuable.",
+            "The denomination returned in 1976 as a green-seal Federal Reserve Note for the United States bicentennial, with a new reverse depicting the signing of the Declaration of Independence. It has been printed intermittently ever since, in later series such as 1995, 2003, 2009, 2013 and 2017A. Because those modern runs are large, the notes from them are common. The history explains why a $2 bill feels special without making an ordinary one valuable.",
         },
       ],
     },
@@ -94,7 +94,7 @@ export const content: PageContent = {
         {
           kind: "list",
           items: [
-            "Early red-seal series. The 1928 and 1953 Legal Tender Notes, and to a lesser extent 1963, carry a premium — most of all in crisp, uncirculated condition.",
+            "Early red-seal series. The 1928 and 1953 Legal Tender Notes, and to a lesser extent 1963, carry a premium, most of all in crisp, uncirculated condition.",
             "Star notes. A star at the end of the serial marks a replacement note, printed in smaller numbers, and a star from a small run can be worth well above face value.",
             "Low serial numbers. A very small serial such as 00000045, and especially 00000001, is genuinely collectible across every series.",
             "Fancy serials. Radars, repeaters, solids and ladders add a premium because they appeal to pattern collectors.",
@@ -106,7 +106,7 @@ export const content: PageContent = {
           segments: [
             "Two of these are easy to check right now. To see whether a note is a scarce replacement, use our ",
             { href: "/star-note-lookup/", label: "star note lookup" },
-            ". The pattern features — low serials, radars and the rest — each have a full guide linked below.",
+            ". The pattern features, including low serials, radars and the rest, each have a full guide linked below.",
           ],
         },
         {
@@ -123,7 +123,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The colour of the Treasury seal is the quickest way to place a $2 note. A red seal marks a United States Note, also called a Legal Tender Note, from the 1928 through 1963 series — the older class of currency, and the group most likely to carry a premium. A green seal marks a Federal Reserve Note, the type printed from the 1976 bicentennial onward, which makes up the common notes most people hold. The table below sets the two side by side.",
+            "The colour of the Treasury seal is the quickest way to place a $2 note. A red seal marks a United States Note, also called a Legal Tender Note, from the 1928 through 1963 series, the older class of currency and the group most likely to carry a premium. A green seal marks a Federal Reserve Note, the type printed from the 1976 bicentennial onward, which makes up the common notes most people hold. The table below sets the two side by side.",
         },
       ],
     },
@@ -149,7 +149,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "To judge a 1976 note, check three things in order. Is it uncirculated, with no folds and sharp corners? Does the serial end in a star, or read as a very low or patterned number? And is there a postmark on it? Collectors in 1976 took new notes to the post office to have them stamped on the first day of issue, and those postmarked examples are collected as souvenirs of the bicentennial. A note that is plain on all three counts is ordinary currency, and there is no shame in that — it is simply worth spending.",
+            "To judge a 1976 note, check three things in order. Is it uncirculated, with no folds and sharp corners? Does the serial end in a star, or read as a very low or patterned number? And is there a postmark on it? Collectors in 1976 took new notes to the post office to have them stamped on the first day of issue, and those postmarked examples are collected as souvenirs of the bicentennial. A note that is plain on all three counts is ordinary currency, and there is no shame in that: it is simply worth spending.",
         },
       ],
     },
@@ -207,7 +207,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Usually not. Most are common and trade at $2. The ones that are worth more have a distinguishing feature — age and seal type, a star, a scarce serial, or an error — rather than simply being a $2 bill.",
+            "Usually not. Most are common and trade at $2. The ones that are worth more have a distinguishing feature, such as age and seal type, a star, a scarce serial, or an error, rather than simply being a $2 bill.",
         },
         { kind: "subheading", text: "Are $2 bills rare?" },
         {

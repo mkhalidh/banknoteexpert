@@ -22,7 +22,7 @@ export function ScarcestStarCallout({ cta }: { cta?: { href: string; label: stri
       <p className="text-zinc-800 dark:text-zinc-200">
         <strong>The scarcest runs in the dataset are $2 series 2003 stars.</strong>{" "}
         {DISTRICTS_AT_MIN} Federal Reserve districts printed just{" "}
-        {MIN_2003.toLocaleString("en-US")} star notes each — a small fraction of a
+        {MIN_2003.toLocaleString("en-US")} star notes each, a small fraction of a
         normal star run, and by a wide margin the smallest print runs recorded.
       </p>
       {cta ? (

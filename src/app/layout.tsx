@@ -25,7 +25,7 @@ const serifDisplay = Fraunces({
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Banknote Expert — US Banknote Serial Number Tools",
+  title: "Banknote Expert: US Banknote Serial Number Tools",
   description:
     "Free tools to check US banknote serial numbers for fancy patterns, star notes and collectible value.",
   path: "/",

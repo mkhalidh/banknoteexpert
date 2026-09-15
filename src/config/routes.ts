@@ -46,7 +46,7 @@ export interface RouteEntry {
 export const routes: RouteEntry[] = [
   {
     path: "/",
-    title: "Banknote Expert — US Banknote Serial Number Tools",
+    title: "Banknote Expert: US Banknote Serial Number Tools",
     description:
       "Free tools to check US banknote serial numbers for fancy patterns, star notes and collectible value.",
     silo: "home",
@@ -72,7 +72,7 @@ export const routes: RouteEntry[] = [
     path: "/fancy-serial-numbers/radar/",
     title: "Radar Serial Number Checker",
     description:
-      "Check whether a banknote serial number is a radar — a number that reads the same forwards and backwards.",
+      "Check whether a banknote serial number is a radar, a number that reads the same forwards and backwards.",
     silo: "fancy-serial-numbers",
     pageType: "tool",
     priority: 0.8,

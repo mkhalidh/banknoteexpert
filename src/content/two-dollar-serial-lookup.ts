@@ -16,7 +16,7 @@ export const content: PageContent = {
     "Only the eight digits form a collectible pattern; the letters give context.",
     "Red seals are 1928–1963 Legal Tender Notes; green seals are 1976-onward Federal Reserve Notes.",
     "Stars, very low serials and clean repeaters are what lift a $2 above face value.",
-    "Everything runs in your browser — your serial is never sent anywhere.",
+    "Everything runs in your browser, so your serial is never sent anywhere.",
   ],
   sections: [
     {
@@ -31,7 +31,7 @@ export const content: PageContent = {
         {
           kind: "list",
           items: [
-            "Prefix letter(s): identify the series and the issuing authority — context, not pattern.",
+            "Prefix letter(s): identify the series and the issuing authority, which is context, not pattern.",
             "Eight digits: the only part that forms a collectible pattern such as a radar or a low serial.",
             "Suffix letter or star: a star marks a replacement note, which is scarcer than a standard note.",
           ],
@@ -69,7 +69,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The 1976 series is the one people ask about most. It was released for the United States bicentennial with a new reverse showing the signing of the Declaration of Independence, and it was printed in huge numbers. That scale is why an ordinary 1976 note, circulated or not, is almost always worth just $2 — there is nothing scarce about the series itself.",
+            "The 1976 series is the one people ask about most. It was released for the United States bicentennial with a new reverse showing the signing of the Declaration of Independence, and it was printed in huge numbers. That scale is why an ordinary 1976 note, circulated or not, is almost always worth just $2: there is nothing scarce about the series itself.",
         },
         {
           kind: "paragraph",

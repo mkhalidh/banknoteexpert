@@ -9,7 +9,7 @@ export const content: PageContent = {
     h1: "Radar Serial Number",
     primaryKeyword: "radar serial number",
     lead:
-      "A radar serial number reads the same forwards and backwards — a palindrome such as 12344321. The first four digits mirror the last four, so the note looks identical whichever way you turn it. Collectors prize the neat symmetry, and a scarcer super radar takes the idea one step further.",
+      "A radar serial number reads the same forwards and backwards, making it a palindrome such as 12344321. The first four digits mirror the last four, so the note looks identical whichever way you turn it. Collectors prize the neat symmetry, and a scarcer super radar takes the idea one step further.",
   },
   takeaways: [
     "A radar is a palindrome: the eight-digit serial reads the same left to right and right to left.",
@@ -51,7 +51,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "A super radar is a stricter, scarcer cousin of the ordinary radar. It is still a palindrome, but it adds a demanding extra condition: the six inner digits are all identical, so the only variety sits in the two outer positions. The serial 71111117 is a textbook super radar serial number — a 7 at each end wrapping six matching ones.",
+          text: "A super radar is a stricter, scarcer cousin of the ordinary radar. It is still a palindrome, but it adds a demanding extra condition: the six inner digits are all identical, so the only variety sits in the two outer positions. The serial 71111117 is a textbook super radar serial number, with a 7 at each end wrapping six matching ones.",
         },
         {
           kind: "paragraph",
@@ -91,7 +91,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "A common mix-up is worth clearing up directly: a radar is not a broken ladder. The confusion is understandable, because a mirrored serial like 12344321 clearly contains short runs of climbing and falling digits — 1234 up, then 4321 down. Those runs look ladder-like at a glance, but they are far too short to count.",
+          text: "A common mix-up is worth clearing up directly: a radar is not a broken ladder. The confusion is understandable, because a mirrored serial like 12344321 clearly contains short runs of climbing and falling digits: 1234 up, then 4321 down. Those runs look ladder-like at a glance, but they are far too short to count.",
         },
         {
           kind: "paragraph",
@@ -113,7 +113,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "Be measured about radar serial number value. The pattern is popular and instantly recognisable, which gives radars steady, mid-range demand among collectors — more than an ordinary note, but rarely dramatic. Because a great many serials qualify, a plain radar in circulated condition usually commands a modest premium rather than a headline price.",
+          text: "Be measured about radar serial number value. The pattern is popular and instantly recognisable, which gives radars steady, mid-range demand among collectors: more than an ordinary note, but rarely dramatic. Because a great many serials qualify, a plain radar in circulated condition usually commands a modest premium rather than a headline price.",
         },
         {
           kind: "paragraph",

@@ -12,7 +12,7 @@ export const content: PageContent = {
       "A fancy serial number price guide estimates what a patterned banknote is worth by pattern and condition. Because paper-money prices swing with grade and demand, every figure here is a range rather than a fixed number, and each row is labelled with how confident the estimate is.",
   },
   takeaways: [
-    "Value is a range, never a single number — condition and demand move it constantly.",
+    "Value is a range, never a single number, because condition and demand move it constantly.",
     "The chart groups patterns by rarity tier and splits each across three grades.",
     "A confidence label shows whether a row rests on real sold data or a placeholder.",
     "Condition, denomination, pattern rarity and star status are the four main price drivers.",
@@ -26,7 +26,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "This page leads with numbers. The chart above sets out an estimated value range for every pattern the checker detects, split across three conditions — circulated, very fine and uncirculated — and grouped by rarity tier so the scarcest patterns sit at the top. Read across a row to see how much condition changes the outcome for one pattern, and down a tier to compare patterns of similar scarcity.",
+            "This page leads with numbers. The chart above sets out an estimated value range for every pattern the checker detects, split across three conditions (circulated, very fine and uncirculated) and grouped by rarity tier so the scarcest patterns sit at the top. Read across a row to see how much condition changes the outcome for one pattern, and down a tier to compare patterns of similar scarcity.",
         },
         {
           kind: "paragraph",

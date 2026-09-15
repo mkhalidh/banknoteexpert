@@ -8,10 +8,10 @@ export const content: PageContent = {
       "A ladder serial number runs in sequence, like 12345678. Learn true ladders, broken ladders and scrambled ladders, and why a true ladder is one of the rarest banknote patterns.",
     h1: "Ladder Serial Number",
     primaryKeyword: "ladder serial number",
-    lead: "A ladder is a banknote whose eight digits run in an unbroken sequence — 12345678 counting up or 87654321 counting down. It is one of the most sought-after banknote patterns because a perfect run is extraordinarily rare, and collectors chase it accordingly.",
+    lead: "A ladder is a banknote whose eight digits run in an unbroken sequence, either 12345678 counting up or 87654321 counting down. It is one of the most sought-after banknote patterns because a perfect run is extraordinarily rare, and collectors chase it accordingly.",
   },
   takeaways: [
-    "A true ladder is only 12345678 (ascending) or 87654321 (descending) — all eight digits in one unbroken run.",
+    "A true ladder is only 12345678 (ascending) or 87654321 (descending), with all eight digits in one unbroken run.",
     "A broken ladder contains a run of six or more sequential digits without being a full ladder, for example 12345687.",
     "A scrambled or mixed ladder uses every digit from 1 to 8 exactly once but out of order, such as 81234567 or 13245768.",
     "A radar is a palindrome that reads the same both ways; it is a different pattern and is not a broken ladder.",
@@ -46,7 +46,7 @@ export const content: PageContent = {
         },
         {
           kind: "paragraph",
-          text: "The key point, and one that is often gotten wrong, is the length of the qualifying run. A stretch of only four sequential digits does not make a broken ladder — that is far too common to count. The pattern only earns the name when six or more digits line up in order while the note as a whole still fails to be a complete top-to-bottom sequence.",
+          text: "The key point, and one that is often gotten wrong, is the length of the qualifying run. A stretch of only four sequential digits does not make a broken ladder, because that is far too common to count. The pattern only earns the name when six or more digits line up in order while the note as a whole still fails to be a complete top-to-bottom sequence.",
         },
         {
           kind: "paragraph",
@@ -60,7 +60,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "A scrambled ladder serial number takes a different approach entirely. Instead of demanding a sequence, it asks only that every digit from 1 through 8 appears exactly once — the full set of ladder digits, but shuffled out of order. So 81234567 and 13245768 both qualify: no digit repeats, none is missing, yet the run is clearly jumbled rather than climbing or descending.",
+          text: "A scrambled ladder serial number takes a different approach entirely. Instead of demanding a sequence, it asks only that every digit from 1 through 8 appears exactly once: the full set of ladder digits, but shuffled out of order. So 81234567 and 13245768 both qualify: no digit repeats, none is missing, yet the run is clearly jumbled rather than climbing or descending.",
         },
         {
           kind: "paragraph",
@@ -78,7 +78,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "It is worth clearing up a mix-up that trips people up: a ladder and a radar are two separate patterns, and they do not overlap. A radar is a palindrome — a serial such as 12344321 that reads the same forwards and backwards. A palindrome mirrors around its centre; the pattern here instead runs in one direction, or scatters its digits, but never mirrors.",
+          text: "It is worth clearing up a mix-up that trips people up: a ladder and a radar are two separate patterns, and they do not overlap. A radar is a palindrome, a serial such as 12344321 that reads the same forwards and backwards. A palindrome mirrors around its centre; the pattern here instead runs in one direction, or scatters its digits, but never mirrors.",
         },
         {
           kind: "richtext",

@@ -187,7 +187,7 @@ export function StarNoteLookup() {
       </form>
 
       <p className="mt-3 text-xs text-zinc-500">
-        For ${denom}, the dataset covers series {seriesOptions.join(", ") || "—"}.
+        For ${denom}, the dataset covers series {seriesOptions.join(", ") || "none"}.
         Figures come from BEP monthly production reports; last updated{" "}
         {STAR_NOTE_DATA_UPDATED}.
       </p>
@@ -249,7 +249,7 @@ export function StarNoteLookup() {
               <FancyBlock matches={fancy.matches} />
             ) : (
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                No fancy pattern in the serial itself — its value comes from the
+                No fancy pattern in the serial itself. Its value comes from the
                 star and the print-run size.
               </p>
             )}
@@ -306,7 +306,7 @@ function FancyBlock({
               </Link>
               <span className="text-zinc-600 dark:text-zinc-400">
                 {" "}
-                &mdash; roughly {match.rarityOdds}
+                (roughly {match.rarityOdds})
               </span>
             </span>
           </li>

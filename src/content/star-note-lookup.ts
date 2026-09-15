@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/star-note-lookup/",
     title: "Star Note Lookup: Check a Star Note's Value by Serial",
     description:
-      "Free star note lookup. Enter the denomination, series and serial to find the print run, rarity tier and any fancy pattern — with a link to the BEP report so you can verify it yourself.",
+      "Free star note lookup. Enter the denomination, series and serial to find the print run, rarity tier and any fancy pattern, with a link to the BEP report so you can verify it yourself.",
     h1: "Star Note Lookup",
     primaryKeyword: "star note lookup",
     lead:
@@ -13,7 +13,7 @@ export const content: PageContent = {
   },
   takeaways: [
     "A star note is a replacement, marked by a star (*) at the end of its serial.",
-    "Print-run size is what decides rarity — a small run is what makes a star scarce.",
+    "Print-run size is what decides rarity: a small run is what makes a star scarce.",
     "Most star notes carry only a modest premium; a few small runs are genuinely rare.",
     "A star note that is also a fancy serial is desirable on both counts.",
     "Every matched run links to the BEP report so you can verify it independently.",
@@ -61,7 +61,7 @@ export const content: PageContent = {
           items: [
             "Condition. As with any note, a crisp, uncirculated example is worth more than a worn one, and grade can multiply value several times over.",
             "Series and denomination. Older series and higher face values start from a higher base, though run size still leads.",
-            "Fancy serial. A star note whose digits also form a pattern — a radar, a low number — carries a premium on both counts.",
+            "Fancy serial. A star note whose digits also form a pattern, such as a radar or a low number, carries a premium on both counts.",
           ],
         },
         {
@@ -115,7 +115,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Linking each result to its source report is deliberate. Star note data is unusually verifiable — the print runs are public record — so there is no reason to ask you to take a number on trust. If a run is not yet in our dataset, the tool says so rather than guessing, and you can find the figure in the same reports we draw from.",
+            "Linking each result to its source report is deliberate. Star note data is unusually verifiable, since the print runs are public record, so there is no reason to ask you to take a number on trust. If a run is not yet in our dataset, the tool says so rather than guessing, and you can find the figure in the same reports we draw from.",
         },
         {
           kind: "richtext",
@@ -177,7 +177,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Yes, and those are the most desirable of all. A star note whose eight digits also form a pattern — a low serial, a radar, a repeater — appeals to star collectors and pattern collectors at once, so it can carry a premium well beyond either feature alone.",
+            "Yes, and those are the most desirable of all. A star note whose eight digits also form a pattern, such as a low serial, a radar or a repeater, appeals to star collectors and pattern collectors at once, so it can carry a premium well beyond either feature alone.",
         },
       ],
     },

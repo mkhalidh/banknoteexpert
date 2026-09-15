@@ -10,10 +10,10 @@ export const content: PageContent = {
     h1: "About Banknote Expert",
     primaryKeyword: "about banknote expert",
     lead:
-      "Banknote Expert is a free set of tools for checking US banknote serial numbers for collectible patterns and estimating what a note might be worth. We built it because the existing tools in this niche are thin, ad-heavy, or simply dishonest about value — and collectors deserve better.",
+      "Banknote Expert is a free set of tools for checking US banknote serial numbers for collectible patterns and estimating what a note might be worth. We built it because the existing tools in this niche are thin, ad-heavy, or simply dishonest about value, and collectors deserve better.",
   },
   takeaways: [
-    "Free, client-side tools — your serial numbers never leave your browser.",
+    "Free, client-side tools: your serial numbers never leave your browser.",
     "Honest about value: most notes are worth face value, and we say so.",
     "Every value figure is sourced and carries a confidence rating.",
   ],
@@ -25,7 +25,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Banknote Expert checks the eight-digit serial number on a US note for the patterns collectors seek — radars, solids, ladders, low serials, birthday dates and more — and returns a rarity score, the matched patterns, and an estimated value range by condition. It also identifies star notes and explains what each part of a serial means. Everything runs in your browser; nothing is uploaded.",
+            "Banknote Expert checks the eight-digit serial number on a US note for the patterns collectors seek, including radars, solids, ladders, low serials, birthday dates and more, and returns a rarity score, the matched patterns, and an estimated value range by condition. It also identifies star notes and explains what each part of a serial means. Everything runs in your browser, and nothing is uploaded.",
         },
       ],
     },
@@ -36,7 +36,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Search for the value of a serial number and you will mostly find scraped, automated pages that inflate every note into a supposed fortune. That is not how the market works, and it wastes people's time. We wanted a tool that does the actual pattern maths correctly, shows its working, and tells you the truth — including the common truth that a given note is worth exactly its face value.",
+            "Search for the value of a serial number and you will mostly find scraped, automated pages that inflate every note into a supposed fortune. That is not how the market works, and it wastes people's time. We wanted a tool that does the actual pattern maths correctly, shows its working, and tells you the truth, including the common truth that a given note is worth exactly its face value.",
         },
       ],
     },
@@ -62,12 +62,12 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: `The site is written and maintained by ${AUTHOR_NAME} — ${AUTHOR_BIO} — drawing on published auction records, grading standards and Bureau of Engraving and Printing data rather than guesswork. Our aim is a resource we would trust ourselves: accurate on the facts, careful with the numbers, and clear about what is known versus estimated.`,
+          text: `The site is written and maintained by ${AUTHOR_NAME}, ${AUTHOR_BIO}, drawing on published auction records, grading standards and Bureau of Engraving and Printing data rather than guesswork. Our aim is a resource we would trust ourselves: accurate on the facts, careful with the numbers, and clear about what is known versus estimated.`,
         },
         {
           kind: "paragraph",
           text:
-            "If you spot an error in a series fact or a value range, we want to hear about it — accuracy in this niche is worth more than reach, and correcting the record quickly is part of how a reference earns trust.",
+            "If you spot an error in a series fact or a value range, we want to hear about it. Accuracy in this niche is worth more than reach, and correcting the record quickly is part of how a reference earns trust.",
         },
       ],
     },

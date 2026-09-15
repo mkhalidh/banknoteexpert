@@ -3,7 +3,7 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Page Not Found — Banknote Expert",
+  title: "Page Not Found: Banknote Expert",
   description: "The page you were looking for could not be found.",
   path: "/404/",
   noindex: true,

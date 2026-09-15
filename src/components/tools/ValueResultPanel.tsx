@@ -39,7 +39,7 @@ export function ValueResultPanel({ result }: { result: ValueResult }) {
       <h3 className="text-sm font-semibold">
         Estimated value{" "}
         <span className="font-normal text-zinc-500">
-          &mdash; {patternLabel(result.pattern)}
+          ({patternLabel(result.pattern)})
         </span>
       </h3>
       <dl className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
