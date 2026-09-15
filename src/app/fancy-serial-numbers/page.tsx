@@ -7,6 +7,7 @@ import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ContentSections } from "@/components/content/ContentSections";
 import { PatternExplainer } from "@/components/content/PatternExplainer";
 import { RelatedPages } from "@/components/content/RelatedPages";
+import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { patternsById } from "@/lib/serial/patterns";
 import {
   content,
@@ -46,6 +47,9 @@ export default function Page() {
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+        <div className="mt-6">
+          <FancySerialChecker />
+        </div>
       </header>
 
       <KeyTakeaways items={content.takeaways} />

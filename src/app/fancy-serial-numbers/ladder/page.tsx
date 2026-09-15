@@ -6,6 +6,7 @@ import { ContentSections } from "@/components/content/ContentSections";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
+import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { content, comparison } from "@/content/ladder";
 
 export const metadata: Metadata = buildMetadata({
@@ -27,6 +28,9 @@ export default function Page() {
       <header>
         <h1 className="text-display">{content.meta.h1}</h1>
         <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
+        <div className="mt-6">
+          <FancySerialChecker />
+        </div>
       </header>
       <KeyTakeaways items={content.takeaways} />
       <ContentSections sections={content.sections} />

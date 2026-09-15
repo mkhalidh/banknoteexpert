@@ -8,6 +8,7 @@ import { ContentSections } from "@/components/content/ContentSections";
 import { ValueRangeTable } from "@/components/content/ValueRangeTable";
 import { SourcesBlock } from "@/components/content/SourcesBlock";
 import { RelatedPages } from "@/components/content/RelatedPages";
+import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { content } from "@/content/fancy-serial-number-value";
 
 export const metadata: Metadata = buildMetadata({
@@ -41,6 +42,9 @@ export default function Page() {
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+        <div className="mt-6">
+          <FancySerialChecker />
+        </div>
       </header>
 
       <KeyTakeaways items={content.takeaways} />
