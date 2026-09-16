@@ -19,18 +19,29 @@ const nextConfig: NextConfig = {
   // scripts/collect-waline-deps.cjs, which walks Node's actual module
   // resolution (nested node_modules first, then up) rather than assuming
   // every dependency name resolves against the top-level node_modules root.
+  //
+  // jsdom is pinned to 27.3.0 via the root package.json "overrides" field:
+  // jsdom 28+ pulls in @exodus/bytes, an ESM-only package that several of
+  // its own dependencies (html-encoding-sniffer, whatwg-url) require()
+  // unconditionally at load time. Vercel's function runtime doesn't support
+  // require() of ESM, so any jsdom >=28 hard-crashes with ERR_REQUIRE_ESM
+  // the moment jsdom loads, regardless of this include list. 27.3.0 is the
+  // last version before that dependency swap; @waline/vercel's only use of
+  // jsdom (src/service/markdown/xss.js) is "new JSDOM('').window" to give
+  // DOMPurify a window to sanitize against, an API untouched across 27-29.
   outputFileTracingIncludes: {
     // Route-glob keys are matched with picomatch, so the dynamic segment's
     // brackets must be escaped — an unescaped "[...all]" is glob character-
     // class syntax, not a literal match, and silently matches nothing.
     "/api/comment/\\[\\.\\.\\.all\\]": [
+      "./node_modules/@acemir/cssom/**/*",
       "./node_modules/@asamuzakjp/css-color/**/*",
+      "./node_modules/@asamuzakjp/css-color/node_modules/lru-cache/**/*",
       "./node_modules/@asamuzakjp/dom-selector/**/*",
-      "./node_modules/@asamuzakjp/generational-cache/**/*",
+      "./node_modules/@asamuzakjp/dom-selector/node_modules/lru-cache/**/*",
       "./node_modules/@asamuzakjp/nwsapi/**/*",
       "./node_modules/@babel/runtime/**/*",
       "./node_modules/@babel/runtime-corejs3/**/*",
-      "./node_modules/@bramus/specificity/**/*",
       "./node_modules/@cloudbase/adapter-interface/**/*",
       "./node_modules/@cloudbase/adapter-wx_mp/**/*",
       "./node_modules/@cloudbase/ai/**/*",
@@ -50,7 +61,6 @@ const nextConfig: NextConfig = {
       "./node_modules/@csstools/css-parser-algorithms/**/*",
       "./node_modules/@csstools/css-syntax-patches-for-csstree/**/*",
       "./node_modules/@csstools/css-tokenizer/**/*",
-      "./node_modules/@exodus/bytes/**/*",
       "./node_modules/@fast-csv/format/**/*",
       "./node_modules/@fast-csv/parse/**/*",
       "./node_modules/@koa/cors/**/*",
@@ -63,6 +73,7 @@ const nextConfig: NextConfig = {
       "./node_modules/@leancloud/platform-adapters-node/node_modules/qs/**/*",
       "./node_modules/@leancloud/platform-adapters-node/node_modules/semver/**/*",
       "./node_modules/@leancloud/platform-adapters-node/node_modules/superagent/**/*",
+      "./node_modules/@leancloud/platform-adapters-node/node_modules/ws/**/*",
       "./node_modules/@leancloud/platform-adapters-weapp/**/*",
       "./node_modules/@mathjax/mathjax-newcm-font/**/*",
       "./node_modules/@mathjax/mathjax-tex-font/**/*",
@@ -148,8 +159,11 @@ const nextConfig: NextConfig = {
       "./node_modules/cron-parser/**/*",
       "./node_modules/crypt/**/*",
       "./node_modules/css-tree/**/*",
+      "./node_modules/cssstyle/**/*",
+      "./node_modules/cssstyle/node_modules/lru-cache/**/*",
       "./node_modules/dashdash/**/*",
       "./node_modules/data-urls/**/*",
+      "./node_modules/data-urls/node_modules/whatwg-mimetype/**/*",
       "./node_modules/date-format/**/*",
       "./node_modules/debug/**/*",
       "./node_modules/decamelize/**/*",
@@ -245,7 +259,9 @@ const nextConfig: NextConfig = {
       "./node_modules/javascript-state-machine/**/*",
       "./node_modules/jsbn/**/*",
       "./node_modules/jsdom/**/*",
-      "./node_modules/jsdom/node_modules/lru-cache/**/*",
+      "./node_modules/jsdom/node_modules/agent-base/**/*",
+      "./node_modules/jsdom/node_modules/http-proxy-agent/**/*",
+      "./node_modules/jsdom/node_modules/https-proxy-agent/**/*",
       "./node_modules/json-schema/**/*",
       "./node_modules/json-schema-traverse/**/*",
       "./node_modules/json-stringify-safe/**/*",
@@ -515,7 +531,6 @@ const nextConfig: NextConfig = {
       "./node_modules/ua-parser-js/**/*",
       "./node_modules/uc.micro/**/*",
       "./node_modules/underscore/**/*",
-      "./node_modules/undici/**/*",
       "./node_modules/undici-types/**/*",
       "./node_modules/universalify/**/*",
       "./node_modules/unpipe/**/*",
@@ -532,6 +547,8 @@ const nextConfig: NextConfig = {
       "./node_modules/w3c-xmlserializer/**/*",
       "./node_modules/web-streams-polyfill/**/*",
       "./node_modules/webidl-conversions/**/*",
+      "./node_modules/whatwg-encoding/**/*",
+      "./node_modules/whatwg-encoding/node_modules/iconv-lite/**/*",
       "./node_modules/whatwg-mimetype/**/*",
       "./node_modules/whatwg-url/**/*",
       "./node_modules/wicked-good-xpath/**/*",
