@@ -1,0 +1,28 @@
+/*
+ * Aliases Waline's own CSS variables to the site's design tokens (see
+ * src/app/globals.css) so the widget reads as native rather than a bolted-on
+ * plugin. References var(--accent) etc. rather than fixed colors, so it
+ * tracks light/dark automatically if the theme toggle returns.
+ */
+.waline-container {
+  --waline-font-size: 1rem;
+  --waline-theme-color: var(--accent);
+  --waline-active-color: var(--accent);
+  --waline-color: var(--foreground);
+  --waline-bg-color: var(--surface);
+  --waline-bg-color-light: var(--background);
+  --waline-bg-color-hover: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  --waline-border-color: var(--border-soft);
+  --waline-disable-bg-color: var(--background);
+  --waline-badge-color: var(--secondary);
+  --waline-avatar-radius: 9999px;
+  --waline-box-shadow: none;
+  --waline-border: 1px solid var(--border-soft);
+  font-family: var(--font-sans);
+}
+
+.waline-container .wl-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-foreground);
+}

@@ -13,6 +13,8 @@
     "preflight": "npx next typegen && npm run lint && npx tsc -p tsconfig.json --noEmit && npx vitest run && npm run build && npm run audit:links && npm run check:data"
   },
   "dependencies": {
+    "@waline/client": "^3.15.2",
+    "@waline/vercel": "^1.41.6",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"

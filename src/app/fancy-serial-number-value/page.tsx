@@ -9,6 +9,7 @@ import { ValueRangeTable } from "@/components/content/ValueRangeTable";
 import { SourcesBlock } from "@/components/content/SourcesBlock";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { Comments } from "@/components/comments/Comments";
 import { content } from "@/content/fancy-serial-number-value";
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +70,8 @@ export default function Page() {
       <SourcesBlock note="Value ranges are built from realised sale prices, not asking prices. Figures are currently placeholders while the sold-listing dataset is assembled." />
 
       <RelatedPages links={content.related} />
+
+      <Comments path={content.meta.path} />
 
       <ArticleSchema
         headline={content.meta.h1}

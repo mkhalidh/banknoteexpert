@@ -8,6 +8,7 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { TwoDollarValueChart } from "@/components/content/TwoDollarValueChart";
 import { ScarcestStarCallout } from "@/components/content/ScarcestStarCallout";
+import { Comments } from "@/components/comments/Comments";
 import { twoDollarSeries } from "@/data/two-dollar-series";
 import { patternsById } from "@/lib/serial/patterns";
 import {
@@ -117,6 +118,8 @@ export default function Page() {
 
       {/* Section 11 */}
       <RelatedPages links={content.related} />
+
+      <Comments path={content.meta.path} />
 
       <ArticleSchema
         headline={content.meta.h1}
