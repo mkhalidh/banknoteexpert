@@ -20,26 +20,30 @@ const nextConfig: NextConfig = {
   // resolution (nested node_modules first, then up) rather than assuming
   // every dependency name resolves against the top-level node_modules root.
   //
-  // jsdom is pinned to 27.3.0 via the root package.json "overrides" field:
-  // jsdom 28+ pulls in @exodus/bytes, an ESM-only package that several of
-  // its own dependencies (html-encoding-sniffer, whatwg-url) require()
-  // unconditionally at load time. Vercel's function runtime doesn't support
-  // require() of ESM, so any jsdom >=28 hard-crashes with ERR_REQUIRE_ESM
-  // the moment jsdom loads, regardless of this include list. 27.3.0 is the
-  // last version before that dependency swap; @waline/vercel's only use of
-  // jsdom (src/service/markdown/xss.js) is "new JSDOM('').window" to give
-  // DOMPurify a window to sanitize against, an API untouched across 27-29.
+  // jsdom is pinned to 19.0.0 via the root package.json "overrides" field.
+  // jsdom 20+ moved its HTML parser (parse5) and, later, its URL/encoding and
+  // CSS engines to ESM-only packages (parse5 7+, then whatwg-url 16+ /
+  // html-encoding-sniffer 6+ / cssstyle 5+ via @asamuzakjp/css-color) that
+  // several of jsdom's own dependencies require() unconditionally at module
+  // load. Vercel's function runtime does not support require() of ESM, so
+  // any jsdom >=20 hard-crashes the moment jsdom loads (ERR_REQUIRE_ESM),
+  // independent of this include list. jsdom 19.0.0 is the last version whose
+  // entire dependency tree is plain CommonJS. @waline/vercel's only use of
+  // jsdom (src/service/markdown/xss.js) is "new JSDOM('').window", purely to
+  // give DOMPurify a window to sanitize comment HTML against; this was
+  // smoke-tested locally against real XSS payloads (script tags, on* handler
+  // attributes, javascript: URLs, forbidden form/input tags) against jsdom
+  // 19 and DOMPurify still strips all of them correctly, so no version-drift
+  // sanitization risk was traded away for compatibility here. Waline's own
+  // markdown/math plugins (@mdit/*, used for KaTeX/MathJax comment syntax)
+  // are ALSO ESM-only internally, but Waline's own code already loads them
+  // via "await import()" rather than require(), which works fine even on
+  // this runtime, so they need no equivalent pin.
   outputFileTracingIncludes: {
     // Route-glob keys are matched with picomatch, so the dynamic segment's
     // brackets must be escaped — an unescaped "[...all]" is glob character-
     // class syntax, not a literal match, and silently matches nothing.
     "/api/comment/\\[\\.\\.\\.all\\]": [
-      "./node_modules/@acemir/cssom/**/*",
-      "./node_modules/@asamuzakjp/css-color/**/*",
-      "./node_modules/@asamuzakjp/css-color/node_modules/lru-cache/**/*",
-      "./node_modules/@asamuzakjp/dom-selector/**/*",
-      "./node_modules/@asamuzakjp/dom-selector/node_modules/lru-cache/**/*",
-      "./node_modules/@asamuzakjp/nwsapi/**/*",
       "./node_modules/@babel/runtime/**/*",
       "./node_modules/@babel/runtime-corejs3/**/*",
       "./node_modules/@cloudbase/adapter-interface/**/*",
@@ -55,12 +59,6 @@ const nextConfig: NextConfig = {
       "./node_modules/@cloudbase/utilities/**/*",
       "./node_modules/@cloudbase/utilities/node_modules/@cloudbase/types/**/*",
       "./node_modules/@cloudbase/wx-cloud-client-sdk/**/*",
-      "./node_modules/@csstools/color-helpers/**/*",
-      "./node_modules/@csstools/css-calc/**/*",
-      "./node_modules/@csstools/css-color-parser/**/*",
-      "./node_modules/@csstools/css-parser-algorithms/**/*",
-      "./node_modules/@csstools/css-syntax-patches-for-csstree/**/*",
-      "./node_modules/@csstools/css-tokenizer/**/*",
       "./node_modules/@fast-csv/format/**/*",
       "./node_modules/@fast-csv/parse/**/*",
       "./node_modules/@koa/cors/**/*",
@@ -100,7 +98,12 @@ const nextConfig: NextConfig = {
       "./node_modules/@waline/vercel/**/*",
       "./node_modules/@xmldom/xmldom/**/*",
       "./node_modules/a-sync-waterfall/**/*",
+      "./node_modules/abab/**/*",
       "./node_modules/accepts/**/*",
+      "./node_modules/acorn/**/*",
+      "./node_modules/acorn-globals/**/*",
+      "./node_modules/acorn-globals/node_modules/acorn/**/*",
+      "./node_modules/acorn-walk/**/*",
       "./node_modules/agent-base/**/*",
       "./node_modules/agentkeepalive/**/*",
       "./node_modules/ajv/**/*",
@@ -124,11 +127,11 @@ const nextConfig: NextConfig = {
       "./node_modules/base64-js/**/*",
       "./node_modules/bcrypt-pbkdf/**/*",
       "./node_modules/better-sqlite3/**/*",
-      "./node_modules/bidi-js/**/*",
       "./node_modules/bignumber.js/**/*",
       "./node_modules/bindings/**/*",
       "./node_modules/bl/**/*",
       "./node_modules/brace-expansion/**/*",
+      "./node_modules/browser-process-hrtime/**/*",
       "./node_modules/bson/**/*",
       "./node_modules/buffer/**/*",
       "./node_modules/buffer-equal-constant-time/**/*",
@@ -158,12 +161,12 @@ const nextConfig: NextConfig = {
       "./node_modules/core-util-is/**/*",
       "./node_modules/cron-parser/**/*",
       "./node_modules/crypt/**/*",
-      "./node_modules/css-tree/**/*",
+      "./node_modules/cssom/**/*",
       "./node_modules/cssstyle/**/*",
-      "./node_modules/cssstyle/node_modules/lru-cache/**/*",
+      "./node_modules/cssstyle/node_modules/cssom/**/*",
       "./node_modules/dashdash/**/*",
       "./node_modules/data-urls/**/*",
-      "./node_modules/data-urls/node_modules/whatwg-mimetype/**/*",
+      "./node_modules/data-urls/node_modules/whatwg-url/**/*",
       "./node_modules/date-format/**/*",
       "./node_modules/debug/**/*",
       "./node_modules/decamelize/**/*",
@@ -181,6 +184,7 @@ const nextConfig: NextConfig = {
       "./node_modules/detect-europe-js/**/*",
       "./node_modules/detect-libc/**/*",
       "./node_modules/dezalgo/**/*",
+      "./node_modules/domexception/**/*",
       "./node_modules/dompurify/**/*",
       "./node_modules/dunder-proto/**/*",
       "./node_modules/ecc-jsbn/**/*",
@@ -194,6 +198,11 @@ const nextConfig: NextConfig = {
       "./node_modules/es-object-atoms/**/*",
       "./node_modules/es-set-tostringtag/**/*",
       "./node_modules/escape-html/**/*",
+      "./node_modules/escodegen/**/*",
+      "./node_modules/escodegen/node_modules/source-map/**/*",
+      "./node_modules/esprima/**/*",
+      "./node_modules/estraverse/**/*",
+      "./node_modules/esutils/**/*",
       "./node_modules/event-target-shim/**/*",
       "./node_modules/eventemitter3/**/*",
       "./node_modules/expand-template/**/*",
@@ -259,9 +268,6 @@ const nextConfig: NextConfig = {
       "./node_modules/javascript-state-machine/**/*",
       "./node_modules/jsbn/**/*",
       "./node_modules/jsdom/**/*",
-      "./node_modules/jsdom/node_modules/agent-base/**/*",
-      "./node_modules/jsdom/node_modules/http-proxy-agent/**/*",
-      "./node_modules/jsdom/node_modules/https-proxy-agent/**/*",
       "./node_modules/json-schema/**/*",
       "./node_modules/json-schema-traverse/**/*",
       "./node_modules/json-stringify-safe/**/*",
@@ -315,7 +321,6 @@ const nextConfig: NextConfig = {
       "./node_modules/markdown-it-emoji/**/*",
       "./node_modules/math-intrinsics/**/*",
       "./node_modules/md5/**/*",
-      "./node_modules/mdn-data/**/*",
       "./node_modules/mdurl/**/*",
       "./node_modules/media-typer/**/*",
       "./node_modules/methods/**/*",
@@ -356,6 +361,7 @@ const nextConfig: NextConfig = {
       "./node_modules/number-is-nan/**/*",
       "./node_modules/nunjucks/**/*",
       "./node_modules/nunjucks/node_modules/commander/**/*",
+      "./node_modules/nwsapi/**/*",
       "./node_modules/oauth-sign/**/*",
       "./node_modules/object-assign/**/*",
       "./node_modules/object-inspect/**/*",
@@ -367,7 +373,6 @@ const nextConfig: NextConfig = {
       "./node_modules/os-locale/**/*",
       "./node_modules/package-json-from-dist/**/*",
       "./node_modules/parse5/**/*",
-      "./node_modules/parse5/node_modules/entities/**/*",
       "./node_modules/parseurl/**/*",
       "./node_modules/path-is-absolute/**/*",
       "./node_modules/path-scurry/**/*",
@@ -398,6 +403,7 @@ const nextConfig: NextConfig = {
       "./node_modules/punycode.js/**/*",
       "./node_modules/pure-uuid/**/*",
       "./node_modules/qs/**/*",
+      "./node_modules/querystringify/**/*",
       "./node_modules/raw-body/**/*",
       "./node_modules/rc/**/*",
       "./node_modules/rc/node_modules/strip-json-comments/**/*",
@@ -406,7 +412,7 @@ const nextConfig: NextConfig = {
       "./node_modules/request/node_modules/form-data/**/*",
       "./node_modules/request/node_modules/tough-cookie/**/*",
       "./node_modules/require-at/**/*",
-      "./node_modules/require-from-string/**/*",
+      "./node_modules/requires-port/**/*",
       "./node_modules/resolve-path/**/*",
       "./node_modules/resolve-path/node_modules/depd/**/*",
       "./node_modules/resolve-path/node_modules/http-errors/**/*",
@@ -437,7 +443,6 @@ const nextConfig: NextConfig = {
       "./node_modules/simple-get/**/*",
       "./node_modules/sorted-array-functions/**/*",
       "./node_modules/source-map/**/*",
-      "./node_modules/source-map-js/**/*",
       "./node_modules/source-map-support/**/*",
       "./node_modules/speakeasy/**/*",
       "./node_modules/speech-rule-engine/**/*",
@@ -515,10 +520,9 @@ const nextConfig: NextConfig = {
       "./node_modules/think-validator/**/*",
       "./node_modules/thinkjs/**/*",
       "./node_modules/thinkjs/node_modules/debug/**/*",
-      "./node_modules/tldts/**/*",
-      "./node_modules/tldts-core/**/*",
       "./node_modules/toidentifier/**/*",
       "./node_modules/tough-cookie/**/*",
+      "./node_modules/tough-cookie/node_modules/universalify/**/*",
       "./node_modules/tr46/**/*",
       "./node_modules/tsscmp/**/*",
       "./node_modules/tunnel-agent/**/*",
@@ -536,6 +540,7 @@ const nextConfig: NextConfig = {
       "./node_modules/unpipe/**/*",
       "./node_modules/uri-js/**/*",
       "./node_modules/url/**/*",
+      "./node_modules/url-parse/**/*",
       "./node_modules/url/node_modules/punycode/**/*",
       "./node_modules/url/node_modules/qs/**/*",
       "./node_modules/util-deprecate/**/*",
@@ -544,6 +549,7 @@ const nextConfig: NextConfig = {
       "./node_modules/vary/**/*",
       "./node_modules/verror/**/*",
       "./node_modules/verror/node_modules/core-util-is/**/*",
+      "./node_modules/w3c-hr-time/**/*",
       "./node_modules/w3c-xmlserializer/**/*",
       "./node_modules/web-streams-polyfill/**/*",
       "./node_modules/webidl-conversions/**/*",
