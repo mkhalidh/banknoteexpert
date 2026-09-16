@@ -29,6 +29,43 @@ const Application = require("@waline/vercel");
 // not from arguments here.
 const walineHandler = Application({});
 
+// The bundled ip2region database is China-focused: it resolves a country
+// for most IPs worldwide but only has province/city/ISP-level detail within
+// China. Waline's own think.ip2region() (src/extend/think.js) only ever
+// joins province + city + isp, so for e.g. a Pakistani visitor's IP it gets
+// back { country: "巴基斯坦", province: "", city: "", isp: "" } and returns
+// an empty string, dropping location entirely rather than showing anything.
+// Wrap it to fall back to the country name (translated to English — the
+// database's country names are themselves in Chinese) when nothing more
+// specific exists, instead of the country field going unused.
+declare const think: { ip2region: (ip: string, opts?: { depth?: number }) => Promise<string> };
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- ip2region ships CommonJS only
+const IP2Region = require("ip2region").default;
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- i18n-iso-countries ships CommonJS only
+const isoCountries = require("i18n-iso-countries");
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- locale JSON data, not a module
+isoCountries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- locale JSON data, not a module
+isoCountries.registerLocale(require("i18n-iso-countries/langs/zh.json"));
+
+const ip2regionInstance = new IP2Region({ ipv4db: process.env.IP2REGION_DB_V4 });
+const originalIp2Region = think.ip2region.bind(think);
+
+think.ip2region = async (ip, opts) => {
+  const primary = await originalIp2Region(ip, opts);
+  if (primary || !ip) return primary;
+
+  try {
+    const countryZh = ip2regionInstance.search(ip)?.country;
+    if (!countryZh) return "";
+
+    const code = isoCountries.getAlpha2Code(countryZh, "zh");
+    return (code && isoCountries.getName(code, "en")) || countryZh;
+  } catch {
+    return "";
+  }
+};
+
 /**
  * Mounts the Waline comment server at /api/*. Waline's own routes
  * (/comment, /article, /user, /ui/...) are root-relative, so the mount
