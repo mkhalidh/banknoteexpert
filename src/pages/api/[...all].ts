@@ -95,6 +95,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     url = query === undefined ? trimmedPath : `${trimmedPath}?${query}`;
 
     req.url = url;
+
+    // Gate the registration page behind a shared secret. Not actually a
+    // vector for creating a second admin any more: @waline/vercel's own
+    // registerAction only grants "administrator" to the very first account
+    // ever created (src/controller/user.js) — with one already registered,
+    // a leaked link just lets a stranger create an inert "guest" account.
+    // Kept anyway on request: obscures the page entirely from anyone who
+    // doesn't have REGISTER_SECRET, rather than relying on that guarantee.
+    if (path === "/ui/register" && process.env.REGISTER_SECRET) {
+      const submittedCode = new URLSearchParams(query).get("code");
+
+      if (submittedCode !== process.env.REGISTER_SECRET) {
+        res.status(404).send("Not found");
+        return;
+      }
+    }
   }
   return walineHandler(req, res);
 }
