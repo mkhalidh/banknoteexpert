@@ -82,6 +82,14 @@ export function XIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function MenuIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Icon {...props}>
+      <path d="M3.25 6h13.5M3.25 10h13.5M3.25 14h13.5" />
+    </Icon>
+  );
+}
+
 export function TagIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <Icon {...props}>

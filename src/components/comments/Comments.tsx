@@ -58,6 +58,12 @@ export function Comments({ path }: { path?: string }) {
         meta: ["nick", "mail", "link"],
         requiredMeta: ["nick"],
         imageUploader: false,
+        // The widget's own in-place "Login" button builds its popup URL
+        // without the "/api" prefix the rest of the widget correctly uses
+        // (a bug in @waline/client itself, not something serverURL can fix),
+        // so it 404s. Guest commenting needs no login anyway; moderation is
+        // handled from the admin dashboard at /api/ui instead.
+        login: "disable",
       }) as unknown as WalineInstance;
     });
 
