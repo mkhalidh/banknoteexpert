@@ -8,6 +8,7 @@ import { ContentSections } from "@/components/content/ContentSections";
 import { PatternExplainer } from "@/components/content/PatternExplainer";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { Comments } from "@/components/comments/Comments";
 import { patternsById } from "@/lib/serial/patterns";
 import {
   content,
@@ -86,6 +87,8 @@ export default function Page() {
       </div>
 
       <RelatedPages title="Keep exploring" links={content.related} />
+
+      <Comments path={content.meta.path} />
 
       <ArticleSchema
         headline={content.meta.h1}

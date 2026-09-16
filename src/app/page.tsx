@@ -10,6 +10,7 @@ import { PatternGrid } from "@/components/content/PatternGrid";
 import { ValueRangeTable } from "@/components/content/ValueRangeTable";
 import { AllToolsGrid } from "@/components/content/AllToolsGrid";
 import { FaqItem } from "@/components/content/FaqItem";
+import { Comments } from "@/components/comments/Comments";
 
 export const metadata: Metadata = buildMetadata({
   title: "Fancy Serial Number Checker: Free US Dollar Bill Serial Lookup",
@@ -337,6 +338,8 @@ export default function Page() {
           <AllToolsGrid />
         </div>
       </section>
+
+      <Comments path="/" />
 
       <JsonLd data={structuredData} />
     </article>

@@ -9,6 +9,7 @@ import { RelatedPages } from "@/components/content/RelatedPages";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { ScarcestStarCallout } from "@/components/content/ScarcestStarCallout";
 import { StarNoteLookup } from "@/components/tools/StarNoteLookup";
+import { Comments } from "@/components/comments/Comments";
 import { patternsById } from "@/lib/serial/patterns";
 import {
   content,
@@ -138,6 +139,8 @@ export default function Page() {
       <ContentSections sections={sectionById("faq")} />
 
       <RelatedPages links={content.related} />
+
+      <Comments path={content.meta.path} />
 
       <ArticleSchema
         headline={content.meta.h1}
