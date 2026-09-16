@@ -4,7 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import "@waline/client/style";
 import "./comments-theme.css";
 
-const SERVER_URL = "/api";
+// @waline/client's underlying transport (@waline/api) always appends its own
+// "api/" segment onto whatever serverURL is configured here, so this must be
+// the bare site origin (empty string = current origin), not "/api" itself,
+// or every request doubles up into "/api/api/...".
+const SERVER_URL = "";
 
 interface WalineInstance {
   destroy: () => void;
