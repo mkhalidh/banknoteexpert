@@ -4,12 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import "@waline/client/style";
 import "./comments-theme.css";
 
-// @waline/client's underlying transport (@waline/api) always appends its own
-// "api/" segment onto whatever serverURL is configured here, so this must be
-// the bare site origin (empty string = current origin), not "/api" itself,
-// or every request doubles up into "/api/api/...".
-const SERVER_URL = "";
-
 interface WalineInstance {
   destroy: () => void;
 }
@@ -51,7 +45,15 @@ export function Comments({ path }: { path?: string }) {
       if (cancelled || !mountRef.current) return;
       instance = init({
         el: mountRef.current,
-        serverURL: SERVER_URL,
+        // Must be a full absolute URL (protocol + host). @waline/client's own
+        // config normalizer blindly prepends "https://" to anything that
+        // doesn't already start with a scheme, so a relative path like "/api"
+        // silently becomes the broken "https:///api", and an empty string
+        // becomes just "https://" with no host at all — either one makes the
+        // widget's own requests fail before they even leave the browser.
+        // @waline/client's transport then appends its own "api/" segment on
+        // top of this, so this is deliberately the bare origin, not ".../api".
+        serverURL: window.location.origin,
         path,
         meta: ["nick", "mail", "link"],
         requiredMeta: ["nick"],
