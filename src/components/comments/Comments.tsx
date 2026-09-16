@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import "@waline/client/style";
 import "./comments-theme.css";
 
-const SERVER_URL = "/api/comment";
+const SERVER_URL = "/api";
 
 interface WalineInstance {
   destroy: () => void;

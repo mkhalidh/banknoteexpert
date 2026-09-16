@@ -9,7 +9,7 @@ guest comment system. There's no separate admin panel to learn — Waline ships 
 own moderation dashboard, reachable from any browser once you're registered.
 
 - **Where it runs:** as an API route inside this same Next.js app
-  (`src/pages/api/comment/[...all].ts`), so it lives on your own domain — no
+  (`src/pages/api/[...all].ts`), so it lives on your own domain — no
   third-party service, no separate deployment to manage.
 - **Where the data lives:** a small Postgres database on
   [Neon](https://console.neon.tech) (free tier), project `banknoteexpert-waline`.
@@ -23,10 +23,10 @@ own moderation dashboard, reachable from any browser once you're registered.
 The first account ever created on a Waline install automatically becomes the
 admin. Do this once, right after the first deploy:
 
-1. Visit `https://banknoteexpert.com/api/comment/ui/register`
+1. Visit `https://banknoteexpert.com/api/ui/register`
 2. Fill in your name, email, and a password — this becomes your login for the
    dashboard, and is separate from anything else (LeanCloud, Vercel, Neon).
-3. You're now the admin. Bookmark **`https://banknoteexpert.com/api/comment/ui`**
+3. You're now the admin. Bookmark **`https://banknoteexpert.com/api/ui`**
    — that's the dashboard for everything below.
 
 ## Daily moderation
@@ -114,4 +114,4 @@ pages; there's no upside to a comment box nobody will ever read.
   means the database connection is down (check Neon hasn't auto-suspended on
   the free tier, or that env vars are still correct in Vercel).
 - **You can't reach the dashboard:** the URL is always
-  `<your-domain>/api/comment/ui`, not a separate site.
+  `<your-domain>/api/ui`, not a separate site.

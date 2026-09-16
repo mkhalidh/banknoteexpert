@@ -43,7 +43,7 @@ const nextConfig: NextConfig = {
     // Route-glob keys are matched with picomatch, so the dynamic segment's
     // brackets must be escaped — an unescaped "[...all]" is glob character-
     // class syntax, not a literal match, and silently matches nothing.
-    "/api/comment/\\[\\.\\.\\.all\\]": [
+    "/api/\\[\\.\\.\\.all\\]": [
       "./node_modules/@babel/runtime/**/*",
       "./node_modules/@babel/runtime-corejs3/**/*",
       "./node_modules/@cloudbase/adapter-interface/**/*",
