@@ -12,6 +12,7 @@ import type { ComponentType, SVGProps } from "react";
  * interactivity.
  */
 const NAV_ITEMS: { path: string; label: string; icon: ComponentType<SVGProps<SVGSVGElement>> }[] = [
+  { path: "/hub/", label: "Hub", icon: DocumentIcon },
   { path: "/fancy-serial-numbers/", label: "Fancy Serial Numbers", icon: SparkleIcon },
   { path: "/fancy-serial-number-value/", label: "Value Guide", icon: TagIcon },
   { path: "/star-note-lookup/", label: "Star Notes Lookup", icon: StarIcon },

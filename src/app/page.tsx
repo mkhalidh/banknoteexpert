@@ -61,10 +61,11 @@ const whereIsSerial = getRoute("/where-is-the-serial-number-on-a-dollar-bill/");
 
 export default function Page() {
   return (
-    <article className="flex flex-col gap-14">
+    <article className="page-shell flex flex-col gap-14 p-4 md:p-6 lg:p-8">
       {/* Section 1 — H1, subhead, input form (nothing above this) */}
-      <header>
-        <h1 className="text-display">Fancy Serial Number Checker</h1>
+      <header className="hero-panel">
+        <div className="eyebrow">Banknote intelligence</div>
+        <h1 className="mt-4 text-display">Fancy Serial Number Checker</h1>
         <p className="mt-3 max-w-2xl text-lead">
           Paste your bill&rsquo;s 8-digit serial number and see instantly whether
           it matches a collectible pattern, how rare it is, and roughly what it
@@ -75,6 +76,20 @@ export default function Page() {
           <FancySerialChecker />
         </div>
       </header>
+
+      <section aria-labelledby="hub-categories" className="space-y-4">
+        <div className="eyebrow">Category hub</div>
+        <h2 id="hub-categories" className="text-h2">Browse the banknote categories</h2>
+        <div className="hub-grid mt-4">
+          {[{ href: "/fancy-serial-numbers/", title: "Fancy Serial Numbers", copy: "Pattern library · article guides · rarity analysis" }, { href: "/star-note-lookup/", title: "Star Notes", copy: "Replacement notes · star value checks · lookup tool" }, { href: "/2-dollar-bill-value/", title: "$2 Bill Guide", copy: "Series history · value guide · serial lookup" }].map((item) => (
+            <Link key={item.href} href={item.href} className="hub-card">
+              <span className="hub-card__kicker">Tool</span>
+              <span className="hub-card__title">{item.title}</span>
+              <span className="hub-card__copy">{item.copy}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Section 3 — where to find the serial number */}
       <section aria-labelledby="find-serial">

@@ -59,9 +59,9 @@ export function FancySerialChecker() {
   }
 
   return (
-    <div>
+    <div className="rounded-[1.5rem] border border-[rgba(31,92,66,0.12)] bg-[rgba(255,255,255,0.68)] p-4 shadow-[0_14px_32px_-22px_rgba(18,45,34,0.3)] md:p-6">
       <form
-        className="flex flex-col gap-3 sm:flex-row"
+        className="flex flex-col gap-3 rounded-[1.25rem] border border-[rgba(31,92,66,0.12)] bg-[rgba(255,255,255,0.7)] p-3 md:flex-row md:items-end md:p-4"
         onSubmit={(event) => {
           event.preventDefault();
           setSubmitted(raw);
@@ -69,10 +69,10 @@ export function FancySerialChecker() {
         noValidate
       >
         <div className="flex-1">
-          <label htmlFor={inputId} className="block text-sm font-medium">
+          <label htmlFor={inputId} className="block text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
             Enter your bill&rsquo;s serial number
           </label>
-          <div className="relative mt-1">
+          <div className="relative mt-1.5">
             <input
               id={inputId}
               name="serial"
@@ -85,7 +85,7 @@ export function FancySerialChecker() {
               onChange={(event) => setRaw(event.target.value)}
               aria-describedby={errorMessage ? errorId : undefined}
               aria-invalid={errorMessage ? true : undefined}
-              className="w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-4 py-3.5 font-mono text-lg tracking-wider text-[var(--foreground)] shadow-sm transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
+              className="w-full rounded-2xl border border-[rgba(31,92,66,0.15)] bg-[rgba(247,243,236,0.9)] px-4 py-3.5 font-mono text-lg tracking-[0.22em] text-[var(--foreground)] shadow-inner transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
             />
             {raw ? (
               <button
@@ -101,14 +101,14 @@ export function FancySerialChecker() {
         </div>
         <button
           type="submit"
-          className="btn-primary mt-1 h-[52px] shrink-0 self-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:mt-7"
+          className="btn-primary mt-1 h-[52px] shrink-0 self-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] md:mt-0"
         >
           Check
         </button>
       </form>
 
       {/* Result region: height reserved up front so there is zero layout shift. */}
-      <div aria-live="polite" className="card mt-6 min-h-[22rem] p-5">
+      <div aria-live="polite" className="card mt-6 min-h-[22rem] overflow-hidden rounded-[1.5rem] p-5">
         {errorMessage ? (
           <p
             id={errorId}

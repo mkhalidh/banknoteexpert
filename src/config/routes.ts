@@ -55,6 +55,17 @@ export const routes: RouteEntry[] = [
     changeFrequency: "weekly",
     indexable: true,
   },
+  {
+    path: "/hub/",
+    title: "Banknote Hub: Serial Number Categories & Guide Library",
+    description:
+      "Browse banknote categories, lookup tools and value guides in one place.",
+    silo: "home",
+    pageType: "home",
+    priority: 0.9,
+    changeFrequency: "weekly",
+    indexable: true,
+  },
 
   // SILO 1 — Fancy serial numbers
   {

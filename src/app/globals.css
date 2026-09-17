@@ -69,11 +69,91 @@ html {
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top, rgba(38, 94, 70, 0.12), transparent 28%),
+    linear-gradient(180deg, #f5f0e7 0%, #f7f2e7 100%);
   color: var(--foreground);
   transition:
     background-color 200ms ease-out,
     color 200ms ease-out;
+}
+
+main {
+  position: relative;
+}
+
+.page-shell {
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(31, 92, 66, 0.08);
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 50px -30px rgba(18, 45, 34, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.hero-panel {
+  border: 1px solid rgba(31, 92, 66, 0.14);
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.95), rgba(244, 240, 231, 0.9));
+  border-radius: 1.5rem;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+}
+
+.hub-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hub-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.1rem 1.1rem 1.15rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(31, 92, 66, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(241, 244, 240, 0.8));
+  box-shadow: 0 10px 24px -20px rgba(18, 45, 34, 0.35);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+}
+
+.hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px -18px rgba(18, 45, 34, 0.22);
+}
+
+.hub-card__kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 9999px;
+  background: rgba(31, 92, 66, 0.1);
+  color: var(--accent);
+  font-size: 0.7rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+}
+
+.hub-card__title {
+  font-family: var(--font-display);
+  color: var(--foreground);
+  font-size: clamp(1.25rem, 1.1rem + 0.45vw, 1.5rem);
+  line-height: 1.1;
+}
+
+.hub-card__copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+@media (min-width: 768px) {
+  .hub-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* Every clickable control shows a pointer, so it reads as clickable at a glance. */
