@@ -79,31 +79,38 @@ think.ip2region = async (ip, opts) => {
  * URLs, where ctx.serverURL defaults to the site origin. Mounting anywhere
  * other than the site root's /api/* makes those self-generated URLs point
  * at a path that doesn't exist.
+ *
+ * The dashboard/API split below exists because Waline's own middleware
+ * chain (src/config/middleware.js) treats these two route families
+ * differently, and both matter:
+ *
+ * - The "dashboard" middleware (serves /ui/register, /ui/login, etc.) runs
+ *   BEFORE Waline's router and matches ctx.path against a bare /^\/ui/
+ *   regex — it never sees the router's own "/api" prefix stripping, so an
+ *   "/api"-prefixed path here 404s outright ("url `/api/ui/x` not found").
+ * - The "prefix-warning" middleware also runs before the router and sets
+ *   ctx.state.deprecated to true UNLESS ctx.path already starts with
+ *   "/api" for API resource routes (/comment, /user, /article, /oauth,
+ *   /token, /verification, /db). Since we're the ones stripping "/api" in
+ *   the first place, every single response was "deprecated" (an old,
+ *   unwrapped {page,...} shape instead of {errno,errmsg,data}) — which is
+ *   why the modern @waline/admin dashboard bundle (unpkg, always latest,
+ *   not pinned to this @waline/vercel version) threw an uncaught error and
+ *   silently failed to render the comment moderation ("Waiting") list.
+ *
+ * So: strip "/api" only for /ui/* paths; leave it in place for everything
+ * else, matching how Waline's own router (options.prefix: ["/api", ...])
+ * expects to receive them.
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.url) {
-    let url = req.url.replace(/^\/api/, "") || "/";
+    let url = req.url;
+    const [rawPath, query] = url.split("?");
+    const path = rawPath.length > 1 ? rawPath.replace(/\/+$/, "") || "/" : rawPath;
 
-    // trailingSlash: true (next.config.ts) redirects every request here to
-    // end in "/" before it arrives, but Waline's own REST router (ID routes
-    // like PUT/DELETE /comment/:id) fails to extract the :id segment when
-    // one follows it, silently resolving it to an empty string and crashing
-    // the underlying SQL query. Stripping it back off is safe: Waline's own
-    // routes are otherwise slash-insensitive, and "/" itself is left alone.
-    const [path, query] = url.split("?");
-    const trimmedPath = path.length > 1 ? path.replace(/\/+$/, "") || "/" : path;
-    url = query === undefined ? trimmedPath : `${trimmedPath}?${query}`;
+    const isDashboardPath = path === "/api/ui" || path.startsWith("/api/ui/");
 
-    req.url = url;
-
-    // Gate the registration page behind a shared secret. Not actually a
-    // vector for creating a second admin any more: @waline/vercel's own
-    // registerAction only grants "administrator" to the very first account
-    // ever created (src/controller/user.js) — with one already registered,
-    // a leaked link just lets a stranger create an inert "guest" account.
-    // Kept anyway on request: obscures the page entirely from anyone who
-    // doesn't have REGISTER_SECRET, rather than relying on that guarantee.
-    if (path === "/ui/register" && process.env.REGISTER_SECRET) {
+    if (path === "/api/ui/register" && process.env.REGISTER_SECRET) {
       const submittedCode = new URLSearchParams(query).get("code");
 
       if (submittedCode !== process.env.REGISTER_SECRET) {
@@ -111,6 +118,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;
       }
     }
+
+    const finalPath = isDashboardPath ? path.replace(/^\/api/, "") || "/" : path;
+
+    url = query === undefined ? finalPath : `${finalPath}?${query}`;
+    req.url = url;
   }
   return walineHandler(req, res);
 }
