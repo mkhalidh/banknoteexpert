@@ -1,0 +1,794 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1789593432.655095,
+    "seen": 1789846862.5687273,
+    "ast_hash": "bb1730a6d272230017087d3a6f631778",
+    "semantic_hash": "bb1730a6d272230017087d3a6f631778"
+  },
+  "eslint.config.mjs": {
+    "mtime": 1788881529.0,
+    "seen": 1789846862.5687273,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "next.config.ts": {
+    "mtime": 1789587114.0538442,
+    "seen": 1789846862.5687273,
+    "ast_hash": "14756d2765628ae35e8faac23ee349a3",
+    "semantic_hash": "14756d2765628ae35e8faac23ee349a3"
+  },
+  "package.json": {
+    "mtime": 1789593532.3692112,
+    "seen": 1789846862.5687273,
+    "ast_hash": "9482e97927d7bb13918bf336fd18ce36",
+    "semantic_hash": "9482e97927d7bb13918bf336fd18ce36"
+  },
+  "postcss.config.mjs": {
+    "mtime": 1788881529.0,
+    "seen": 1789846862.5687273,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "scripts/audit-links.ts": {
+    "mtime": 1789933824.7752402,
+    "seen": 1789934815.849157,
+    "ast_hash": "b19ea525152b95cd128fbeff4fb9ef61",
+    "semantic_hash": ""
+  },
+  "scripts/check-data.ts": {
+    "mtime": 1789400780.0,
+    "seen": 1789846862.5687273,
+    "ast_hash": "07fb69c646019802c1421bfa25987c5f",
+    "semantic_hash": "07fb69c646019802c1421bfa25987c5f"
+  },
+  "scripts/collect-waline-deps.cjs": {
+    "mtime": 1789569956.8273664,
+    "seen": 1789846862.5687273,
+    "ast_hash": "ffd3efce257f4ba11748418b628e4142",
+    "semantic_hash": "ffd3efce257f4ba11748418b628e4142"
+  },
+  "src/app/2-dollar-bill-serial-number-lookup/page.tsx": {
+    "mtime": 1789564735.8094628,
+    "seen": 1789846862.5687273,
+    "ast_hash": "7399c45d2ac0e3f29154b388e2f71879",
+    "semantic_hash": "7399c45d2ac0e3f29154b388e2f71879"
+  },
+  "src/app/2-dollar-bill-value/page.tsx": {
+    "mtime": 1789564735.9573815,
+    "seen": 1789846862.5687273,
+    "ast_hash": "f686ea530f36037bc6d9e7bf4bc815b5",
+    "semantic_hash": "f686ea530f36037bc6d9e7bf4bc815b5"
+  },
+  "src/app/about/page.tsx": {
+    "mtime": 1789407862.740181,
+    "seen": 1789846862.5687273,
+    "ast_hash": "313882ec986fde8128a65056b9a7fe4f",
+    "semantic_hash": "313882ec986fde8128a65056b9a7fe4f"
+  },
+  "src/app/fancy-serial-number-value/page.tsx": {
+    "mtime": 1789933336.5877924,
+    "seen": 1789933498.7543926,
+    "ast_hash": "0d9ecc891254dd4997cc78f26c5e75e7",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/birthday-note/page.tsx": {
+    "mtime": 1789471101.204471,
+    "seen": 1789846862.5687273,
+    "ast_hash": "a87a35043551a653c691c3dee15b99f0",
+    "semantic_hash": "a87a35043551a653c691c3dee15b99f0"
+  },
+  "src/app/fancy-serial-numbers/ladder/page.tsx": {
+    "mtime": 1789471071.9135911,
+    "seen": 1789846862.5687273,
+    "ast_hash": "6da3df53fb5455f1d8f5e62d659fd50c",
+    "semantic_hash": "6da3df53fb5455f1d8f5e62d659fd50c"
+  },
+  "src/app/fancy-serial-numbers/low-serial-number/page.tsx": {
+    "mtime": 1789471089.1749334,
+    "seen": 1789846862.5687273,
+    "ast_hash": "26769e7cbae808c6e54143a8ffa6f958",
+    "semantic_hash": "26769e7cbae808c6e54143a8ffa6f958"
+  },
+  "src/app/fancy-serial-numbers/page.tsx": {
+    "mtime": 1789900579.6721218,
+    "seen": 1789901943.9267669,
+    "ast_hash": "4ec0fc4b5eb3e34d9a6b6bf86d537e05",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/radar/page.tsx": {
+    "mtime": 1789471051.0771291,
+    "seen": 1789846862.5687273,
+    "ast_hash": "6fdfe884209299abe0e876eafaa16478",
+    "semantic_hash": "6fdfe884209299abe0e876eafaa16478"
+  },
+  "src/app/layout.tsx": {
+    "mtime": 1789847963.036693,
+    "seen": 1789866322.726213,
+    "ast_hash": "d2cb41695afb9f8611b15e734be47201",
+    "semantic_hash": ""
+  },
+  "src/app/methodology/page.tsx": {
+    "mtime": 1789407852.1026847,
+    "seen": 1789846862.5687273,
+    "ast_hash": "99cecc5147f5b8cf11ca5d954c605aa3",
+    "semantic_hash": "99cecc5147f5b8cf11ca5d954c605aa3"
+  },
+  "src/app/not-found.tsx": {
+    "mtime": 1789472146.2278867,
+    "seen": 1789846862.5687273,
+    "ast_hash": "7926fd3b7f66655920116ad39ddf433a",
+    "semantic_hash": "7926fd3b7f66655920116ad39ddf433a"
+  },
+  "src/app/opengraph-image.tsx": {
+    "mtime": 1789472152.9451668,
+    "seen": 1789846862.5687273,
+    "ast_hash": "02d40137dbeb22f14dc44a5e5e008c18",
+    "semantic_hash": "02d40137dbeb22f14dc44a5e5e008c18"
+  },
+  "src/app/page.tsx": {
+    "mtime": 1789934497.1793787,
+    "seen": 1789934815.849157,
+    "ast_hash": "1b7ef466dee3fec213664c242f6761e2",
+    "semantic_hash": ""
+  },
+  "src/app/privacy/page.tsx": {
+    "mtime": 1789407851.507964,
+    "seen": 1789846862.5687273,
+    "ast_hash": "adda6a56d6c832ed6451ce274956e585",
+    "semantic_hash": "adda6a56d6c832ed6451ce274956e585"
+  },
+  "src/app/robots.ts": {
+    "mtime": 1788881944.0,
+    "seen": 1789846862.5687273,
+    "ast_hash": "3d2432805b63aedee6c53244de2e3c43",
+    "semantic_hash": "3d2432805b63aedee6c53244de2e3c43"
+  },
+  "src/app/sitemap.ts": {
+    "mtime": 1788881939.0,
+    "seen": 1789846862.5687273,
+    "ast_hash": "814e680b49729eeb04119ba3daba6b7e",
+    "semantic_hash": "814e680b49729eeb04119ba3daba6b7e"
+  },
+  "src/app/star-note-lookup/page.tsx": {
+    "mtime": 1789847963.0466633,
+    "seen": 1789866322.726213,
+    "ast_hash": "c970472136250156d5ff5c511e2843b2",
+    "semantic_hash": ""
+  },
+  "src/app/terms/page.tsx": {
+    "mtime": 1789407856.5973191,
+    "seen": 1789846862.5687273,
+    "ast_hash": "952ec4cc8bc886bd13418a017fe9bb2d",
+    "semantic_hash": "952ec4cc8bc886bd13418a017fe9bb2d"
+  },
+  "src/app/where-is-the-serial-number-on-a-dollar-bill/page.tsx": {
+    "mtime": 1789900585.1735594,
+    "seen": 1789901943.9277635,
+    "ast_hash": "a8dc506831fbd6eb646e98cbc0c6e8db",
+    "semantic_hash": ""
+  },
+  "src/components/comments/Comments.tsx": {
+    "mtime": 1789591599.348274,
+    "seen": 1789846862.5687273,
+    "ast_hash": "798e8d23ce6f15933d65672865a15919",
+    "semantic_hash": "798e8d23ce6f15933d65672865a15919"
+  },
+  "src/components/content/AllToolsGrid.tsx": {
+    "mtime": 1789847963.0556386,
+    "seen": 1789866322.726213,
+    "ast_hash": "6342265cd4706b0d53ac6fe7368b2881",
+    "semantic_hash": ""
+  },
+  "src/components/content/AnchorNav.tsx": {
+    "mtime": 1789847963.0606256,
+    "seen": 1789866322.726213,
+    "ast_hash": "b5c29d1b440faea12a9db7cea3900d95",
+    "semantic_hash": ""
+  },
+  "src/components/content/ComparisonTable.tsx": {
+    "mtime": 1789407040.4442942,
+    "seen": 1789846862.569725,
+    "ast_hash": "0f5e7488c8ed572600550f836d655e4d",
+    "semantic_hash": "0f5e7488c8ed572600550f836d655e4d"
+  },
+  "src/components/content/ContentSections.tsx": {
+    "mtime": 1789847963.0576346,
+    "seen": 1789866322.726213,
+    "ast_hash": "7df6ebd2e332ec8da007de281958ca71",
+    "semantic_hash": ""
+  },
+  "src/components/content/FaqItem.tsx": {
+    "mtime": 1789406953.024331,
+    "seen": 1789846862.569725,
+    "ast_hash": "6a84fce5a0c0a3ebf38d6234f4d4daef",
+    "semantic_hash": "6a84fce5a0c0a3ebf38d6234f4d4daef"
+  },
+  "src/components/content/KeyTakeaways.tsx": {
+    "mtime": 1789847963.059628,
+    "seen": 1789866322.726213,
+    "ast_hash": "aa3ef99b9fa166627d2b39a52b054651",
+    "semantic_hash": ""
+  },
+  "src/components/content/LastUpdated.tsx": {
+    "mtime": 1788885432.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "6405aa04ff57baf641c33f981bd42d5f",
+    "semantic_hash": "6405aa04ff57baf641c33f981bd42d5f"
+  },
+  "src/components/content/PatternExplainer.tsx": {
+    "mtime": 1789847963.0646157,
+    "seen": 1789866322.726213,
+    "ast_hash": "c17e22966fd1e0a01c2101fbcf0ced8d",
+    "semantic_hash": ""
+  },
+  "src/components/content/PatternGrid.tsx": {
+    "mtime": 1789847963.0516508,
+    "seen": 1789866322.726213,
+    "ast_hash": "7b41a46bd942b054ccf40812823a70ac",
+    "semantic_hash": ""
+  },
+  "src/components/content/RelatedPages.tsx": {
+    "mtime": 1789847963.0626209,
+    "seen": 1789866322.726213,
+    "ast_hash": "7294b8946b2588cb0e41a2745ea23406",
+    "semantic_hash": ""
+  },
+  "src/components/content/ScarcestStarCallout.tsx": {
+    "mtime": 1789472257.2623038,
+    "seen": 1789846862.569725,
+    "ast_hash": "1a6f22ec600cb2eae2082236020db438",
+    "semantic_hash": "1a6f22ec600cb2eae2082236020db438"
+  },
+  "src/components/content/SerialDiagram.tsx": {
+    "mtime": 1789865189.3772142,
+    "seen": 1789866322.726213,
+    "ast_hash": "75c5ebc5a1ede7849af2430ebea76471",
+    "semantic_hash": ""
+  },
+  "src/components/content/SourcesBlock.tsx": {
+    "mtime": 1789407028.3476765,
+    "seen": 1789846862.569725,
+    "ast_hash": "0a43f75cd0daa1dda234fc9b6a37dcb8",
+    "semantic_hash": "0a43f75cd0daa1dda234fc9b6a37dcb8"
+  },
+  "src/components/content/TwoDollarValueChart.tsx": {
+    "mtime": 1789472248.656283,
+    "seen": 1789846862.569725,
+    "ast_hash": "8b92df2e24ca3322fe59df901e2acb39",
+    "semantic_hash": "8b92df2e24ca3322fe59df901e2acb39"
+  },
+  "src/components/content/ValueRangeTable.tsx": {
+    "mtime": 1789933339.0735185,
+    "seen": 1789933498.7543926,
+    "ast_hash": "a8f2579fd4b25713942be6df991469d4",
+    "semantic_hash": ""
+  },
+  "src/components/layout/Footer.tsx": {
+    "mtime": 1789847963.0416772,
+    "seen": 1789866322.726213,
+    "ast_hash": "b2c925095af7d65cf52d3c8b51120257",
+    "semantic_hash": ""
+  },
+  "src/components/layout/Header.tsx": {
+    "mtime": 1789900482.6332781,
+    "seen": 1789901943.9277635,
+    "ast_hash": "2f26404d1a9ef6f292b76d65f30dc938",
+    "semantic_hash": ""
+  },
+  "src/components/layout/MobileNav.tsx": {
+    "mtime": 1789847963.0406792,
+    "seen": 1789866322.726213,
+    "ast_hash": "f1a01895a7846d4353adeb9353f62ac3",
+    "semantic_hash": ""
+  },
+  "src/components/layout/ThemeToggle.tsx": {
+    "mtime": 1789409741.5483015,
+    "seen": 1789846862.569725,
+    "ast_hash": "fd5cc57cd0381e8339c0f0c99f0ef583",
+    "semantic_hash": "fd5cc57cd0381e8339c0f0c99f0ef583"
+  },
+  "src/components/seo/ArticleSchema.tsx": {
+    "mtime": 1789933340.1785877,
+    "seen": 1789933498.7543926,
+    "ast_hash": "2137ceb69d4e34998970f4add282ce09",
+    "semantic_hash": ""
+  },
+  "src/components/seo/Breadcrumbs.tsx": {
+    "mtime": 1789407063.8007843,
+    "seen": 1789846862.569725,
+    "ast_hash": "157f56485ee87f54fb6865ebb325211f",
+    "semantic_hash": "157f56485ee87f54fb6865ebb325211f"
+  },
+  "src/components/seo/JsonLd.tsx": {
+    "mtime": 1788881920.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "2c6e6bbdd9a896bb8c63e3c6b43868b2",
+    "semantic_hash": "2c6e6bbdd9a896bb8c63e3c6b43868b2"
+  },
+  "src/components/tools/FancySerialChecker.tsx": {
+    "mtime": 1789847963.048659,
+    "seen": 1789866322.726213,
+    "ast_hash": "8d5b108fe290236fe569831639efe61b",
+    "semantic_hash": ""
+  },
+  "src/components/tools/ScoreMeter.tsx": {
+    "mtime": 1789408806.9322972,
+    "seen": 1789846862.569725,
+    "ast_hash": "dcbe5325e30106d988aa96049128fe02",
+    "semantic_hash": "dcbe5325e30106d988aa96049128fe02"
+  },
+  "src/components/tools/StarNoteLookup.tsx": {
+    "mtime": 1789865513.575502,
+    "seen": 1789866322.726213,
+    "ast_hash": "3e08ea0a3ef36572add54068591611a4",
+    "semantic_hash": ""
+  },
+  "src/components/tools/TwoDollarSerialLookup.tsx": {
+    "mtime": 1789472191.6078744,
+    "seen": 1789846862.569725,
+    "ast_hash": "03ff5c10086bd3314c4d7437915e64cc",
+    "semantic_hash": "03ff5c10086bd3314c4d7437915e64cc"
+  },
+  "src/components/tools/ValueResultPanel.tsx": {
+    "mtime": 1789472220.9249072,
+    "seen": 1789846862.569725,
+    "ast_hash": "0f327e6ff72ff09696658dedb2d38d69",
+    "semantic_hash": "0f327e6ff72ff09696658dedb2d38d69"
+  },
+  "src/components/ui/icons.tsx": {
+    "mtime": 1789591737.2359757,
+    "seen": 1789846862.569725,
+    "ast_hash": "2c05f87513798fb1a7e0b4a2ee385a7b",
+    "semantic_hash": "2c05f87513798fb1a7e0b4a2ee385a7b"
+  },
+  "src/config/routes.ts": {
+    "mtime": 1789934553.6797106,
+    "seen": 1789934815.849157,
+    "ast_hash": "af7f45d5c2456a514893ce73348b3d7a",
+    "semantic_hash": ""
+  },
+  "src/config/site.ts": {
+    "mtime": 1789405408.8193014,
+    "seen": 1789846862.569725,
+    "ast_hash": "49e7c0d886281917f39f33f893973657",
+    "semantic_hash": "49e7c0d886281917f39f33f893973657"
+  },
+  "src/content/about.ts": {
+    "mtime": 1789933337.0276153,
+    "seen": 1789933498.7543926,
+    "ast_hash": "73908f12220db1e62728e99bde374880",
+    "semantic_hash": ""
+  },
+  "src/content/birthday-note.ts": {
+    "mtime": 1789934553.106045,
+    "seen": 1789934815.849157,
+    "ast_hash": "61c09ef3d9f84db4bf42bbc89d2d35d0",
+    "semantic_hash": ""
+  },
+  "src/content/fancy-serial-number-value.ts": {
+    "mtime": 1789933337.5173056,
+    "seen": 1789933498.7543926,
+    "ast_hash": "37b8bddaa18201b66ba764abab252c80",
+    "semantic_hash": ""
+  },
+  "src/content/fancy-serial-numbers.ts": {
+    "mtime": 1789472100.7981813,
+    "seen": 1789846862.569725,
+    "ast_hash": "5954dfee02461a5b9ebef33a54faa6b1",
+    "semantic_hash": "5954dfee02461a5b9ebef33a54faa6b1"
+  },
+  "src/content/ladder.ts": {
+    "mtime": 1789934541.121132,
+    "seen": 1789934815.849157,
+    "ast_hash": "a064fbe2d623210c1c3212d96a536256",
+    "semantic_hash": ""
+  },
+  "src/content/low-serial-number.ts": {
+    "mtime": 1789934548.793884,
+    "seen": 1789934815.849157,
+    "ast_hash": "9d21b013f77d7913bb8513e2600df58e",
+    "semantic_hash": ""
+  },
+  "src/content/methodology.ts": {
+    "mtime": 1789471857.1725476,
+    "seen": 1789846862.569725,
+    "ast_hash": "8bc83f1f0702eb2ff0cc5b1e79af701e",
+    "semantic_hash": "8bc83f1f0702eb2ff0cc5b1e79af701e"
+  },
+  "src/content/privacy.ts": {
+    "mtime": 1789471836.3819315,
+    "seen": 1789846862.569725,
+    "ast_hash": "6d1abad3563a5d0a103503190f298c92",
+    "semantic_hash": "6d1abad3563a5d0a103503190f298c92"
+  },
+  "src/content/radar.ts": {
+    "mtime": 1789934525.054388,
+    "seen": 1789934815.849157,
+    "ast_hash": "f3d6b9cba59450b3bed09de81736ab62",
+    "semantic_hash": ""
+  },
+  "src/content/star-note-lookup.ts": {
+    "mtime": 1789471965.209176,
+    "seen": 1789846862.569725,
+    "ast_hash": "7e200e229a7171139bf3e32aeded21ca",
+    "semantic_hash": "7e200e229a7171139bf3e32aeded21ca"
+  },
+  "src/content/terms.ts": {
+    "mtime": 1788887577.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "bd1df69ac263e8fe584ff0e9eb432be8",
+    "semantic_hash": "bd1df69ac263e8fe584ff0e9eb432be8"
+  },
+  "src/content/two-dollar-serial-lookup.ts": {
+    "mtime": 1789933338.1256776,
+    "seen": 1789933498.7543926,
+    "ast_hash": "11f69f8a727d427a7e1e7c010817a4f0",
+    "semantic_hash": ""
+  },
+  "src/content/two-dollar-value.ts": {
+    "mtime": 1789472027.5712464,
+    "seen": 1789846862.569725,
+    "ast_hash": "e0792bd899a9db82bb535b8c304fad29",
+    "semantic_hash": "e0792bd899a9db82bb535b8c304fad29"
+  },
+  "src/content/types.ts": {
+    "mtime": 1788885938.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "383aef31e7fc948c3991e4cb62d2b67d",
+    "semantic_hash": "383aef31e7fc948c3991e4cb62d2b67d"
+  },
+  "src/content/where-is-serial.ts": {
+    "mtime": 1789472046.44687,
+    "seen": 1789846862.569725,
+    "ast_hash": "29c54d6940af53f05d82eacd8518f876",
+    "semantic_hash": "29c54d6940af53f05d82eacd8518f876"
+  },
+  "src/data/star-notes/runs.ts": {
+    "mtime": 1789399482.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "68439bd999959550bec16616deb37b32",
+    "semantic_hash": "68439bd999959550bec16616deb37b32"
+  },
+  "src/data/two-dollar-series.ts": {
+    "mtime": 1788887665.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "14df1ceddc5df7d1b4e9f6b2eed146b4",
+    "semantic_hash": "14df1ceddc5df7d1b4e9f6b2eed146b4"
+  },
+  "src/data/two-dollar-values.ts": {
+    "mtime": 1789398515.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "f1e8978eb5f21b42298c8e3c04e6aaac",
+    "semantic_hash": "f1e8978eb5f21b42298c8e3c04e6aaac"
+  },
+  "src/data/value-ranges.ts": {
+    "mtime": 1789398513.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "50884da7d60e780c7d2336ad64b6edc2",
+    "semantic_hash": "50884da7d60e780c7d2336ad64b6edc2"
+  },
+  "src/lib/seo.ts": {
+    "mtime": 1789933335.8052082,
+    "seen": 1789933498.7543926,
+    "ast_hash": "904eacf20e603869c10f5a7e0cc0783a",
+    "semantic_hash": ""
+  },
+  "src/lib/serial/__tests__/parse.test.ts": {
+    "mtime": 1788883331.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "5bea00feaef9fb1c96624edc1b040162",
+    "semantic_hash": "5bea00feaef9fb1c96624edc1b040162"
+  },
+  "src/lib/serial/__tests__/patterns.test.ts": {
+    "mtime": 1788885153.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "78092d0a9205acb7cce8fc969380f3b8",
+    "semantic_hash": "78092d0a9205acb7cce8fc969380f3b8"
+  },
+  "src/lib/serial/__tests__/score.test.ts": {
+    "mtime": 1788885164.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "abac23bd1a20e30b0111d7a66247e1c4",
+    "semantic_hash": "abac23bd1a20e30b0111d7a66247e1c4"
+  },
+  "src/lib/serial/__tests__/two-dollar.test.ts": {
+    "mtime": 1788887241.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "faa8e0646d8a894928652b65f8985363",
+    "semantic_hash": "faa8e0646d8a894928652b65f8985363"
+  },
+  "src/lib/serial/__tests__/value.test.ts": {
+    "mtime": 1789400918.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "d1a28cd5b09c559fbee50529536ddbbc",
+    "semantic_hash": "d1a28cd5b09c559fbee50529536ddbbc"
+  },
+  "src/lib/serial/index.ts": {
+    "mtime": 1789400295.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "b2d282d876509c950ce2e350548eedfc",
+    "semantic_hash": "b2d282d876509c950ce2e350548eedfc"
+  },
+  "src/lib/serial/parse.ts": {
+    "mtime": 1788883205.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "c7fc273c6ed030caf4414e82532a63ea",
+    "semantic_hash": "c7fc273c6ed030caf4414e82532a63ea"
+  },
+  "src/lib/serial/patterns.ts": {
+    "mtime": 1788885087.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "66494d71e5fd4e85152329762f69ff24",
+    "semantic_hash": "66494d71e5fd4e85152329762f69ff24"
+  },
+  "src/lib/serial/score.ts": {
+    "mtime": 1788885119.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "bfe22efb091aad7c888aa4773d15d192",
+    "semantic_hash": "bfe22efb091aad7c888aa4773d15d192"
+  },
+  "src/lib/serial/value.ts": {
+    "mtime": 1789400288.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "8df4a79cd04099afc046961ace9266e4",
+    "semantic_hash": "8df4a79cd04099afc046961ace9266e4"
+  },
+  "src/lib/star-note/__tests__/lookup.test.ts": {
+    "mtime": 1789400933.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "ef8d31892477029ef045deb877d4025b",
+    "semantic_hash": "ef8d31892477029ef045deb877d4025b"
+  },
+  "src/lib/star-note/lookup.ts": {
+    "mtime": 1789472266.96827,
+    "seen": 1789846862.569725,
+    "ast_hash": "a245842f1aadd88738c67c19e486d070",
+    "semantic_hash": "a245842f1aadd88738c67c19e486d070"
+  },
+  "src/pages/api/[...all].ts": {
+    "mtime": 1789933368.3946545,
+    "seen": 1789933498.7543926,
+    "ast_hash": "61b1536456b8c162eaf60265615cf7ca",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1788889985.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "e97971fc5db9e40c615c15c479fe2dad",
+    "semantic_hash": "e97971fc5db9e40c615c15c479fe2dad"
+  },
+  "vitest.config.mts": {
+    "mtime": 1788883189.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "50036cb753fd4dfdf71cb9ac51411395",
+    "semantic_hash": "50036cb753fd4dfdf71cb9ac51411395"
+  },
+  "AGENTS.md": {
+    "mtime": 1789845656.6752157,
+    "seen": 1789846862.569725,
+    "ast_hash": "f6fce9434a0b23bdb4c408bb843b16cc",
+    "semantic_hash": "f6fce9434a0b23bdb4c408bb843b16cc"
+  },
+  "CLAUDE.md": {
+    "mtime": 1788881759.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "README.md": {
+    "mtime": 1788890332.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "26df91264c9bb8046b8ea627f0835792",
+    "semantic_hash": "26df91264c9bb8046b8ea627f0835792"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_desktop_valuation_intelligence_workstation/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "5a8eb5f0de0395191bd464f300c8b42d",
+    "semantic_hash": "5a8eb5f0de0395191bd464f300c8b42d"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_fancy_serial_numbers_guide_taxonomy/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "d545a2d56855f5a90652f67ba1f8835e",
+    "semantic_hash": "d545a2d56855f5a90652f67ba1f8835e"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_mobile_article_the_396k_solid_8/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "e0e81033afbce5ac97f32965f28b9bf7",
+    "semantic_hash": "e0e81033afbce5ac97f32965f28b9bf7"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_mobile_star_note_lookup_tool/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "aba7d87692e7aef493f0a4d988d12ea2",
+    "semantic_hash": "aba7d87692e7aef493f0a4d988d12ea2"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_mobile_valuation_methodology/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "a6fb121c1e503e76f259082675ede396",
+    "semantic_hash": "a6fb121c1e503e76f259082675ede396"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_numismatic_research_journal_blog/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "2cd456dc426767adc7b2f5ebfc62e124",
+    "semantic_hash": "2cd456dc426767adc7b2f5ebfc62e124"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_redesigned_mobile_experience/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "1a77c73a8386dbfbc520bd436658975e",
+    "semantic_hash": "1a77c73a8386dbfbc520bd436658975e"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_research_monograph_the_396_000_solid_8/code.html": {
+    "mtime": 1789867620.7955854,
+    "seen": 1789901943.9277635,
+    "ast_hash": "ed7b21e9ef203eb2af4966bd212d3ada",
+    "semantic_hash": "ed7b21e9ef203eb2af4966bd212d3ada"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_star_note_lookup_print_run_tool/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "79639a25dfa29f5d95fafcb44e49f56e",
+    "semantic_hash": "79639a25dfa29f5d95fafcb44e49f56e"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/banknote_expert_valuation_scarcity_methodology/code.html": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "a052bf312216d534da57fd30e1a3e888",
+    "semantic_hash": "a052bf312216d534da57fd30e1a3e888"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/extracted_text_from_https_www.banknoteexpert.com.md": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "53ffe7c70869dbd1c4140428baf5450c",
+    "semantic_hash": "53ffe7c70869dbd1c4140428baf5450c"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/extracted_text_from_https_www.banknoteexpert.com_fancy_serial_numbers.md": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "c181554eb8cfdd4db6c95c6703bc0bc5",
+    "semantic_hash": "c181554eb8cfdd4db6c95c6703bc0bc5"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/extracted_text_from_https_www.banknoteexpert.com_methodology.md": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "7a510c6e74fafb98c7ca7e547250f3f0",
+    "semantic_hash": "7a510c6e74fafb98c7ca7e547250f3f0"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/extracted_text_from_https_www.banknoteexpert.com_star_note_lookup_denom_1.md": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "25822aa794ee447565874b35b5cbc6eb",
+    "semantic_hash": "25822aa794ee447565874b35b5cbc6eb"
+  },
+  "Redesign/stitch_banknote_value_checker_redesign/treasury_heritage/DESIGN.md": {
+    "mtime": 1789587630.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "31c284db78b70c830528e08f68e24c78",
+    "semantic_hash": "31c284db78b70c830528e08f68e24c78"
+  },
+  "docs/comment-moderation-guide.md": {
+    "mtime": 1789934499.7447429,
+    "seen": 1789934815.8501542,
+    "ast_hash": "87a51706c9db74025134ff261a67b7ff",
+    "semantic_hash": ""
+  },
+  "public/llms.txt": {
+    "mtime": 1789933340.5705388,
+    "seen": 1789933498.7543926,
+    "ast_hash": "1ab5fecdb03853e15c3a4a16ebdef80a",
+    "semantic_hash": ""
+  },
+  "site-structure.md": {
+    "mtime": 1789472636.1938481,
+    "seen": 1789846862.569725,
+    "ast_hash": "8ebb07e3499fa149bdead88e56941aa8",
+    "semantic_hash": "8ebb07e3499fa149bdead88e56941aa8"
+  },
+  "src/data/star-notes/README.md": {
+    "mtime": 1789400050.0,
+    "seen": 1789846862.569725,
+    "ast_hash": "b03c6fad61764a0d4547e3642bd69f63",
+    "semantic_hash": "b03c6fad61764a0d4547e3642bd69f63"
+  },
+  "waline-integration-prompt__1_.md": {
+    "mtime": 1789001887.5726867,
+    "seen": 1789846862.569725,
+    "ast_hash": "d0c252bb67c1ff76d69b7ba22b8531db",
+    "semantic_hash": "d0c252bb67c1ff76d69b7ba22b8531db"
+  },
+  ".impeccable/design.json": {
+    "mtime": 1789901770.544786,
+    "seen": 1789901943.9267669,
+    "ast_hash": "02f9f0d7ee9cf443cfe4a240960973c5",
+    "semantic_hash": ""
+  },
+  "src/app/blog/page.tsx": {
+    "mtime": 1789902634.8619795,
+    "seen": 1789933498.7543926,
+    "ast_hash": "bbb5d884ac6a0b41e1fdbd60a31fd914",
+    "semantic_hash": ""
+  },
+  "src/components/content/ArticleDirectory.tsx": {
+    "mtime": 1789902694.4853497,
+    "seen": 1789933498.7543926,
+    "ast_hash": "296a45d49e081b68749649acc167cc4d",
+    "semantic_hash": ""
+  },
+  "DESIGN.md": {
+    "mtime": 1789901770.5388012,
+    "seen": 1789901943.9277635,
+    "ast_hash": "ad15d16bccb416cf6248fb9dc0e1b188",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1789847725.5344484,
+    "seen": 1789866322.726213,
+    "ast_hash": "f4c66e1c4c61332c498fca8772d8ac88",
+    "semantic_hash": ""
+  },
+  "src/app/about-the-author/page.tsx": {
+    "mtime": 1789900863.814736,
+    "seen": 1789901943.9267669,
+    "ast_hash": "cc5c4e58c1fdde33037ad3d0f11e2aa3",
+    "semantic_hash": ""
+  },
+  "src/app/tools/page.tsx": {
+    "mtime": 1789900460.5490975,
+    "seen": 1789901943.9277635,
+    "ast_hash": "5bad935600c895f6f025754c9a24675b",
+    "semantic_hash": ""
+  },
+  "src/components/content/ArticleByline.tsx": {
+    "mtime": 1789901668.591195,
+    "seen": 1789901943.9277635,
+    "ast_hash": "74b45f298d863c6667f1f3fc866cb09d",
+    "semantic_hash": ""
+  },
+  "src/components/content/ArticleIntro.tsx": {
+    "mtime": 1789901668.5940938,
+    "seen": 1789901943.9277635,
+    "ast_hash": "4c8ccb5ca435eea462896211e3e89b3c",
+    "semantic_hash": ""
+  },
+  "src/components/layout/MegaNavigation.tsx": {
+    "mtime": 1789933512.2832437,
+    "seen": 1789934815.849157,
+    "ast_hash": "65446d82b51555399ba1d1515eea3890",
+    "semantic_hash": ""
+  },
+  "src/config/editorial.ts": {
+    "mtime": 1789902629.7350743,
+    "seen": 1789933498.7543926,
+    "ast_hash": "7d6c7be35bae6794d2960301128311c8",
+    "semantic_hash": ""
+  },
+  "src/config/navigation.ts": {
+    "mtime": 1789902630.5385146,
+    "seen": 1789933498.7543926,
+    "ast_hash": "ba38a8d699486c4b6a8ff085864a65b5",
+    "semantic_hash": ""
+  },
+  "public/images/editorial/banknote-collecting-detail.webp": {
+    "mtime": 1789901223.004,
+    "seen": 1789901943.9277635,
+    "ast_hash": "6316103f05a01967544b45aa260a3122",
+    "semantic_hash": ""
+  },
+  "public/images/editorial/banknote-inspection-detail.webp": {
+    "mtime": 1789901224.256,
+    "seen": 1789901943.9277635,
+    "ast_hash": "243fb6ba069bfba039e08c7a26958a71",
+    "semantic_hash": ""
+  },
+  "public/images/editorial/serial-patterns-detail.webp": {
+    "mtime": 1789901225.845,
+    "seen": 1789901943.9277635,
+    "ast_hash": "0f5116ce47f574c914df8c296e542eff",
+    "semantic_hash": ""
+  }
+}

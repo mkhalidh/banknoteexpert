@@ -23,10 +23,10 @@ own moderation dashboard, reachable from any browser once you're registered.
 The first account ever created on a Waline install automatically becomes the
 admin. Do this once, right after the first deploy:
 
-1. Visit `https://banknoteexpert.com/api/ui/register`
+1. Visit `https://www.banknoteexpert.com/api/ui/register`
 2. Fill in your name, email, and a password — this becomes your login for the
    dashboard, and is separate from anything else (LeanCloud, Vercel, Neon).
-3. You're now the admin. Bookmark **`https://banknoteexpert.com/api/ui`**
+3. You're now the admin. Bookmark **`https://www.banknoteexpert.com/api/ui`**
    — that's the dashboard for everything below.
 
 ## Daily moderation

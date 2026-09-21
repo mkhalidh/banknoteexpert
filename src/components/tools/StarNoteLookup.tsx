@@ -104,9 +104,9 @@ export function StarNoteLookup() {
   }
 
   return (
-    <div>
+    <div className="star-workstation">
       <form
-        className="grid grid-cols-1 gap-3 sm:grid-cols-[7rem_9rem_1fr_auto] sm:items-end"
+        className="star-form grid grid-cols-2 gap-5"
         onSubmit={(event) => {
           event.preventDefault();
           setSubmitted(raw);
@@ -114,38 +114,30 @@ export function StarNoteLookup() {
         noValidate
       >
         <div>
-          <label htmlFor={denomId} className="block text-sm font-medium">
+          <span id={denomId} className="block text-sm font-medium">
             Denomination
-          </label>
-          <select
-            id={denomId}
-            value={denom}
-            onChange={(event) => selectDenom(event.target.value)}
-            className="mt-1 w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-3 py-3.5 text-lg text-[var(--foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
-          >
+          </span>
+          <div className="star-choices mt-2" role="radiogroup" aria-labelledby={denomId}>
             {DENOMINATIONS.map((d) => (
-              <option key={d} value={d}>
-                ${d}
-              </option>
+              <label key={d}>
+                <input className="sr-only" type="radio" name={denomId} value={d} checked={denom === String(d)} onChange={() => selectDenom(String(d))} />
+                <span>${d}</span>
+              </label>
             ))}
-          </select>
+          </div>
         </div>
         <div>
-          <label htmlFor={seriesId} className="block text-sm font-medium">
+          <span id={seriesId} className="block text-sm font-medium">
             Series
-          </label>
-          <select
-            id={seriesId}
-            value={series}
-            onChange={(event) => setSeries(event.target.value)}
-            className="mt-1 w-full rounded-xl border border-zinc-200 bg-[var(--surface)] px-3 py-3.5 text-lg text-[var(--foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] dark:border-zinc-800"
-          >
+          </span>
+          <div className="star-choices star-series mt-2" role="radiogroup" aria-labelledby={seriesId}>
             {seriesOptions.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
+              <label key={s}>
+                <input className="sr-only" type="radio" name={seriesId} value={s} checked={series === s} onChange={() => setSeries(s)} />
+                <span>{s}</span>
+              </label>
             ))}
-          </select>
+          </div>
         </div>
         <div>
           <label htmlFor={inputId} className="block text-sm font-medium">
@@ -156,7 +148,7 @@ export function StarNoteLookup() {
               id={inputId}
               name="serial"
               type="text"
-              inputMode="numeric"
+              inputMode="text"
               autoComplete="off"
               spellCheck={false}
               placeholder="e.g. L00088892*"
@@ -186,14 +178,14 @@ export function StarNoteLookup() {
         </button>
       </form>
 
-      <p className="mt-3 text-xs text-zinc-500">
+      <p className="star-dataset-note mt-3 text-xs text-zinc-500">
         For ${denom}, the dataset covers series {seriesOptions.join(", ") || "none"}.
         Figures come from BEP monthly production reports; last updated{" "}
         {STAR_NOTE_DATA_UPDATED}.
       </p>
 
       {/* Result region: height reserved up front so there is zero layout shift. */}
-      <div aria-live="polite" className="card mt-6 min-h-[24rem] p-5">
+      <div aria-live="polite" className="star-result card min-h-[24rem] p-5">
         {!showResult ? (
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Enter your star note&rsquo;s serial number to check its print run,
@@ -277,7 +269,7 @@ export function StarNoteLookup() {
 
 function Fact({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="card p-3">
+    <div className="star-fact p-3">
       <p className="text-xs uppercase tracking-wide text-zinc-500">{label}</p>
       <p className="mt-1 font-mono text-base font-semibold">{children}</p>
     </div>

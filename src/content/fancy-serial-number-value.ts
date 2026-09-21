@@ -14,7 +14,7 @@ export const content: PageContent = {
   takeaways: [
     "Value is a range, never a single number, because condition and demand move it constantly.",
     "The chart groups patterns by rarity tier and splits each across three grades.",
-    "A confidence label shows whether a row rests on real sold data or a placeholder.",
+    "Sample sizes and confidence labels show how much recorded sold data supports each range.",
     "Condition, denomination, pattern rarity and star status are the four main price drivers.",
     "Verify any figure against recent sold listings before you buy or sell.",
   ],
@@ -50,12 +50,12 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            'Every row carries a confidence label. "Estimate" means the figure is a placeholder or rests on thin data: a sensible starting range, but one to treat with caution. "Indicative" means the range is backed by a reasonable sample of recent sold listings and is firmer, though still a range and not a promise.',
+            'Every available range is based on recorded sold prices. "Estimate" means the sample contains at least eight sales and the range covers the middle half of those prices, reducing the effect of outliers. "Indicative" means fewer than eight sales support the range, which shows the full observed minimum and maximum: evidence of what has been paid, not a reliable market range.',
         },
         {
           kind: "paragraph",
           text:
-            'Right now most rows read "estimate" because the underlying sold-listing dataset is still being assembled. As real results are gathered for each pattern and grade, rows move to "indicative" and gain a specific source. Nothing here is invented to fill a gap; where the data is thin, the label says so plainly.',
+            'The chart shows the number of sales behind each available range and marks small samples as "indicative". Combinations with no recorded sales read "no recorded sales" rather than receiving a guessed value. Nothing here is invented to fill a gap; where the data is thin, the label says so plainly.',
         },
       ],
     },

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { ArticleCategory, ArticleIntro } from "@/components/content/ArticleIntro";
+import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
@@ -87,7 +89,7 @@ function NoteDiagram({ label }: { label: string }) {
 
 export default function Page() {
   return (
-    <article className="flex flex-col gap-10">
+    <article className="editorial-page flex flex-col gap-10">
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
@@ -96,10 +98,13 @@ export default function Page() {
         ]}
       />
       <header>
+        <ArticleCategory path={content.meta.path} />
         <h1 className="text-display">{content.meta.h1}</h1>
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+        <ArticleIntro path={content.meta.path} />
+        <div className="mt-6" data-editorial-addition="true"><FancySerialChecker /></div>
       </header>
 
       <KeyTakeaways items={content.takeaways} />

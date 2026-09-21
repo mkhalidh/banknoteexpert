@@ -3,10 +3,10 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/low-serial-number/",
-    title: "Low Serial Number Dollar Bill: Tiers, Value and 00000001",
+    title: "Low Serial Number Dollar Bill: Rarity and Value",
     description:
-      "A low serial number dollar bill has a very small serial like 00000001. Learn the under-10, under-100 and under-1000 tiers, why low serials are scarce, and how value varies by denomination.",
-    h1: "Low Serial Number Dollar Bill",
+      "Low serial number dollar bill guide: understand the under-10, under-100 and under-1000 tiers, why they are rare, and how condition affects value.",
+    h1: "Low Serial Number Dollar Bill: Rarity and Value",
     primaryKeyword: "low serial number dollar bill",
     lead:
       "A low serial number dollar bill is a note whose eight-digit serial is a very small number, anything from 00000001 up to roughly 00000999. The digits sit far below the billions of ordinary serials, which is exactly what makes these notes scarce and sought after by collectors.",

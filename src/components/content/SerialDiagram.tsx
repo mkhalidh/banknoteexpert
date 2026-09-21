@@ -5,7 +5,7 @@
  */
 export function SerialDiagram() {
   return (
-    <figure className="card p-4">
+    <figure className="note-diagram card p-4">
       <svg
         viewBox="0 0 480 210"
         role="img"
@@ -28,13 +28,13 @@ export function SerialDiagram() {
           width="468"
           height="150"
           rx="10"
-          fill="#f0f4ef"
-          stroke="#94a3b8"
+          fill="var(--surface)"
+          stroke="#8ca293"
           strokeWidth="2"
         />
         {/* Portrait oval */}
-        <ellipse cx="240" cy="81" rx="52" ry="60" fill="#dfe7dd" stroke="#94a3b8" />
-        <text x="240" y="86" textAnchor="middle" fontSize="11" fill="#64748b">
+        <ellipse cx="240" cy="81" rx="52" ry="60" fill="var(--treasury-tint)" stroke="#8ca293" />
+        <text x="240" y="86" textAnchor="middle" fontSize="11" fill="var(--muted)">
           portrait
         </text>
 
@@ -43,10 +43,10 @@ export function SerialDiagram() {
           x="408"
           y="40"
           textAnchor="middle"
-          fontFamily="monospace"
+          fontFamily="var(--font-mono)"
           fontSize="17"
           fontWeight="700"
-          fill="#1a7f37"
+          fill="var(--accent)"
         >
           L00088892*
         </text>
@@ -55,33 +55,33 @@ export function SerialDiagram() {
           x="86"
           y="132"
           textAnchor="middle"
-          fontFamily="monospace"
+          fontFamily="var(--font-mono)"
           fontSize="17"
           fontWeight="700"
-          fill="#1a7f37"
+          fill="var(--accent)"
         >
           L00088892*
         </text>
 
         {/* Callout structure below the note */}
-        <text x="120" y="182" textAnchor="middle" fontSize="12" fill="#4338ca">
+        <text x="120" y="182" textAnchor="middle" fontSize="12" fill="var(--accent)">
           L
         </text>
-        <text x="120" y="198" textAnchor="middle" fontSize="10" fill="#64748b">
+        <text x="120" y="198" textAnchor="middle" fontSize="10" fill="var(--muted)">
           prefix letter
         </text>
 
-        <text x="240" y="182" textAnchor="middle" fontSize="12" fill="#4338ca">
+        <text x="240" y="182" textAnchor="middle" fontSize="12" fill="var(--accent)">
           00088892
         </text>
-        <text x="240" y="198" textAnchor="middle" fontSize="10" fill="#64748b">
+        <text x="240" y="198" textAnchor="middle" fontSize="10" fill="var(--muted)">
           8 digits (the pattern)
         </text>
 
-        <text x="372" y="182" textAnchor="middle" fontSize="12" fill="#4338ca">
+        <text x="372" y="182" textAnchor="middle" fontSize="12" fill="var(--accent)">
           *
         </text>
-        <text x="372" y="198" textAnchor="middle" fontSize="10" fill="#64748b">
+        <text x="372" y="198" textAnchor="middle" fontSize="10" fill="var(--muted)">
           suffix letter or star
         </text>
       </svg>

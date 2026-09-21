@@ -9,10 +9,10 @@ import { patterns } from "@/lib/serial/patterns";
  */
 export function PatternGrid() {
   return (
-    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="pattern-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {patterns.map((pattern) => {
         return (
-          <li key={pattern.id} className="card card-hover flex flex-col p-4">
+          <li key={pattern.id} className="pattern-card card card-hover flex flex-col p-4">
             <div className="flex items-baseline justify-between gap-2">
               <Link href={pattern.href} className="link-accent text-base font-semibold">
                 {pattern.name}

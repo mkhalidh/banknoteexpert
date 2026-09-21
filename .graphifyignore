@@ -1,0 +1,5 @@
+# This graph maps source code and project documentation, not image content.
+*.png
+*.svg
+package-lock.json
+graphify-out/

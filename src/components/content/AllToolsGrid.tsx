@@ -13,7 +13,7 @@ export function AllToolsGrid() {
   );
 
   return (
-    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="all-tools-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((route) => (
         <li key={route.path} className="card card-hover p-4">
           <Link href={route.path} className="link-accent text-base font-semibold">

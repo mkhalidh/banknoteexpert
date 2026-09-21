@@ -108,7 +108,7 @@ export function FancySerialChecker() {
       </form>
 
       {/* Result region: height reserved up front so there is zero layout shift. */}
-      <div aria-live="polite" className="card mt-6 min-h-[22rem] p-5">
+      <div aria-live="polite" className="checker-result card mt-6 min-h-[22rem] p-5">
         {errorMessage ? (
           <p
             id={errorId}

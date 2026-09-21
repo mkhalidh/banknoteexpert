@@ -15,7 +15,7 @@ export function AnchorNav({
 }) {
   if (items.length === 0) return null;
   return (
-    <nav aria-label="Table of contents" className="card p-4">
+    <nav aria-label="Table of contents" className="contents-nav card p-4">
       <h2 className="eyebrow">{title}</h2>
       <ol className="mt-2 flex flex-col gap-1 text-sm">
         {items.map((item) => (

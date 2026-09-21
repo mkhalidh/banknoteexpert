@@ -27,7 +27,8 @@ const Application = require("@waline/vercel");
 // Waline's server (ThinkJS/Koa) reads database and site config from
 // process.env directly (POSTGRES_*, SITE_NAME, SITE_URL — see .env.local),
 // not from arguments here.
-const walineHandler = Application({});
+// New guest comments await administrator approval before becoming public.
+const walineHandler = Application({ audit: true });
 
 // The bundled ip2region database is China-focused: it resolves a country
 // for most IPs worldwide but only has province/city/ISP-level detail within

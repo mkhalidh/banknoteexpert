@@ -15,7 +15,7 @@ export function RelatedPages({
 }) {
   if (links.length === 0) return null;
   return (
-    <section aria-label={title} className="scroll-mt-24">
+    <section aria-label={title} className="related-pages scroll-mt-24">
       <h2 className="text-h2">{title}</h2>
       <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {links.map((link) => (

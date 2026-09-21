@@ -51,7 +51,7 @@ export function ContentSections({ sections }: { sections: ContentSection[] }) {
           key={section.id}
           id={section.id}
           aria-labelledby={`${section.id}-heading`}
-          className="scroll-mt-24"
+          className="prose-section scroll-mt-24"
         >
           <h2 id={`${section.id}-heading`} className="text-h2">
             {section.heading}

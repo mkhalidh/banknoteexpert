@@ -104,7 +104,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Value ranges here reflect the pattern rather than the denomination, and they are drawn from realised sale prices rather than asking prices. Each range carries a confidence label: \"estimate\" while it rests on placeholder or thin data, \"indicative\" once it is backed by a solid sample of recent sold listings. We never invent a figure to fill a gap.",
+            "Value ranges here reflect the pattern rather than the denomination, and they are drawn from realised sale prices rather than asking prices. Each range carries a confidence label: \"estimate\" for a sample of at least eight recorded sales, \"indicative\" for a smaller sample. Combinations with no recorded sales have no value estimate. We never invent a figure to fill a gap.",
         },
         {
           kind: "richtext",

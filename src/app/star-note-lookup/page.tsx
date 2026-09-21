@@ -71,7 +71,7 @@ function StarSerialDiagram() {
 
 export default function Page() {
   return (
-    <article className="flex flex-col gap-10">
+    <article className="star-page flex flex-col gap-10">
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },

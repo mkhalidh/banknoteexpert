@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleCategory, ArticleIntro } from "@/components/content/ArticleIntro";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
@@ -34,7 +35,7 @@ const anchorItems = [
 
 export default function Page() {
   return (
-    <article className="flex flex-col gap-10">
+    <article className="taxonomy-page editorial-page flex flex-col gap-10">
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
@@ -42,12 +43,14 @@ export default function Page() {
         ]}
       />
       <header>
+        <ArticleCategory path={content.meta.path} />
         <h1 className="text-display">
           {content.meta.h1}
         </h1>
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+        <ArticleIntro path={content.meta.path} />
         <div className="mt-6">
           <FancySerialChecker />
         </div>
@@ -61,7 +64,7 @@ export default function Page() {
         <h2 id="patterns-heading" className="text-h2">
           Every pattern, explained
         </h2>
-        <div className="mt-4 flex flex-col gap-5">
+        <div className="pattern-directory mt-4 grid gap-5">
           {patternOrder.map((id) => {
             const pattern = patternsById[id];
             const copy = patternCopy[id];

@@ -33,6 +33,7 @@ function routeToHtml(path: string): string {
 interface Link {
   target: string; // base route, fragment/query stripped
   anchor: string;
+  navigation: boolean;
 }
 
 function stripTags(html: string): string {
@@ -48,7 +49,10 @@ function extractLinks(html: string): Link[] {
     if (!href.startsWith("/")) continue; // external / mailto / #frag
     const base = href.split("#")[0].split("?")[0];
     if (base === "") continue; // pure fragment link
-    out.push({ target: base, anchor: stripTags(m[2]) });
+    // Byline names, taxonomy labels and explicit tool navigation should stay
+    // consistent. Their repetition is not editorial keyword over-optimization.
+    const anchorTag = m[0].slice(0, m[0].indexOf(">"));
+    out.push({ target: base, anchor: stripTags(m[2]), navigation: /rel="(?:author|tag)"|data-navigation-link="true"/.test(anchorTag) });
   }
   return out;
 }
@@ -226,7 +230,11 @@ if (missingEdges.length) {
 // ---- Anchor-text concentration (content links only) ----
 const anchorByTarget = new Map<string, Map<string, number>>();
 for (const p of pages) {
+  // Catalog pages intentionally repeat canonical page titles as navigation.
+  // They still participate in broken-link, reachability and outbound checks.
+  if (routes.some((route) => route.path === p.route && route.pageType === "article-index")) continue;
   for (const l of p.mainLinks) {
+    if (l.navigation) continue;
     if (!validRoutes.has(l.target) || l.target === p.route) continue;
     if (!anchorByTarget.has(l.target)) anchorByTarget.set(l.target, new Map());
     const counts = anchorByTarget.get(l.target)!;

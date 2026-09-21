@@ -52,7 +52,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The value figures published today are clearly labelled placeholders while we assemble a dataset of real sold prices. We would rather show a labelled estimate than a confident fabrication.",
+            "The value figures published today are based on recorded sold-price samples, with sample sizes and confidence labels. Small samples are marked indicative, and combinations with no recorded sales are left without an estimate.",
         },
       ],
     },
