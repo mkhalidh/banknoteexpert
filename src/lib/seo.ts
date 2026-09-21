@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 /** Canonical origin. Every canonical URL on the site is absolute and rooted here. */
-export const SITE_URL = "https://banknoteexpert.com";
+export const SITE_URL = "https://www.banknoteexpert.com";
 export const SITE_NAME = "Banknote Expert";
 
 export interface BuildMetadataParams {
@@ -17,7 +17,7 @@ export interface BuildMetadataParams {
 
 /**
  * Build a Next.js Metadata object with an absolute, self-referencing canonical
- * of `https://banknoteexpert.com{path}` on EVERY page.
+ * of `https://www.banknoteexpert.com{path}` on EVERY page.
  */
 export function buildMetadata({
   title,

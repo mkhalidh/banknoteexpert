@@ -39,7 +39,8 @@ function Cell({ pattern, condition }: { pattern: string; condition: NoteConditio
       <span className="font-medium tabular-nums">
         {formatUsd(band.low)}&ndash;{formatUsd(band.high)}
       </span>
-      <span className="ml-2 whitespace-nowrap text-xs text-zinc-500">
+      {" · "}
+      <span className="whitespace-nowrap text-xs text-zinc-500">
         {band.sampleSize} {band.sampleSize === 1 ? "sale" : "sales"}
         {band.confidence === "indicative" ? " · indicative" : ""}
       </span>

@@ -34,7 +34,7 @@ export function PatternExplainer({
 }: PatternExplainerProps) {
   const hasDedicatedPage = !href.includes("#");
   return (
-    <div id={id} className="scroll-mt-24 border-t border-[var(--border-soft)] pt-5">
+    <div id={id} className="pattern-explainer scroll-mt-24">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="text-h3">{name}</h3>
         <code className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">

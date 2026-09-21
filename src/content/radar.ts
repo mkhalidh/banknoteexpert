@@ -3,10 +3,10 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/radar/",
-    title: "Radar Serial Number: Palindromes and Super Radars",
+    title: "Radar Serial Number: Meaning, Rarity and Value",
     description:
-      "A radar serial number reads the same forwards and backwards, like 12344321. Learn radars, super radars, the palindrome relationship, and why a radar is not a broken ladder.",
-    h1: "Radar Serial Number",
+      "Radar serial number guide: learn what palindromes and super radars are, how rare they are, and what condition and pattern mean for their value.",
+    h1: "Radar Serial Number: Meaning, Rarity and Value",
     primaryKeyword: "radar serial number",
     lead:
       "A radar serial number reads the same forwards and backwards, making it a palindrome such as 12344321. The first four digits mirror the last four, so the note looks identical whichever way you turn it. Collectors prize the neat symmetry, and a scarcer super radar takes the idea one step further.",

@@ -13,6 +13,7 @@ export type Silo =
 
 export type PageType =
   | "home"
+  | "article-index"
   | "silo-hub"
   | "tool"
   | "guide"
@@ -55,17 +56,6 @@ export const routes: RouteEntry[] = [
     changeFrequency: "weekly",
     indexable: true,
   },
-  {
-    path: "/hub/",
-    title: "Banknote Hub: Serial Number Categories & Guide Library",
-    description:
-      "Browse banknote categories, lookup tools and value guides in one place.",
-    silo: "home",
-    pageType: "home",
-    priority: 0.9,
-    changeFrequency: "weekly",
-    indexable: true,
-  },
 
   // SILO 1 — Fancy serial numbers
   {
@@ -81,7 +71,7 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/fancy-serial-numbers/radar/",
-    title: "Radar Serial Number Checker",
+    title: "Radar Serial Number: Meaning, Rarity and Value",
     description:
       "Check whether a banknote serial number is a radar, a number that reads the same forwards and backwards.",
     silo: "fancy-serial-numbers",
@@ -92,7 +82,7 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/fancy-serial-numbers/ladder/",
-    title: "Ladder Serial Number Checker",
+    title: "Ladder Serial Number: Meaning, Rarity and Value",
     description:
       "Check whether a banknote serial number is a ladder of consecutive ascending or descending digits.",
     silo: "fancy-serial-numbers",
@@ -103,7 +93,7 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/fancy-serial-numbers/low-serial-number/",
-    title: "Low Serial Number Checker",
+    title: "Low Serial Number Dollar Bill: Rarity and Value",
     description:
       "Check whether a banknote has a collectible low serial number.",
     silo: "fancy-serial-numbers",
@@ -114,7 +104,7 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/fancy-serial-numbers/birthday-note/",
-    title: "Birthday Note Serial Number Checker",
+    title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     description:
       "Check whether a banknote serial number matches a birthday in MMDDYY or similar date formats.",
     silo: "fancy-serial-numbers",
@@ -181,7 +171,28 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
 
+  {
+    path: "/blog/",
+    title: "Banknote Guides & Articles",
+    description: "Explore Banknote Expert guides to fancy serial numbers, star notes, $2 bills and banknote values.",
+    silo: "trust",
+    pageType: "article-index",
+    priority: 0.7,
+    changeFrequency: "weekly",
+    indexable: true,
+  },
+
   // TRUST
+  {
+    path: "/about-the-author/", title: "About the Author",
+    description: "Meet Muhammad Khalid Hussain, the writer and developer behind Banknote Expert.",
+    silo: "trust", pageType: "trust", priority: 0.5, changeFrequency: "yearly", indexable: true,
+  },
+  {
+    path: "/tools/", title: "Banknote Tools",
+    description: "Explore Banknote Expert serial number checkers and lookup tools.",
+    silo: "home", pageType: "article-index", priority: 0.7, changeFrequency: "monthly", indexable: true,
+  },
   {
     path: "/methodology/",
     title: "Methodology",

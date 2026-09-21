@@ -15,8 +15,8 @@ const FOOTER_SILOS: Silo[] = [
  */
 export function Footer() {
   return (
-    <footer className="mt-24 bg-[var(--accent)]">
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-8 gap-y-10 px-4 py-14 sm:grid-cols-4">
+    <footer className="site-footer mt-24">
+      <div className="site-footer-inner mx-auto grid grid-cols-2 gap-x-8 gap-y-10 py-14 sm:grid-cols-4">
         {FOOTER_SILOS.map((silo) => {
           const items = getRoutesBySilo(silo).filter(
             (route) => route.pageType !== "home",
@@ -45,7 +45,7 @@ export function Footer() {
           );
         })}
       </div>
-      <div className="mx-auto max-w-5xl px-4 pb-10 text-sm text-[var(--on-accent)]">
+      <div className="site-footer-bottom mx-auto pb-10 text-sm text-[var(--on-accent)]">
         © {"2026"} Banknote Expert. Serial number checks run entirely in your browser.
       </div>
     </footer>

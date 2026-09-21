@@ -20,18 +20,18 @@ export function MobileNav({ navItems }: { navItems: NavItem[] }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--on-accent-strong)]"
+        className="mobile-menu-button flex h-11 w-11 shrink-0 items-center justify-center rounded"
       >
         {open ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
       </button>
       {open ? (
-        <nav aria-label="Primary" className="absolute inset-x-0 top-full bg-[var(--accent)] px-4 pb-3">
+        <nav aria-label="Primary" className="mobile-menu absolute inset-x-0 top-full px-4 pb-3">
           <ul className="flex flex-col gap-1 border-t border-[var(--on-accent)]/20 pt-2 text-sm">
             {navItems.map((item) => (
               <li key={item.path}>
@@ -39,7 +39,7 @@ export function MobileNav({ navItems }: { navItems: NavItem[] }) {
                   href={item.path}
                   title={item.title}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2.5 rounded-lg px-2 py-2.5 font-medium text-[var(--on-accent)] transition-colors hover:text-[var(--on-accent-strong)]"
+                  className="flex items-center gap-2.5 rounded-lg px-2 py-2.5 font-medium text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
                 >
                   {item.icon}
                   {item.label}

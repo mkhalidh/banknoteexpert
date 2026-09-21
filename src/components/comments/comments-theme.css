@@ -26,3 +26,24 @@
   border-color: var(--accent);
   color: var(--accent-foreground);
 }
+
+/* Make the editable area distinct from each field's label. */
+.waline-container .wl-header input {
+  min-width: 0;
+  min-height: 40px;
+  margin: 8px;
+  padding: 8px 12px;
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--surface));
+  border-radius: 5px;
+  color: var(--foreground);
+  cursor: text;
+}
+.waline-container .wl-header input:hover {
+  border-color: var(--muted);
+}
+.waline-container .wl-header input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  background: var(--surface);
+}

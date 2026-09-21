@@ -3,10 +3,10 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/ladder/",
-    title: "Ladder Serial Number: True, Broken and Scrambled Ladders",
+    title: "Ladder Serial Number: Meaning, Rarity and Value",
     description:
-      "A ladder serial number runs in sequence, like 12345678. Learn true ladders, broken ladders and scrambled ladders, and why a true ladder is one of the rarest banknote patterns.",
-    h1: "Ladder Serial Number",
+      "Ladder serial number guide: compare true, broken and scrambled ladders, understand their rarity, and learn what makes a ladder banknote valuable.",
+    h1: "Ladder Serial Number: Meaning, Rarity and Value",
     primaryKeyword: "ladder serial number",
     lead: "A ladder is a banknote whose eight digits run in an unbroken sequence, either 12345678 counting up or 87654321 counting down. It is one of the most sought-after banknote patterns because a perfect run is extraordinarily rare, and collectors chase it accordingly.",
   },

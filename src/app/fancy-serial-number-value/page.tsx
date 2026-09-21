@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleCategory, ArticleIntro } from "@/components/content/ArticleIntro";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
@@ -28,7 +29,7 @@ const anchorItems = [
 
 export default function Page() {
   return (
-    <article className="flex flex-col gap-10">
+    <article className="editorial-page flex flex-col gap-10">
       <Breadcrumbs
         items={[
           { name: "Home", path: "/" },
@@ -37,12 +38,14 @@ export default function Page() {
         ]}
       />
       <header>
+        <ArticleCategory path={content.meta.path} />
         <h1 className="text-display">
           {content.meta.h1}
         </h1>
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+        <ArticleIntro path={content.meta.path} />
         <div className="mt-6">
           <FancySerialChecker />
         </div>
@@ -67,7 +70,7 @@ export default function Page() {
 
       <ContentSections sections={content.sections} />
 
-      <SourcesBlock note="Value ranges are built from realised sale prices, not asking prices. Figures are currently placeholders while the sold-listing dataset is assembled." />
+      <SourcesBlock note="Value ranges are built from recorded realised sale prices, not asking prices. Sample sizes are shown; small samples are marked indicative, and combinations with no recorded sales have no value estimate." />
 
       <RelatedPages links={content.related} />
 

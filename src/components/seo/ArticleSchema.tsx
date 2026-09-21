@@ -1,6 +1,7 @@
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
 import { AUTHOR_NAME, PUBLISHED_ISO, LAST_UPDATED_ISO } from "@/config/site";
+import { articles } from "@/config/editorial";
 
 export interface ArticleSchemaProps {
   headline: string;
@@ -12,7 +13,7 @@ export interface ArticleSchemaProps {
 }
 
 /**
- * Emits Article JSON-LD with an author (Person, linked to /about/),
+ * Emits Article JSON-LD with an author linked to the dedicated author profile,
  * datePublished, dateModified and publisher. Used by every guide page.
  * Server Component.
  */
@@ -24,6 +25,7 @@ export function ArticleSchema({
   dateModified = LAST_UPDATED_ISO,
 }: ArticleSchemaProps) {
   const url = `${SITE_URL}${path}`;
+  const article = articles.find(item => item.path === path);
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -35,7 +37,8 @@ export function ArticleSchema({
     author: {
       "@type": "Person",
       name: AUTHOR_NAME,
-      url: `${SITE_URL}/about/`,
+      "@id": `${SITE_URL}/about-the-author/#person`,
+      url: `${SITE_URL}/about-the-author/`,
     },
     publisher: {
       "@type": "Organization",
@@ -43,5 +46,10 @@ export function ArticleSchema({
       url: `${SITE_URL}/`,
     },
   };
+  if (article) {
+    data.datePublished = article.published;
+    data.image = `${SITE_URL}${article.image}`;
+    data.articleSection = article.category;
+  }
   return <JsonLd data={data} />;
 }

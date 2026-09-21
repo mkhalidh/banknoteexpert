@@ -3,10 +3,10 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/birthday-note/",
-    title: "Birthday Note Dollar Bill: How to Check Your Serial Number",
+    title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     description:
-      "A birthday note is a dollar bill whose serial reads as a date (MMDDYYYY). Learn how to check yours, which dates are prized, and what a birthday note is realistically worth.",
-    h1: "Birthday Note Dollar Bill",
+      "Birthday note dollar bill guide: learn how serial numbers encode dates, how common birthday notes are, and what collectors realistically pay for them.",
+    h1: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     primaryKeyword: "birthday note dollar bill",
     lead:
       "A birthday note is a dollar bill whose eight-digit serial number reads as a calendar date in MMDDYYYY form, such as 01011990 for 1 January 1990. Collectors seek notes that match a birthday, anniversary, or another meaningful day, and the appeal is almost always personal rather than financial.",

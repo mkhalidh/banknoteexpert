@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 // Self-hosted via next/font — no runtime requests to Google.
-const geistSans = Geist({
+const geistSans = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 // Display face for headings only — a sharp, engraved-feeling serif that
 // reads like currency typography, deliberately distinct from the sans body.
-const serifDisplay = Fraunces({
+const serifDisplay = Playfair_Display({
   variable: "--font-serif-display",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
 });
 
 export const metadata: Metadata = buildMetadata({
@@ -55,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <Header />
-        <main id="main-content" className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
+        <main id="main-content" className="site-main mx-auto w-full flex-1">
           {children}
         </main>
         <Footer />

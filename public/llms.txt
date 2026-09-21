@@ -4,7 +4,7 @@
 > "fancy" patterns, star notes and value. No account, no upload — every
 > calculation runs in your browser.
 
-Site: https://banknoteexpert.com
+Site: https://www.banknoteexpert.com
 
 ## About
 
@@ -12,7 +12,8 @@ Banknote Expert helps collectors and owners of US paper money inspect a
 banknote's serial number. Enter a serial and the tools report whether it matches
 a fancy pattern collectors seek, whether it is a scarce star note, and what such
 a note may be worth. All logic is static and runs client-side; the site stores
-no data, has no backend, and never transmits the serial numbers you enter.
+no serial-check data and never transmits the serial numbers you enter. Optional
+comments use a separate server-backed comment service.
 
 ## The four tools
 
@@ -51,10 +52,15 @@ page at /fancy-serial-numbers/.
 
 - Methodology (sources, confidence levels, limitations): /methodology/
 - About: /about/
+- Author: /about-the-author/
+- All tools: /tools/
+- Article directory: /blog/
 
 ## Notes for automated agents
 
-- The site is fully static and safe to crawl.
-- There is no login, paywall, or user-generated content.
+- Public content pages are statically rendered and crawlable.
+- Tools have no login or paywall. Some pages include moderated user comments.
 - Serial number checks are deterministic; the same input always yields the same result.
-- Value figures are currently labelled placeholders pending real auction and BEP data.
+- Value ranges use recorded sold-price samples. Small samples are marked indicative;
+  combinations with no recorded sales have no value estimate. Star-note print-run
+  information is based on BEP production data.

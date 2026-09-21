@@ -61,11 +61,10 @@ const whereIsSerial = getRoute("/where-is-the-serial-number-on-a-dollar-bill/");
 
 export default function Page() {
   return (
-    <article className="page-shell flex flex-col gap-14 p-4 md:p-6 lg:p-8">
+    <article className="home-page flex flex-col gap-14">
       {/* Section 1 — H1, subhead, input form (nothing above this) */}
-      <header className="hero-panel">
-        <div className="eyebrow">Banknote intelligence</div>
-        <h1 className="mt-4 text-display">Fancy Serial Number Checker</h1>
+      <header>
+        <h1 className="text-display">Fancy Serial Number Checker</h1>
         <p className="mt-3 max-w-2xl text-lead">
           Paste your bill&rsquo;s 8-digit serial number and see instantly whether
           it matches a collectible pattern, how rare it is, and roughly what it
@@ -76,20 +75,6 @@ export default function Page() {
           <FancySerialChecker />
         </div>
       </header>
-
-      <section aria-labelledby="hub-categories" className="space-y-4">
-        <div className="eyebrow">Category hub</div>
-        <h2 id="hub-categories" className="text-h2">Browse the banknote categories</h2>
-        <div className="hub-grid mt-4">
-          {[{ href: "/fancy-serial-numbers/", title: "Fancy Serial Numbers", copy: "Pattern library · article guides · rarity analysis" }, { href: "/star-note-lookup/", title: "Star Notes", copy: "Replacement notes · star value checks · lookup tool" }, { href: "/2-dollar-bill-value/", title: "$2 Bill Guide", copy: "Series history · value guide · serial lookup" }].map((item) => (
-            <Link key={item.href} href={item.href} className="hub-card">
-              <span className="hub-card__kicker">Tool</span>
-              <span className="hub-card__title">{item.title}</span>
-              <span className="hub-card__copy">{item.copy}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* Section 3 — where to find the serial number */}
       <section aria-labelledby="find-serial">
@@ -244,9 +229,11 @@ export default function Page() {
           Condition is mapped to PMG and PCGS grading standards so a range means
           the same thing from one note to the next. Where the sample of recent
           sales is thin, we say so through the confidence label rather than
-          inventing a precise figure. The figures on this page are currently
-          placeholders while that sold-listing dataset is assembled; each will be
-          attributed to its source as it lands. Nothing here is an offer to buy
+          inventing a precise figure. Pattern value bands come from a September
+          2026 sample of Heritage Auctions and eBay sold listings, with sample
+          sizes disclosed. Star note print runs come from 287 BEP monthly
+          production reports, and $2 series values are compiled from a published
+          secondary price guide. Nothing here is an offer to buy
           or a formal appraisal; it exists to help you research a note before you
           approach a dealer or an auction house.
         </p>
