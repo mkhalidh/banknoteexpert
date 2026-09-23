@@ -41,7 +41,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The tools do not require cookies to function. If privacy-respecting, aggregate analytics are added in future to understand overall traffic, they will not identify individual visitors or record the serial numbers checked. This page will be updated before any such change takes effect.",
+            "The tools do not require cookies to function. We use Google Analytics to understand aggregate site traffic and usage. Google Analytics may set cookies and collect information such as pages visited, device and browser details, approximate location, and a pseudonymous identifier. It does not receive the serial numbers you enter into our tools.",
         },
       ],
     },
