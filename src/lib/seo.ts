@@ -27,6 +27,17 @@ export function buildMetadata({
   noindex = false,
 }: BuildMetadataParams): Metadata {
   const canonical = `${SITE_URL}${path}`;
+  // Nested page metadata replaces openGraph/twitter wholesale. Always include
+  // an explicit fallback; relying on the root file alone loses inherited images.
+  const previews: Record<string, string> = {
+    "/": "Fancy Serial Number Checker",
+    "/star-note-lookup/": "Star Note Lookup",
+    "/2-dollar-bill-serial-number-lookup/": "$2 Bill Value by Serial Number",
+    "/fancy-serial-number-value/": "Fancy Serial Number Price Guide",
+    "/fancy-serial-numbers/": "What Is a Fancy Serial Number?",
+  };
+  const imagePath = path === "/" ? "/social/home/" : previews[path] ? path : "/";
+  const imageAlt = `${previews[path] ?? SITE_NAME} — Free US banknote serial number tools`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -44,13 +55,13 @@ export function buildMetadata({
       siteName: SITE_NAME,
       title,
       description,
-      images: ogImage ? [{ url: ogImage }] : undefined,
+      images: [{ url: ogImage ?? `${imagePath}opengraph-image/`, width: 1200, height: 630, alt: imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ogImage ? [ogImage] : undefined,
+      images: [{ url: ogImage ?? `${imagePath}${path === "/" ? "opengraph-image" : "twitter-image"}/`, alt: imageAlt }],
     },
   };
 }

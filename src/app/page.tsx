@@ -17,6 +17,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Free fancy serial number checker for US dollar bills. Instantly detect radar, repeater, ladder, solid, binary and low serial patterns, get a 0–100 rarity score and an estimated value range.",
   path: "/",
+  ogImage: "/social/home/opengraph-image/",
 });
 
 const structuredData: Record<string, unknown> = {
