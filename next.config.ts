@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import { securityHeaders } from "./src/config/security-headers.mjs";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  headers() {
+    return [{ source: "/:path*", headers: securityHeaders }];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     maximumRedirects: 0,

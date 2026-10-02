@@ -54,6 +54,7 @@ export function Comments({ path }: { path?: string }) {
         // @waline/client's transport then appends its own "api/" segment on
         // top of this, so this is deliberately the bare origin, not ".../api".
         serverURL: window.location.origin,
+        emoji: ["https://unpkg.com/@waline/emojis@1.1.0/weibo"],
         path,
         meta: ["nick", "mail", "link"],
         requiredMeta: ["nick"],
