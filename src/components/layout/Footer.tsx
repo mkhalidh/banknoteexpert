@@ -26,10 +26,10 @@ export function Footer() {
           }
           return (
             <div key={silo}>
-              <h2 className="text-[0.75rem] font-[650] tracking-[0.07em] text-[var(--on-accent-strong)] uppercase">
+              <p className="footer-column-label text-[0.75rem] font-[650] tracking-[0.07em] text-[var(--on-accent-strong)] uppercase">
                 {siloLabels[silo]}
-              </h2>
-              <ul className="mt-4 space-y-2.5 text-sm text-[var(--on-accent)]">
+              </p>
+              <ul aria-label={siloLabels[silo]} className="mt-4 space-y-2.5 text-sm text-[var(--on-accent)]">
                 {items.map((route) => (
                   <li key={route.path}>
                     <Link
