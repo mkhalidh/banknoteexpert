@@ -34,12 +34,20 @@ const serifDisplay = Playfair_Display({
   display: "swap",
 });
 
-export const metadata: Metadata = buildMetadata({
+export const metadata: Metadata = {
+  ...buildMetadata({
   title: "Banknote Expert: US Banknote Serial Number Tools",
   description:
     "Free tools to check US banknote serial numbers for fancy patterns, star notes and collectible value.",
   path: "/",
-});
+  }),
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION }
+      : undefined,
+  },
+};
 
 // Every route on this site is fully static; make that explicit and enforced.
 export const dynamic = "force-static";
