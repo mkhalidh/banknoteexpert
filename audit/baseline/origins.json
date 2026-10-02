@@ -1,0 +1,27 @@
+[
+  {
+    "origin": "https://www.googletagmanager.com",
+    "type": "script",
+    "example": "https://www.googletagmanager.com/gtag/js"
+  },
+  {
+    "origin": "https://www.google-analytics.com",
+    "type": "fetch",
+    "example": "https://www.google-analytics.com/g/collect"
+  },
+  {
+    "origin": "http://unpkg.com",
+    "type": "fetch",
+    "example": "http://unpkg.com/@waline/emojis@1.1.0/weibo/info.json"
+  },
+  {
+    "origin": "https://unpkg.com",
+    "type": "fetch",
+    "example": "https://unpkg.com/@waline/emojis@1.1.0/weibo/info.json"
+  },
+  {
+    "origin": "https://www.google.com",
+    "type": "fetch",
+    "example": "https://www.google.com/g/collect"
+  }
+]
