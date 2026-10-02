@@ -7,21 +7,31 @@ import { Footer } from "@/components/layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
 // Self-hosted via next/font — no runtime requests to Google.
+// Only the display face is preloaded: it renders the hero <h1> (the LCP
+// element), so its file is on the critical path. The sans body and mono
+// data faces load on demand with font-display: swap — preloading them too
+// would compete with the LCP font for early bandwidth and regress LCP.
 const geistSans = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: false,
+  display: "swap",
 });
 
 const geistMono = JetBrains_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: false,
+  display: "swap",
 });
 
 // Display face for headings only — a sharp, engraved-feeling serif that
 // reads like currency typography, deliberately distinct from the sans body.
+// Preloaded (default) because the hero <h1 class="text-display"> is the LCP.
 const serifDisplay = Playfair_Display({
   variable: "--font-serif-display",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = buildMetadata({
@@ -60,15 +70,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
       </body>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-72D1E83TN3"
-        strategy="afterInteractive"
-      />
-      <Script id="google-tag" strategy="afterInteractive">
+      <Script id="google-tag" strategy="lazyOnload">
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-72D1E83TN3');`}
+gtag('config', 'G-72D1E83TN3');
+setTimeout(function () {
+  var script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-72D1E83TN3';
+  script.async = true;
+  document.head.appendChild(script);
+}, 3000);`}
       </Script>
     </html>
   );
