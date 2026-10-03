@@ -6,7 +6,7 @@ import { SunIcon, MoonIcon } from "@/components/ui/icons";
 type Theme = "light" | "dark";
 
 /**
- * Light is the deliberate default (not the OS `prefers-color-scheme`) — dark
+ * Light is the deliberate default (not the OS `prefers-color-scheme`), dark
  * is only ever an explicit choice made here. Reads/writes `data-theme` on
  * <html>; the blocking script in layout.tsx applies a stored 'dark' value
  * before first paint so there's no flash. Starts from the DOM's current

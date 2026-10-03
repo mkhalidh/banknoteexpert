@@ -75,6 +75,6 @@ Sanity checks before committing a refresh:
 
 ## Notable
 
-$2 series 2003 star notes were printed in runs of only **8,000 notes per district** —
+$2 series 2003 star notes were printed in runs of only **8,000 notes per district** 
 by a wide margin the scarcest runs in the dataset. Verified against
 `https://www.bep.gov/media/1241/download?inline`.

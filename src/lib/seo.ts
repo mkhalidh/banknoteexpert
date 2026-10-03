@@ -32,12 +32,12 @@ export function buildMetadata({
   const previews: Record<string, string> = {
     "/": "Fancy Serial Number Checker",
     "/star-note-lookup/": "Star Note Lookup",
-    "/2-dollar-bill-serial-number-lookup/": "$2 Bill Value by Serial Number",
+    "/2-dollar-bill-serial-number-lookup/": "$2 Bill Serial Number Lookup",
     "/fancy-serial-number-value/": "Fancy Serial Number Price Guide",
     "/fancy-serial-numbers/": "What Is a Fancy Serial Number?",
   };
   const imagePath = path === "/" ? "/social/home/" : previews[path] ? path : "/";
-  const imageAlt = `${previews[path] ?? SITE_NAME} — Free US banknote serial number tools`;
+  const imageAlt = `${previews[path] ?? SITE_NAME}, Free US banknote serial number tools`;
 
   return {
     metadataBase: new URL(SITE_URL),

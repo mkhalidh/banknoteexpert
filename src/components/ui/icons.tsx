@@ -1,7 +1,7 @@
 import type { ReactNode, SVGProps } from "react";
 
 /**
- * Small inline stroke-icon set — no icon library dependency. 20x20 viewBox,
+ * Small inline stroke-icon set, no icon library dependency. 20x20 viewBox,
  * 1.75 stroke, round caps/joins throughout so every icon reads as one family
  * (apple-design §16 "Craft": nothing random, every value deliberate).
  */

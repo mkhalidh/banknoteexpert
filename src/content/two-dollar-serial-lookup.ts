@@ -3,13 +3,13 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-serial-number-lookup/",
-    title: "$2 Bill Value by Serial Number: Free Lookup Tool",
+    title: "$2 Bill Serial Number Lookup: Free Checker Tool",
     description:
-      "Check a $2 bill value by serial number. Pick the series, enter the serial, and see any fancy pattern, star note or low serial with honest, sourced ranges. Most $2 bills are worth $2.",
-    h1: "$2 Bill Value by Serial Number",
-    primaryKeyword: "$2 bill value by serial number",
+      "$2 bill serial number lookup: enter the series and serial to flag fancy patterns, star notes and low serials, with honest, sourced value ranges.",
+    h1: "$2 Bill Serial Number Lookup",
+    primaryKeyword: "$2 bill serial number lookup",
     lead:
-      "Most $2 bills are worth exactly $2. This free tool checks a $2 bill value by serial number: choose the series, enter the serial, and it flags any collectible pattern, star note or low number, then shows a sourced value range. For the vast majority of notes, the honest answer is face value.",
+      "This free $2 bill serial number lookup checks any $2 note: choose the series, enter the serial, and it flags collectible patterns, star notes and low serials, then shows a sourced value range. For the vast majority of notes, the honest answer is face value.",
   },
   takeaways: [
     "The overwhelming majority of $2 bills are worth their $2 face value.",

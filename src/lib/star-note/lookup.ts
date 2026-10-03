@@ -1,6 +1,6 @@
 /**
  * Star note lookup: match a star serial against real BEP print runs and
- * classify rarity by run size. Pure module — no React, no side effects. The
+ * classify rarity by run size. Pure module, no React, no side effects. The
  * serial is parsed with the shared engine (src/lib/serial/parse.ts); no second
  * parser. All run data comes from src/data/star-notes/runs.ts.
  */

@@ -49,7 +49,7 @@ export function Comments({ path }: { path?: string }) {
         // config normalizer blindly prepends "https://" to anything that
         // doesn't already start with a scheme, so a relative path like "/api"
         // silently becomes the broken "https:///api", and an empty string
-        // becomes just "https://" with no host at all — either one makes the
+        // becomes just "https://" with no host at all, either one makes the
         // widget's own requests fail before they even leave the browser.
         // @waline/client's transport then appends its own "api/" segment on
         // top of this, so this is deliberately the bare origin, not ".../api".

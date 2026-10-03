@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/where-is-the-serial-number-on-a-dollar-bill/",
     title: "Where Is the Serial Number on a Dollar Bill? All Denominations",
     description:
-      "The serial number on a dollar bill is printed twice in green ink, upper-right and lower-left. See exactly where to find it on $1, $2, $5, $10, $20 and $100 notes.",
+      "The serial number on a dollar bill is printed twice in green, upper-right and lower-left. See where to find it on $1, $2, $5, $10, $20 and $100 notes.",
     h1: "Where Is the Serial Number on a Dollar Bill?",
     primaryKeyword: "where is the serial number on a dollar bill",
     lead:

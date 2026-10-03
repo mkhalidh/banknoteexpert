@@ -2,7 +2,7 @@
 //
 // Source: compiled from serialworth.com's published price guide, which aggregates
 // eBay and Heritage Auctions sold data. These figures are a secondary compilation,
-// not our own sampling — /methodology/ must say so plainly.
+// not our own sampling, /methodology/ must say so plainly.
 //
 // faceValue: true for 1976 and later. These notes are still printed and circulate
 // normally; virtually all of them are worth exactly $2. The bands below reflect

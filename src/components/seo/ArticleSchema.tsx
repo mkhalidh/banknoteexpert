@@ -1,6 +1,6 @@
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
-import { AUTHOR_NAME, PUBLISHED_ISO, LAST_UPDATED_ISO } from "@/config/site";
+import { AUTHOR_NAME, PUBLISHED_ISO, LAST_UPDATED_ISO, ORG_LOGO_PATH, ORG_SAME_AS } from "@/config/site";
 import { articles } from "@/config/editorial";
 
 export interface ArticleSchemaProps {
@@ -34,6 +34,9 @@ export function ArticleSchema({
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     datePublished,
     dateModified,
+    // Branded 1200×630 default guarantees every Article carries an image; the
+    // editorial override below swaps in the page-specific illustration.
+    image: `${SITE_URL}/opengraph-image/`,
     author: {
       "@type": "Person",
       name: AUTHOR_NAME,
@@ -42,8 +45,16 @@ export function ArticleSchema({
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#org`,
       name: SITE_NAME,
       url: `${SITE_URL}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${ORG_LOGO_PATH}`,
+        width: 707,
+        height: 353,
+      },
+      sameAs: [...ORG_SAME_AS],
     },
   };
   if (article) {

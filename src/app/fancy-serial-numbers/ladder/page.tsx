@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ArticleSchema } from "@/components/seo/ArticleSchema";
+import { Byline } from "@/components/content/Byline";
 import { ContentSections } from "@/components/content/ContentSections";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
@@ -27,6 +28,7 @@ export default function Page() {
       />
       <header>
         <h1 className="text-display">{content.meta.h1}</h1>
+        <Byline className="mt-3 text-sm text-zinc-500" />
         <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
         <div className="mt-6">
           <FancySerialChecker />

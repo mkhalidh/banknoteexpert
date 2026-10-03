@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/fancy-serial-numbers/",
     title: "What Is a Fancy Serial Number? Types & Patterns Explained",
     description:
-      "A fancy serial number is a banknote serial whose eight digits form a collectible pattern. See every type, including solid, radar, ladder, binary, repeater and more, with odds and value drivers.",
+      "What makes a dollar bill serial number “fancy”: every pattern, radar, solid, ladder, binary, repeater and more, plus the odds and what drives value.",
     h1: "What Is a Fancy Serial Number?",
     primaryKeyword: "what is a fancy serial number",
     lead:

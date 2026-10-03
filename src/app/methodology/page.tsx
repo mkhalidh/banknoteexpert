@@ -8,6 +8,7 @@ import { ContentSections } from "@/components/content/ContentSections";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { LastUpdated } from "@/components/content/LastUpdated";
 import { content } from "@/content/methodology";
+import { SOURCE_LINKS } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
   title: content.meta.title,
@@ -42,6 +43,24 @@ export default function Page() {
       <KeyTakeaways items={content.takeaways} />
       <AnchorNav items={anchorItems} />
       <ContentSections sections={content.sections} />
+
+      <section aria-labelledby="sources-heading" className="scroll-mt-24">
+        <h2 id="sources-heading" className="text-h2">Sources</h2>
+        <p className="mt-3 max-w-2xl">
+          Value ranges, print runs and grading context are drawn from the
+          following references:
+        </p>
+        <ul className="mt-4 flex flex-col gap-2">
+          {SOURCE_LINKS.map((source) => (
+            <li key={source.url}>
+              <a href={source.url} rel="noopener" className="underline underline-offset-2">
+                {source.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <RelatedPages links={content.related} />
 
       <ArticleSchema
