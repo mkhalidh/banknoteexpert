@@ -1,5 +1,5 @@
 /**
- * Renders a JSON-LD structured-data block. Server Component — no interactivity.
+ * Renders a JSON-LD structured-data block. Server Component, no interactivity.
  * `data` is a plain JSON-serialisable object describing a schema.org type.
  */
 export interface JsonLdProps {

@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/star-note-lookup/",
     title: "Star Note Lookup: Check a Star Note's Value by Serial",
     description:
-      "Free star note lookup. Enter the denomination, series and serial to find the print run, rarity tier and any fancy pattern, with a link to the BEP report so you can verify it yourself.",
+      "Free star note lookup: enter denomination, series and serial to find the print run, rarity tier and any fancy pattern, with a BEP report link to verify.",
     h1: "Star Note Lookup",
     primaryKeyword: "star note lookup",
     lead:

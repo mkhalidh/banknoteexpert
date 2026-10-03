@@ -1,6 +1,6 @@
 import { socialImage } from "@/lib/social-image";
 
-export const alt = "Fancy Serial Number Checker — Banknote Expert";
+export const alt = "Fancy Serial Number Checker, Banknote Expert";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

@@ -4,7 +4,7 @@
  * Series years, seal colours and note types are documented public facts.
  * Sources: uspapermoney.info small-size type-note tables and U.S. Bureau of
  * Engraving and Printing records (bep.gov). NO dollar figures live in this file
- * — value ranges come only from src/data/value-ranges.ts.
+ *, value ranges come only from src/data/value-ranges.ts.
  *
  * Red seal  = United States Note / Legal Tender Note (1928–1963 series).
  * Green seal = Federal Reserve Note (1976 onward).

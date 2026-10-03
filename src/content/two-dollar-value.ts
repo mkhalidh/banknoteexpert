@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/2-dollar-bill-value/",
     title: "How Much Is a $2 Bill Worth? Value Chart by Series",
     description:
-      "Most $2 bills are worth exactly $2. See an honest $2 bill value chart by series and seal colour, what actually makes one valuable, and how to check yours, with no hype and sources cited.",
+      "Most $2 bills are worth exactly $2. See an honest $2 bill value chart by series and seal colour, what makes one valuable, and how to check yours.",
     h1: "How Much Is a $2 Bill Worth?",
     primaryKeyword: "how much is a 2 dollar bill worth",
     lead:

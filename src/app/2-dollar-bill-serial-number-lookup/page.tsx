@@ -50,7 +50,7 @@ export default function Page() {
         ]}
       />
 
-      {/* Section 1 — H1, subhead, tool (nothing above) */}
+      {/* Section 1, H1, subhead, tool (nothing above) */}
       <header>
         <h1 className="text-display">
           {content.meta.h1}
@@ -59,7 +59,7 @@ export default function Page() {
           {content.meta.lead}
         </p>
         <div className="mt-6">
-          {/* Section 2 — result panel lives inside the tool */}
+          {/* Section 2, result panel lives inside the tool */}
           <TwoDollarSerialLookup />
         </div>
       </header>
@@ -69,7 +69,7 @@ export default function Page() {
       {/* Section 3 */}
       <ContentSections sections={sectionById("what-serial-tells")} />
 
-      {/* Section 4 — series & seal table from the data file */}
+      {/* Section 4, series & seal table from the data file */}
       <div>
         <ContentSections sections={sectionById("series-seal")} />
         <div className="mt-4">
@@ -84,7 +84,7 @@ export default function Page() {
       {/* Section 5 */}
       <ContentSections sections={sectionById("bicentennial-1976")} />
 
-      {/* Section 6 — pattern pages, linked from the registry href values */}
+      {/* Section 6, pattern pages, linked from the registry href values */}
       <div>
         <ContentSections sections={sectionById("patterns")} />
         <div className="mt-4">
@@ -98,7 +98,7 @@ export default function Page() {
         <LastUpdated className="mt-3 text-sm text-zinc-500" />
       </div>
 
-      {/* Section 8 — FAQ */}
+      {/* Section 8, FAQ */}
       <ContentSections sections={sectionById("faq")} />
 
       <RelatedPages links={content.related} />

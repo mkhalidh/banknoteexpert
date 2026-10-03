@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
 import { getRoute } from "@/config/routes";
-import { LAST_UPDATED } from "@/config/site";
+import { LAST_UPDATED, ORG_LOGO_PATH, ORG_SAME_AS } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { SerialDiagram } from "@/components/content/SerialDiagram";
@@ -15,7 +15,7 @@ import { Comments } from "@/components/comments/Comments";
 export const metadata: Metadata = buildMetadata({
   title: "Fancy Serial Number Checker: Free US Dollar Bill Serial Lookup",
   description:
-    "Free fancy serial number checker for US dollar bills. Instantly detect radar, repeater, ladder, solid, binary and low serial patterns, get a 0–100 rarity score and an estimated value range.",
+    "Free fancy serial number checker for US dollar bills. Detect radar, repeater, ladder, solid and binary patterns, get a 0–100 rarity score and value range.",
   path: "/",
   ogImage: "/social/home/opengraph-image/",
 });
@@ -52,6 +52,13 @@ const structuredData: Record<string, unknown> = {
       "@id": `${SITE_URL}/#org`,
       name: SITE_NAME,
       url: `${SITE_URL}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${ORG_LOGO_PATH}`,
+        width: 707,
+        height: 353,
+      },
+      sameAs: [...ORG_SAME_AS],
     },
   ],
 };
@@ -63,7 +70,7 @@ const whereIsSerial = getRoute("/where-is-the-serial-number-on-a-dollar-bill/");
 export default function Page() {
   return (
     <article className="home-page flex flex-col gap-14">
-      {/* Section 1 — H1, subhead, input form (nothing above this) */}
+      {/* Section 1, H1, subhead, input form (nothing above this) */}
       <header>
         <h1 className="text-display">Fancy Serial Number Checker</h1>
         <p className="mt-3 max-w-2xl text-lead">
@@ -72,12 +79,12 @@ export default function Page() {
           may be worth.
         </p>
         <div className="mt-6">
-          {/* Section 2 — result panel lives inside the checker component */}
+          {/* Section 2, result panel lives inside the checker component */}
           <FancySerialChecker />
         </div>
       </header>
 
-      {/* Section 3 — where to find the serial number */}
+      {/* Section 3, where to find the serial number */}
       <section aria-labelledby="find-serial">
         <h2 id="find-serial" className="text-h2">
           Where to find the serial number on your bill
@@ -118,7 +125,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 4 — pattern card grid from the registry */}
+      {/* Section 4, pattern card grid from the registry */}
       <section aria-labelledby="patterns">
         <h2 id="patterns" className="text-h2">
           Fancy serial number patterns
@@ -138,7 +145,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 5 — value table */}
+      {/* Section 5, value table */}
       <section aria-labelledby="worth">
         <h2 id="worth" className="text-h2">
           What is your bill actually worth
@@ -159,7 +166,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 6 — star notes */}
+      {/* Section 6, star notes */}
       <section aria-labelledby="star">
         <h2 id="star" className="text-h2">
           Does your bill have a star?
@@ -187,7 +194,7 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Section 7 — value by denomination */}
+      {/* Section 7, value by denomination */}
       <section aria-labelledby="denomination">
         <h2 id="denomination" className="text-h2">
           Check value by denomination
@@ -216,7 +223,7 @@ export default function Page() {
         </ul>
       </section>
 
-      {/* Section 8 — how we estimate value */}
+      {/* Section 8, how we estimate value */}
       <section aria-labelledby="estimate">
         <h2 id="estimate" className="text-h2">
           How we estimate value
@@ -249,7 +256,7 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Section 9 — FAQ (semantic HTML only; no FAQPage schema by design) */}
+      {/* Section 9, FAQ (semantic HTML only; no FAQPage schema by design) */}
       <section aria-labelledby="faq">
         <h2 id="faq" className="text-h2">
           Common questions
@@ -332,7 +339,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Section 10 — all tools */}
+      {/* Section 10, all tools */}
       <section aria-labelledby="all-tools">
         <h2 id="all-tools" className="text-h2">
           All tools

@@ -79,21 +79,21 @@ export default function Page() {
         ]}
       />
 
-      {/* Section 1 — H1, subhead, tool */}
+      {/* Section 1, H1, subhead, tool */}
       <header>
         <h1 className="text-display">{content.meta.h1}</h1>
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
         <div className="mt-6">
-          {/* Section 2 — result panel lives inside the tool */}
+          {/* Section 2, result panel lives inside the tool */}
           <StarNoteLookup />
         </div>
       </header>
 
       <KeyTakeaways items={content.takeaways} />
 
-      {/* Section 3 — how to read, with inline SVG */}
+      {/* Section 3, how to read, with inline SVG */}
       <div>
         <ContentSections sections={sectionById("how-to-read")} />
         <div className="mt-4">
@@ -104,7 +104,7 @@ export default function Page() {
       {/* Section 4 */}
       <ContentSections sections={sectionById("what-makes-valuable")} />
 
-      {/* Section 5 — rarity tiers table */}
+      {/* Section 5, rarity tiers table */}
       <div>
         <ContentSections sections={sectionById("rarity-tiers")} />
         <div className="mt-4">
@@ -121,7 +121,7 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Section 6 — pattern pages from the registry href */}
+      {/* Section 6, pattern pages from the registry href */}
       <div>
         <ContentSections sections={sectionById("fancy-serials")} />
         <div className="mt-4">
@@ -135,7 +135,7 @@ export default function Page() {
         <LastUpdated className="mt-3 text-sm text-zinc-500" />
       </div>
 
-      {/* Section 8 — FAQ */}
+      {/* Section 8, FAQ */}
       <ContentSections sections={sectionById("faq")} />
 
       <RelatedPages links={content.related} />

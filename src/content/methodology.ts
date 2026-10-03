@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/methodology/",
     title: "Methodology: How We Value Fancy Serial Numbers",
     description:
-      "Our sources, confidence levels, the 0–100 rarity score, grading standards and limitations: how Banknote Expert estimates US banknote serial number value, explained honestly.",
+      "How Banknote Expert estimates banknote serial number value: our sources, confidence levels, the 0–100 rarity score, grading standards and limits.",
     h1: "Methodology",
     primaryKeyword: "methodology",
     lead:

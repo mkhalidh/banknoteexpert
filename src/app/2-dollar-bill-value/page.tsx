@@ -52,7 +52,7 @@ export default function Page() {
         ]}
       />
 
-      {/* Section 1 — H1 + direct answer */}
+      {/* Section 1, H1 + direct answer */}
       <header>
         <h1 className="text-display">
           {content.meta.h1}
@@ -65,7 +65,7 @@ export default function Page() {
       {/* Section 2 */}
       <KeyTakeaways items={content.takeaways} />
 
-      {/* Section 3 — value chart grouped by seal colour */}
+      {/* Section 3, value chart grouped by seal colour */}
       <div>
         <ContentSections sections={sectionById("value-chart")} />
         <div className="mt-4">
@@ -79,7 +79,7 @@ export default function Page() {
       {/* Short history */}
       <ContentSections sections={sectionById("history")} />
 
-      {/* Section 5 — what makes it valuable + pattern links */}
+      {/* Section 5, what makes it valuable + pattern links */}
       <div>
         <ContentSections sections={sectionById("what-makes-valuable")} />
         <div className="mt-4">
@@ -92,7 +92,7 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Section 6 — red vs green table */}
+      {/* Section 6, red vs green table */}
       <div>
         <ContentSections sections={sectionById("red-vs-green")} />
         <div className="mt-4">
@@ -113,7 +113,7 @@ export default function Page() {
       {/* Section 9 */}
       <ContentSections sections={sectionById("how-we-estimate")} />
 
-      {/* Section 10 — FAQ */}
+      {/* Section 10, FAQ */}
       <ContentSections sections={sectionById("faq")} />
 
       {/* Section 11 */}

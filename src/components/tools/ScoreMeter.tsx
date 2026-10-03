@@ -26,7 +26,7 @@ export const SCORE_TIER_STYLES: Record<string, { bar: string; pill: string }> = 
 };
 
 const DURATION_MS = 650;
-// Ease-out cubic: fast start, gentle settle — matches the bar's own easing.
+// Ease-out cubic: fast start, gentle settle, matches the bar's own easing.
 const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
 /**
