@@ -43,15 +43,21 @@ describe("detectors — true and false cases", () => {
     expect(detect("double-quad", "12341234")).toBe(false);
   });
 
-  it("ladder", () => {
+  it("ladder — any full 8-digit run, not just the two canonical strings", () => {
     expect(detect("ladder", "12345678")).toBe(true);
     expect(detect("ladder", "87654321")).toBe(true);
-    expect(detect("ladder", "12345679")).toBe(false);
+    expect(detect("ladder", "23456789")).toBe(true); // FIX 2: was misreported
+    expect(detect("ladder", "01234567")).toBe(true);
+    expect(detect("ladder", "98765432")).toBe(true);
+    expect(detect("ladder", "76543210")).toBe(true);
+    expect(detect("ladder", "12345679")).toBe(false); // run of 7, not 8
+    expect(detect("ladder", "12345687")).toBe(false); // run of 6
   });
 
   it("broken-ladder", () => {
     expect(detect("broken-ladder", "12345687")).toBe(true); // run of 6
     expect(detect("broken-ladder", "12345679")).toBe(true); // run of 7
+    expect(detect("broken-ladder", "23456789")).toBe(false); // FIX 2: now a full ladder
     expect(detect("broken-ladder", "12344321")).toBe(false); // radar, run of 4
     expect(detect("broken-ladder", "12346789")).toBe(false); // two runs of 4
     expect(detect("broken-ladder", "12345678")).toBe(false); // full ladder
@@ -90,10 +96,14 @@ describe("detectors — true and false cases", () => {
     expect(detect("high-serial", "99999899")).toBe(false);
   });
 
-  it("birthday-note", () => {
-    expect(detect("birthday-note", "01011990")).toBe(true);
-    expect(detect("birthday-note", "12312023")).toBe(true);
-    expect(detect("birthday-note", "13011990")).toBe(false);
+  it("birthday-note — MMDDYYYY, DDMMYYYY and YYYYMMDD", () => {
+    expect(detect("birthday-note", "01011990")).toBe(true); // MMDDYYYY
+    expect(detect("birthday-note", "12312023")).toBe(true); // MMDDYYYY 12/31/2023
+    expect(detect("birthday-note", "16101964")).toBe(true); // FIX 3: DDMMYYYY 16 Oct 1964
+    expect(detect("birthday-note", "19970802")).toBe(true); // FIX 3: YYYYMMDD 2 Aug 1997
+    expect(detect("birthday-note", "13011990")).toBe(true); // DDMMYYYY 13 Jan 1990
+    expect(detect("birthday-note", "19991345")).toBe(false); // invalid in every order
+    expect(detect("birthday-note", "19902411")).toBe(false); // seller mislabel, no valid order
     expect(detect("birthday-note", "00000000")).toBe(false);
   });
 

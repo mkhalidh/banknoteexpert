@@ -62,8 +62,8 @@ describe("estimateValue", () => {
     }
   });
 
-  it("returns 'unmapped' for a pattern with no value equivalent (double quad)", () => {
-    const result = estimateValue(scoreSerial("11112222").matches);
+  it("returns 'unmapped' for a trinary (no value equivalent, not a binary)", () => {
+    const result = estimateValue(scoreSerial("12312312").matches);
     expect(result.status).toBe("insufficient-data");
     if (result.status === "insufficient-data") expect(result.reason).toBe("unmapped");
   });
@@ -74,12 +74,24 @@ describe("estimateValue", () => {
     if (result.status === "insufficient-data") expect(result.reason).toBe("unmapped");
   });
 
-  it("returns 'gap' when the mapped pattern is entirely un-sampled (super radar)", () => {
-    const result = estimateValue(scoreSerial("71111117").matches);
+  it("returns 'gap' when the only mapped pattern is entirely un-sampled (super radar)", () => {
+    // Hand-built: in production 71111117 also surfaces Binary (see below).
+    const result = estimateValue([match("super-radar")]);
     expect(result.status).toBe("insufficient-data");
     if (result.status === "insufficient-data") {
       expect(result.pattern).toBe("super-radar");
       expect(result.reason).toBe("gap");
+    }
+  });
+
+  it("FIX 1 side-effect: double-quad/super-radar serials now surface a Binary value floor", () => {
+    // 11112222 (Double Quad) and 71111117 (Super Radar) are strictly Binary too;
+    // with Binary no longer suppressed they now get a real binary comp instead
+    // of insufficient-data. This is an accuracy improvement, not a regression.
+    for (const serial of ["11112222", "71111117"]) {
+      const result = estimateValue(scoreSerial(serial).matches);
+      expect(result.status).toBe("ok");
+      if (result.status === "ok") expect(result.pattern).toBe("binary");
     }
   });
 
