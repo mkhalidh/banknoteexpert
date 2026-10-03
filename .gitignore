@@ -53,3 +53,10 @@ next-env.d.ts
 /graphify-out/GRAPH_HEALTH.txt
 /graphify-out/cost.json
 /graphify-out/graph.html
+
+# Audit run outputs (regenerable); committed baselines under audit/baseline/ are kept
+/audit/*
+!/audit/baseline/
+
+# Claude Code local memory workspace (not a project artifact)
+/memory/
