@@ -3,3 +3,4 @@
 *.svg
 package-lock.json
 graphify-out/
+audit/
