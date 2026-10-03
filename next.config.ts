@@ -6,6 +6,22 @@ const nextConfig: NextConfig = {
   headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  // Canonicalise the apex host to www in-app, so the apex HTTPS redirect
+  // response carries the full HSTS header (includeSubDomains; preload) from
+  // headers() above — a prerequisite for hstspreload.org accepting the base
+  // domain. Requires the apex domain in Vercel to SERVE this project rather
+  // than use Vercel's edge-level "Redirect to www" (which only emits a bare
+  // max-age header). Host-only redirect; it does not make any route dynamic.
+  redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "banknoteexpert.com" }],
+        destination: "https://www.banknoteexpert.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     maximumRedirects: 0,
