@@ -6,10 +6,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { buildMetadata } from "@/lib/seo";
 
-// Self-hosted via next/font — no runtime requests to Google.
+// Self-hosted via next/font, no runtime requests to Google.
 // Only the display face is preloaded: it renders the hero <h1> (the LCP
 // element), so its file is on the critical path. The sans body and mono
-// data faces load on demand with font-display: swap — preloading them too
+// data faces load on demand with font-display: swap, preloading them too
 // would compete with the LCP font for early bandwidth and regress LCP.
 const geistSans = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
@@ -25,7 +25,7 @@ const geistMono = JetBrains_Mono({
   display: "swap",
 });
 
-// Display face for headings only — a sharp, engraved-feeling serif that
+// Display face for headings only, a sharp, engraved-feeling serif that
 // reads like currency typography, deliberately distinct from the sans body.
 // Preloaded (default) because the hero <h1 class="text-display"> is the LCP.
 const serifDisplay = Playfair_Display({
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
-        {/* Apply a stored theme override before first paint — no flash of the wrong theme. */}
+        {/* Apply a stored theme override before first paint, no flash of the wrong theme. */}
         <script
           dangerouslySetInnerHTML={{
             __html:

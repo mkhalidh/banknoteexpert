@@ -11,7 +11,7 @@ const FOOTER_SILOS: Silo[] = [
 
 /**
  * Footer with one link column per silo, sourced from the route registry.
- * Server Component — no interactivity.
+ * Server Component, no interactivity.
  */
 export function Footer() {
   return (

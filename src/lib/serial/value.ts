@@ -1,6 +1,6 @@
 /**
  * Value estimation. Reads real, sampled bands from src/data/value-ranges.ts.
- * Pure module — no React, no side effects.
+ * Pure module, no React, no side effects.
  *
  * Honesty rules enforced here:
  * - Never returns a single number; always a low–high band with its sample size.
@@ -30,7 +30,7 @@ export const CONDITION_LABELS: Record<NoteCondition, string> = {
 };
 
 /**
- * Task A — explicit mapping from every engine detector id to a value-data
+ * Task A, explicit mapping from every engine detector id to a value-data
  * pattern name, or null where no genuine market equivalent exists.
  *
  * Deliberately NOT mapped (different notes, different markets):
@@ -113,7 +113,7 @@ function isGap(valuePattern: string, condition: NoteCondition): boolean {
 
 /**
  * Resolve one pattern × condition cell. A recorded band, an explicit gap, or a
- * plain absence (no-band) — never a fabricated or substituted value.
+ * plain absence (no-band), never a fabricated or substituted value.
  */
 export function valueCell(
   valuePattern: string,

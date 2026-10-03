@@ -14,12 +14,15 @@ export const metadata: Metadata = buildMetadata({
   path: content.meta.path,
 });
 
-// Person JSON-LD matches the `author` reference emitted by ArticleSchema exactly.
+// One canonical Person entity across the site: same @id as the author-profile
+// page and the `author` reference emitted by ArticleSchema, so Google merges
+// them into a single node instead of three separate people.
 const personSchema: Record<string, unknown> = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${SITE_URL}/about-the-author/#person`,
   name: AUTHOR_NAME,
-  url: `${SITE_URL}/about/`,
+  url: `${SITE_URL}/about-the-author/`,
   description: AUTHOR_BIO,
   sameAs: AUTHOR_SAME_AS,
 };

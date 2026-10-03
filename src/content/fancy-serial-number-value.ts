@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/fancy-serial-number-value/",
     title: "Fancy Serial Number Price Guide: Value Chart by Pattern",
     description:
-      "A fancy serial number price guide with an estimated value chart by pattern and condition. See ranges for radars, solids, ladders, low serials and more, with sources and a confidence rating.",
+      "A fancy serial number price guide: estimated value ranges by pattern and condition for radars, solids, ladders, low serials and more, with sources.",
     h1: "Fancy Serial Number Price Guide",
     primaryKeyword: "fancy serial number price guide",
     lead:

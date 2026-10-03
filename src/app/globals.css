@@ -2,7 +2,7 @@
 
 /*
  * Dark mode is an explicit user choice (ThemeToggle sets data-theme on
- * <html>), not the OS media query — so every `dark:` utility across the
+ * <html>), not the OS media query, so every `dark:` utility across the
  * codebase must key off that attribute instead of Tailwind's default
  * prefers-color-scheme variant.
  */
@@ -96,7 +96,7 @@ label[for] {
 
 /* ---- Typography ---- */
 /* Display face (Fraunces) carries the headings; Geist Sans stays the body
-   face and Geist Mono the data face — three roles, not one family doing
+   face and Geist Mono the data face, three roles, not one family doing
    everything. Size-specific tracking/leading: large text tightens, body
    stays relaxed. */
 .text-display {
@@ -126,7 +126,7 @@ label[for] {
   letter-spacing: -0.005em;
 }
 
-/* Deliberately light against the bold display headline it sits under —
+/* Deliberately light against the bold display headline it sits under
    Geist's variable weight axis, not a second typeface, carries the contrast. */
 .text-lead {
   color: var(--muted);

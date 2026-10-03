@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /**
- * One accordion FAQ entry. Native `<details>` — no JS, works with JS
+ * One accordion FAQ entry. Native `<details>`, no JS, works with JS
  * disabled, and the answer stays in the DOM (readable by search engines and
  * assistive tech) even while visually collapsed. The open/close motion is a
  * pure CSS `grid-template-rows` transition; author CSS overrides the

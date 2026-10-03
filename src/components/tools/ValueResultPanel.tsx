@@ -15,7 +15,7 @@ function patternLabel(pattern: string): string {
 /**
  * Renders a value result honestly: a range per condition with its sample size
  * and confidence, or an explicit "insufficient data" message. Never a single
- * number, never $0, never an empty cell. Presentational — no client hooks.
+ * number, never $0, never an empty cell. Presentational, no client hooks.
  */
 export function ValueResultPanel({ result }: { result: ValueResult }) {
   if (result.status === "insufficient-data") {

@@ -1,7 +1,7 @@
 # Banknote Expert
 
 > Free, client-side tools to check US banknote serial numbers for collectible
-> "fancy" patterns, star notes and value. No account, no upload — every
+> "fancy" patterns, star notes and value. No account, no upload, every
 > calculation runs in your browser.
 
 Site: https://www.banknoteexpert.com
@@ -17,44 +17,44 @@ comments use a separate server-backed comment service.
 
 ## The four tools
 
-1. Fancy Serial Number Checker — /
+1. Fancy Serial Number Checker, https://www.banknoteexpert.com/
    Enter any US banknote serial. Detects radar, solid, ladder, repeater, binary,
    low/high serial, birthday and more; returns a 0–100 rarity score and an
    estimated value range.
-2. Star Note Lookup — /star-note-lookup/
+2. Star Note Lookup, https://www.banknoteexpert.com/star-note-lookup/
    Enter a star note's denomination, series and serial. Matches it against BEP
    print-run data, reports the run size and rarity tier, and flags any fancy
    pattern.
-3. $2 Bill Serial Number Lookup — /2-dollar-bill-serial-number-lookup/
+3. $2 Bill Serial Number Lookup, https://www.banknoteexpert.com/2-dollar-bill-serial-number-lookup/
    Enter a $2 note's series and serial. Reports seal colour and note type, flags
    fancy patterns and stars, and gives a value range.
-4. Fancy Serial Number Price Guide — /fancy-serial-number-value/
+4. Fancy Serial Number Price Guide, https://www.banknoteexpert.com/fancy-serial-number-value/
    A value chart by pattern and condition, with confidence ratings and sources.
 
 ## Pattern guides (Silo 1)
 
-- Fancy serial numbers overview (hub): /fancy-serial-numbers/
-- Radar serial numbers: /fancy-serial-numbers/radar/
-- Ladder serial numbers: /fancy-serial-numbers/ladder/
-- Low serial numbers: /fancy-serial-numbers/low-serial-number/
-- Birthday notes: /fancy-serial-numbers/birthday-note/
-- Where is the serial number on a dollar bill: /where-is-the-serial-number-on-a-dollar-bill/
+- Fancy serial numbers overview (hub): https://www.banknoteexpert.com/fancy-serial-numbers/
+- Radar serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/radar/
+- Ladder serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/ladder/
+- Low serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/low-serial-number/
+- Birthday notes: https://www.banknoteexpert.com/fancy-serial-numbers/birthday-note/
+- Where is the serial number on a dollar bill: https://www.banknoteexpert.com/where-is-the-serial-number-on-a-dollar-bill/
 
-Other patterns — binary, solid, repeater, super radar, seven-of-a-kind, double
-quad, trinary, high serial and flipper — are explained as sections on the hub
+Other patterns, binary, solid, repeater, super radar, seven-of-a-kind, double
+quad, trinary, high serial and flipper, are explained as sections on the hub
 page at /fancy-serial-numbers/.
 
 ## Adjacent topics
 
-- $2 bill value guide: /2-dollar-bill-value/
+- $2 bill value guide: https://www.banknoteexpert.com/2-dollar-bill-value/
 
 ## Trust
 
-- Methodology (sources, confidence levels, limitations): /methodology/
-- About: /about/
-- Author: /about-the-author/
-- All tools: /tools/
-- Article directory: /blog/
+- Methodology (sources, confidence levels, limitations): https://www.banknoteexpert.com/methodology/
+- About: https://www.banknoteexpert.com/about/
+- Author: https://www.banknoteexpert.com/about-the-author/
+- All tools: https://www.banknoteexpert.com/tools/
+- Article directory: https://www.banknoteexpert.com/blog/
 
 ## Notes for automated agents
 

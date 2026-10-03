@@ -57,7 +57,7 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
 
-  // SILO 1 — Fancy serial numbers
+  // SILO 1, Fancy serial numbers
   {
     path: "/fancy-serial-numbers/",
     title: "Fancy Serial Numbers on US Banknotes",
@@ -147,7 +147,7 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
 
-  // ANCHOR pages — adjacent silos, expanded later
+  // ANCHOR pages, adjacent silos, expanded later
   {
     path: "/star-note-lookup/",
     title: "Star Note Lookup",
@@ -173,7 +173,7 @@ export const routes: RouteEntry[] = [
 
   {
     path: "/blog/",
-    title: "Banknote Guides & Articles",
+    title: "Banknote Collecting Guides & Articles",
     description: "Explore Banknote Expert guides to fancy serial numbers, star notes, $2 bills and banknote values.",
     silo: "trust",
     pageType: "article-index",
@@ -184,12 +184,12 @@ export const routes: RouteEntry[] = [
 
   // TRUST
   {
-    path: "/about-the-author/", title: "About the Author",
+    path: "/about-the-author/", title: "About the Author: Muhammad Khalid Hussain | Banknote Expert",
     description: "Meet Muhammad Khalid Hussain, the writer and developer behind Banknote Expert.",
     silo: "trust", pageType: "trust", priority: 0.5, changeFrequency: "yearly", indexable: true,
   },
   {
-    path: "/tools/", title: "Banknote Tools",
+    path: "/tools/", title: "Banknote Serial Number Tools & Checkers",
     description: "Explore Banknote Expert serial number checkers and lookup tools.",
     silo: "home", pageType: "article-index", priority: 0.7, changeFrequency: "monthly", indexable: true,
   },

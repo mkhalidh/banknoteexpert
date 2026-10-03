@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { STAR_NOTE_RUNS } from "@/data/star-notes/runs";
 
-// Verified against the data at render time — no hardcoded figure.
+// Verified against the data at render time, no hardcoded figure.
 const RUNS_2003 = STAR_NOTE_RUNS.filter(
   (r) => r.denomination === 2 && r.series === "2003",
 );
@@ -11,7 +11,7 @@ const GLOBAL_MIN = Math.min(...STAR_NOTE_RUNS.map((r) => r.runSize));
 const IS_SCARCEST = MIN_2003 === GLOBAL_MIN;
 
 /**
- * Factual callout about the scarcest star runs in the dataset — $2 series 2003.
+ * Factual callout about the scarcest star runs in the dataset, $2 series 2003.
  * All figures are computed from STAR_NOTE_RUNS, not hardcoded. Renders nothing
  * if the data no longer supports the claim. Server Component.
  */
