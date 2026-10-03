@@ -24,7 +24,9 @@ export const securityHeaders = [
   { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
   { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()' },
-  // Preserve existing policy: the complete subdomain inventory is unverified.
-  { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
+  // All properties (apex, www, *.vercel.app) are HTTPS-only on Vercel and there
+  // are no plain-HTTP subdomains, so includeSubDomains + preload are safe. This
+  // lets browsers skip the http->https hop entirely (submit at hstspreload.org).
+  { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
   { key: cspHeaderName, value: contentSecurityPolicy },
 ];
