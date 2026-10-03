@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getRoutesBySilo, siloLabels, type Silo } from "@/config/routes";
+import { getRoute, getRoutesBySilo, siloLabels, type Silo } from "@/config/routes";
+import { SealIcon } from "@/components/ui/icons";
 
 /** Silos rendered as footer columns, in display order. */
 const FOOTER_SILOS: Silo[] = [
@@ -45,8 +46,18 @@ export function Footer() {
           );
         })}
       </div>
-      <div className="site-footer-bottom mx-auto pb-10 text-sm text-[var(--on-accent)]">
-        © {"2026"} Banknote Expert. Serial number checks run entirely in your browser.
+      <div className="site-footer-bottom mx-auto flex flex-col gap-4 pb-10 text-sm text-[var(--on-accent)] sm:flex-row sm:items-center sm:justify-between">
+        <Link
+          href="/"
+          className="site-brand flex shrink-0 items-center gap-3"
+          title={getRoute("/").title}
+        >
+          <SealIcon className="brand-seal h-8 w-8 shrink-0" />
+          Banknote Expert
+        </Link>
+        <span>
+          © {"2026"} Banknote Expert. Serial number checks run entirely in your browser.
+        </span>
       </div>
     </footer>
   );

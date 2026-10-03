@@ -267,6 +267,7 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
 .site-footer-inner, .site-footer-bottom { max-width: 1220px; padding-left: 32px; padding-right: 32px; }
 .site-footer .footer-column-label { font-family: var(--font-mono); font-size: 0.68rem; }
 .site-footer li { line-height: 1.6; }
+.site-footer .site-brand { color: var(--on-accent-strong); font-size: 1.2rem; }
 .site-footer a { display: inline-block; padding: 3px 0; font-size: 0.8rem; }
 .site-footer-bottom { font-size: 0.75rem; }
 .site-main > article { gap: 48px; }
