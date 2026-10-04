@@ -9,7 +9,13 @@ export type {
 export { patterns, patternsById } from "@/lib/serial/patterns";
 export type { PatternDefinition } from "@/lib/serial/patterns";
 
-export { scoreSerial, COMBO_BONUS, STAR_BONUS } from "@/lib/serial/score";
+export {
+  scoreSerial,
+  patternSatisfied,
+  COMBO_BONUS,
+  COMBO_CAP,
+  STAR_BONUS,
+} from "@/lib/serial/score";
 export type {
   SerialScore,
   PatternMatch,

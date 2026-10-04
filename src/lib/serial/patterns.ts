@@ -74,8 +74,14 @@ function longestSequentialRun(digits: string): number {
   return best;
 }
 
+/**
+ * A full ladder is any eight-digit strictly +1 or -1 run, regardless of start:
+ * 01234567, 12345678, 23456789, 76543210, 87654321, 98765432, etc. This reuses
+ * longestSequentialRun rather than hard-coding the two canonical strings, so
+ * true ladders like 23456789 are no longer misreported as broken ladders.
+ */
 function isFullLadder(digits: string): boolean {
-  return digits === "12345678" || digits === "87654321";
+  return longestSequentialRun(digits) === 8;
 }
 
 function numericValue(digits: string): number {
@@ -107,16 +113,28 @@ function isLeapYear(year: number): boolean {
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
-/** True when 8 digits form a valid MMDDYYYY date (years 1900-2099). */
-function isBirthday(digits: string): boolean {
-  const month = Number(digits.slice(0, 2));
-  const day = Number(digits.slice(2, 4));
-  const year = Number(digits.slice(4, 8));
+/** True when month/day/year form a real calendar date in 1900-2099. */
+function validDate(month: number, day: number, year: number): boolean {
   if (year < 1900 || year > 2099) return false;
   if (month < 1 || month > 12) return false;
   let maxDay = DAYS_IN_MONTH[month - 1];
   if (month === 2 && isLeapYear(year)) maxDay = 29;
   return day >= 1 && day <= maxDay;
+}
+
+/**
+ * True when the 8 digits spell a valid date in ANY of the three common
+ * orderings: MMDDYYYY, DDMMYYYY or YYYYMMDD (year 1900-2099). Collectors write
+ * birthdays in all three, so MMDDYYYY-only missed valid dates such as 16101964
+ * (16 Oct 1964, DDMMYYYY) and 19970802 (2 Aug 1997, YYYYMMDD).
+ */
+function isBirthday(digits: string): boolean {
+  const n = (a: number, b: number): number => Number(digits.slice(a, b));
+  return (
+    validDate(n(0, 2), n(2, 4), n(4, 8)) || // MMDDYYYY
+    validDate(n(2, 4), n(0, 2), n(4, 8)) || // DDMMYYYY
+    validDate(n(4, 6), n(6, 8), n(0, 4)) //   YYYYMMDD
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -230,6 +248,10 @@ export const patterns: PatternDefinition[] = [
     href: LADDER_HREF,
   },
   {
+    // Glossary note: the market loosely calls any serial with eight unique
+    // digits in scrambled order a "broken ladder". We intentionally do NOT
+    // detect that (≈1.8% of all notes, not collectible); we reserve the term
+    // for a genuine near-ladder (a 6-7 digit sequential run).
     id: "broken-ladder",
     name: "Broken Ladder",
     slug: "broken-ladder",
@@ -331,6 +353,9 @@ export const patterns: PatternDefinition[] = [
     href: BIRTHDAY_HREF,
   },
   {
+    // Glossary note: sellers call any serial made only of 0/1/6/8/9 a "soft
+    // flipper". We intentionally require strict 180-degree rotational symmetry
+    // (strobogrammatic), so loose "flipper" claims correctly do not match.
     id: "flipper",
     name: "Flipper",
     slug: "flipper",

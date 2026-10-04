@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { scoreSerial, STAR_BONUS } from "@/lib/serial/score";
+import { scoreSerial, patternSatisfied, STAR_BONUS } from "@/lib/serial/score";
 
 const ids = (serial: string): string[] =>
   scoreSerial(serial).matches.map((m) => m.id);
@@ -59,32 +59,87 @@ describe("scoreSerial — radar is not a broken ladder (Task A regression)", () 
   });
 });
 
-describe("scoreSerial — suppression rules", () => {
-  it("super-repeater suppresses repeater and binary", () => {
+describe("scoreSerial — same-axis supersession hides ONLY weaker same-axis forms", () => {
+  it("super-repeater hides repeater (same axis) but shows cross-axis binary", () => {
     const matched = ids("12121212");
     expect(matched).toContain("super-repeater");
-    expect(matched).not.toContain("repeater");
-    expect(matched).not.toContain("binary");
+    expect(matched).toContain("binary"); // FIX 1: cross-axis, must show
+    expect(matched).not.toContain("repeater"); // same-axis weaker form, hidden
   });
 
-  it("super-radar suppresses radar and binary", () => {
+  it("super-radar hides radar (same axis) but shows cross-axis binary", () => {
     const matched = ids("71111117");
     expect(matched).toContain("super-radar");
+    expect(matched).toContain("binary"); // FIX 1
     expect(matched).not.toContain("radar");
-    expect(matched).not.toContain("binary");
   });
 
-  it("double-quad suppresses binary", () => {
-    const matched = ids("11112222");
-    expect(matched).toContain("double-quad");
-    expect(matched).not.toContain("binary");
-  });
-
-  it("the tightest low-serial tier suppresses looser tiers", () => {
+  it("the tightest low-serial tier hides looser tiers (same axis)", () => {
     const matched = ids("00000001");
     expect(matched).toContain("low-serial-10");
     expect(matched).not.toContain("low-serial-100");
     expect(matched).not.toContain("low-serial-1000");
+  });
+});
+
+describe("scoreSerial — FIX 1: cross-axis patterns are no longer suppressed", () => {
+  it("77777477 shows Seven of a Kind AND Binary", () => {
+    const matched = ids("77777477");
+    expect(matched).toContain("seven-of-a-kind");
+    expect(matched).toContain("binary");
+    expect(primary("77777477")).toBe("seven-of-a-kind"); // higher baseScore
+  });
+
+  it("double-quad shows cross-axis Binary too (11112222)", () => {
+    const matched = ids("11112222");
+    expect(matched).toContain("double-quad");
+    expect(matched).toContain("binary");
+  });
+
+  it("80000008 shows Super Radar + Flipper + Binary; a radar claim is satisfied", () => {
+    const matched = ids("80000008");
+    expect(matched).toContain("super-radar");
+    expect(matched).toContain("flipper");
+    expect(matched).toContain("binary");
+    expect(matched).not.toContain("radar"); // hidden under super-radar...
+    expect(patternSatisfied(scoreSerial("80000008"), "radar")).toBe(true); // ...but implied
+  });
+
+  it("a super-repeater satisfies a 'repeater' claim via IMPLIES", () => {
+    expect(patternSatisfied(scoreSerial("12121212"), "repeater")).toBe(true);
+  });
+
+  it("combination bonus only counts different-axis tags and is capped", () => {
+    // 77777477: primary seven-of-a-kind (80) + binary on a different axis (+5)
+    expect(scoreSerial("77777477").score).toBe(85);
+  });
+});
+
+describe("scoreSerial — FIX 2: any full 8-digit run is a ladder", () => {
+  for (const serial of ["12345678", "23456789", "01234567", "98765432", "76543210"]) {
+    it(`${serial} is a ladder, not a broken ladder`, () => {
+      const matched = ids(serial);
+      expect(matched).toContain("ladder");
+      expect(matched).not.toContain("broken-ladder");
+    });
+  }
+
+  it("12345670 (run of 7) is a broken ladder", () => {
+    const matched = ids("12345670");
+    expect(matched).toContain("broken-ladder");
+    expect(matched).not.toContain("ladder");
+  });
+});
+
+describe("scoreSerial — FIX 3: multi-format birthday", () => {
+  it("16101964 is a birthday (DDMMYYYY)", () => {
+    expect(ids("16101964")).toContain("birthday-note");
+  });
+  it("19970802 is a birthday (YYYYMMDD)", () => {
+    expect(ids("19970802")).toContain("birthday-note");
+  });
+  it("19991345 is not a birthday in any order", () => {
+    expect(ids("19991345")).not.toContain("birthday-note");
   });
 });
 
