@@ -143,6 +143,21 @@ describe("scoreSerial — FIX 3: multi-format birthday", () => {
   });
 });
 
+describe("scoreSerial — high-serial threshold and score", () => {
+  it("96000000 and 99999999 match high serial; 95999999 does not", () => {
+    expect(ids("96000000")).toContain("high-serial");
+    expect(ids("99999999")).toContain("high-serial"); // also solid, but high-serial is present
+    expect(ids("95999999")).not.toContain("high-serial");
+  });
+
+  it("a high-serial-only note scores its new base (30) and is Notable, not Rare", () => {
+    const result = scoreSerial("96123457"); // only pattern is high-serial
+    expect(result.matches.map((m) => m.id)).toEqual(["high-serial"]);
+    expect(result.score).toBe(30);
+    expect(result.tier).toBe("Notable");
+  });
+});
+
 describe("scoreSerial — scoring behaviour", () => {
   it("produces deterministic scores for the same input", () => {
     expect(scoreSerial("12345678").score).toBe(scoreSerial("12345678").score);

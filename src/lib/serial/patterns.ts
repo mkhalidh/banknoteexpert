@@ -334,11 +334,12 @@ export const patterns: PatternDefinition[] = [
     id: "high-serial",
     name: "High Serial",
     slug: "high-serial",
-    description: "Serial value of 99999900 or above.",
+    description:
+      "Serial value of 96,000,000 or above. That is the top of a modern $1 to $20 Federal Reserve print block; $50 and $100 blocks run a little higher, to 99,200,000.",
     example: "99999999",
-    detect: (d) => numericValue(d) >= 99999900,
-    rarityOdds: "1 in ~111,000",
-    baseScore: 55,
+    detect: (d) => numericValue(d) >= 96000000,
+    rarityOdds: "1 in 25",
+    baseScore: 30,
     href: hub("high-serial"),
   },
   {

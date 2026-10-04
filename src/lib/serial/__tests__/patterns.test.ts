@@ -90,10 +90,11 @@ describe("detectors — true and false cases", () => {
     expect(detect("low-serial-1000", "00001500")).toBe(false);
   });
 
-  it("high-serial", () => {
+  it("high-serial — threshold is 96,000,000 (BEP block ceiling)", () => {
+    expect(detect("high-serial", "95999999")).toBe(false); // just below the cap
+    expect(detect("high-serial", "96000000")).toBe(true); // $1-$20 block top
+    expect(detect("high-serial", "99200000")).toBe(true); // $50/$100 block top
     expect(detect("high-serial", "99999999")).toBe(true);
-    expect(detect("high-serial", "99999900")).toBe(true);
-    expect(detect("high-serial", "99999899")).toBe(false);
   });
 
   it("birthday-note — MMDDYYYY, DDMMYYYY and YYYYMMDD", () => {
