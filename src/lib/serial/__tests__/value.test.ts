@@ -101,14 +101,22 @@ describe("confounder exclusions produce de-confounded figures", () => {
     }
   });
 
-  it("low-serial buckets with only confounded records stay blank", () => {
+  it("low-serial-under-1000 / unc stays blank (records all confounded)", () => {
+    const cell = valueCell("low-serial-under-1000", "unc");
+    expect(cell.status).toBe("insufficient-data");
+  });
+
+  it("new records publish the previously blank low-serial buckets", () => {
     for (const [p, c] of [
-      ["low-serial-under-100", "vf"],
-      ["low-serial-under-1000", "unc"],
+      ["low-serial-under-1000", "circulated"],
+      ["low-serial-under-1000", "vf"],
     ] as const) {
-      const cell = valueCell(p, c);
-      expect(cell.status).toBe("insufficient-data");
+      expect(valueCell(p, c).status).toBe("ok");
     }
+  });
+
+  it("low-serial-under-100 / vf stays blank (serial 1 outlier excluded by owner decision)", () => {
+    expect(valueCell("low-serial-under-100", "vf").status).toBe("insufficient-data");
   });
 });
 
@@ -140,12 +148,11 @@ describe("estimateValue", () => {
     if (result.status === "insufficient-data") expect(result.reason).toBe("unmapped");
   });
 
-  it("returns 'gap' when the mapped pattern has no band in any bucket (birthday)", () => {
+  it("birthday-note now returns a value (new records pushed it over the threshold)", () => {
     const result = estimateValue([match("birthday-note")]);
-    expect(result.status).toBe("insufficient-data");
-    if (result.status === "insufficient-data") {
+    expect(result.status).toBe("ok");
+    if (result.status === "ok") {
       expect(result.pattern).toBe("birthday-note");
-      expect(result.reason).toBe("gap");
     }
   });
 
@@ -193,7 +200,7 @@ describe("valueCell — no substitution", () => {
   });
 
   it("returns 'gap' for an explicitly empty combination", () => {
-    const cell = valueCell("radar", "circulated");
+    const cell = valueCell("binary", "circulated");
     expect(cell.status).toBe("insufficient-data");
     if (cell.status === "insufficient-data") expect(cell.reason).toBe("gap");
   });
