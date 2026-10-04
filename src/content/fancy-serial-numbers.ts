@@ -161,7 +161,7 @@ export const patternCopy: Record<string, PatternCopy> = {
   },
   "high-serial": {
     definition:
-      "A high serial sits at the very end of a print run, at 99999900 or above, with 99999999 the ceiling. It is the mirror image of a low serial: instead of the first notes off the press, these are among the last. High serials are scarce for the same structural reason low ones are, since only a tiny band of numbers at the top of each run qualifies, but they attract a smaller, more specialist following, so recognition lags behind the famous low numbers.",
+      "A high serial sits at the very top of a print block, at a serial value of 96,000,000 or above. That is the ceiling of a modern $1 to $20 Federal Reserve block; $50 and $100 blocks run a little higher, to 99,200,000. Roughly 1 in 25 notes falls in this band, so a high serial is far more common than a low one. It is the mirror image of a low serial: instead of the first notes off the press, these are among the last. The following is a smaller, more specialist one, so recognition lags behind the famous low numbers.",
     valueNote:
       "High serials carry a modest premium that leans heavily on condition and on how close the number sits to the absolute maximum. A note ending in a long tail of nines is more striking, and therefore more wanted, than one merely inside the qualifying band. As with every pattern, check comparable sold listings before settling on a figure rather than assuming the top of the run guarantees a top price.",
   },
