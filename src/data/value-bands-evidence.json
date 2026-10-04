@@ -1,0 +1,640 @@
+{
+  "_comment": "Reviewable derivation of homepage value bands from the clean evidence sheet. sheetSummary reproduces the sheet's own per-bucket summary. publishedBand is the de-confounded (modern small-size) min-max used on the site; excludedConfounders lists what was removed and why. Not imported at runtime; src/data/value-ranges.ts holds the live bands.",
+  "updated": "2026-10-03",
+  "source": "Heritage Auctions + eBay sold records, Value Bands (Clean) tab",
+  "cells": [
+    {
+      "pattern": "solid",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 10,
+        "low": 364.25,
+        "high": 1150.0,
+        "status": "OK"
+      },
+      "keptModernCount": 6,
+      "excludedConfounders": {
+        "silver certificate": 4
+      },
+      "publishedBand": {
+        "low": 364.25,
+        "high": 1150.0,
+        "sampleSize": 6,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "solid",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 13,
+        "low": 1320.0,
+        "high": 5287.5,
+        "status": "OK"
+      },
+      "keptModernCount": 9,
+      "excludedConfounders": {
+        "legal tender note": 1,
+        "large-size (1917)": 1,
+        "silver certificate": 3
+      },
+      "publishedBand": {
+        "low": 1320.0,
+        "high": 4800.0,
+        "sampleSize": 9,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "solid",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 12,
+        "low": 8700.0,
+        "high": 90000.0,
+        "status": "OK"
+      },
+      "keptModernCount": 5,
+      "excludedConfounders": {
+        "silver certificate": 5,
+        "large-size (1899)": 3,
+        "courtesy autograph": 1,
+        "large-size (1914)": 1,
+        "star note": 1
+      },
+      "publishedBand": {
+        "low": 9600.0,
+        "high": 27600.0,
+        "sampleSize": 5,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "ladder",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 0,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 0/10"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 0/10)"
+    },
+    {
+      "pattern": "ladder",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 2,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 2/10"
+      },
+      "keptModernCount": 2,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 2/10)"
+    },
+    {
+      "pattern": "ladder",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 16,
+        "low": 1560.0,
+        "high": 5520.0,
+        "status": "OK"
+      },
+      "keptModernCount": 15,
+      "excludedConfounders": {
+        "silver certificate": 1
+      },
+      "publishedBand": {
+        "low": 1560.0,
+        "high": 4392.0,
+        "sampleSize": 15,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "birthday-note",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 8,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 8/10"
+      },
+      "keptModernCount": 8,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 8/10)"
+    },
+    {
+      "pattern": "birthday-note",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 0,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 0/10"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 0/10)"
+    },
+    {
+      "pattern": "birthday-note",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 1,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 1/10"
+      },
+      "keptModernCount": 1,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 1/10)"
+    },
+    {
+      "pattern": "ladder-partial",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 0,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 0/10"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {},
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 0/10)"
+    },
+    {
+      "pattern": "ladder-partial",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 6,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 6/10"
+      },
+      "keptModernCount": 5,
+      "excludedConfounders": {
+        "legal tender note; star note": 1
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 6/10)"
+    },
+    {
+      "pattern": "ladder-partial",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 26,
+        "low": 15.0,
+        "high": 616.88,
+        "status": "OK"
+      },
+      "keptModernCount": 24,
+      "excludedConfounders": {
+        "star note": 2
+      },
+      "publishedBand": {
+        "low": 15.0,
+        "high": 616.88,
+        "sampleSize": 24,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "low-serial-under-100",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 19,
+        "low": 74.0,
+        "high": 11500.0,
+        "status": "OK"
+      },
+      "keptModernCount": 7,
+      "excludedConfounders": {
+        "high denomination": 1,
+        "large-size (1918)": 1,
+        "star note": 1,
+        "large-size (1914)": 1,
+        "national bank note": 9,
+        "legal tender note": 1,
+        "large-size (1863)": 1,
+        "silver certificate; star note": 2,
+        "large-size (1864)": 1,
+        "silver certificate": 1
+      },
+      "publishedBand": {
+        "low": 74.0,
+        "high": 390.4,
+        "sampleSize": 7,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "low-serial-under-100",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 10,
+        "low": 385.0,
+        "high": 31200.0,
+        "status": "OK"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {
+        "large-size (1890)": 1,
+        "treasury/coin note": 1,
+        "high denomination": 4,
+        "large-size (1918)": 1,
+        "star note": 2,
+        "large-size (1914)": 2,
+        "large-size (1875)": 1,
+        "national bank note": 2
+      },
+      "publishedBand": null,
+      "blankReason": "OK clean count but every record is a confounder (large-size / certificate / NBN / high-denom); no modern small-size evidence, so left blank per rule 4"
+    },
+    {
+      "pattern": "low-serial-under-100",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 25,
+        "low": 6168.75,
+        "high": 66000.0,
+        "status": "OK"
+      },
+      "keptModernCount": 3,
+      "excludedConfounders": {
+        "silver certificate": 7,
+        "large-size (1896)": 2,
+        "large-size (1891)": 4,
+        "silver certificate; courtesy autograph": 2,
+        "large-size (1899)": 4,
+        "national bank note": 8,
+        "large-size (1902)": 3,
+        "large-size (1918)": 5,
+        "treasury/coin note": 2,
+        "legal tender note": 1,
+        "large-size (1862)": 1,
+        "high denomination": 1
+      },
+      "publishedBand": {
+        "low": 6168.75,
+        "high": 9400.0,
+        "sampleSize": 3,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 10,
+        "low": 61.0,
+        "high": 3840.0,
+        "status": "OK"
+      },
+      "keptModernCount": 2,
+      "excludedConfounders": {
+        "silver certificate": 1,
+        "large-size (1899)": 1,
+        "silver certificate; star note": 1,
+        "large-size (1923)": 1,
+        "star note; high denomination": 1,
+        "high denomination": 1,
+        "star note": 3,
+        "gold certificate; star note": 1,
+        "large-size (1922)": 1
+      },
+      "publishedBand": {
+        "low": 61.0,
+        "high": 156.0,
+        "sampleSize": 2,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 19,
+        "low": 74.0,
+        "high": 21000.0,
+        "status": "OK"
+      },
+      "keptModernCount": 1,
+      "excludedConfounders": {
+        "star note": 5,
+        "star note; high denomination": 3,
+        "mule note; star note; high denomination": 3,
+        "legal tender note; star note; high denomination": 1,
+        "legal tender note; star note": 1,
+        "high denomination": 1,
+        "silver certificate": 3,
+        "large-size (1899)": 1,
+        "legal tender note": 1,
+        "large-size (1923)": 1
+      },
+      "publishedBand": {
+        "low": 150.0,
+        "high": 150.0,
+        "sampleSize": 1,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 14,
+        "low": 2820.0,
+        "high": 48875.0,
+        "status": "OK"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {
+        "silver certificate": 5,
+        "large-size (1896)": 3,
+        "high denomination": 1,
+        "legal tender note": 2,
+        "large-size (1899)": 2,
+        "large-size (1918)": 6,
+        "large-size (1917)": 1
+      },
+      "publishedBand": null,
+      "blankReason": "OK clean count but every record is a confounder (large-size / certificate / NBN / high-denom); no modern small-size evidence, so left blank per rule 4"
+    },
+    {
+      "pattern": "repeater",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 5,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 5/10"
+      },
+      "keptModernCount": 1,
+      "excludedConfounders": {
+        "silver certificate": 2,
+        "large-size (1914)": 2
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 5/10)"
+    },
+    {
+      "pattern": "repeater",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 14,
+        "low": 14.0,
+        "high": 3480.0,
+        "status": "OK"
+      },
+      "keptModernCount": 7,
+      "excludedConfounders": {
+        "mule note; high denomination": 1,
+        "large-size (1918)": 2,
+        "silver certificate": 2,
+        "large-size (1923)": 2,
+        "legal tender note": 2
+      },
+      "publishedBand": {
+        "low": 14.0,
+        "high": 384.0,
+        "sampleSize": 7,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "repeater",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 10,
+        "low": 384.0,
+        "high": 2640.0,
+        "status": "OK"
+      },
+      "keptModernCount": 5,
+      "excludedConfounders": {
+        "courtesy autograph": 1,
+        "large-size (1914)": 1,
+        "gold certificate": 1,
+        "star note": 2,
+        "legal tender note": 1
+      },
+      "publishedBand": {
+        "low": 432.0,
+        "high": 600.0,
+        "sampleSize": 5,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 2,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 2/10"
+      },
+      "keptModernCount": 1,
+      "excludedConfounders": {
+        "star note": 1
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 2/10)"
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 7,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 7/10"
+      },
+      "keptModernCount": 5,
+      "excludedConfounders": {
+        "legal tender note": 2
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 7/10)"
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 11,
+        "low": 240.0,
+        "high": 1098.0,
+        "status": "OK"
+      },
+      "keptModernCount": 9,
+      "excludedConfounders": {
+        "silver certificate": 1,
+        "large-size (1923)": 1,
+        "error note": 1,
+        "qa: pattern match failed strict definition": 1
+      },
+      "publishedBand": {
+        "low": 264.0,
+        "high": 1020.0,
+        "sampleSize": 9,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "binary",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 9,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 9/10"
+      },
+      "keptModernCount": 2,
+      "excludedConfounders": {
+        "also a super-repeater (abababab)": 2,
+        "star note": 2,
+        "silver certificate": 1,
+        "large-size (1899)": 1,
+        "legal tender note": 1,
+        "large-size (1917)": 1,
+        "legal tender note; star note": 1
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 9/10)"
+    },
+    {
+      "pattern": "binary",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 11,
+        "low": 55.2,
+        "high": 528.0,
+        "status": "OK"
+      },
+      "keptModernCount": 4,
+      "excludedConfounders": {
+        "star note": 2,
+        "silver certificate": 2,
+        "silver certificate; hawaii wwii emergency note": 1,
+        "legal tender note": 1,
+        "also a super-repeater (abababab)": 1
+      },
+      "publishedBand": {
+        "low": 135.13,
+        "high": 336.0,
+        "sampleSize": 4,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "binary",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 16,
+        "low": 336.0,
+        "high": 1920.0,
+        "status": "OK"
+      },
+      "keptModernCount": 11,
+      "excludedConfounders": {
+        "star note": 1,
+        "silver certificate": 4
+      },
+      "publishedBand": {
+        "low": 366.0,
+        "high": 1920.0,
+        "sampleSize": 11,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "radar",
+      "condition": "circulated",
+      "sheetSummary": {
+        "cleanCount": 3,
+        "low": null,
+        "high": null,
+        "status": "SHORTFALL 3/10"
+      },
+      "keptModernCount": 0,
+      "excludedConfounders": {
+        "silver certificate; hawaii wwii emergency note": 1,
+        "silver certificate": 2
+      },
+      "publishedBand": null,
+      "blankReason": "shortfall (SHORTFALL 3/10)"
+    },
+    {
+      "pattern": "radar",
+      "condition": "vf",
+      "sheetSummary": {
+        "cleanCount": 11,
+        "low": 40.0,
+        "high": 432.0,
+        "status": "OK"
+      },
+      "keptModernCount": 4,
+      "excludedConfounders": {
+        "legal tender note": 5,
+        "silver certificate; star note": 1,
+        "star note": 1
+      },
+      "publishedBand": {
+        "low": 40.0,
+        "high": 432.0,
+        "sampleSize": 4,
+        "confidence": "indicative"
+      },
+      "blankReason": null
+    },
+    {
+      "pattern": "radar",
+      "condition": "unc",
+      "sheetSummary": {
+        "cleanCount": 16,
+        "low": 378.2,
+        "high": 1955.0,
+        "status": "OK"
+      },
+      "keptModernCount": 12,
+      "excludedConfounders": {
+        "silver certificate": 3,
+        "large-size (1923)": 1,
+        "star note": 1,
+        "large-size (1899)": 1
+      },
+      "publishedBand": {
+        "low": 378.2,
+        "high": 1020.0,
+        "sampleSize": 12,
+        "confidence": "estimate"
+      },
+      "blankReason": null
+    }
+  ]
+}

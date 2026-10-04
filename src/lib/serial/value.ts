@@ -34,8 +34,11 @@ export const CONDITION_LABELS: Record<NoteCondition, string> = {
  * pattern name, or null where no genuine market equivalent exists.
  *
  * Deliberately NOT mapped (different notes, different markets):
- *   super-repeater, trinary, seven-of-a-kind, double-quad, flipper, high-serial,
- *   and the low-serial <10 and <100 tiers (no recorded sales).
+ *   super-repeater, trinary, seven-of-a-kind, double-quad, flipper, high-serial.
+ *
+ * The <10 and <100 low-serial tiers both resolve to the "low-serial-under-100"
+ * value data (a serial below 10 is also below 100). This fixes the earlier
+ * defect where those two tiers mapped to null and returned nothing.
  */
 export const ENGINE_TO_VALUE_PATTERN: Record<string, string | null> = {
   solid: "solid",
@@ -49,13 +52,37 @@ export const ENGINE_TO_VALUE_PATTERN: Record<string, string | null> = {
   "broken-ladder": "ladder-partial",
   binary: "binary",
   trinary: null,
-  "low-serial-10": null,
-  "low-serial-100": null,
+  "low-serial-10": "low-serial-under-100",
+  "low-serial-100": "low-serial-under-100",
   "low-serial-1000": "low-serial-under-1000",
   "high-serial": null,
   "birthday-note": "birthday-note",
   flipper: null,
 };
+
+/**
+ * Map a grade number or a grade/condition term onto one of the three value
+ * buckets, exactly the way the evidence sheet bucketed its records:
+ *   grade 60-70, or Uncirculated / Gem / Crisp / New  -> "unc"
+ *   grade 20-58, or VF / XF / Extremely Fine / AU / About Uncirculated -> "vf"
+ *   below grade 20, or Fine / Very Good / Good / Circulated -> "circulated"
+ * A numeric grade in the string takes precedence over the words, so
+ * "About Uncirculated 55" resolves to "vf" (55) rather than "unc".
+ */
+export function conditionForGrade(gradeOrTerm: string | number): NoteCondition {
+  const byNumber = (g: number): NoteCondition =>
+    g >= 60 ? "unc" : g >= 20 ? "vf" : "circulated";
+  if (typeof gradeOrTerm === "number") return byNumber(gradeOrTerm);
+  const t = gradeOrTerm.toLowerCase();
+  const num = t.match(/\b(\d{1,2})\b/);
+  if (num) return byNumber(Number(num[1]));
+  // "About Uncirculated" / "AU" must resolve to vf, so the vf terms are tested
+  // before the unc terms (otherwise "uncirculated" inside "about uncirculated"
+  // would win).
+  if (/very fine|\bvf\b|extremely fine|\bxf\b|\bef\b|about uncirculated|\bau\b/.test(t)) return "vf";
+  if (/uncirculated|\bgem\b|crisp|\bunc\b|\bcu\b|\bnew\b/.test(t)) return "unc";
+  return "circulated";
+}
 
 /** Human labels for value-data pattern names. */
 export const VALUE_PATTERN_LABELS: Record<string, string> = {
