@@ -108,12 +108,15 @@ describe("confounder exclusions produce de-confounded figures", () => {
 
   it("new records publish the previously blank low-serial buckets", () => {
     for (const [p, c] of [
-      ["low-serial-under-100", "vf"], // skewed by serial 1, published per policy
       ["low-serial-under-1000", "circulated"],
       ["low-serial-under-1000", "vf"],
     ] as const) {
       expect(valueCell(p, c).status).toBe("ok");
     }
+  });
+
+  it("low-serial-under-100 / vf stays blank (serial 1 outlier excluded by owner decision)", () => {
+    expect(valueCell("low-serial-under-100", "vf").status).toBe("insufficient-data");
   });
 });
 

@@ -29,10 +29,12 @@
 // data" state for them, never a $0 or a neighbouring band.
 //
 // Last rebuilt from evidence: 2026-10-03. Refreshed 2026-10-04 with new sold
-// records that pushed eight previously blank buckets over the 3-record threshold
-// (ladder/vf, birthday/circulated, birthday/unc, low-serial-under-100/vf,
-// low-serial-under-1000/circulated, low-serial-under-1000/vf, repeater/circulated,
-// radar/circulated). See src/data/value-bands-evidence.json (newRecords).
+// records. Seven previously blank buckets published from new evidence (ladder/vf,
+// birthday/circulated, birthday/unc, low-serial-under-1000/circulated,
+// low-serial-under-1000/vf, repeater/circulated, radar/circulated), and two more
+// (ladder-partial/vf, super-radar/vf) published on their existing 5 de-confounded
+// records. low-serial-under-100/vf was left blank (serial number 1 $5,000 outlier).
+// See src/data/value-bands-evidence.json (newRecords).
 
 export type ValueConfidence = "estimate" | "indicative";
 export type NoteCondition = "circulated" | "vf" | "unc";
@@ -66,17 +68,18 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "birthday-note", condition: "circulated", low: 2.99, high: 60.0, sampleSize: 10, confidence: "estimate", source: SRC_EST },
   { pattern: "birthday-note", condition: "unc", low: 15.0, high: 79.0, sampleSize: 10, confidence: "estimate", source: SRC_EST },
 
-  // broken ladder (ladder-partial): excluded two star notes.
+  // broken ladder (ladder-partial): excluded two star notes (unc) and a legal-tender star note (vf).
+  // vf has 5 de-confounded records and publishes per the 3-record rule.
+  { pattern: "ladder-partial", condition: "vf", low: 129.25, high: 372.0, sampleSize: 5, confidence: "indicative", source: SRC_IND },
   { pattern: "ladder-partial", condition: "unc", low: 15.0, high: 616.88, sampleSize: 24, confidence: "estimate", source: SRC_EST },
 
   // low serial under 100: excluded National Bank Notes, large-size, high-denomination,
   // star, legal tender and silver certificates. Circulated unchanged (a new $1 at $140
   // sits inside the range; a $20 best-offer at $399 is approximate and not promoted).
-  // vf: WARNING, this range is skewed by serial number 1 ($20 PMG VF 25, $5,000). The
-  // other two modern records are $249.99 and $450; without serial 1 the bucket has only
-  // two records and would be blank. Kept per the 3-record publish rule, but flagged.
+  // vf stays blank by owner decision: its only modern records are $249.99 and $450 plus
+  // serial number 1 ($20 PMG VF 25, $5,000). Serial 1 is an outlier, and without it the
+  // bucket has two records, so we leave it blank rather than publish a $250 to $5,000 range.
   { pattern: "low-serial-under-100", condition: "circulated", low: 74.0, high: 390.4, sampleSize: 7, confidence: "indicative", source: SRC_IND },
-  { pattern: "low-serial-under-100", condition: "vf", low: 249.99, high: 5000.0, sampleSize: 3, confidence: "indicative", source: SRC_IND },
   { pattern: "low-serial-under-100", condition: "unc", low: 6168.75, high: 9400.0, sampleSize: 3, confidence: "indicative", source: SRC_IND },
 
   // low serial under 1000: circulated and vf now publish on modern small-size records
@@ -92,7 +95,9 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "repeater", condition: "vf", low: 14.0, high: 384.0, sampleSize: 7, confidence: "indicative", source: SRC_IND },
   { pattern: "repeater", condition: "unc", low: 432.0, high: 600.0, sampleSize: 5, confidence: "indicative", source: SRC_IND },
 
-  // super radar: excluded a 1923 large-size, a silver certificate, an error note and a QA-flagged record. Only unc clears the gate.
+  // super radar: excluded a 1923 large-size, a silver certificate, an error note and QA-flagged records.
+  // vf has 5 de-confounded records and publishes per the 3-record rule.
+  { pattern: "super-radar", condition: "vf", low: 43.0, high: 118.68, sampleSize: 5, confidence: "indicative", source: SRC_IND },
   { pattern: "super-radar", condition: "unc", low: 264.0, high: 1020.0, sampleSize: 9, confidence: "estimate", source: SRC_EST },
 
   // binary: excluded star notes, silver certificates, a Hawaii WWII note and a QA-flagged super-repeater.
@@ -109,19 +114,18 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
 ];
 
 /**
- * Combinations with no publishable band (fewer than 3 de-confounded records).
- * Render as "insufficient data", never $0. ladder-partial / vf and super-radar / vf
- * each have 5 de-confounded records but received no new evidence, so they are left
- * blank rather than publish a cell the refresh did not actually touch.
+ * Combinations with no publishable band. Render as "insufficient data", never $0.
+ * Most are under 3 de-confounded records. low-serial-under-100 / vf is a special
+ * case: it would reach 3 only by counting serial number 1 ($5,000), an outlier, so
+ * by owner decision it is left blank rather than publish a $250 to $5,000 range.
  */
 export const PATTERN_VALUE_GAPS: { pattern: string; condition: NoteCondition }[] = [
   { pattern: "ladder", condition: "circulated" },
   { pattern: "birthday-note", condition: "vf" },
   { pattern: "ladder-partial", condition: "circulated" },
-  { pattern: "ladder-partial", condition: "vf" },
+  { pattern: "low-serial-under-100", condition: "vf" }, // only serial 1 ($5,000) outlier plus 2 records; blanked by owner decision
   { pattern: "low-serial-under-1000", condition: "unc" }, // records all 1918 large-size / 1896 silver certificate / high-denom
   { pattern: "super-radar", condition: "circulated" },
-  { pattern: "super-radar", condition: "vf" },
   { pattern: "binary", condition: "circulated" },
 ];
 
