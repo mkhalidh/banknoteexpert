@@ -5,6 +5,7 @@ import { getRoute } from "@/config/routes";
 import { LAST_UPDATED, ORG_LOGO_PATH, ORG_SAME_AS } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { FeaturedOn } from "@/components/content/FeaturedOn";
 import { SerialDiagram } from "@/components/content/SerialDiagram";
 import { PatternGrid } from "@/components/content/PatternGrid";
 import { ValueRangeTable } from "@/components/content/ValueRangeTable";
@@ -350,6 +351,8 @@ export default function Page() {
       </section>
 
       <Comments path="/" />
+
+      <FeaturedOn />
 
       <JsonLd data={structuredData} />
     </article>
