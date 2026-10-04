@@ -26,6 +26,7 @@ export type {
 export {
   estimateValue,
   valueCell,
+  conditionForGrade,
   valuePatternUniverse,
   ENGINE_TO_VALUE_PATTERN,
   VALUE_PATTERN_LABELS,
