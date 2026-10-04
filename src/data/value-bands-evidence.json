@@ -320,13 +320,8 @@
         "gold certificate; star note": 1,
         "large-size (1922)": 1
       },
-      "publishedBand": {
-        "low": 61.0,
-        "high": 156.0,
-        "sampleSize": 2,
-        "confidence": "indicative"
-      },
-      "blankReason": null
+      "publishedBand": null,
+      "blankReason": "only 2 modern record(s) after excluding confounders; too thin to publish (need 3+)"
     },
     {
       "pattern": "low-serial-under-1000",
@@ -350,13 +345,8 @@
         "legal tender note": 1,
         "large-size (1923)": 1
       },
-      "publishedBand": {
-        "low": 150.0,
-        "high": 150.0,
-        "sampleSize": 1,
-        "confidence": "indicative"
-      },
-      "blankReason": null
+      "publishedBand": null,
+      "blankReason": "only 1 modern record(s) after excluding confounders; too thin to publish (need 3+)"
     },
     {
       "pattern": "low-serial-under-1000",

@@ -16,9 +16,11 @@
 //   confounders are removed (low-serial-under-100 / vf and
 //   low-serial-under-1000 / unc). There is no honest modern figure, so they are
 //   left blank (gaps) rather than publish a confounder-inflated range.
-// - sampleSize is the de-confounded record count actually behind the band.
-//   8 or more = "estimate"; fewer = "indicative" (shows what has been paid, not a
-//   reliable market range).
+// - sampleSize is the de-confounded record count actually behind the band. A
+//   bucket needs at least 3 de-confounded records to publish a band: one or two
+//   sales is an anecdote, not a range, so it is left blank. 8 or more records =
+//   "estimate"; 3 to 7 = "indicative" (shows what has been paid, not a reliable
+//   market range).
 //
 // The full derivation, including the reproduced sheet summary and every excluded
 // record, lives in src/data/value-bands-evidence.json for review.
@@ -62,10 +64,10 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "low-serial-under-100", condition: "circulated", low: 74.0, high: 390.4, sampleSize: 7, confidence: "indicative", source: SRC_IND },
   { pattern: "low-serial-under-100", condition: "unc", low: 6168.75, high: 9400.0, sampleSize: 3, confidence: "indicative", source: SRC_IND },
 
-  // low serial under 1000: excluded star notes, large-size (1899/1922/1923), gold/silver certificates and high-denominations.
-  // The unc bucket is blank: its clean records are all 1918 large-size / 1896 silver certificate / high-denom notes.
-  { pattern: "low-serial-under-1000", condition: "circulated", low: 61.0, high: 156.0, sampleSize: 2, confidence: "indicative", source: SRC_IND },
-  { pattern: "low-serial-under-1000", condition: "vf", low: 150.0, high: 150.0, sampleSize: 1, confidence: "indicative", source: SRC_IND },
+  // low serial under 1000: all three buckets are blank. After removing confounders
+  // the circulated bucket had only 2 modern records and the vf bucket only 1, and
+  // the unc bucket zero (all 1918 large-size / 1896 silver certificate / high-denom).
+  // One or two sales is not a band, so these are shown as "no recorded sales".
 
   // repeater: excluded a mule, large-size (1914/1918/1923), gold/silver certificates, legal tender, a courtesy autograph and star notes.
   { pattern: "repeater", condition: "vf", low: 14.0, high: 384.0, sampleSize: 7, confidence: "indicative", source: SRC_IND },
@@ -97,6 +99,8 @@ export const PATTERN_VALUE_GAPS: { pattern: string; condition: NoteCondition }[]
   { pattern: "ladder-partial", condition: "circulated" },
   { pattern: "ladder-partial", condition: "vf" },
   { pattern: "low-serial-under-100", condition: "vf" }, // OK count, but all records confounded
+  { pattern: "low-serial-under-1000", condition: "circulated" }, // only 2 modern records, too thin to be a band
+  { pattern: "low-serial-under-1000", condition: "vf" }, // only 1 modern record, not a band
   { pattern: "low-serial-under-1000", condition: "unc" }, // OK count, but all records confounded
   { pattern: "repeater", condition: "circulated" },
   { pattern: "super-radar", condition: "circulated" },
