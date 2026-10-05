@@ -34,6 +34,10 @@
 // low-serial-under-1000/vf, repeater/circulated, radar/circulated), and two more
 // (ladder-partial/vf, super-radar/vf) published on their existing 5 de-confounded
 // records. low-serial-under-100/vf was left blank (serial number 1 $5,000 outlier).
+// Refreshed again 2026-10-05 (batch 2, 9 records): three more buckets published,
+// super-radar/circulated ($38 to $500), birthday-note/vf ($13 to $28.99) and
+// low-serial-under-1000/unc ($69, Series 2004 $20 FRNs). The unc cell's older $2
+// records are 1918 large-size notes and stay excluded.
 // See src/data/value-bands-evidence.json (newRecords).
 
 export type ValueConfidence = "estimate" | "indicative";
@@ -65,7 +69,10 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "ladder", condition: "unc", low: 1560.0, high: 4392.0, sampleSize: 15, confidence: "estimate", source: SRC_EST },
 
   // birthday note: modern $1 and $2 birthday-date notes (valid MMDDYYYY serials).
+  // vf now publishes on 3 de-confounded records: a 2026 XF ($13, best-offer accepted),
+  // a 2026 AU ($19.95) and the existing $28.99 record.
   { pattern: "birthday-note", condition: "circulated", low: 2.99, high: 60.0, sampleSize: 10, confidence: "estimate", source: SRC_EST },
+  { pattern: "birthday-note", condition: "vf", low: 13.0, high: 28.99, sampleSize: 3, confidence: "indicative", source: SRC_IND },
   { pattern: "birthday-note", condition: "unc", low: 15.0, high: 79.0, sampleSize: 10, confidence: "estimate", source: SRC_EST },
 
   // broken ladder (ladder-partial): excluded two star notes (unc) and a legal-tender star note (vf).
@@ -82,12 +89,14 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "low-serial-under-100", condition: "circulated", low: 74.0, high: 390.4, sampleSize: 7, confidence: "indicative", source: SRC_IND },
   { pattern: "low-serial-under-100", condition: "unc", low: 6168.75, high: 9400.0, sampleSize: 3, confidence: "indicative", source: SRC_IND },
 
-  // low serial under 1000: circulated and vf now publish on modern small-size records
+  // low serial under 1000: circulated and vf publish on modern small-size records
   // (new $1/$20 three-digit serials). One circulated record ($89.99) was a best-offer
-  // accepted eBay sale, so its price is approximate. The unc bucket stays blank (its
-  // clean records are all 1918 large-size, 1896 silver certificate or high-denom notes).
+  // accepted eBay sale, so its price is approximate. unc now publishes on 3 modern
+  // Series 2004 $20 FRN sales at $69 each ($60 hammer + $9 buyer premium, BK Auctions);
+  // the cell's older $2 records are 1918 large-size notes, excluded as a different market.
   { pattern: "low-serial-under-1000", condition: "circulated", low: 49.99, high: 156.0, sampleSize: 5, confidence: "indicative", source: SRC_IND },
   { pattern: "low-serial-under-1000", condition: "vf", low: 6.0, high: 150.0, sampleSize: 4, confidence: "indicative", source: SRC_IND },
+  { pattern: "low-serial-under-1000", condition: "unc", low: 69.0, high: 69.0, sampleSize: 3, confidence: "indicative", source: SRC_IND },
 
   // repeater: excluded a mule, large-size (1914/1918/1923), gold/silver certificates, legal tender, a courtesy autograph and star notes.
   // circulated: modern $1 quad repeaters (Series 2017A/2021).
@@ -96,7 +105,9 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
   { pattern: "repeater", condition: "unc", low: 432.0, high: 600.0, sampleSize: 5, confidence: "indicative", source: SRC_IND },
 
   // super radar: excluded a 1923 large-size, a silver certificate, an error note and QA-flagged records.
-  // vf has 5 de-confounded records and publishes per the 3-record rule.
+  // circulated now publishes on 5 de-confounded records: four 2026 eBay sales ($60 to
+  // $500, the $500 a $100 note) plus the existing $38 record. vf has 5 de-confounded records.
+  { pattern: "super-radar", condition: "circulated", low: 38.0, high: 500.0, sampleSize: 5, confidence: "indicative", source: SRC_IND },
   { pattern: "super-radar", condition: "vf", low: 43.0, high: 118.68, sampleSize: 5, confidence: "indicative", source: SRC_IND },
   { pattern: "super-radar", condition: "unc", low: 264.0, high: 1020.0, sampleSize: 9, confidence: "estimate", source: SRC_EST },
 
@@ -121,12 +132,9 @@ export const PATTERN_VALUE_BANDS: PatternValueBand[] = [
  */
 export const PATTERN_VALUE_GAPS: { pattern: string; condition: NoteCondition }[] = [
   { pattern: "ladder", condition: "circulated" },
-  { pattern: "birthday-note", condition: "vf" },
   { pattern: "ladder-partial", condition: "circulated" },
   { pattern: "low-serial-under-100", condition: "vf" }, // only serial 1 ($5,000) outlier plus 2 records; blanked by owner decision
-  { pattern: "low-serial-under-1000", condition: "unc" }, // records all 1918 large-size / 1896 silver certificate / high-denom
-  { pattern: "super-radar", condition: "circulated" },
   { pattern: "binary", condition: "circulated" },
 ];
 
-export const PATTERN_VALUES_UPDATED = "2026-10-04";
+export const PATTERN_VALUES_UPDATED = "2026-10-05";

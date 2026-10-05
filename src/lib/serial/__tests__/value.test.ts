@@ -101,15 +101,20 @@ describe("confounder exclusions produce de-confounded figures", () => {
     }
   });
 
-  it("low-serial-under-1000 / unc stays blank (records all confounded)", () => {
+  it("low-serial-under-1000 / unc publishes on modern $20 FRNs, not the 1918 large-size $2 notes", () => {
     const cell = valueCell("low-serial-under-1000", "unc");
-    expect(cell.status).toBe("insufficient-data");
+    expect(cell.status).toBe("ok");
+    if (cell.status === "ok") {
+      expect(cell.band.high).toBe(69);
+      expect(cell.band.high).toBeLessThan(2820); // the excluded 1918 large-size $2 floor
+    }
   });
 
   it("new records publish the previously blank low-serial buckets", () => {
     for (const [p, c] of [
       ["low-serial-under-1000", "circulated"],
       ["low-serial-under-1000", "vf"],
+      ["low-serial-under-1000", "unc"],
     ] as const) {
       expect(valueCell(p, c).status).toBe("ok");
     }
