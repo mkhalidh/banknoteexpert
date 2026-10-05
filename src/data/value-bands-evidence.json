@@ -1,6 +1,6 @@
 {
-  "_comment": "Reviewable derivation of homepage value bands from the clean evidence sheet. sheetSummary reproduces the sheet's own per-bucket summary. publishedBand is the de-confounded (modern small-size) min-max used on the site; excludedConfounders lists what was removed and why. Not imported at runtime; src/data/value-ranges.ts holds the live bands. Refreshed 2026-10-04 with the New Records evidence (see newRecords).",
-  "updated": "2026-10-04",
+  "_comment": "Reviewable derivation of homepage value bands from the clean evidence sheet. sheetSummary reproduces the sheet's own per-bucket summary. publishedBand is the de-confounded (modern small-size) min-max used on the site; excludedConfounders lists what was removed and why. Not imported at runtime; src/data/value-ranges.ts holds the live bands. Refreshed 2026-10-04 with the New Records evidence (see newRecords). Batch 2 (2026-10-05): 9 more records; super-radar/circulated, birthday-note/vf and low-serial-under-1000/unc now publish.",
+  "updated": "2026-10-05",
   "source": "Heritage Auctions + eBay sold records, Value Bands (Clean) tab",
   "cells": [
     {
@@ -154,10 +154,15 @@
         "high": null,
         "status": "SHORTFALL 0/10"
       },
-      "keptModernCount": 1,
+      "keptModernCount": 3,
       "excludedConfounders": {},
-      "publishedBand": null,
-      "blankReason": "only 1 modern record(s) after excluding confounders; too thin to publish (need 3+)"
+      "publishedBand": {
+        "low": 13.0,
+        "high": 28.99,
+        "sampleSize": 3,
+        "confidence": "indicative"
+      },
+      "blankReason": null
     },
     {
       "pattern": "birthday-note",
@@ -387,7 +392,7 @@
         "high": 48875.0,
         "status": "OK"
       },
-      "keptModernCount": 0,
+      "keptModernCount": 3,
       "excludedConfounders": {
         "silver certificate": 5,
         "large-size (1896)": 3,
@@ -397,8 +402,13 @@
         "large-size (1918)": 6,
         "large-size (1917)": 1
       },
-      "publishedBand": null,
-      "blankReason": "no de-confounded modern records"
+      "publishedBand": {
+        "low": 69.0,
+        "high": 69.0,
+        "sampleSize": 3,
+        "confidence": "indicative"
+      },
+      "blankReason": null
     },
     {
       "pattern": "repeater",
@@ -481,12 +491,17 @@
         "high": null,
         "status": "SHORTFALL 2/10"
       },
-      "keptModernCount": 1,
+      "keptModernCount": 5,
       "excludedConfounders": {
         "star note": 1
       },
-      "publishedBand": null,
-      "blankReason": "only 1 modern record(s) after excluding confounders; too thin to publish (need 3+)"
+      "publishedBand": {
+        "low": 38.0,
+        "high": 500.0,
+        "sampleSize": 5,
+        "confidence": "indicative"
+      },
+      "blankReason": null
     },
     {
       "pattern": "super-radar",
@@ -1190,6 +1205,141 @@
       "note": "Modern FRN, non-star; sold (not asking).",
       "included": true,
       "excludedFor": []
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "serial": "94444449",
+      "grade": "Circulated (ungraded)",
+      "price": 500.0,
+      "date": "2026-04-01",
+      "denomination": "$100",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/397781628435",
+      "note": "2009A $100 FRN LD94444449C; palindrome, inner 444444 = super radar. Same serial as an old VF record but a different physical note (do not dedupe).",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "serial": "36666663",
+      "grade": "Circulated (ungraded)",
+      "price": 85.0,
+      "date": "2026-07-24",
+      "denomination": "$10",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/366511035217",
+      "note": "$10 2013 FRN MC36666663A, circulating condition.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "serial": "17777771",
+      "grade": "Circulated (ungraded)",
+      "price": 60.0,
+      "date": "2026-07-09",
+      "denomination": "$1",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/306650347713",
+      "note": "$1 2013 FRN, item specifics Circulated. Same serial as an old VF record but a different physical note (do not dedupe).",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "serial": "35555553",
+      "grade": "Circulated",
+      "price": 100.0,
+      "date": "2026-03-11",
+      "denomination": "$20",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/257343221789",
+      "note": "$20 2006 FRN IF35555553G, circulated in title.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "birthday-note",
+      "condition": "vf",
+      "serial": "11301950",
+      "grade": "AU (seller-described)",
+      "price": 19.95,
+      "date": "2025-11-15",
+      "denomination": "$1",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/276836202267",
+      "note": "$1 birthday note 11/30/1950; AU maps to VF bucket.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "birthday-note",
+      "condition": "vf",
+      "serial": "04151960",
+      "grade": "XF (seller-described)",
+      "price": 13.0,
+      "date": "2025-02-25",
+      "denomination": "$1",
+      "source": "eBay",
+      "url": "https://www.ebay.com/itm/276836098167",
+      "note": "$1 birthday note 04/15/1960; XF maps to VF bucket. Best Offer accepted: $13.00 actual sold price (listed $14.95).",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "serial": "00000329",
+      "grade": "Uncirculated",
+      "price": 69.0,
+      "date": "2017-12-17",
+      "denomination": "$20",
+      "source": "iCollector BK Auctions",
+      "url": "https://www.icollector.com/2004-20-Federal-Reserve-Note-Uncirculated-LOW-SERIAL-Number_i28771705",
+      "note": "2004 $20 FRN EJ00000329A, Uncirculated, non-star. $60 hammer + $9 buyer premium.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "serial": "00000829",
+      "grade": "Uncirculated",
+      "price": 69.0,
+      "date": "2018-01-27",
+      "denomination": "$20",
+      "source": "iCollector BK Auctions",
+      "url": "https://www.icollector.com/2004-20-Federal-Reserve-Note-Uncirculated-LOW-SERIAL-Number_i29105680",
+      "note": "2004 $20 FRN EG00000829A, Uncirculated, non-star.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
+    },
+    {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "serial": "00000508",
+      "grade": "Uncirculated",
+      "price": 69.0,
+      "date": "2018-01-19",
+      "denomination": "$20",
+      "source": "iCollector BK Auctions",
+      "url": "https://www.icollector.com/2004-20-Federal-Reserve-Note-Uncirculated-LOW-SERIAL-Number_i29015005",
+      "note": "2004 $20 FRN EB00000508A, Uncirculated, non-star.",
+      "included": true,
+      "excludedFor": [],
+      "batch": 2
     }
   ]
 }
