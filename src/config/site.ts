@@ -4,10 +4,10 @@
  */
 
 /** Human-readable date the value guidance was last reviewed. */
-export const LAST_UPDATED = "September 8, 2026";
+export const LAST_UPDATED = "October 6, 2026";
 
 /** ISO form of {@link LAST_UPDATED}, for <time> elements and schema dateModified. */
-export const LAST_UPDATED_ISO = "2026-09-08";
+export const LAST_UPDATED_ISO = "2026-10-06";
 
 /** ISO date the guide content was first published, for schema datePublished. */
 export const PUBLISHED_ISO = "2026-09-08";
