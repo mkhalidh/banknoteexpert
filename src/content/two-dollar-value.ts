@@ -189,7 +189,15 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "So if you are wondering how much are 2 dollar bills worth after finding a stack of 1976 notes, the realistic answer is two dollars each, unless one of them carries a genuinely scarce serial or grade. The 1976 series will get its own dedicated page as we expand this section; for now, treat it as the archetype of a common $2 bill.",
+            "So if you are wondering how much are 2 dollar bills worth after finding a stack of 1976 notes, the realistic answer is two dollars each, unless one of them carries a genuinely scarce serial or grade. Treat the 1976 series as the archetype of a common $2 bill.",
+        },
+        {
+          kind: "richtext",
+          segments: [
+            "For the full breakdown, including star notes by district, first-day postmarks and a serial check, see the ",
+            { href: "/1976-2-dollar-bill-value/", label: "1976 $2 bill value guide" },
+            ".",
+          ],
         },
         {
           kind: "paragraph",

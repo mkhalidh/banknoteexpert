@@ -170,6 +170,17 @@ export const routes: RouteEntry[] = [
     changeFrequency: "monthly",
     indexable: true,
   },
+  {
+    path: "/1976-2-dollar-bill-value/",
+    title: "1976 $2 Bill Value",
+    description:
+      "What a 1976 $2 bill is worth, including star notes, low and fancy serials and errors.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
 
   {
     path: "/blog/",
