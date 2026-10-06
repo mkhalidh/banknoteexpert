@@ -3,9 +3,9 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/birthday-note/",
-    title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
+    title: "Birthday Note Dollar Bill: What It Is and What It's Worth",
     description:
-      "Birthday note dollar bill guide: learn how serial numbers encode dates, how common birthday notes are, and what collectors realistically pay for them.",
+      "What a birthday note dollar bill is, how the eight digits spell a date, how common they are, and what collectors really pay. Check your own serial free.",
     h1: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     primaryKeyword: "birthday note dollar bill",
     lead:
