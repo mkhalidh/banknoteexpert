@@ -104,8 +104,15 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Red-seal series detail, then the silver-certificate clarification */}
+      <ContentSections sections={sectionById("red-seal-years")} />
+      <ContentSections sections={sectionById("silver-certificate")} />
+
       {/* Section 7 */}
       <ContentSections sections={sectionById("bicentennial")} />
+
+      {/* Older large-size $2 notes, before the small-size chart era */}
+      <ContentSections sections={sectionById("large-size")} />
 
       {/* Section 8 */}
       <ContentSections sections={sectionById("check-your-bill")} />
