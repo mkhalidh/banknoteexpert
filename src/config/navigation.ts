@@ -7,11 +7,11 @@ export const companyLinks = links(["/methodology/", "/privacy/", "/about/", "/ab
 export const navigation = [
   { label: "Fancy Serial Numbers", path: "/", columns: [{ label: "Fancy Serial Numbers", path: "/", links: toolLinks.slice(0, 5) }, { label: "Related guides", path: "/blog/#fancy-serial-numbers", links: fancyArticles }] },
   { label: "Star Note Lookup", path: "/star-note-lookup/", columns: [{ label: "Star Note Lookup", path: "/star-note-lookup/", links: links(["/star-note-lookup/"]) }] },
-  { label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", columns: [{ label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/"]) }] },
+  { label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", columns: [{ label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/", "/1976-2-dollar-bill-value/"]) }] },
   { label: "Blog", path: "/blog/", columns: [
     { label: "Fancy Serial Numbers", path: "/blog/#fancy-serial-numbers", links: fancyArticles },
     { label: "Star Notes", path: "/blog/#star-notes", links: links(["/star-note-lookup/"]) },
-    { label: "$2 Bills", path: "/blog/#two-dollar-bills", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/"]) },
+    { label: "$2 Bills", path: "/blog/#two-dollar-bills", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/", "/1976-2-dollar-bill-value/"]) },
     { label: "Company", path: "/about/", links: companyLinks },
   ] },
 ];
