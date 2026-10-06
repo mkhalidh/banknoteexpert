@@ -59,6 +59,10 @@ export default function Page() {
       <header>
         <h1 className="text-display">{content.meta.h1}</h1>
         <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
+        <div className="mt-6">
+          {/* Interactive checker up top, defaults to the 1976 series */}
+          <TwoDollarSerialLookup />
+        </div>
       </header>
 
       <KeyTakeaways items={content.takeaways} />
@@ -89,14 +93,7 @@ export default function Page() {
       <ContentSections sections={sectionById("serials")} />
       <ContentSections sections={sectionById("errors")} />
 
-      {/* Interactive checker, defaults to the 1976 series */}
-      <div>
-        <ContentSections sections={sectionById("check-your-note")} />
-        <div className="mt-4">
-          <TwoDollarSerialLookup />
-        </div>
-      </div>
-
+      <ContentSections sections={sectionById("check-your-note")} />
       <ContentSections sections={sectionById("how-we-estimate")} />
       <ContentSections sections={sectionById("faq")} />
 
