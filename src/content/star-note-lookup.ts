@@ -3,9 +3,9 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/star-note-lookup/",
-    title: "Star Note Lookup: Check a Star Note's Value by Serial",
+    title: "Star Note Lookup: Free Value Checker by Serial Number",
     description:
-      "Free star note lookup: enter denomination, series and serial to find the print run, rarity tier and any fancy pattern, with a BEP report link to verify.",
+      "Free star note lookup. Enter the denomination, series and serial to see the print run, the rarity tier, any fancy pattern, and how much the note could be worth.",
     h1: "Star Note Lookup",
     primaryKeyword: "star note lookup",
     lead:
