@@ -154,7 +154,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Use the lookup below to check a 1976 note in under a minute. It is already set to the 1976 series: enter the eight-digit serial and it flags any fancy pattern, low serial or star, then shows an honest value range for what it finds. For most 1976 notes the result will confirm face value, and that is the honest answer.",
+            "Use the lookup at the top of this page to check a 1976 note in under a minute. It is already set to the 1976 series: enter the eight-digit serial and it flags any fancy pattern, low serial or star, then shows an honest value range for what it finds. For most 1976 notes the result will confirm face value, and that is the honest answer.",
         },
         {
           kind: "richtext",
