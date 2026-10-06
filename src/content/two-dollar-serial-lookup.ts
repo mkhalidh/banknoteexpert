@@ -3,9 +3,9 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-serial-number-lookup/",
-    title: "$2 Bill Serial Number Lookup: Free Checker Tool",
+    title: "$2 Bill Serial Number Lookup: Free Value Checker",
     description:
-      "$2 bill serial number lookup: enter the series and serial to flag fancy patterns, star notes and low serials, with honest, sourced value ranges.",
+      "Free $2 bill serial number lookup. Enter the series and serial to find fancy patterns, star notes and low serials, and see an honest, sourced value range.",
     h1: "$2 Bill Serial Number Lookup",
     primaryKeyword: "$2 bill serial number lookup",
     lead:

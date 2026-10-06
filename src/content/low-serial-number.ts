@@ -3,9 +3,9 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/low-serial-number/",
-    title: "Low Serial Number Dollar Bill: Rarity and Value",
+    title: "Low Serial Number Dollar Bill: How Rare and What It's Worth",
     description:
-      "Low serial number dollar bill guide: understand the under-10, under-100 and under-1000 tiers, why they are rare, and how condition affects value.",
+      "What counts as a low serial number, the under-10, under-100 and under-1000 tiers, why they are rare, and what each tier is actually worth today.",
     h1: "Low Serial Number Dollar Bill: Rarity and Value",
     primaryKeyword: "low serial number dollar bill",
     lead:
