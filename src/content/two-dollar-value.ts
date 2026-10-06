@@ -128,6 +128,51 @@ export const content: PageContent = {
       ],
     },
     {
+      id: "red-seal-years",
+      heading: "The red-seal years: 1928, 1953 and 1963",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "Three small-size series carry the red seal: 1928, 1953 and 1963. All three are United States Notes, also called Legal Tender Notes, and all three can carry a premium over face value, though how much depends heavily on the series and the grade.",
+        },
+        {
+          kind: "list",
+          items: [
+            "1928 is the first small-size $2 and the most collectible of the three. It runs through several sub-series from 1928 to 1928G, and the 1928B star note is a well-known rarity. Premiums are strongest on crisp, uncirculated examples.",
+            "1953 is more available than 1928, with a modest premium that shows up mainly in uncirculated grade. Its sub-series run 1953, 1953A, 1953B and 1953C.",
+            "1963 is the last red-seal $2 before the denomination paused in 1966. These are common and carry only a small premium unless the grade is high or the serial is special. No red-seal $2 was issued after 1963.",
+          ],
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Recorded price ranges for each series sit in the chart above. Across all three, condition is the single biggest lever: the same series line covers both a worn note worth a little over face and a crisp note worth several times that.",
+        },
+      ],
+    },
+    {
+      id: "silver-certificate",
+      heading: "Is there a $2 silver certificate?",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "This is one of the most common $2 questions, and for any modern note the answer is no. There is no small-size $2 silver certificate. If your $2 bill has a red seal and dates from 1928, 1953 or 1963, it is a United States Note, a Legal Tender Note, not a silver certificate. The two are different classes of currency that people tend to blur together because both can show a coloured seal.",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "The $2 silver certificate does exist, but only in the older large-size era: the 1886, 1891 and 1896 series, the 1896 being the famous Educational note prized for its artwork. Those are genuinely scarce and are valued well above an ordinary note, which is exactly why it matters not to confuse a common 1963 red seal with one.",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "So if someone tells you a 1953 or 1963 $2 bill is a valuable silver certificate, they have mislabelled it. It is a red-seal United States Note, valued on the chart above, and worth what its series and grade support rather than silver-certificate money.",
+        },
+      ],
+    },
+    {
       id: "bicentennial",
       heading: "The 1976 bicentennial series",
       blocks: [
@@ -150,6 +195,31 @@ export const content: PageContent = {
           kind: "paragraph",
           text:
             "To judge a 1976 note, check three things in order. Is it uncirculated, with no folds and sharp corners? Does the serial end in a star, or read as a very low or patterned number? And is there a postmark on it? Collectors in 1976 took new notes to the post office to have them stamped on the first day of issue, and those postmarked examples are collected as souvenirs of the bicentennial. A note that is plain on all three counts is ordinary currency, and there is no shame in that: it is simply worth spending.",
+        },
+      ],
+    },
+    {
+      id: "large-size",
+      heading: "Older large-size $2 notes (before 1928)",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "Every note on the chart above is a small-size bill, the format used since 1928. Before that, $2 notes were large-size, noticeably wider and taller than today's currency. If your $2 bill is oversized, it predates 1928 and belongs to a different and generally more valuable group.",
+        },
+        {
+          kind: "list",
+          items: [
+            "1862 and 1869 Legal Tender Notes, the 1869 issue known to collectors as the \"Rainbow\" note for its colourful paper.",
+            "1890 and 1891 Treasury, or Coin, Notes.",
+            "1896 Educational silver certificate, one of the most admired US notes ever produced.",
+            "1917 and 1918 issues, the last of the large-size $2 notes before the small-size era began.",
+          ],
+        },
+        {
+          kind: "paragraph",
+          text:
+            "These older notes are the genuinely scarce and valuable $2 bills, and their worth varies widely by type, signature and grade. Because the premiums can be significant and condition is decisive, a large-size note is worth checking against recent auction records and, for anything that looks high-grade, having professionally graded before you buy or sell.",
         },
       ],
     },
@@ -220,6 +290,18 @@ export const content: PageContent = {
           kind: "paragraph",
           text:
             "The $2 bills worth money are typically the 1928 and 1953 red-seal notes in high grade, star notes from small print runs, notes with very low or fancy serials, and error notes. A common green-seal note without any of those features is worth its face value. The single most reliable predictor is condition combined with an early series: a crisp 1928 note is a different object from a worn one, even though both share the same series line on this chart.",
+        },
+        { kind: "subheading", text: "Is there a $2 silver certificate?" },
+        {
+          kind: "paragraph",
+          text:
+            "Not in small-size form. A modern $2 bill with a red seal is a United States Note, a Legal Tender Note, not a silver certificate. Genuine $2 silver certificates exist only in the large-size series of 1886, 1891 and 1896, and those are scarce, valuable notes rather than the common red seals people often mislabel.",
+        },
+        { kind: "subheading", text: "Is a 1963 red seal $2 bill valuable?" },
+        {
+          kind: "paragraph",
+          text:
+            "Usually only modestly. The 1963 red seal is a common United States Note, so a circulated example carries a small premium at most, with more value reserved for crisp uncirculated notes, star notes or special serials. See its recorded range in the chart above.",
         },
         { kind: "subheading", text: "Is a 1976 $2 bill worth anything?" },
         {
