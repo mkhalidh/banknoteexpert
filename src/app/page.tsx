@@ -168,11 +168,11 @@ export default function Page() {
       </section>
 
       {/* Section 6, star notes */}
-      <section aria-labelledby="star">
+      <section aria-labelledby="star" className="star-callout">
         <h2 id="star" className="text-h2">
           Does your bill have a star?
         </h2>
-        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+        <p className="mt-3">
           If the serial number ends in a star instead of a letter, you are
           holding a star note. The Bureau of Engraving and Printing prints these
           as replacements when a sheet is damaged or misprinted during
@@ -185,12 +185,12 @@ export default function Page() {
           command the strongest prices. Our checker flags a star automatically
           as soon as it reads one in your serial.
         </p>
-        <p className="mt-4">
+        <p className="star-callout-actions">
           <Link
             href="/star-note-lookup/"
-            className="btn-primary text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+            className="star-callout-button focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
           >
-            Look up a star note
+            Look up a star note <span aria-hidden="true">→</span>
           </Link>
         </p>
       </section>
