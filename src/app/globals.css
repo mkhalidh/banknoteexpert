@@ -529,14 +529,13 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
 .journal-gold-button { display:flex; align-items:center; justify-content:space-between; gap:16px; background:#e6bd4a; color:#172b23; padding:14px 18px; border-radius:3px; font-size:.8rem; font-weight:700; min-height:48px; }
 .journal-gold-button:hover { background:#f4ce61; }
 /* Star-note section styled as the dark-green Treasury tool card (gold CTA). */
-.star-callout { background:#0f382a; color:#fbf9f4; padding:40px 36px; border-radius:6px; }
+.star-callout { background:#0f382a; color:#fbf9f4; padding:clamp(28px, 3.5vw, 52px); border-radius:6px; }
 .star-callout h2 { color:#fbf9f4; }
-.star-callout p { color:#d5e5d9; }
+.star-callout p { color:#d5e5d9; max-width:68ch; }
 .star-callout-actions { margin-top:28px; margin-bottom:0; }
 .star-callout-button { display:inline-flex; align-items:center; gap:14px; background:#e6bd4a; color:#172b23; padding:14px 22px; border-radius:3px; font-size:.85rem; font-weight:700; min-height:48px; }
 .star-callout-button:hover { background:#f4ce61; }
 @media(max-width:600px) {
-  .star-callout { padding:28px 22px; }
   .star-callout-button { width:100%; justify-content:space-between; }
 }
 .author-story { max-width:75ch; line-height:1.9; }
