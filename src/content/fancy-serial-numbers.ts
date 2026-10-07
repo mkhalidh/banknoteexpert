@@ -15,7 +15,7 @@ export const content: PageContent = {
     "Only the eight digits form the pattern; the prefix and suffix letters do not.",
     "Patterns range from common (birthday dates) to trophy-rare (solids and true ladders).",
     "Rarer patterns set a higher ceiling, but condition and demand decide the final price.",
-    "Four patterns are explained in full here; radar, ladder, low serial and birthday have their own guides.",
+    "Every pattern the checker detects is explained below; radar, ladder, low serial and birthday also have their own in-depth guides.",
   ],
   sections: [
     {
@@ -178,28 +178,199 @@ export const patternCopy: Record<string, PatternCopy> = {
     valueNote:
       "Flippers are an uncommon novelty; value depends on the arrangement and condition.",
   },
+  "six-of-a-kind": {
+    definition:
+      "A six-of-a-kind shows the same digit six times with two different digits filling the other two positions, such as 66666678. It sits one step below a seven-of-a-kind: still dominated by a single repeated figure, but with a touch more variation.",
+    valueNote:
+      "Scarcer than most everyday patterns and clearly collectible, though well short of a seven-of-a-kind or a solid. Grade and where the two odd digits land both move the price.",
+  },
+  "five-of-a-kind": {
+    definition:
+      "A five-of-a-kind repeats one digit five times across the serial, such as 55555123. The long block of a single figure still reads as deliberate even with three other digits present.",
+    valueNote:
+      "A modest step up from an ordinary note. Appeal rises when the five-run is paired with a clean arrangement of the remaining digits or a high grade.",
+  },
+  "true-binary-radar": {
+    definition:
+      "A true binary radar is built only from 0s and 1s and also reads the same forwards and backwards, such as 11100111. It stacks two scarce traits at once, making it one of the rarest radar forms there is.",
+    valueNote:
+      "A trophy-tier radar: the binary digit set and the palindrome together make it far scarcer than a plain radar, with condition setting the ceiling.",
+    linkLabel: "See radars and super radars in full",
+  },
+  "true-binary-repeater": {
+    definition:
+      "A true binary repeater uses only 0s and 1s and repeats its first four digits as its last four, an all-binary ABCDABCD such as 11101110.",
+    valueNote:
+      "Very scarce: combining the strict 0/1 alphabet with a repeater block puts it near the top of the hobby.",
+  },
+  "near-true-binary": {
+    definition:
+      "A near true binary is a single digit away from an all-0/1 serial, so seven of the eight digits are 0 or 1 and just one is not, such as 10001102. It narrowly misses the true binary club.",
+    valueNote:
+      "An interesting near-miss that reads almost binary. It carries a small premium over an ordinary note and rewards a clean look.",
+  },
+  "true-binary": {
+    definition:
+      "A true binary uses nothing but 0s and 1s across all eight positions, such as 11001010, so the serial looks like machine code. It is far scarcer than an ordinary binary, which allows any two digits.",
+    valueNote:
+      "Highly sought after: the strict 0/1 alphabet is rare and visually striking, placing a true binary well above a standard binary.",
+  },
+  "radar-repeater": {
+    definition:
+      "A radar repeater repeats a four-digit block that is itself a radar, giving an ABBA|ABBA shape such as 12211221. It is both a repeater and a palindrome at once.",
+    valueNote:
+      "A scarce double pattern that commands a clear premium over a plain repeater or a plain radar.",
+    linkLabel: "See radars and super radars in full",
+  },
+  "double-binary-repeater": {
+    definition:
+      "A double binary repeater repeats an AABB block, such as 11221122, so two doubled digits play twice. The paired blocks give it a bold, regular rhythm.",
+    valueNote:
+      "Scarcer than an ordinary repeater; the clean paired structure adds to its appeal in good condition.",
+  },
+  "ladder-repeater": {
+    definition:
+      "A ladder repeater repeats a four-step sequential block, such as 12341234, where 1234 climbs and then plays again. It unites a ladder run with a repeater.",
+    valueNote:
+      "A very scarce combination pattern that sits well above a plain repeater.",
+    linkLabel: "Read the full ladder serial number guide",
+  },
+  "trinary-repeater": {
+    definition:
+      "A trinary repeater cycles three distinct digits in an ABCABCAB rhythm, such as 12312312. Only three values appear, and they repeat in a strict order.",
+    valueNote:
+      "More distinctive than a plain trinary; the repeating cycle makes it noticeably more collectible.",
+  },
+  "bookends-repeater": {
+    definition:
+      "A bookends repeater alternates two digits the whole way, an ABABABAB shape such as 12121212, so the first two digits repeat four times. The tight, regular rhythm stands out at a glance.",
+    valueNote:
+      "Scarcer than an ordinary repeater, a bookends repeater carries a corresponding premium in good condition.",
+  },
+  "binary-repeater": {
+    definition:
+      "A binary repeater uses just two digits and repeats its first four as its last four, such as 12111211. It is a repeater whose halves are drawn from a two-value alphabet.",
+    valueNote:
+      "A tidy two-in-one pattern; value climbs with a clean arrangement and a strong grade.",
+  },
+  "binary-radar": {
+    definition:
+      "A binary radar is a palindrome built from only two digits, such as 11222211, so it mirrors itself and uses a two-value alphabet at the same time.",
+    valueNote:
+      "Scarcer than a plain radar thanks to the restricted digit set; a clear step up in desirability.",
+    linkLabel: "See radars and super radars in full",
+  },
+  "bookends-radar": {
+    definition:
+      "A bookends radar is a palindrome that opens and closes on a repeated pair, such as 11233211, so it begins on a double and mirrors cleanly to end on the same double.",
+    valueNote:
+      "An uncommon radar variant whose neat framing lifts it above an everyday palindrome.",
+    linkLabel: "See radars and super radars in full",
+  },
+  "binary-four-pairs": {
+    definition:
+      "A binary four pairs is an AABBCCDD shape built from only two digits, such as 11331111, so every adjacent pair doubles up and just two values appear.",
+    valueNote:
+      "A neat, structured binary; value rises with a clean look and a high grade.",
+  },
+  "ladder-four-pairs": {
+    definition:
+      "A ladder four pairs doubles each step of a climbing run, an AABBCCDD where the pairs rise by one, such as 11223344. It reads like a ladder built from pairs.",
+    valueNote:
+      "A scarce, very tidy pattern that collectors find especially satisfying.",
+  },
+  "bookends-four-pairs": {
+    definition:
+      "A bookends four pairs is an AABBCCDD whose first pair matches its last, such as 11334411, so the same doubled digit frames both ends of the serial.",
+    valueNote:
+      "An uncommon paired pattern; the matching ends give it a clean, deliberate look.",
+  },
+  "four-pairs": {
+    definition:
+      "A four pairs is any AABBCCDD serial, four doubled digits in a row, such as 11557744. Each adjacent pair repeats even when the four values differ.",
+    valueNote:
+      "A recognisable structured pattern; most are modestly priced, with cleaner arrangements worth more.",
+  },
+  "bookends-binary": {
+    definition:
+      "A bookends binary opens and closes on the same two digits and uses only two values overall, such as 79997779. The matching ends frame a two-digit serial.",
+    valueNote:
+      "A light novelty pattern; value leans on a clean look and condition.",
+  },
+  bookends: {
+    definition:
+      "A bookends serial repeats its first two digits as its last two, such as 12456712, so the ends match while the middle can be anything. It is one of the more common structured shapes.",
+    valueNote:
+      "Common and affordable; appeal rises when the matching ends frame something memorable.",
+  },
+  "near-radar-repeater": {
+    definition:
+      "A near radar repeater is a single digit away from a radar repeater, such as 15511557, so it almost forms an ABBA|ABBA pattern but misses in one spot.",
+    valueNote:
+      "A near-miss curiosity worth a small premium over an ordinary note, especially in high grade.",
+  },
+  "near-binary-radar": {
+    definition:
+      "A near binary radar is one digit away from a binary radar, such as 32122121, narrowly missing a two-digit palindrome.",
+    valueNote:
+      "An affordable near-miss pattern; the closer it reads to a true binary radar, the more interest it draws.",
+  },
+  "super-high-serial": {
+    definition:
+      "A super high serial sits at 99,000,000 or above, the very top of the print range. Only $50 and $100 blocks run this high, to 99,200,000; $1 to $20 blocks stop at 96,000,000, so a note this high is a $50 or $100.",
+    valueNote:
+      "Scarcer than a plain high serial and more striking the closer it sits to the absolute ceiling. Condition and that final margin drive the premium.",
+  },
 };
 
 /**
- * Order in which patterns are explained on the hub. Low-serial tiers are folded
- * into a single summary (low-serial-10), so the other two tiers are omitted here.
+ * Order in which patterns are explained on the hub — the same detection order
+ * the checker uses, rarest/most specific first down to the everyday finds.
+ *
+ * Notes on which ids appear: the low-serial tiers are folded into a single
+ * summary (low-serial-10); the ABABABAB pattern is shown once as its canonical
+ * "bookends-repeater" (the legacy "super-repeater" twin is omitted); and the
+ * generic palindrome is shown once as "radar" (its "palindrome-radar" twin is
+ * omitted). Radar- and ladder-family entries link out to their dedicated guides.
  */
 export const patternOrder: string[] = [
   "solid",
   "seven-of-a-kind",
-  "super-radar",
-  "radar",
-  "super-repeater",
+  "six-of-a-kind",
+  "five-of-a-kind",
+  "true-binary-radar",
+  "true-binary-repeater",
+  "near-true-binary",
+  "true-binary",
+  "radar-repeater",
+  "double-binary-repeater",
+  "ladder-repeater",
+  "trinary-repeater",
+  "bookends-repeater",
+  "binary-repeater",
   "repeater",
+  "super-radar",
+  "binary-radar",
+  "bookends-radar",
+  "radar",
   "double-quad",
+  "binary-four-pairs",
+  "ladder-four-pairs",
+  "bookends-four-pairs",
+  "four-pairs",
+  "bookends-binary",
+  "bookends",
+  "near-radar-repeater",
+  "near-binary-radar",
   "ladder",
   "broken-ladder",
   "binary",
   "trinary",
+  "flipper",
+  "birthday-note",
   "low-serial-10",
   "high-serial",
-  "birthday-note",
-  "flipper",
+  "super-high-serial",
 ];
 
 /** The four dedicated spoke pages, linked down from the hub. */
