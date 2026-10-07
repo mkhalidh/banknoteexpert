@@ -296,7 +296,11 @@ export const patterns: PatternDefinition[] = [
     // out of this bucket (that is True Binary, per the taxonomy), matching the
     // 66666678 example where the two leftovers are themselves different.
     detect: (d) => maxRepeat(d) === 6 && distinctCount(d) === 3,
-    rarityOdds: "1 in 4,409",
+    // 10 * C(8,6) * 9 * 8 / 10^8 = 20,160 / 10^8. The two leftover positions must
+    // be two DIFFERENT digits (distinctCount === 3), which is stricter than the
+    // task's looser 1-in-4,409 figure (that one allowed the pair to be equal and
+    // so included serials like 00000011, which the taxonomy classes as True Binary).
+    rarityOdds: "1 in 4,960",
     baseScore: 85,
     href: hub("six-of-a-kind"),
   },
