@@ -135,6 +135,40 @@ export const PATTERN_VALUE_GAPS: { pattern: string; condition: NoteCondition }[]
   { pattern: "ladder-partial", condition: "circulated" },
   { pattern: "low-serial-under-100", condition: "vf" }, // only serial 1 ($5,000) outlier plus 2 records; blanked by owner decision
   { pattern: "binary", condition: "circulated" },
+
+  // New patterns: listed in the chart so they are visible, but every cell is an
+  // explicit gap ("no recorded sales") until de-confounded sold records arrive.
+  // No figures are guessed. When sold data lands, move a cell into
+  // PATTERN_VALUE_BANDS (>= 3 de-confounded records) and drop its gap here.
+  ...(
+    [
+      "six-of-a-kind",
+      "five-of-a-kind",
+      "true-binary-radar",
+      "true-binary-repeater",
+      "near-true-binary",
+      "true-binary",
+      "radar-repeater",
+      "double-binary-repeater",
+      "ladder-repeater",
+      "trinary-repeater",
+      "bookends-repeater",
+      "binary-repeater",
+      "binary-radar",
+      "bookends-radar",
+      "binary-four-pairs",
+      "ladder-four-pairs",
+      "bookends-four-pairs",
+      "four-pairs",
+      "bookends-binary",
+      "bookends",
+      "near-radar-repeater",
+      "near-binary-radar",
+      "super-high-serial",
+    ] as const
+  ).flatMap((pattern) =>
+    (["circulated", "vf", "unc"] as const).map((condition) => ({ pattern, condition })),
+  ),
 ];
 
 export const PATTERN_VALUES_UPDATED = "2026-10-05";
