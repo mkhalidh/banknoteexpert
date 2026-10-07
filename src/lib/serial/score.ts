@@ -1,24 +1,27 @@
 /**
  * Deterministic, explainable scoring of a serial number.
  *
+ * PRIMARY CLASSIFICATION — DETECTION ORDER WINS
+ * ---------------------------------------------
+ * The `patterns` registry is ordered rarest/most-specific first. The PRIMARY tag
+ * (matches[0]) is the FIRST pattern in that order whose detector fires. This is
+ * the "first match wins, then stop" rule: a serial is never reported as a generic
+ * pattern when a rarer one also matches (e.g. 12211221 is a Radar Repeater, not a
+ * Binary Radar; 00000011 is True Binary, not a Low Serial).
+ *
  * SHOWN TAGS / SUPERSESSION
  * -------------------------
- * Every strictly-true pattern is a shown tag. Only a SAME-AXIS weaker form is
- * hidden when its stronger form is also present (super-radar hides radar;
- * low-serial-10 hides the looser low tiers). Cross-axis facts are independent
- * and always shown: a Seven of a Kind that is also a Binary shows both, because
- * "exactly two distinct digits" is true regardless of the repetition. Same-axis
- * supersession is DATA in `SUPERSEDED_BY`; claim-equivalence (a "radar" claim is
- * satisfied by Super Radar) is DATA in `IMPLIES`.
+ * The primary is always shown. In addition, a cross-axis fact (a pattern on a
+ * DIFFERENT structural axis from the primary) is shown too, so a Super Radar that
+ * is also a Binary and a Flipper reports all three. A secondary tag is hidden when
+ * (a) it sits on the SAME axis as the primary — stacking two forms of one idea
+ * adds nothing — or (b) a stronger, more specific form of the same concept is also
+ * present (SUPERSEDED_BY). Claim-equivalence (a "radar" claim is satisfied by a
+ * Super Radar) is DATA in IMPLIES.
  *
- *   solid | super-radar  > radar
- *   solid | super-repeater > repeater
- *   ladder > broken-ladder
- *   low-serial-10 > low-serial-100 > low-serial-1000
- *
- * The highest-baseScore shown tag is primary and scores its baseScore; each
- * secondary tag on a DIFFERENT axis adds a flat combination bonus, capped at
- * COMBO_CAP. Star notes add a documented flat bonus.
+ * The primary scores its baseScore; each shown secondary on a DIFFERENT axis adds
+ * a flat combination bonus, capped at COMBO_CAP. Star notes add a documented flat
+ * bonus.
  */
 
 import { patterns } from "@/lib/serial/patterns";
@@ -59,25 +62,94 @@ export interface SerialScore {
 }
 
 /**
- * Same-axis supersession ONLY: a weak id is hidden from the shown tags when a
- * stronger form of the SAME idea is also present (super-radar is a stronger
- * radar; low-serial-10 is a tighter low serial). Cross-axis patterns are NOT
- * suppressed here: a serial that is both a Seven of a Kind and a Binary shows
- * both, because "two distinct digits" is an independent, strictly-true fact.
- * Forward references (true-binary, radar-repeater, bookends) are intentional so
- * the rules already work once those patterns ship.
+ * A secondary tag is hidden when any id in its list is also present. These are
+ * cross-concept redundancies: a Palindrome Radar is just a plain Radar by a more
+ * specific name, so Radar is hidden under it; a Double Quad already explains an
+ * AAAABBBB serial, so the Four Pairs family is hidden under it; the generic
+ * Bookends fact is hidden whenever a structured pattern that implies it is
+ * present. Same-AXIS redundancy is handled separately (by the axis check in
+ * scoreSerial), so these lists only need the CROSS-axis cases.
  */
 const SUPERSEDED_BY: Record<string, string[]> = {
-  radar: ["solid", "super-radar", "radar-repeater"],
-  "super-radar": ["solid"],
-  repeater: ["solid", "super-repeater", "radar-repeater"],
-  "super-repeater": ["solid"],
+  // radar / symmetry family
+  "super-radar": ["solid", "true-binary-radar"],
+  "binary-radar": ["solid", "super-radar", "true-binary-radar"],
+  "bookends-radar": ["solid", "super-radar", "true-binary-radar"],
+  "palindrome-radar": [
+    "solid",
+    "super-radar",
+    "true-binary-radar",
+    "binary-radar",
+    "bookends-radar",
+    "radar-repeater",
+  ],
+  radar: [
+    "solid",
+    "super-radar",
+    "true-binary-radar",
+    "binary-radar",
+    "bookends-radar",
+    "palindrome-radar",
+    "radar-repeater",
+  ],
+  // repeater family
+  "super-repeater": ["solid", "bookends-repeater"],
+  "binary-repeater": [
+    "solid",
+    "true-binary-repeater",
+    "radar-repeater",
+    "double-binary-repeater",
+    "bookends-repeater",
+  ],
+  repeater: [
+    "solid",
+    "super-repeater",
+    "bookends-repeater",
+    "binary-repeater",
+    "radar-repeater",
+    "double-binary-repeater",
+    "ladder-repeater",
+    "trinary-repeater",
+    "true-binary-repeater",
+  ],
+  // repeated-pair family
+  "binary-four-pairs": ["solid", "double-quad"],
+  "bookends-four-pairs": ["solid", "double-quad"],
+  "ladder-four-pairs": ["solid", "double-quad"],
+  "four-pairs": [
+    "solid",
+    "double-quad",
+    "binary-four-pairs",
+    "ladder-four-pairs",
+    "bookends-four-pairs",
+  ],
+  // generic positional fact — hidden whenever a structured pattern explains it
+  "bookends-binary": [
+    "solid",
+    "super-repeater",
+    "bookends-repeater",
+    "bookends-four-pairs",
+  ],
+  bookends: [
+    "solid",
+    "super-repeater",
+    "bookends-repeater",
+    "trinary-repeater",
+    "bookends-four-pairs",
+    "bookends-binary",
+    "double-binary-repeater",
+  ],
+  // digit-count family
+  binary: ["true-binary"],
+  // A solid serial is all one digit; "also True Binary" is noise on 00000000 /
+  // 11111111, and the taxonomy says 11111111 is Solid, never True Binary.
+  "true-binary": ["solid"],
+  // value tiers
   flipper: ["solid"],
   "broken-ladder": ["ladder"],
   "low-serial-100": ["low-serial-10"],
   "low-serial-1000": ["low-serial-10", "low-serial-100"],
-  binary: ["true-binary"],
-  bookends: ["solid", "super-repeater"],
+  "high-serial": ["super-high-serial"],
 };
 
 /**
@@ -86,21 +158,36 @@ const SUPERSEDED_BY: Record<string, string[]> = {
  * Used by patternSatisfied() and the re-test harness.
  */
 const IMPLIES: Record<string, string[]> = {
-  "super-radar": ["radar"],
-  "super-repeater": ["repeater"],
-  "radar-repeater": ["radar", "repeater"],
+  "super-radar": ["radar", "palindrome-radar"],
+  "super-repeater": ["repeater", "bookends-repeater"],
+  "bookends-repeater": ["repeater", "super-repeater"],
+  "radar-repeater": ["radar", "palindrome-radar", "repeater", "near-radar-repeater"],
+  "double-binary-repeater": ["repeater"],
+  "ladder-repeater": ["repeater"],
+  "trinary-repeater": ["repeater"],
+  "binary-repeater": ["repeater"],
+  "true-binary-repeater": ["repeater", "true-binary", "binary"],
+  "true-binary-radar": ["radar", "palindrome-radar", "true-binary", "binary"],
+  "binary-radar": ["radar", "palindrome-radar", "binary"],
+  "bookends-radar": ["radar", "palindrome-radar"],
+  "palindrome-radar": ["radar"],
   ladder: ["broken-ladder"],
+  "ladder-four-pairs": ["four-pairs"],
+  "binary-four-pairs": ["four-pairs", "binary"],
+  "bookends-four-pairs": ["four-pairs"],
   "true-binary": ["binary"],
-  solid: ["radar", "super-radar", "repeater", "super-repeater", "flipper"],
+  "near-true-binary": [],
+  solid: ["radar", "super-radar", "palindrome-radar", "repeater", "super-repeater", "flipper"],
+  "super-high-serial": ["high-serial"],
   "low-serial-10": ["low-serial-100", "low-serial-1000"],
   "low-serial-100": ["low-serial-1000"],
 };
 
 /**
  * Each pattern's structural axis. The combination bonus only rewards secondary
- * tags that sit on a DIFFERENT axis from the primary, so stacking two forms of
- * the same idea does not inflate the score. Forward ids are included so new
- * patterns classify correctly on arrival.
+ * tags that sit on a DIFFERENT axis from the primary, and a same-axis secondary
+ * is never shown, so stacking two forms of the same idea cannot inflate the
+ * score or clutter the tag list.
  */
 const AXIS_OF: Record<string, string> = {
   solid: "repetition",
@@ -108,24 +195,53 @@ const AXIS_OF: Record<string, string> = {
   "six-of-a-kind": "repetition",
   "five-of-a-kind": "repetition",
   "double-quad": "repetition",
-  repeater: "repetition",
-  "super-repeater": "repetition",
-  "radar-repeater": "repetition",
+  repeater: "repeater",
+  "super-repeater": "repeater",
+  "bookends-repeater": "repeater",
+  "radar-repeater": "repeater",
+  "double-binary-repeater": "repeater",
+  "ladder-repeater": "repeater",
+  "trinary-repeater": "repeater",
+  "binary-repeater": "repeater",
+  "true-binary-repeater": "repeater",
   radar: "symmetry",
   "super-radar": "symmetry",
+  "palindrome-radar": "symmetry",
+  "binary-radar": "symmetry",
+  "bookends-radar": "symmetry",
+  "true-binary-radar": "symmetry",
+  "four-pairs": "pairs",
+  "binary-four-pairs": "pairs",
+  "ladder-four-pairs": "pairs",
+  "bookends-four-pairs": "pairs",
+  bookends: "bookends",
+  "bookends-binary": "bookends",
+  "near-binary-radar": "near",
+  "near-radar-repeater": "near",
+  "near-true-binary": "near",
   ladder: "sequence",
   "broken-ladder": "sequence",
   binary: "digit-count",
   "true-binary": "digit-count",
   trinary: "digit-count",
   flipper: "rotation",
-  bookends: "positional",
   "low-serial-10": "value",
   "low-serial-100": "value",
   "low-serial-1000": "value",
   "high-serial": "value",
+  "super-high-serial": "value",
   "birthday-note": "date",
 };
+
+/**
+ * Only these axes carry independent "facts" that are worth showing ALONGSIDE the
+ * primary (e.g. a Super Radar that is also Binary and a Flipper). Structural axes
+ * — repetition, repeater, symmetry, pairs, bookends, near, sequence — describe
+ * the same shape the primary already names, so they only ever appear AS the
+ * primary, never as a secondary tag. This keeps the tag list informative instead
+ * of listing every near-miss and generic form a serial technically satisfies.
+ */
+const FACT_AXES = new Set(["digit-count", "rotation", "value", "date"]);
 
 /** Flat combination bonus per additional different-axis tag; total capped below. */
 export const COMBO_BONUS = 5;
@@ -182,22 +298,32 @@ export function scoreSerial(input: string | ParsedSerial): SerialScore {
   const serial = parsed as ParsedSerial;
   const { digits, isStar } = serial;
 
+  // Detect in registry (priority) order: the first hit is the primary.
   const detected = patterns.filter((p) => p.detect(digits));
   const detectedIds = new Set(detected.map((p) => p.id));
 
-  // Shown tags: every strictly-true pattern, hiding only a same-axis WEAKER
-  // form when its stronger form is also present. Cross-axis facts (e.g. Binary)
-  // are kept, so a Seven of a Kind that is also a Binary shows both.
-  const shown = detected.filter((p) => {
-    const stronger = SUPERSEDED_BY[p.id] ?? [];
-    return !stronger.some((k) => detectedIds.has(k));
-  });
+  const superseded = (id: string): boolean =>
+    (SUPERSEDED_BY[id] ?? []).some((k) => detectedIds.has(k));
 
-  // Highest baseScore is primary; deterministic tie-break by id.
-  shown.sort((a, b) => {
-    if (b.baseScore !== a.baseScore) return b.baseScore - a.baseScore;
-    return a.id.localeCompare(b.id);
-  });
+  let shown: typeof detected = [];
+  if (detected.length > 0) {
+    // FIRST MATCH WINS: the earliest-in-order detector is the primary and is
+    // never suppressed (nothing rarer precedes it).
+    const primary = detected[0];
+    const primaryAxis = AXIS_OF[primary.id];
+    // Secondary tags: an independent, DIFFERENT-axis fact that no stronger form
+    // supersedes. Only fact axes (binary/trinary, flipper, value tier, date) can
+    // be a secondary — structural shapes only ever appear as the primary.
+    const secondaries = detected
+      .slice(1)
+      .filter(
+        (p) =>
+          FACT_AXES.has(AXIS_OF[p.id]) &&
+          AXIS_OF[p.id] !== primaryAxis &&
+          !superseded(p.id),
+      );
+    shown = [primary, ...secondaries];
+  }
 
   const matches: PatternMatch[] = shown.map((p, index) => ({
     id: p.id,
@@ -221,12 +347,9 @@ export function scoreSerial(input: string | ParsedSerial): SerialScore {
       detail: primary.rarityOdds,
     });
 
-    // Combination bonus: only secondary tags on a DIFFERENT axis count, and the
-    // total is capped, so stacking same-idea forms cannot inflate the score.
-    const primaryAxis = AXIS_OF[primary.id];
-    const crossAxis = shown
-      .slice(1)
-      .filter((p) => AXIS_OF[p.id] !== primaryAxis);
+    // Combination bonus: every shown secondary is already a different axis, so
+    // each counts once, with the total capped.
+    const crossAxis = shown.slice(1);
     const comboBonus = Math.min(COMBO_CAP, COMBO_BONUS * crossAxis.length);
     if (comboBonus > 0) {
       raw += comboBonus;

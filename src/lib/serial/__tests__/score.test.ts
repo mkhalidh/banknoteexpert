@@ -12,9 +12,11 @@ describe("scoreSerial — required acceptance cases", () => {
     expect(primary("12345678")).toBe("ladder");
   });
 
-  it("12344321 is a radar", () => {
-    expect(primary("12344321")).toBe("radar");
-    expect(ids("12344321")).toContain("radar");
+  it("12344321 is a palindrome radar (the canonical radar headline)", () => {
+    expect(primary("12344321")).toBe("palindrome-radar");
+    expect(ids("12344321")).toContain("palindrome-radar");
+    // A "radar" claim is still satisfied via IMPLIES.
+    expect(patternSatisfied(scoreSerial("12344321"), "radar")).toBe(true);
   });
 
   it("77777777 is solid and NOT binary, repeater or super-repeater", () => {
@@ -32,18 +34,25 @@ describe("scoreSerial — required acceptance cases", () => {
     expect(result.tier).toBe("Common");
   });
 
-  it("01011990 is a birthday note", () => {
-    expect(primary("01011990")).toBe("birthday-note");
+  it("01011990 classifies as Trinary (3 distinct digits rank ahead of Birthday)", () => {
+    // Detection order puts Trinary before Birthday, and 01011990 uses only
+    // {0,1,9}. The date fact is still available as a cross-axis secondary tag.
+    expect(primary("01011990")).toBe("trinary");
+    expect(ids("01011990")).toContain("birthday-note");
+  });
+
+  it("a 4+ digit birthday date is a Birthday Note primary (07041976)", () => {
+    expect(primary("07041976")).toBe("birthday-note");
   });
 });
 
 describe("scoreSerial — radar is not a broken ladder (Task A regression)", () => {
-  it("12344321 is a radar only", () => {
-    expect(ids("12344321")).toEqual(["radar"]);
+  it("12344321 is a palindrome radar only", () => {
+    expect(ids("12344321")).toEqual(["palindrome-radar"]);
   });
 
-  it("87655678 is a radar only", () => {
-    expect(ids("87655678")).toEqual(["radar"]);
+  it("87655678 is a palindrome radar only", () => {
+    expect(ids("87655678")).toEqual(["palindrome-radar"]);
   });
 
   it("12345687 is a genuine broken ladder", () => {
@@ -60,11 +69,12 @@ describe("scoreSerial — radar is not a broken ladder (Task A regression)", () 
 });
 
 describe("scoreSerial — same-axis supersession hides ONLY weaker same-axis forms", () => {
-  it("super-repeater hides repeater (same axis) but shows cross-axis binary", () => {
+  it("12121212 is a Bookends Repeater, hiding weaker repeater forms but showing cross-axis binary", () => {
     const matched = ids("12121212");
-    expect(matched).toContain("super-repeater");
-    expect(matched).toContain("binary"); // FIX 1: cross-axis, must show
-    expect(matched).not.toContain("repeater"); // same-axis weaker form, hidden
+    expect(matched[0]).toBe("bookends-repeater"); // rarer repeater form wins
+    expect(matched).toContain("binary"); // cross-axis fact, must show
+    expect(matched).not.toContain("repeater"); // generic form hidden
+    expect(matched).not.toContain("super-repeater"); // same-axis duplicate hidden
   });
 
   it("super-radar hides radar (same axis) but shows cross-axis binary", () => {
@@ -144,10 +154,13 @@ describe("scoreSerial — FIX 3: multi-format birthday", () => {
 });
 
 describe("scoreSerial — high-serial threshold and score", () => {
-  it("96000000 and 99999999 match high serial; 95999999 does not", () => {
+  it("96000000 matches high serial; 99999999 is super-high; 95999999 is neither", () => {
     expect(ids("96000000")).toContain("high-serial");
-    expect(ids("99999999")).toContain("high-serial"); // also solid, but high-serial is present
+    // 99,999,999 >= 99,000,000, so the super-high tier supersedes plain high.
+    expect(ids("99999999")).toContain("super-high-serial"); // also solid primary
+    expect(ids("99999999")).not.toContain("high-serial");
     expect(ids("95999999")).not.toContain("high-serial");
+    expect(ids("95999999")).not.toContain("super-high-serial");
   });
 
   it("a high-serial-only note scores its new base (30) and is Notable, not Rare", () => {

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { getTwoDollarSeries, twoDollarSeries } from "@/data/two-dollar-series";
 import { parseSerial } from "@/lib/serial/parse";
-import { scoreSerial } from "@/lib/serial/score";
+import { scoreSerial, patternSatisfied } from "@/lib/serial/score";
 
 describe("two-dollar series lookup", () => {
   it("resolves 1976 as a green-seal Federal Reserve Note", () => {
@@ -52,13 +52,17 @@ describe("two-dollar serial engine reuse", () => {
     if (parsed.ok) expect(parsed.isStar).toBe(true);
   });
 
-  it("flags the 1976 repeater 12121212 as a repeater pattern", () => {
+  it("flags the 1976 repeater 12121212 as a bookends repeater", () => {
     const result = scoreSerial("12121212");
-    expect(result.matches[0]?.id).toBe("super-repeater");
+    expect(result.matches[0]?.id).toBe("bookends-repeater");
+    // The repeater claim is still satisfied for lookup/value purposes.
+    expect(patternSatisfied(result, "repeater")).toBe(true);
   });
 
-  it("flags a plain repeater 12341234", () => {
-    expect(scoreSerial("12341234").matches[0]?.id).toBe("repeater");
+  it("flags the repeating block 12341234 as a ladder repeater", () => {
+    const result = scoreSerial("12341234");
+    expect(result.matches[0]?.id).toBe("ladder-repeater");
+    expect(patternSatisfied(result, "repeater")).toBe(true);
   });
 
   it("flags a low serial number on a $2 note", () => {

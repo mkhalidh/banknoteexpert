@@ -45,6 +45,9 @@ export const ENGINE_TO_VALUE_PATTERN: Record<string, string | null> = {
   "seven-of-a-kind": null,
   "super-radar": "super-radar",
   radar: "radar",
+  // Palindrome Radar is the canonical new name for a plain radar; it maps to the
+  // same recorded value data so the headline rename does not drop value lookups.
+  "palindrome-radar": "radar",
   "super-repeater": null,
   repeater: "repeater",
   "double-quad": null,
