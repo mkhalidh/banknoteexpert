@@ -1,3 +1,4 @@
+import { pageModified } from "@/config/page-dates";
 import { getRoute, routes } from "@/config/routes";
 import { toolLinks } from "@/config/navigation";
 import { PUBLISHED_ISO } from "@/config/site";
@@ -32,6 +33,12 @@ export const articles = entries.map(({ content, extra, image, alt, popularOrder 
 }));
 
 export type EditorialArticle = (typeof articles)[number];
+export const patternIllustrations: Record<string, string> = {
+  "/fancy-serial-numbers/radar/": "/images/patterns/radar.svg",
+  "/fancy-serial-numbers/ladder/": "/images/patterns/ladder.svg",
+  "/fancy-serial-numbers/low-serial-number/": "/images/patterns/low-serial-number.svg",
+  "/fancy-serial-numbers/birthday-note/": "/images/patterns/birthday-note.svg",
+};
 /** All existing content pages, including tools and company/legal pages. */
 export const directoryPages = routes.filter(route => route.pageType !== "article-index").map((route, index) => {
   const article = articles.find(item => item.path === route.path);
@@ -39,14 +46,15 @@ export const directoryPages = routes.filter(route => route.pageType !== "article
   const category = categoryId === "two-dollar-bills" ? "$2 Bills" : categoryId === "star-notes" ? "Star Notes" : categoryId === "company" ? "Company" : "Fancy Serial Numbers";
   return {
     ...route, categoryId, category,
-    published: "", readingMinutes: 0,
-    image: `/images/editorial/${categoryId === "fancy-serial-numbers" ? "serial-patterns" : "banknote-collecting"}-detail.webp`,
+    published: "", modified: pageModified[route.path], readingMinutes: 0,
+    image: patternIllustrations[route.path] ?? `/images/editorial/${categoryId === "fancy-serial-numbers" ? "serial-patterns" : "banknote-collecting"}-detail.webp`,
     imageAlt: "Illustrative banknote artwork", popularOrder: index + 10,
     ...article,
     isTool: toolLinks.some(tool => tool.path === route.path),
     hasByline: Boolean(article),
   };
 });
+directoryPages.sort((a, b) => b.modified.localeCompare(a.modified) || a.title.localeCompare(b.title));
 export type DirectoryPage = (typeof directoryPages)[number];
 export function getArticle(path: string) {
   const article = articles.find(item => item.path === path);

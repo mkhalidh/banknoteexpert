@@ -233,7 +233,7 @@ export const routes: RouteEntry[] = [
     pageType: "legal",
     priority: 0.1,
     changeFrequency: "yearly",
-    indexable: false,
+    indexable: true,
   },
   {
     path: "/terms/",
@@ -243,7 +243,7 @@ export const routes: RouteEntry[] = [
     pageType: "legal",
     priority: 0.1,
     changeFrequency: "yearly",
-    indexable: false,
+    indexable: true,
   },
 ];
 

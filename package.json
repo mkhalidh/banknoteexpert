@@ -10,7 +10,12 @@
     "test": "vitest run",
     "audit:links": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-links.ts",
     "check:data": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-data.ts",
-    "preflight": "npx next typegen && npm run lint && npx tsc -p tsconfig.json --noEmit && npx vitest run && npm run build && npm run audit:links && npm run check:data"
+    "preflight": "npx next typegen && npm run lint && npx tsc -p tsconfig.json --noEmit && npx vitest run && npm run build && npm run audit:links && npm run check:data",
+    "postbuild": "npm run check:metadata",
+    "check:metadata": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-seo.mjs --metadata-only",
+    "audit:seo": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-seo.mjs",
+    "check:value-anomalies": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-value-anomalies.ts",
+    "perf:seo": "node scripts/measure-seo-performance.mjs"
   },
   "dependencies": {
     "@waline/client": "^3.15.2",
@@ -31,7 +36,8 @@
     "playwright": "^1.63.0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.0",
+    "jsdom": "19.0.0"
   },
   "overrides": {
     "jsdom": "19.0.0"

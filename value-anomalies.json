@@ -1,0 +1,148 @@
+[
+  {
+    "pattern": "birthday-note",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "birthday-note",
+      "condition": "circulated",
+      "low": 2.99,
+      "high": 60,
+      "sampleSize": 10,
+      "confidence": "estimate",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; confounders excluded"
+    },
+    "higher": {
+      "pattern": "birthday-note",
+      "condition": "vf",
+      "low": 13,
+      "high": 28.99,
+      "sampleSize": 3,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  },
+  {
+    "pattern": "ladder-partial",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "ladder-partial",
+      "condition": "vf",
+      "low": 129.25,
+      "high": 372,
+      "sampleSize": 5,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    },
+    "higher": {
+      "pattern": "ladder-partial",
+      "condition": "unc",
+      "low": 15,
+      "high": 616.88,
+      "sampleSize": 24,
+      "confidence": "estimate",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; confounders excluded"
+    }
+  },
+  {
+    "pattern": "low-serial-under-1000",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "low-serial-under-1000",
+      "condition": "circulated",
+      "low": 49.99,
+      "high": 156,
+      "sampleSize": 5,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    },
+    "higher": {
+      "pattern": "low-serial-under-1000",
+      "condition": "vf",
+      "low": 6,
+      "high": 150,
+      "sampleSize": 4,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  },
+  {
+    "pattern": "low-serial-under-1000",
+    "condition": "unc",
+    "reason": "Single-price range",
+    "band": {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "low": 69,
+      "high": 69,
+      "sampleSize": 3,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  },
+  {
+    "pattern": "low-serial-under-1000",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "low-serial-under-1000",
+      "condition": "circulated",
+      "low": 49.99,
+      "high": 156,
+      "sampleSize": 5,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    },
+    "higher": {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "low": 69,
+      "high": 69,
+      "sampleSize": 3,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  },
+  {
+    "pattern": "low-serial-under-1000",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "low-serial-under-1000",
+      "condition": "vf",
+      "low": 6,
+      "high": 150,
+      "sampleSize": 4,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    },
+    "higher": {
+      "pattern": "low-serial-under-1000",
+      "condition": "unc",
+      "low": 69,
+      "high": 69,
+      "sampleSize": 3,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  },
+  {
+    "pattern": "super-radar",
+    "reason": "Higher-grade sample has a lower minimum or maximum",
+    "lower": {
+      "pattern": "super-radar",
+      "condition": "circulated",
+      "low": 38,
+      "high": 500,
+      "sampleSize": 5,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    },
+    "higher": {
+      "pattern": "super-radar",
+      "condition": "vf",
+      "low": 43,
+      "high": 118.68,
+      "sampleSize": 5,
+      "confidence": "indicative",
+      "source": "Heritage Auctions and eBay sold records, Oct 2026; small de-confounded sample"
+    }
+  }
+]

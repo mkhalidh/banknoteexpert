@@ -1,5 +1,5 @@
 import type { PageContent } from "@/content/types";
-import { AUTHOR_NAME, AUTHOR_BIO } from "@/config/site";
+import { AUTHOR_NAME } from "@/config/site";
 
 export const content: PageContent = {
   meta: {
@@ -62,7 +62,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: `The site is written and maintained by ${AUTHOR_NAME}, ${AUTHOR_BIO}, drawing on published auction records, grading standards and Bureau of Engraving and Printing data rather than guesswork. Our aim is a resource we would trust ourselves: accurate on the facts, careful with the numbers, and clear about what is known versus estimated.`,
+          text: `The site is written and maintained by ${AUTHOR_NAME}, a researcher and developer who builds practical banknote tools using published auction records, grading standards and Bureau of Engraving and Printing data rather than guesswork. Our aim is a resource we would trust ourselves: accurate on the facts, careful with the numbers, and clear about what is known versus estimated.`,
         },
         {
           kind: "paragraph",

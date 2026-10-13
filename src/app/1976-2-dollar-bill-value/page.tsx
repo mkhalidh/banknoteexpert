@@ -1,7 +1,7 @@
+import { Byline } from "@/components/content/Byline";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { ContentSections } from "@/components/content/ContentSections";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
@@ -63,6 +63,7 @@ export default function Page() {
           {/* Interactive checker up top, defaults to the 1976 series */}
           <TwoDollarSerialLookup />
         </div>
+      <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
       </header>
 
       <KeyTakeaways items={content.takeaways} />
@@ -100,12 +101,6 @@ export default function Page() {
       <RelatedPages links={content.related} />
 
       <Comments path={content.meta.path} />
-
-      <ArticleSchema
-        headline={content.meta.h1}
-        description={content.meta.description}
-        path={content.meta.path}
-      />
     </article>
   );
 }

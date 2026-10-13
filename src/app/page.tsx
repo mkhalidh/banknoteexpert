@@ -1,8 +1,10 @@
+import { homeFaqs } from "@/content/home-faq";
+import { pageGraph } from "@/lib/page-schema";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { buildMetadata, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
 import { getRoute } from "@/config/routes";
-import { LAST_UPDATED, ORG_LOGO_PATH, ORG_SAME_AS } from "@/config/site";
+import { LAST_UPDATED } from "@/config/site";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { FeaturedOn } from "@/components/content/FeaturedOn";
@@ -14,55 +16,14 @@ import { FaqItem } from "@/components/content/FaqItem";
 import { Comments } from "@/components/comments/Comments";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Fancy Serial Number Checker: Free US Dollar Bill Serial Lookup",
+  title: "Fancy Serial Number Checker: Free US Dollar Bill Lookup",
   description:
     "Free fancy serial number checker for US dollar bills. Detect radar, repeater, ladder, solid and binary patterns, get a 0–100 rarity score and value range.",
   path: "/",
   ogImage: "/social/home/opengraph-image/",
 });
 
-const structuredData: Record<string, unknown> = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebApplication",
-      "@id": `${SITE_URL}/#webapp`,
-      name: "Fancy Serial Number Checker",
-      url: `${SITE_URL}/`,
-      applicationCategory: "UtilityApplication",
-      operatingSystem: "Any",
-      browserRequirements: "Requires JavaScript",
-      description:
-        "Free tool that detects fancy patterns in US banknote serial numbers and returns a rarity score and estimated value range.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-      },
-      publisher: { "@id": `${SITE_URL}/#org` },
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      name: SITE_NAME,
-      url: `${SITE_URL}/`,
-      publisher: { "@id": `${SITE_URL}/#org` },
-    },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#org`,
-      name: SITE_NAME,
-      url: `${SITE_URL}/`,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}${ORG_LOGO_PATH}`,
-        width: 707,
-        height: 353,
-      },
-      sameAs: [...ORG_SAME_AS],
-    },
-  ],
-};
+const structuredData = pageGraph("/", []);
 
 const twoDollarValue = getRoute("/2-dollar-bill-value/");
 const twoDollarLookup = getRoute("/2-dollar-bill-serial-number-lookup/");
@@ -137,7 +98,7 @@ export default function Page() {
           the same in both directions; others, like a low serial number, are
           prized because so few notes carry them. This fancy serial number
           lookup checks every pattern below at once. Each card shows a worked
-          example, a plain definition, rough odds and a typical value range;
+          example, a plain definition and rough odds;
           four patterns have their own page, and the rest are explained on the
           hub.
         </p>
@@ -263,80 +224,8 @@ export default function Page() {
           Common questions
         </h2>
         <div className="mt-4 flex max-w-3xl flex-col gap-3">
-          <FaqItem question="What is a fancy serial number?">
-            A fancy serial number is one whose eight digits form a recognisable
-            pattern rather than a random string. Radars, repeaters, ladders,
-            solids, binaries and very low numbers are all examples. Collectors
-            pay attention to them because a memorable pattern is scarce and
-            easy to appreciate at a glance. An ordinary note has no such
-            structure, so it is worth face value. The tool at the top of this
-            page reads your digits and tells you which pattern, if any, they
-            match.
-          </FaqItem>
-          <FaqItem question="Which patterns are worth the most?">
-            As a rule, the scarcer the pattern, the higher the ceiling. Solid
-            serials, true ladders, super radars and single-digit low numbers
-            sit at the top, while radars and repeaters are more common and more
-            affordable. That said, condition and demand can outweigh rarity: a
-            clean, uncirculated common pattern can beat a heavily worn rare
-            one. Use the value table above to compare patterns side by side
-            across the three condition bands.
-          </FaqItem>
-          <FaqItem question="Is this fancy serial number checker free?">
-            Yes. This fancy serial number checker is completely free, with no
-            account, no sign-up and no limit on how many notes you check.
-            Everything runs in your browser, so your serial numbers are never
-            sent to a server or stored. You can bookmark or share a result,
-            since the serial is saved in the page address, and run as
-            many notes as you like.
-          </FaqItem>
-          <FaqItem question="What do the digits mean versus the letters?">
-            The letters and the digits do different jobs. The one or two prefix
-            letters identify the series and the Federal Reserve district; the
-            suffix letter, or star, simply continues the count within a print
-            run. The eight digits in the middle are the serial proper, and they
-            are the only part scored for a pattern. So when people talk about a
-            collectible pattern, they mean those eight digits, not the
-            surrounding letters.
-          </FaqItem>
-          <FaqItem question="My note scored highly: what should I do next?">
-            First, handle it carefully: keep it flat and clean, ideally in a
-            currency sleeve, because condition strongly affects value. Then
-            confirm the pattern and look at recent sold listings for the same
-            pattern and grade to gauge the real market. If it looks genuinely
-            scarce, consider third-party grading from PMG or PCGS, which makes
-            a note easier to sell and often lifts the price. Only then decide
-            whether to hold, sell privately or consign it to auction.
-            Photograph both sides in good light first, so you have a clear
-            record of its condition before it changes hands.
-          </FaqItem>
-          <FaqItem question="Do star notes count as fancy?">
-            A star note is not a pattern in itself, but it is collectible for a
-            related reason: it is a replacement note, and fewer of them exist.
-            A star adds to a note&rsquo;s interest and can raise its value,
-            especially from a small print run, and a star note that also
-            carries a fancy pattern is more desirable than either feature
-            alone. Our tool flags a star as soon as it reads one at the end of
-            your serial.
-          </FaqItem>
-          <FaqItem question="How accurate are the value estimates?">
-            Treat them as informed guidance, not an appraisal. Paper-money
-            prices move with condition, demand and what happens to sell that
-            month, so any honest figure is a range rather than a single number.
-            We show a confidence label with every row and, where recent sales
-            are scarce, we widen the range or mark it clearly instead of
-            guessing. For a firm valuation, a professional grader or dealer is
-            the right next step.
-          </FaqItem>
-          <FaqItem question="Where can I sell a note with a collectible serial?">
-            The main routes are online marketplaces like eBay, specialist
-            currency dealers, and auction houses such as Heritage Auctions or
-            Stack&rsquo;s Bowers for higher-value notes. Marketplaces reach the
-            most buyers but take fees; dealers are quicker but pay wholesale;
-            auctions suit genuinely scarce material. A currency serial number
-            lookup and a graded holder both help buyers trust what you are
-            selling, which usually improves the price you achieve.
-          </FaqItem>
+          {homeFaqs.map(faq => <FaqItem key={faq.question} question={faq.question}>{faq.answer}</FaqItem>)}
+
         </div>
       </section>
 

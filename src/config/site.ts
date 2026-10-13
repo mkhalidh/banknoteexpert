@@ -34,7 +34,7 @@ export const ORG_LOGO_PATH = "/logo.png";
  * brand social accounts, so its external presence is the maintainer's own
  * professional profiles, real, not fabricated.
  */
-export const ORG_SAME_AS = AUTHOR_SAME_AS;
+export const ORG_SAME_AS: readonly string[] = [];
 
 /** Named sources used for value estimates, surfaced in copy and methodology. */
 export const VALUE_SOURCES = [
@@ -57,3 +57,10 @@ export const SOURCE_LINKS = [
   { name: "Heritage Auctions (realized currency prices)", url: "https://currency.ha.com/" },
   { name: "Stack's Bowers (realized currency prices)", url: "https://www.stacksbowers.com/" },
 ] as const;
+
+/** TODO(human): Add only verified credentials, memberships and reviewer identity. */
+export const authorDetails: { credentials: string[]; memberships: string[]; reviewedBy: string | null } = {
+  credentials: [],
+  memberships: [],
+  reviewedBy: null,
+};

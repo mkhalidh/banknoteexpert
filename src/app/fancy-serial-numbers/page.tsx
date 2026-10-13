@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ArticleCategory, ArticleIntro } from "@/components/content/ArticleIntro";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { AnchorNav } from "@/components/content/AnchorNav";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ContentSections } from "@/components/content/ContentSections";
@@ -10,6 +9,7 @@ import { PatternExplainer } from "@/components/content/PatternExplainer";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { Comments } from "@/components/comments/Comments";
+import { ALL_CONDITIONS, ENGINE_TO_VALUE_PATTERN, valueCell } from "@/lib/serial/value";
 import { patternsById } from "@/lib/serial/patterns";
 import {
   content,
@@ -71,13 +71,14 @@ export default function Page() {
             return (
               <PatternExplainer
                 key={id}
+                alias={id === "bookends-repeater" ? "super-repeater" : undefined}
                 id={pattern.slug}
                 name={pattern.name}
                 example={pattern.example}
                 rarityOdds={pattern.rarityOdds}
                 href={pattern.href}
-                definition={copy.definition}
-                valueNote={copy.valueNote}
+                definition={`${pattern.description} The example ${pattern.example} illustrates this pattern.`}
+                valueNote={ALL_CONDITIONS.some(condition => valueCell(ENGINE_TO_VALUE_PATTERN[id] ?? id, condition).status === "ok") ? copy.valueNote : "No recorded sales yet."}
                 linkLabel={copy.linkLabel}
               />
             );
@@ -92,12 +93,6 @@ export default function Page() {
       <RelatedPages title="Keep exploring" links={content.related} />
 
       <Comments path={content.meta.path} />
-
-      <ArticleSchema
-        headline={content.meta.h1}
-        description={content.meta.description}
-        path={content.meta.path}
-      />
     </article>
   );
 }

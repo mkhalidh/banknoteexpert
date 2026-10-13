@@ -26,18 +26,12 @@ export function buildMetadata({
   ogImage,
   noindex = false,
 }: BuildMetadataParams): Metadata {
+  if (!title || title.length > 60 || !description || description.length > 160) {
+    throw new Error(`Invalid metadata length for ${path}: title ${title.length}, description ${description.length}`);
+  }
   const canonical = `${SITE_URL}${path}`;
-  // Nested page metadata replaces openGraph/twitter wholesale. Always include
-  // an explicit fallback; relying on the root file alone loses inherited images.
-  const previews: Record<string, string> = {
-    "/": "Fancy Serial Number Checker",
-    "/star-note-lookup/": "Star Note Lookup",
-    "/2-dollar-bill-serial-number-lookup/": "$2 Bill Serial Number Lookup",
-    "/fancy-serial-number-value/": "Fancy Serial Number Price Guide",
-    "/fancy-serial-numbers/": "What Is a Fancy Serial Number?",
-  };
-  const imagePath = path === "/" ? "/social/home/" : previews[path] ? path : "/";
-  const imageAlt = `${previews[path] ?? SITE_NAME}, Free US banknote serial number tools`;
+  const imagePath = path === "/" ? "/social/home/" : path;
+  const imageAlt = `${title} | ${SITE_NAME}`;
 
   return {
     metadataBase: new URL(SITE_URL),

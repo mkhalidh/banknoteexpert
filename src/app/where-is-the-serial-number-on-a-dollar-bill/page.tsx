@@ -3,7 +3,6 @@ import { ArticleCategory, ArticleIntro } from "@/components/content/ArticleIntro
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { AnchorNav } from "@/components/content/AnchorNav";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ContentSections } from "@/components/content/ContentSections";
@@ -138,12 +137,6 @@ export default function Page() {
       <ContentSections sections={[closing]} />
 
       <RelatedPages links={content.related} />
-
-      <ArticleSchema
-        headline={content.meta.h1}
-        description={content.meta.description}
-        path={content.meta.path}
-      />
     </article>
   );
 }

@@ -5,7 +5,7 @@ export const content: PageContent = {
     path: "/fancy-serial-numbers/",
     title: "What Is a Fancy Serial Number? Types & Patterns Explained",
     description:
-      "What makes a dollar bill serial number “fancy”: every pattern, radar, solid, ladder, binary, repeater and more, plus the odds and what drives value.",
+      "What is a fancy serial number? Explore collectible banknote patterns, including radar, solid, ladder, binary and repeater, with odds and value drivers.",
     h1: "What Is a Fancy Serial Number?",
     primaryKeyword: "what is a fancy serial number",
     lead:

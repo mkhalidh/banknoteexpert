@@ -55,7 +55,9 @@ function Cell({ pattern, condition }: { pattern: string; condition: NoteConditio
  * than a zero or a dash. Server Component.
  */
 export function ValueRangeTable() {
-  const rows = valuePatternUniverse().sort((a, b) => maxHigh(b) - maxHigh(a));
+  const all = valuePatternUniverse();
+  const rows = all.filter(pattern => maxHigh(pattern) >= 0).sort((a, b) => maxHigh(b) - maxHigh(a));
+  const missing = all.filter(pattern => maxHigh(pattern) < 0);
 
   return (
     <div>
@@ -91,6 +93,8 @@ export function ValueRangeTable() {
         </table>
       </div>
       <div className="mt-3 flex flex-col gap-1 text-xs text-zinc-500">
+        {missing.length > 0 && <p>No recorded sales yet for: {missing.map(patternLabel).join(", ")}.</p>}
+        <p>Ranges reflect small samples; a higher grade can show a lower range when few sales exist.</p>
         <p>Last updated {VALUE_UPDATED}.</p>
         <p>
           Bands are the range of recorded sold prices. &ldquo;Indicative&rdquo;

@@ -4,7 +4,7 @@
 > "fancy" patterns, star notes and value. No account, no upload, every
 > calculation runs in your browser.
 
-Site: https://www.banknoteexpert.com
+Site: https://www.banknoteexpert.com/
 
 ## About
 
@@ -15,7 +15,7 @@ a note may be worth. All logic is static and runs client-side; the site stores
 no serial-check data and never transmits the serial numbers you enter. Optional
 comments use a separate server-backed comment service.
 
-## The four tools
+## Tools and guides
 
 1. Fancy Serial Number Checker, https://www.banknoteexpert.com/
    Enter any US banknote serial. Detects radar, solid, ladder, repeater, binary,
@@ -31,7 +31,7 @@ comments use a separate server-backed comment service.
 4. Fancy Serial Number Price Guide, https://www.banknoteexpert.com/fancy-serial-number-value/
    A value chart by pattern and condition, with confidence ratings and sources.
 
-## Pattern guides (Silo 1)
+## Pattern guides
 
 - Fancy serial numbers overview (hub): https://www.banknoteexpert.com/fancy-serial-numbers/
 - Radar serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/radar/
@@ -48,6 +48,8 @@ page at /fancy-serial-numbers/.
 
 - $2 bill value guide: https://www.banknoteexpert.com/2-dollar-bill-value/
 
+- 1976 $2 bill value: https://www.banknoteexpert.com/1976-2-dollar-bill-value/
+
 ## Trust
 
 - Methodology (sources, confidence levels, limitations): https://www.banknoteexpert.com/methodology/
@@ -55,6 +57,9 @@ page at /fancy-serial-numbers/.
 - Author: https://www.banknoteexpert.com/about-the-author/
 - All tools: https://www.banknoteexpert.com/tools/
 - Article directory: https://www.banknoteexpert.com/blog/
+
+- Privacy: https://www.banknoteexpert.com/privacy/
+- Terms: https://www.banknoteexpert.com/terms/
 
 ## Notes for automated agents
 

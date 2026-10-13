@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { SITE_URL } from "@/lib/seo";
+import { pageGraph } from "@/lib/page-schema";
 
 export interface BreadcrumbItem {
   name: string;
@@ -17,16 +17,7 @@ export interface BreadcrumbsProps {
  * source data, so the two can never drift apart. Server Component.
  */
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const jsonLd: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: `${SITE_URL}${item.path}`,
-    })),
-  };
+  const jsonLd = pageGraph(items[items.length - 1].path, items);
 
   return (
     <nav aria-label="Breadcrumb" className="text-sm">

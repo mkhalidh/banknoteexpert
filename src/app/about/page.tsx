@@ -1,8 +1,7 @@
+import { AuthorDetails } from "@/components/content/AuthorDetails";
 import type { Metadata } from "next";
-import { buildMetadata, SITE_URL } from "@/lib/seo";
-import { AUTHOR_NAME, AUTHOR_BIO, AUTHOR_SAME_AS } from "@/config/site";
+import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { JsonLd } from "@/components/seo/JsonLd";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ContentSections } from "@/components/content/ContentSections";
 import { RelatedPages } from "@/components/content/RelatedPages";
@@ -14,18 +13,6 @@ export const metadata: Metadata = buildMetadata({
   path: content.meta.path,
 });
 
-// One canonical Person entity across the site: same @id as the author-profile
-// page and the `author` reference emitted by ArticleSchema, so Google merges
-// them into a single node instead of three separate people.
-const personSchema: Record<string, unknown> = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${SITE_URL}/about-the-author/#person`,
-  name: AUTHOR_NAME,
-  url: `${SITE_URL}/about-the-author/`,
-  description: AUTHOR_BIO,
-  sameAs: AUTHOR_SAME_AS,
-};
 
 export default function Page() {
   return (
@@ -47,9 +34,8 @@ export default function Page() {
 
       <KeyTakeaways items={content.takeaways} />
       <ContentSections sections={content.sections} />
+      <AuthorDetails />
       <RelatedPages links={content.related} />
-
-      <JsonLd data={personSchema} />
     </article>
   );
 }

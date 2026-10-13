@@ -40,6 +40,14 @@ export function Comments({ path }: { path?: string }) {
     if (!shouldLoad || !mountRef.current) return;
     let instance: WalineInstance | null = null;
     let cancelled = false;
+    const mount = mountRef.current;
+    const markUserLinks = () => {
+      mount.querySelectorAll<HTMLAnchorElement>(".wl-content a, .wl-nick").forEach(link => {
+        link.relList.add("ugc", "nofollow", "noopener", "noreferrer");
+      });
+    };
+    const linksObserver = new MutationObserver(markUserLinks);
+    linksObserver.observe(mount, { childList: true, subtree: true, attributes: true, attributeFilter: ["href"] });
 
     import("@waline/client").then(({ init }) => {
       if (cancelled || !mountRef.current) return;
@@ -70,6 +78,7 @@ export function Comments({ path }: { path?: string }) {
 
     return () => {
       cancelled = true;
+      linksObserver.disconnect();
       instance?.destroy();
     };
   }, [shouldLoad, path]);
@@ -80,7 +89,7 @@ export function Comments({ path }: { path?: string }) {
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         Have a serial number you want a second opinion on? Ask below, no account needed.
       </p>
-      <div ref={containerRef} className="card mt-4 min-h-[14rem] p-5">
+      <div ref={containerRef} className="card mt-4 min-h-[24rem] p-5">
         {shouldLoad ? (
           <div ref={mountRef} className="waline-container" />
         ) : (

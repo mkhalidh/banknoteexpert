@@ -1,0 +1,8 @@
+{
+  "stage": "after",
+  "base": "http://localhost:3000",
+  "status": "blocked",
+  "pages": [],
+  "note": "Mobile lab LCP/TBT/CLS; INP requires field or interaction measurements.",
+  "error": "waiting for dynamic debugging port in chrome-err.log"
+}

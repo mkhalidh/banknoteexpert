@@ -10,7 +10,7 @@ import { patterns } from "@/lib/serial/patterns";
 export function PatternGrid() {
   return (
     <ul className="pattern-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {patterns.map((pattern) => {
+      {patterns.filter(pattern => !["super-repeater", "palindrome-radar"].includes(pattern.id)).map((pattern) => {
         return (
           <li key={pattern.id} className="pattern-card card card-hover flex flex-col p-4">
             <div className="flex items-baseline justify-between gap-2">

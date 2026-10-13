@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { ContentSections } from "@/components/content/ContentSections";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
-import { LastUpdated } from "@/components/content/LastUpdated";
+import { Byline } from "@/components/content/Byline";
 import { ScarcestStarCallout } from "@/components/content/ScarcestStarCallout";
 import { StarNoteLookup } from "@/components/tools/StarNoteLookup";
 import { Comments } from "@/components/comments/Comments";
@@ -132,7 +131,7 @@ export default function Page() {
       {/* Section 7 */}
       <div>
         <ContentSections sections={sectionById("how-we-estimate")} />
-        <LastUpdated className="mt-3 text-sm text-zinc-500" />
+        <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
       </div>
 
       {/* Section 8, FAQ */}
@@ -141,12 +140,6 @@ export default function Page() {
       <RelatedPages links={content.related} />
 
       <Comments path={content.meta.path} />
-
-      <ArticleSchema
-        headline={content.meta.h1}
-        description={content.meta.description}
-        path={content.meta.path}
-      />
     </article>
   );
 }

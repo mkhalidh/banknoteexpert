@@ -3,6 +3,7 @@ import Link from "next/link";
 export interface PatternExplainerProps {
   /** Anchor id (the pattern slug), e.g. "binary". */
   id: string;
+  alias?: string;
   name: string;
   example: string;
   rarityOdds: string;
@@ -24,6 +25,7 @@ export interface PatternExplainerProps {
  */
 export function PatternExplainer({
   id,
+  alias,
   name,
   example,
   rarityOdds,
@@ -35,6 +37,7 @@ export function PatternExplainer({
   const hasDedicatedPage = !href.includes("#");
   return (
     <div id={id} className="pattern-explainer scroll-mt-24">
+      {alias && <span id={alias} className="scroll-mt-24" />}
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="text-h3">{name}</h3>
         <code className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">

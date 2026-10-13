@@ -1,0 +1,6 @@
+{
+  "stage": "before",
+  "status": "blocked",
+  "pages": [],
+  "reason": "No production baseline was captured: initial Turbopack build stalled at compilation, and webpack failed with spawn EPERM. No before/after performance comparison can be claimed."
+}

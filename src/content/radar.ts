@@ -120,8 +120,8 @@ export const content: PageContent = {
           text: "Super radars sit in a different tier. Their tight inner-digit rule makes them far scarcer, so they attract noticeably keener interest and stronger competition when one surfaces. As always, condition, denomination, and any overlapping features shift the picture: a crisp, uncirculated note presents better than a soft, folded one.",
         },
         {
-          kind: "paragraph",
-          text: "We do not quote fixed figures here, because recent auction results vary widely by note, grade, and the exact combination of traits. For grounded expectations, read our value guide at /fancy-serial-number-value/, which explains how graders and buyers actually price these notes instead of leaning on a single number.",
+          kind: "richtext",
+            segments: ["Recent auction results vary widely by note, grade and combination of traits. For grounded expectations, read the ", { href: "/fancy-serial-number-value/", label: "fancy serial number value guide" }, ", which explains how graders and buyers price these notes."],
         },
       ],
     },

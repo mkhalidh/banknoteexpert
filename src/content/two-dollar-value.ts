@@ -339,6 +339,7 @@ export const content: PageContent = {
     },
   ],
   related: [
+    { href: "/1976-2-dollar-bill-value/", label: "1976 $2 bill value guide" },
     {
       href: "/star-note-lookup/",
       label: "Star note lookup",

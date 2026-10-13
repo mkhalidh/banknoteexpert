@@ -1,7 +1,8 @@
+import { Byline } from "@/components/content/Byline";
+import { SOURCE_LINKS } from "@/config/site";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { ArticleSchema } from "@/components/seo/ArticleSchema";
 import { ContentSections } from "@/components/content/ContentSections";
 import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
@@ -60,6 +61,7 @@ export default function Page() {
         <p className="mt-3 max-w-2xl text-lead">
           {content.meta.lead}
         </p>
+      <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
       </header>
 
       {/* Section 2 */}
@@ -126,13 +128,12 @@ export default function Page() {
       {/* Section 11 */}
       <RelatedPages links={content.related} />
 
+      <section aria-labelledby="sources"><h2 id="sources" className="text-h2">Sources</h2>
+        <p>The series chart uses the secondary compilation at serialworth.com. Primary reference sites below are already listed in our source data; they are not individual sale citations.</p>
+        <ul className="mt-3 list-disc pl-5"><li><a href="https://serialworth.com/" className="link-accent">SerialWorth price guide (secondary compilation)</a></li>{SOURCE_LINKS.filter(source => /Heritage|Stack|Engraving/.test(source.name)).map(source => <li key={source.url}><a href={source.url} className="link-accent">{source.name}</a></li>)}</ul>
+        {/* TODO(human): Add exact primary lot/report URLs for each supported price or production claim. */}
+      </section>
       <Comments path={content.meta.path} />
-
-      <ArticleSchema
-        headline={content.meta.h1}
-        description={content.meta.description}
-        path={content.meta.path}
-      />
     </article>
   );
 }
