@@ -55,17 +55,17 @@ export default function Page() {
           <div className="text-zinc-700 dark:text-zinc-300">
             <p>
               Every US Federal Reserve Note carries the same serial number
-              printed twice on the face: once in the upper-right corner and once
-              in the lower-left. It is set in green ink, the same shade as the
-              Treasury seal beside it. Read the characters in order and the
-              structure is always the same.
+              printed twice on the front in green ink. On $1 and $2 bills,
+              look at the upper right and lower left. On newer $5 through $100
+              bills, look at the upper left and lower right.
             </p>
             <p className="mt-3">
-              One or two letters come first: the prefix, which identifies
-              the series and the Federal Reserve district that issued the note.
-              Then come exactly eight digits. Those eight digits are the part
-              collectors care about, because the pattern they form is what makes
-              a note ordinary or unusual. After the digits sits a single suffix
+              A $1 or $2 bill has one prefix letter identifying its Federal
+              Reserve Bank. Newer $5 through $100 bills have two: a series
+              letter and a Federal Reserve Bank letter. Then come exactly eight
+              digits. Those eight digits are the part collectors care about,
+              because the pattern they form is what makes a note ordinary or
+              unusual. After the digits sits a single suffix
               letter, or a star. A star in place of that final letter marks a
               replacement note, printed to swap out a bill spoiled during
               production. Both printed copies always show the same characters,

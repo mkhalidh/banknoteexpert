@@ -141,7 +141,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Look at the very end of the serial number. If it finishes with a star symbol rather than a letter, you have a star note. Both printings of the serial, upper-right and lower-left, will show the same star.",
+            "Look at the very end of the serial number. If it finishes with a star symbol rather than a letter, you have a star note. Both printings on the front of the bill will show the same star; their positions vary by denomination.",
         },
         { kind: "subheading", text: "Are all star notes valuable?" },
         {

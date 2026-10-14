@@ -26,12 +26,12 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The serial number is printed twice on the face of the note, in green ink, upper-right and lower-left. It always follows the same structure: one or two prefix letters, then exactly eight digits, then a suffix letter or a star.",
+            "The serial number is printed twice on the front of a $2 bill in green ink, at the upper right and lower left. It has one prefix letter, exactly eight digits, then a suffix letter or star.",
         },
         {
           kind: "list",
           items: [
-            "Prefix letter(s): identify the series and the issuing authority, which is context, not pattern.",
+            "Prefix letter: identifies the Federal Reserve Bank, which is context, not a digit pattern.",
             "Eight digits: the only part that forms a collectible pattern such as a radar or a low serial.",
             "Suffix letter or star: a star marks a replacement note, which is scarcer than a standard note.",
           ],

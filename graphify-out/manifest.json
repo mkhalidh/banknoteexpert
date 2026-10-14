@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1791806971.368076,
-    "seen": 1791807399.9944263,
-    "ast_hash": "f02bff55757447e9006369923f4b2902",
+    "mtime": 1792021354.5504222,
+    "seen": 1792021574.1532304,
+    "ast_hash": "3daec5f56e2b981e89927c5b863641e2",
     "semantic_hash": ""
   },
   "src/app/privacy/page.tsx": {
@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "src/app/where-is-the-serial-number-on-a-dollar-bill/page.tsx": {
-    "mtime": 1791806453.3631325,
-    "seen": 1791806790.0416303,
-    "ast_hash": "c63cae0922ae4af12e18e5eef0e23c47",
+    "mtime": 1792021463.2646368,
+    "seen": 1792021574.1532304,
+    "ast_hash": "a9433920785fb77e4df003165ece5b0a",
     "semantic_hash": ""
   },
   "src/components/comments/Comments.tsx": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "src/config/routes.ts": {
-    "mtime": 1791929155.479119,
-    "seen": 1791929948.763516,
-    "ast_hash": "8f1115d6fea4a65958ac97fa985c2a5b",
+    "mtime": 1792020794.0133529,
+    "seen": 1792021158.4319296,
+    "ast_hash": "6419428090c337d55cadce944f428c02",
     "semantic_hash": ""
   },
   "src/config/site.ts": {
@@ -384,9 +384,9 @@
     "semantic_hash": ""
   },
   "src/content/low-serial-number.ts": {
-    "mtime": 1791290618.3232007,
-    "seen": 1791806790.0416303,
-    "ast_hash": "da7adbc9749f65f6a373fb36339d37e7",
+    "mtime": 1792021338.5842795,
+    "seen": 1792021574.1532304,
+    "ast_hash": "720fab892770da31523966b9e3bc4d8c",
     "semantic_hash": ""
   },
   "src/content/methodology.ts": {
@@ -408,9 +408,9 @@
     "semantic_hash": ""
   },
   "src/content/star-note-lookup.ts": {
-    "mtime": 1791290618.3241985,
-    "seen": 1791806790.0416303,
-    "ast_hash": "effc007f1054638fb089ed5f20f821af",
+    "mtime": 1792021338.5802886,
+    "seen": 1792021574.1532304,
+    "ast_hash": "ec1d33742b4a8e7867ad0bcac9f35fb8",
     "semantic_hash": ""
   },
   "src/content/terms.ts": {
@@ -420,9 +420,9 @@
     "semantic_hash": "bd1df69ac263e8fe584ff0e9eb432be8"
   },
   "src/content/two-dollar-serial-lookup.ts": {
-    "mtime": 1791290618.3251963,
-    "seen": 1791806790.0416303,
-    "ast_hash": "8f254e3908cdaed1cb765f0d42476a0d",
+    "mtime": 1792021338.585276,
+    "seen": 1792021574.1532304,
+    "ast_hash": "087affe8a298b3677566e39834f20222",
     "semantic_hash": ""
   },
   "src/content/two-dollar-value.ts": {
@@ -438,9 +438,9 @@
     "semantic_hash": "383aef31e7fc948c3991e4cb62d2b67d"
   },
   "src/content/where-is-serial.ts": {
-    "mtime": 1791290618.3261926,
-    "seen": 1791806790.0416303,
-    "ast_hash": "87b74ad4c6579ff077a49b7b566e11e8",
+    "mtime": 1792021299.442775,
+    "seen": 1792021574.1532304,
+    "ast_hash": "9ee08979044704da5d6c35b9ef2873c9",
     "semantic_hash": ""
   },
   "src/data/star-notes/runs.ts": {
@@ -672,9 +672,9 @@
     "semantic_hash": ""
   },
   "src/config/editorial.ts": {
-    "mtime": 1791928949.5008574,
-    "seen": 1791929948.7625132,
-    "ast_hash": "06e282fa0f1a67c935df1709aaf7c963",
+    "mtime": 1792020991.2655914,
+    "seen": 1792021158.4319296,
+    "ast_hash": "510534fe33340da2b04324006a2c7902",
     "semantic_hash": ""
   },
   "src/config/navigation.ts": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "src/config/page-dates.ts": {
-    "mtime": 1791928947.131123,
-    "seen": 1791929948.7625132,
-    "ast_hash": "637efb6613fe270adbc5bbceceb0d623",
+    "mtime": 1792021606.562204,
+    "seen": 1792021747.7867556,
+    "ast_hash": "c777f5f1d7a3e7e6359f056ce75e138d",
     "semantic_hash": ""
   },
   "src/config/security-headers.mjs": {
@@ -1155,6 +1155,12 @@
     "mtime": 1791929353.3837574,
     "seen": 1791929948.763516,
     "ast_hash": "300f52a0d253d74be57337c523c9c58d",
+    "semantic_hash": ""
+  },
+  "src/content/__tests__/where-is-serial.test.ts": {
+    "mtime": 1792021404.476255,
+    "seen": 1792021574.1532304,
+    "ast_hash": "1610864d14d0de9086369022f4491596",
     "semantic_hash": ""
   }
 }

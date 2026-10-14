@@ -5,7 +5,7 @@ import { PUBLISHED_ISO } from "@/config/site";
 import { content as fancy, patternCopy } from "@/content/fancy-serial-numbers";
 import { content as brokenLadder } from "@/content/broken-ladder";
 import { content as value } from "@/content/fancy-serial-number-value";
-import { content as serial, denominations, denomIntro, closing } from "@/content/where-is-serial";
+import { content as serial, denominations, denomIntro, closing, sources } from "@/content/where-is-serial";
 
 function prose(value: unknown): string {
   if (typeof value === "string") return value;
@@ -17,7 +17,7 @@ function prose(value: unknown): string {
 const entries = [
   { content: fancy, extra: patternCopy, image: "serial-patterns-detail", alt: "Illustrative close-up of banknote serial digits", popularOrder: 2 },
   { content: value, extra: [], image: "banknote-inspection-detail", alt: "Illustrative banknote inspection scene", popularOrder: 1 },
-  { content: serial, extra: [denominations, denomIntro, closing], image: "banknote-collecting-detail", alt: "Illustrative view of banknotes on a collector's desk", popularOrder: 3 },
+  { content: serial, extra: [denominations, denomIntro, closing, sources], image: "banknote-collecting-detail", alt: "Illustrative view of banknotes on a collector's desk", popularOrder: 3 },
   { content: brokenLadder, extra: [], image: "serial-patterns-detail", alt: "Illustrative close-up of banknote serial digits", popularOrder: 4 },
 ];
 

@@ -134,7 +134,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Checking a note takes seconds. Find the eight-digit serial, which appears twice on the face, once upper-right and once lower-left, and read the digits in order. Mentally drop the leading zeros: 00000058 is really 58, which lands in the under-100 tier, while 00000006 is a 6 and reaches the under-10 tier.",
+            "Checking a note takes seconds. Find the eight-digit serial printed twice on the front and read the digits in order. Its position varies by denomination. Keep the leading zeros when entering it in a checker: 00000058 falls in the under-100 tier, while 00000006 falls in the under-10 tier.",
         },
         {
           kind: "richtext",

@@ -12,6 +12,7 @@ import {
   denomIntro,
   denominations,
   closing,
+  sources,
 } from "@/content/where-is-serial";
 
 export const metadata: Metadata = buildMetadata({
@@ -21,21 +22,27 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const anchorItems = [
-  ...content.sections.map((section) => ({
+  ...content.sections.slice(0, 1).map((section) => ({
     id: section.id,
     heading: section.heading,
   })),
   { id: "denominations", heading: "Where to look on each denomination" },
+  ...content.sections.slice(1).map((section) => ({
+    id: section.id,
+    heading: section.heading,
+  })),
   { id: closing.id, heading: closing.heading },
+  { id: sources.id, heading: sources.heading },
 ];
 
-/** Labelled inline SVG of a note showing the two serial positions. */
-function NoteDiagram({ label }: { label: string }) {
+/** Labelled illustration of the two serial positions on a modern note. */
+function NoteDiagram({ label, serial, topSerialSide }: { label: string; serial: string; topSerialSide: "left" | "right" }) {
+  const topIsLeft = topSerialSide === "left";
   return (
     <svg
       viewBox="0 0 320 150"
       role="img"
-      aria-label={`${label} note showing the serial number in the upper-right and lower-left corners`}
+      aria-label={`Illustration of a ${label} note with matching serial numbers in the upper-${topSerialSide} and lower-${topIsLeft ? "right" : "left"} corners`}
       className="h-auto w-full"
     >
       <rect
@@ -53,15 +60,15 @@ function NoteDiagram({ label }: { label: string }) {
         portrait
       </text>
       {/* Denomination corner labels */}
-      <text x="28" y="30" fontSize="16" fontWeight="700" fill="#334155">
+      <text x={topIsLeft ? 292 : 28} y="30" textAnchor={topIsLeft ? "end" : "start"} fontSize="16" fontWeight="700" fill="#334155">
         {label}
       </text>
-      <text x="292" y="130" fontSize="16" fontWeight="700" fill="#334155" textAnchor="end">
+      <text x={topIsLeft ? 28 : 292} y="130" fontSize="16" fontWeight="700" fill="#334155" textAnchor={topIsLeft ? "start" : "end"}>
         {label}
       </text>
-      {/* Serial numbers in green ink, upper-right and lower-left */}
+      {/* Serial positions vary by denomination; both copies match. */}
       <text
-        x="270"
+        x={topIsLeft ? 70 : 270}
         y="34"
         textAnchor="middle"
         fontFamily="monospace"
@@ -69,10 +76,10 @@ function NoteDiagram({ label }: { label: string }) {
         fontWeight="700"
         fill="#1a7f37"
       >
-        L00088892*
+        {serial}
       </text>
       <text
-        x="70"
+        x={topIsLeft ? 270 : 70}
         y="122"
         textAnchor="middle"
         fontFamily="monospace"
@@ -80,7 +87,7 @@ function NoteDiagram({ label }: { label: string }) {
         fontWeight="700"
         fill="#1a7f37"
       >
-        L00088892*
+        {serial}
       </text>
     </svg>
   );
@@ -108,7 +115,7 @@ export default function Page() {
 
       <KeyTakeaways items={content.takeaways} />
       <AnchorNav items={anchorItems} />
-      <ContentSections sections={content.sections} />
+      <ContentSections sections={content.sections.slice(0, 1)} />
 
       <section
         id="denominations"
@@ -124,7 +131,7 @@ export default function Page() {
             <figure key={denom.id} id={denom.id} className="card scroll-mt-24 p-4">
               <h3 className="text-h3">{denom.heading}</h3>
               <div className="mt-2">
-                <NoteDiagram label={denom.label} />
+                <NoteDiagram label={denom.label} serial={denom.exampleSerial} topSerialSide={denom.topSerialSide} />
               </div>
               <figcaption className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 {denom.note}
@@ -134,7 +141,9 @@ export default function Page() {
         </div>
       </section>
 
+      <ContentSections sections={content.sections.slice(1)} />
       <ContentSections sections={[closing]} />
+      <ContentSections sections={[sources]} />
 
       <RelatedPages links={content.related} />
     </article>

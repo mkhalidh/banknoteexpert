@@ -147,9 +147,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/where-is-the-serial-number-on-a-dollar-bill/",
-    title: "Where Is the Serial Number on a Dollar Bill?",
+    title: "Where Is the Serial Number on a Dollar Bill? $1-$100 Guide",
     description:
-      "Find the serial number on a US dollar bill and learn what each character means.",
+      "Find serial numbers on $1, $2, $20 and $100 bills. See where they appear on the front, what the letters and star mean, and how to check the eight digits.",
     silo: "fancy-serial-numbers",
     pageType: "guide",
     priority: 0.7,

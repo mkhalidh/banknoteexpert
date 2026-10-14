@@ -3,78 +3,83 @@ import type { PageContent, ContentSection } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/where-is-the-serial-number-on-a-dollar-bill/",
-    title: "Where Is the Serial Number on a Dollar Bill? ($1 to $100)",
+    title: "Where Is the Serial Number on a Dollar Bill? $1-$100 Guide",
     description:
-      "Find the serial number on any US bill from $1 to $100, learn to read all 8 digits, and check whether yours is a rare fancy serial worth more than face value.",
+      "Find serial numbers on $1, $2, $20 and $100 bills. See where they appear on the front, what the letters and star mean, and how to check the eight digits.",
     h1: "Where Is the Serial Number on a Dollar Bill?",
     primaryKeyword: "where is the serial number on a dollar bill",
     lead:
-      "The serial number on a dollar bill is printed twice on the front in green ink, once in the upper-right and once in the lower-left. It is a short string of one or two letters, eight digits, and a final letter or star, and every US denomination follows the same layout.",
+      "Look on the front of a U.S. bill for the green serial printed twice. On $1 and $2 notes, it sits at the upper right and lower left. On newer $5, $10, $20, $50 and $100 notes, look at the upper left and lower right. Both copies show the same number.",
   },
   takeaways: [
-    "The serial appears twice on the face: upper-right and lower-left, in green ink.",
+    "The green serial appears twice on the front of a Federal Reserve note.",
     "Both printings are identical, so either one gives you the full number.",
-    "The structure is prefix letter(s), eight digits, then a suffix letter or star.",
-    "Only the eight digits form a collectible pattern; the letters give context.",
-    "The layout is the same on $1 through $100, with only minor design differences.",
+    "$1 and $2: upper right and lower left. Newer $5-$100: upper left and lower right.",
+    "$1 and $2 bills have one prefix letter; newer $5-$100 bills have two.",
+    "Read all eight digits, including leading zeros; a star replaces the final letter on a replacement note.",
   ],
   sections: [
     {
       id: "positions",
-      heading: "Two printings, both in green ink",
+      heading: "Where is the serial number on a dollar bill?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "Turn any US note face-up and you will find the serial number printed in two places: the upper-right quadrant and the lower-left quadrant. Both are set in the same green ink as the Treasury seal, which sits between them near the portrait. The two printings always carry the same characters, so you only need to read one of them.",
+            "Hold the bill with the portrait facing you. On a $1 or $2 note, find the green serial near the upper-right corner and again near the lower-left. On redesigned $5 through $100 notes, the matching serials are near the upper-left and lower-right. The number is on the front, not the back.",
         },
         {
           kind: "paragraph",
           text:
-            "Printing the number twice is a long-standing anti-counterfeiting measure: the two impressions must match, and both must align with the rest of the note. For collectors, it simply means the serial is easy to find from either corner, whichever way the bill is sitting.",
+            "The diagram below each denomination marks both positions. It is a simplified illustration, so use your bill's own printed characters when entering a number into a lookup tool.",
         },
       ],
     },
     {
       id: "structure",
-      heading: "Prefix, digits, suffix and star",
+      heading: "What does a dollar bill serial number look like?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "Read the serial left to right and it always follows the same structure. One or two prefix letters come first and identify the series year and the Federal Reserve district that issued the note. Then come exactly eight digits. After the digits sits a single suffix letter, or a star in place of that letter.",
+            "A modern Federal Reserve note's serial has a letter prefix, eight digits, and a final letter or star. On $1 and $2 bills, the prefix is one letter identifying the Federal Reserve Bank. On newer $5, $10, $20, $50 and $100 notes, the first prefix letter identifies the series and the second identifies the Federal Reserve Bank.",
         },
         {
           kind: "list",
           items: [
-            "Prefix letter(s): the series and issuing district, which is context, not pattern.",
-            "Eight digits: the part that forms a collectible pattern.",
-            "Suffix letter or star: a star marks a replacement note, printed to swap out a spoiled one.",
+            "$1 or $2 example: A12345678B (one prefix letter).",
+            "$5-$100 example: AB12345678C (two prefix letters on newer series).",
+            "Star note example: A12345678* (the star takes the suffix letter's place).",
           ],
         },
         {
           kind: "richtext",
           segments: [
-            "When you check a note, it is only those eight digits that matter. Type them into the ",
+            "For a fancy digit pattern, enter the eight digits, including any zeros at the start, into the ",
             { href: "/", label: "fancy serial number checker" },
-            " and it will tell you whether they form a radar, a solid, a low serial or another collectible pattern.",
+            ". Keep the letters and star in mind when identifying the note: a star also matters for replacement-note research.",
           ],
         },
       ],
     },
     {
       id: "variations",
-      heading: "Small differences between series",
+      heading: "Is the series year or another printed number the serial number?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "Newer redesigns moved the portrait and added security features, and the typeface of the serial has changed slightly over the years, but the two positions have stayed put. Whether you are holding an older small-portrait note or a modern redesign, look upper-right and lower-left and you will find the number. On very old large-size notes the layout differs, but every note you are likely to have in your wallet follows the modern pattern.",
+            "No. The series year is a small label such as Series 2017A; it identifies a design or signature change, not your bill's unique serial. The large corner numerals show the denomination. A separate Federal Reserve indicator and tiny plate numbers are also different from the green serial printed twice on the front.",
         },
       ],
     },
   ],
   related: [
+    {
+      href: "/2-dollar-bill-serial-number-lookup/",
+      label: "$2 bill serial number lookup",
+      description: "Check a two-dollar bill's serial pattern and series.",
+    },
     {
       href: "/fancy-serial-numbers/",
       label: "What makes a serial number fancy",
@@ -94,7 +99,7 @@ export const content: PageContent = {
 };
 
 export const denomIntro =
-  "The position is consistent across denominations, but here is exactly where to look on each of the notes you are most likely to check, along with any quirks worth knowing.";
+  "The location changes with the design: $1 and $2 use upper right and lower left; newer $5 through $100 notes use upper left and lower right. The illustrations use example serials, not numbers from actual bills.";
 
 export interface DenominationInfo {
   id: string;
@@ -102,44 +107,66 @@ export interface DenominationInfo {
   label: string;
   heading: string;
   note: string;
+  exampleSerial: string;
+  topSerialSide: "left" | "right";
 }
 
 export const denominations: DenominationInfo[] = [
   {
     id: "one-dollar",
     label: "$1",
-    heading: "$1 bill",
-    note: "The $1 note is the one most people check first. Washington sits in the centre, and the serial number is upper-right and lower-left in green ink. Because ones are printed in vast quantities, they are a great place to start hunting for patterns.",
+    heading: "$1 bill serial number",
+    note: "On the front of a $1 bill, look above and to the right of Washington's portrait, then below and to the left. The one-letter prefix comes before the eight digits.",
+    exampleSerial: "A12345678B",
+    topSerialSide: "right",
   },
   {
     id: "two-dollar",
     label: "$2",
-    heading: "$2 bill",
-    note: "People often ask where is the serial number on a 2 dollar bill: it is in the same two corners as every other note, framing Jefferson's portrait. The layout on a two dollar bill is identical, so read the eight digits between the prefix and suffix just as you would on a $1.",
+    heading: "Where is the serial number on a $2 bill?",
+    note: "On a $2 bill, find the green serial above-right and below-left of Jefferson's portrait. It has one prefix letter, eight digits and a final letter or star. Both printed copies match.",
+    exampleSerial: "A12345678B",
+    topSerialSide: "right",
   },
   {
     id: "five-dollar",
     label: "$5",
-    heading: "$5 bill",
-    note: "The redesigned $5 added extra security printing and a large purple 5, but the serial number kept its place in the upper-right and lower-left. Lincoln's portrait sits between the two printings.",
+    heading: "$5 bill serial number",
+    note: "On the front of a redesigned $5 bill, the green serial appears at the upper left and lower right. Newer $5 notes have two prefix letters.",
+    exampleSerial: "AB12345678C",
+    topSerialSide: "left",
   },
   {
     id: "ten-dollar",
     label: "$10",
-    heading: "$10 bill",
-    note: "On the $10 note, Hamilton's portrait is flanked by the same two serial positions. The colour-shifting ink and background tints do not move the number, which stays upper-right and lower-left.",
+    heading: "$10 bill serial number",
+    note: "On the front of a redesigned $10 bill, check the upper left and lower right. The serial is the repeated green letter-and-digit string, not the large 10.",
+    exampleSerial: "AB12345678C",
+    topSerialSide: "left",
   },
   {
     id: "twenty-dollar",
     label: "$20",
-    heading: "$20 bill",
-    note: "For where is the serial number on a 20 dollar bill, the answer is unchanged: upper-right and lower-left, around Jackson's portrait. The larger portrait redesign shifted other elements but left the serial positions alone.",
+    heading: "Where is the serial number on a $20 bill?",
+    note: "On a redesigned $20 bill, find the green serial at the upper left and lower right. Read either copy; the small Federal Reserve indicator and plate numbers are separate markings.",
+    exampleSerial: "AB12345678C",
+    topSerialSide: "left",
+  },
+  {
+    id: "fifty-dollar",
+    label: "$50",
+    heading: "$50 bill serial number",
+    note: "On the front of a redesigned $50 bill, the green serial is near the upper-left and lower-right corners, around Grant's portrait.",
+    exampleSerial: "AB12345678C",
+    topSerialSide: "left",
   },
   {
     id: "hundred-dollar",
     label: "$100",
-    heading: "$100 bill",
-    note: "The $100 is the most rewarding note to check because a pattern on a high denomination carries more. Despite the 3-D security ribbon and colour-shifting features, the serial number is still printed upper-right and lower-left, around Franklin's portrait.",
+    heading: "Where is the serial number on a $100 bill?",
+    note: "On a redesigned $100 bill, the green serial appears at the upper left and lower right. The blue security ribbon and large 100 are not part of the serial number.",
+    exampleSerial: "AB12345678C",
+    topSerialSide: "left",
   },
 ];
 
@@ -150,7 +177,7 @@ export const closing: ContentSection = {
     {
       kind: "paragraph",
       text:
-        "Once you have located the serial from either corner, write down the eight digits in order, ignoring the prefix and suffix letters. Leading zeros count, so 00000045 is forty-five, not forty-five thousand.",
+        "Once you have located the serial from either corner, copy its eight digits in order. Keep leading zeros: 00000045 is a different eight-digit pattern from 00004500. Also note any star at the end if you want to research the replacement note.",
     },
     {
       kind: "richtext",
@@ -160,5 +187,20 @@ export const closing: ContentSection = {
         " to see instantly whether your note is an ordinary bill or something a collector would want.",
       ],
     },
+  ],
+};
+
+export const sources: ContentSection = {
+  id: "sources",
+  heading: "Sources for serial-number identification",
+  blocks: [
+    { kind: "richtext", segments: [
+      "The ", { href: "https://www.bep.gov/currency/serial-numbers", label: "Bureau of Engraving and Printing's serial-number guide" },
+      " explains prefix letters, eight digits and star replacements. The ",
+      { href: "https://www.uscurrency.gov/denominations/bank-note-identifiers", label: "U.S. Currency Education Program's banknote identifiers" },
+      " distinguish the serial from the series year, Federal Reserve indicator and plate numbers. Its ",
+      { href: "https://www.uscurrency.gov/sites/default/files/downloadable-materials/files/en/dollars-in-detail-guide-en-2022.pdf", label: "Dollars in Detail guide" },
+      " labels the serial positions on redesigned $5-$100 notes.",
+    ] },
   ],
 };
