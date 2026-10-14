@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { replyEmailTemplate } from "@/lib/comments/email-template";
+
+// Waline reads mail templates while it initializes its config. Keep an explicit
+// deployment override available, but use the site's branded template by default.
+process.env.MAIL_TEMPLATE ??= replyEmailTemplate;
 
 // Commenter location (city/region) needs an offline GeoIP database file;
 // Waline reads its path from this env var but never sets one itself. The
@@ -30,15 +35,10 @@ const Application = require("@waline/vercel");
 // New guest comments await administrator approval before becoming public.
 const walineHandler = Application({ audit: true });
 
-// The bundled ip2region database is China-focused: it resolves a country
-// for most IPs worldwide but only has province/city/ISP-level detail within
-// China. Waline's own think.ip2region() (src/extend/think.js) only ever
-// joins province + city + isp, so for e.g. a Pakistani visitor's IP it gets
-// back { country: "巴基斯坦", province: "", city: "", isp: "" } and returns
-// an empty string, dropping location entirely rather than showing anything.
-// Wrap it to fall back to the country name (translated to English — the
-// database's country names are themselves in Chinese) when nothing more
-// specific exists, instead of the country field going unused.
+// Waline's default display uses province/city/ISP from the bundled database.
+// Those fields can be Chinese even for a VPN exit outside China. Show only
+// the country in English, so the badge stays readable and does not imply a
+// precise physical location for the commenter.
 declare const think: { ip2region: (ip: string, opts?: { depth?: number }) => Promise<string> };
 // eslint-disable-next-line @typescript-eslint/no-require-imports -- ip2region ships CommonJS only
 const IP2Region = require("ip2region").default;
@@ -50,18 +50,15 @@ isoCountries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 isoCountries.registerLocale(require("i18n-iso-countries/langs/zh.json"));
 
 const ip2regionInstance = new IP2Region({ ipv4db: process.env.IP2REGION_DB_V4 });
-const originalIp2Region = think.ip2region.bind(think);
 
-think.ip2region = async (ip, opts) => {
-  const primary = await originalIp2Region(ip, opts);
-  if (primary || !ip) return primary;
-
+think.ip2region = async (ip) => {
+  if (!ip) return "";
   try {
     const countryZh = ip2regionInstance.search(ip)?.country;
     if (!countryZh) return "";
 
     const code = isoCountries.getAlpha2Code(countryZh, "zh");
-    return (code && isoCountries.getName(code, "en")) || countryZh;
+    return (code && isoCountries.getName(code, "en")) || "";
   } catch {
     return "";
   }

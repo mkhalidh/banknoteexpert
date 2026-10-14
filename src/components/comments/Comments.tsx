@@ -21,6 +21,17 @@ export function Comments({ path }: { path?: string }) {
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
+    const loadLinkedComment = () => {
+      if (window.location.hash && window.location.hash !== "#comments") {
+        setShouldLoad(true);
+      }
+    };
+    loadLinkedComment();
+    window.addEventListener("hashchange", loadLinkedComment);
+    return () => window.removeEventListener("hashchange", loadLinkedComment);
+  }, []);
+
+  useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -41,13 +52,30 @@ export function Comments({ path }: { path?: string }) {
     let instance: WalineInstance | null = null;
     let cancelled = false;
     const mount = mountRef.current;
+    let lastScrolledId = "";
+    const scrollToLinkedComment = () => {
+      const id = window.location.hash.slice(1);
+      if (!id || id === "comments" || id === lastScrolledId) return;
+      const target = document.getElementById(id);
+      if (target && mount.contains(target)) {
+        lastScrolledId = id;
+        target.scrollIntoView({ block: "center" });
+      } else if (mount.querySelector(".wl-card-item") && lastScrolledId !== `fallback:${id}`) {
+        // Older replies may be on another comments page. Still take the reader
+        // to the discussion instead of leaving them at the top of the article.
+        lastScrolledId = `fallback:${id}`;
+        containerRef.current?.scrollIntoView({ block: "start" });
+      }
+    };
     const markUserLinks = () => {
       mount.querySelectorAll<HTMLAnchorElement>(".wl-content a, .wl-nick").forEach(link => {
         link.relList.add("ugc", "nofollow", "noopener", "noreferrer");
       });
+      scrollToLinkedComment();
     };
     const linksObserver = new MutationObserver(markUserLinks);
     linksObserver.observe(mount, { childList: true, subtree: true, attributes: true, attributeFilter: ["href"] });
+    window.addEventListener("hashchange", scrollToLinkedComment);
 
     import("@waline/client").then(({ init }) => {
       if (cancelled || !mountRef.current) return;
@@ -79,6 +107,7 @@ export function Comments({ path }: { path?: string }) {
     return () => {
       cancelled = true;
       linksObserver.disconnect();
+      window.removeEventListener("hashchange", scrollToLinkedComment);
       instance?.destroy();
     };
   }, [shouldLoad, path]);
