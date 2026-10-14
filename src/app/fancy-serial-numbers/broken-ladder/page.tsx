@@ -46,9 +46,11 @@ export default function Page() {
       <h1 className="text-display">{content.meta.h1}</h1>
       <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
       <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
+      <div className="mt-6">
+        <FancySerialChecker />
+      </div>
     </header>
     <KeyTakeaways items={content.takeaways} />
-    <FancySerialChecker />
     {content.sections.map(section => <div key={section.id}>
       <ContentSections sections={[section]} />
       {section.id === "examples" && <div className="mt-4 overflow-x-auto"><table className="w-full min-w-[38rem] border-collapse text-sm">
