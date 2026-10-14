@@ -8,27 +8,27 @@ export const content: PageContent = {
       "What a ladder serial number is, how true, broken and scrambled ladders differ, how rare each one is, and what a ladder banknote is actually worth.",
     h1: "Ladder Serial Number: Meaning, Rarity and Value",
     primaryKeyword: "ladder serial number",
-    lead: "A ladder is a banknote whose eight digits run in an unbroken sequence, either 12345678 counting up or 87654321 counting down. It is one of the most sought-after banknote patterns because a perfect run is extraordinarily rare, and collectors chase it accordingly.",
+    lead: "A ladder is a banknote whose eight digits run in an unbroken ascending or descending sequence. Under our no-wrap rule, six eight-digit serials qualify, including 12345678 and 87654321.",
   },
   takeaways: [
-    "A true ladder is only 12345678 (ascending) or 87654321 (descending), with all eight digits in one unbroken run.",
+    "A true ladder has all eight digits in one unbroken ascending or descending run; six eight-digit serials qualify without wrap-around.",
     "A broken ladder contains a run of six or more sequential digits without being a full ladder, for example 12345687.",
-    "A scrambled or mixed ladder uses every digit from 1 to 8 exactly once but out of order, such as 81234567 or 13245768.",
+    "A scrambled or mixed ladder uses every digit from 1 to 8 exactly once but out of order, without a six-digit run, such as 13245768.",
     "A radar is a palindrome that reads the same both ways; it is a different pattern and is not a broken ladder.",
     "True ladders are the most prized of the group, while broken and scrambled versions are more common and worth far less.",
   ],
   sections: [
     {
       id: "true-ladder",
-      heading: "True ladders: 12345678 and 87654321",
+      heading: "True ladders: six possible eight-digit sequences",
       blocks: [
         {
           kind: "paragraph",
-          text: "A true ladder is the strict, purest form of the pattern. On a standard eight-digit note there are only two of them: 12345678 climbing from one to eight, and 87654321 descending back down. Every single digit must sit in its correct sequential place, with no repeats, no gaps and no shuffled positions. The moment one digit steps out of line, the note stops being a true ladder and drops into a lesser category.",
+          text: "A true ladder has all eight digits in a continuous ascending or descending sequence, with no wrap from 9 to 0. Six serials qualify: 01234567, 12345678, 23456789, 76543210, 87654321 and 98765432. Every adjacent digit changes by exactly one in the same direction.",
         },
         {
           kind: "paragraph",
-          text: "This is exactly why the ascending ladder serial number 12345678 dollar bill is talked about with such reverence among collectors. Out of the tens of millions of serials printed within a single series, only a couple of individual notes can ever wear a perfect ascending or descending run. Compared with more forgiving fancy patterns, the odds of a clean eight-digit climb are tiny, which is what places the perfect run among the rarest banknote patterns you can hope to pull from circulation.",
+          text: "Across all 100,000,000 possible eight-digit serials, those six full ladders give odds of about 1 in 16,666,667. Zero is the lowest digit, so 01234567 counts; 9 followed by 0 does not continue a run. Actual print quantities and surviving notes vary by series.",
         },
         {
           kind: "paragraph",
@@ -60,7 +60,7 @@ export const content: PageContent = {
       blocks: [
         {
           kind: "paragraph",
-          text: "A scrambled ladder serial number takes a different approach entirely. Instead of demanding a sequence, it asks only that every digit from 1 through 8 appears exactly once: the full set of ladder digits, but shuffled out of order. So 81234567 and 13245768 both qualify: no digit repeats, none is missing, yet the run is clearly jumbled rather than climbing or descending.",
+          text: "A scrambled ladder serial number uses every digit from 1 through 8 exactly once, without a six-digit sequential run. For example, 13245768 has all eight digits but no qualifying run. By contrast, 81234567 contains the seven-digit run 1234567 and is a broken ladder under this site's rule.",
         },
         {
           kind: "paragraph",
@@ -117,7 +117,7 @@ export const content: PageContent = {
           ordered: true,
           items: [
             "Write out all eight digits exactly as they appear on the note, left to right.",
-            "If they read 12345678 or 87654321, you are holding the perfect, strict form.",
+            "If all eight digits rise or fall by one at each step without wrapping from 9 to 0, you have a true ladder.",
             "If six or more digits run in sequence but the note falls short of a full run, it is a broken example.",
             "If every digit from 1 to 8 appears once but the order is jumbled, it is a scrambled or mixed one.",
           ],
@@ -173,7 +173,7 @@ export const comparison = {
     ],
     [
       "Scrambled / mixed",
-      "81234567",
+      "13245768",
       "Every digit from 1 to 8 present exactly once, but out of order.",
       "Most common",
     ],

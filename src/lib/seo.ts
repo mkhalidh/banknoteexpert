@@ -11,7 +11,7 @@ export interface BuildMetadataParams {
   path: string;
   /** Optional path or absolute URL to a page-specific OG image. */
   ogImage?: string;
-  /** When true the page is marked noindex/nofollow. */
+  /** When true the page is excluded from search results while links remain crawlable. */
   noindex?: boolean;
 }
 
@@ -41,7 +41,7 @@ export function buildMetadata({
       canonical,
     },
     robots: noindex
-      ? { index: false, follow: false }
+      ? { index: false, follow: true }
       : { index: true, follow: true },
     openGraph: {
       type: "website",

@@ -28,7 +28,9 @@ if (!metadataOnly) {
   for (const [path, doc] of documents) {
     check(doc.querySelector('link[rel="canonical"]')?.href === origin + path, `${path}: canonical mismatch`);
     check(doc.querySelectorAll("h1").length === 1, `${path}: expected one H1`);
-    check(!/noindex/.test(doc.querySelector('meta[name="robots"]')?.content ?? ""), `${path}: noindex public page`);
+    const route = routes.find(item => item.path === path);
+    const robots = doc.querySelector('meta[name="robots"]')?.content ?? "";
+    check(route?.indexable ? !/noindex/.test(robots) : /noindex/.test(robots), `${path}: incorrect robots index status`);
     check(!doc.querySelector("img:not([alt])"), `${path}: image missing alt attribute`);
     for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) {
       const image = doc.querySelector(selector)?.content;
@@ -75,7 +77,8 @@ if (!metadataOnly) {
   if (existsSync(sitemapFile)) {
     const xml = new JSDOM(readFileSync(sitemapFile, "utf8"), { contentType: "text/xml" }).window.document;
     const urls = [...xml.querySelectorAll("url")];
-    check(urls.length === 19, `Expected 19 sitemap URLs, got ${urls.length}`);
+    const expected = routes.filter(route => route.indexable).length;
+    check(urls.length === expected, `Expected ${expected} sitemap URLs, got ${urls.length}`);
     for (const node of urls) {
       const loc = node.querySelector("loc")?.textContent;
       check(loc?.startsWith(origin + "/") && loc.endsWith("/") && documents.has(new URL(loc).pathname), `Invalid sitemap URL ${loc}`);

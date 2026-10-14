@@ -13,10 +13,12 @@ import robots from "@/app/robots";
 import { homeFaqs } from "@/content/home-faq";
 
 describe("SEO publication contracts", () => {
-  it("lists exactly the 19 canonical public pages with durable dates", () => {
+  it("lists canonical indexable pages with durable dates", () => {
     const entries = sitemap();
-    expect(entries).toHaveLength(19);
-    expect(new Set(entries.map(entry => entry.url)).size).toBe(19);
+    expect(entries).toHaveLength(routes.filter(route => route.indexable).length);
+    expect(new Set(entries.map(entry => entry.url)).size).toBe(entries.length);
+    expect(entries.map(entry => new URL(entry.url).pathname)).not.toContain("/privacy/");
+    expect(entries.map(entry => new URL(entry.url).pathname)).not.toContain("/terms/");
     for (const entry of entries) {
       const path = new URL(entry.url).pathname;
       expect(entry.url).toBe(`${SITE_URL}${path}`);

@@ -9,6 +9,7 @@ export const metadata: Metadata = buildMetadata({
   title: content.meta.title,
   description: content.meta.description,
   path: content.meta.path,
+  noindex: true,
 });
 
 export default function Page() {

@@ -243,6 +243,8 @@ for (const p of pages) {
 }
 const overConcentrated: string[] = [];
 for (const [target, counts] of anchorByTarget) {
+  // Author bylines should use the person's actual name consistently.
+  if (target === "/about-the-author/") continue;
   const total = [...counts.values()].reduce((a, b) => a + b, 0);
   if (total < ANCHOR_MIN_INBOUND) continue;
   const max = Math.max(...counts.values());

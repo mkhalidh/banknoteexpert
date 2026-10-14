@@ -1,10 +1,10 @@
 // Recorded visible update dates; undated pages use their last source commit.
 // Keep these dates in sync when publishing substantive content changes.
 export const pageModified: Record<string, string> = {
-  "/": "2026-10-06",
-  "/fancy-serial-numbers/": "2026-09-21",
+  "/": "2026-10-14",
+  "/fancy-serial-numbers/": "2026-10-14",
   "/fancy-serial-numbers/radar/": "2026-10-06",
-  "/fancy-serial-numbers/ladder/": "2026-10-06",
+  "/fancy-serial-numbers/ladder/": "2026-10-14",
   "/fancy-serial-numbers/low-serial-number/": "2026-10-06",
   "/fancy-serial-numbers/birthday-note/": "2026-10-06",
   "/fancy-serial-number-value/": "2026-09-21",
