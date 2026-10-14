@@ -4,6 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { createRequire } from "node:module";
 const { JSDOM } = createRequire(import.meta.url)("jsdom") as { JSDOM: new (html: string) => { window: { document: Document } } };
 import { describe, expect, it, vi } from "vitest";
+import { routes } from "@/config/routes";
 
 // Verify server content without browser-only checker/widget initialization.
 vi.mock("@/components/tools/FancySerialChecker", () => ({ FancySerialChecker: () => null }));
@@ -18,7 +19,7 @@ const normalize = (text: string | null) => (text ?? "").replace(/\s+/g, " ").tri
 
 describe("rendered SEO content (browser tools excluded)", () => {
   it("renders one H1 and graph per page, with matching visible FAQ and article dates", async () => {
-    expect(Object.keys(pages)).toHaveLength(19);
+    expect(Object.keys(pages)).toHaveLength(routes.length);
     const titles = new Set();
     for (const [file, load] of Object.entries(pages)) {
       const page = await load();

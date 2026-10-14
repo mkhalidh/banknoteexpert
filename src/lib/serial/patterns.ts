@@ -11,7 +11,7 @@
  * match several patterns at once; the registry order is the single source of
  * truth for which one wins.
  *
- * `href` routing rule (only four families have their own page):
+ * `href` routing rule (named pattern families have their own pages):
  *   radar family           -> /fancy-serial-numbers/radar/
  *   ladder family          -> /fancy-serial-numbers/ladder/
  *   low serial (all tiers)  -> /fancy-serial-numbers/low-serial-number/
@@ -679,7 +679,7 @@ export const patterns: PatternDefinition[] = [
     },
     rarityOdds: "1 in 35,286",
     baseScore: 45,
-    href: LADDER_HREF,
+    href: "/fancy-serial-numbers/broken-ladder/",
   },
 
   // --- generic digit-count families -----------------------------------------

@@ -41,16 +41,12 @@ export const content: PageContent = {
       heading: "Broken ladder serial numbers",
       blocks: [
         {
-          kind: "paragraph",
-          text: "A broken ladder serial number sits one step below the perfect run. The corrected, accurate definition is a note that contains a run of six or more sequential digits without forming a complete, unbroken ladder. A clear example is 12345687: the digits 123456 climb cleanly, and then the final two positions swap so the note falls just short of a full sequence.",
-        },
-        {
-          kind: "paragraph",
-          text: "The key point, and one that is often gotten wrong, is the length of the qualifying run. A stretch of only four sequential digits does not make a broken ladder, because that is far too common to count. The pattern only earns the name when six or more digits line up in order while the note as a whole still fails to be a complete top-to-bottom sequence.",
-        },
-        {
-          kind: "paragraph",
-          text: "Broken versions are noticeably more common than the strict form, simply because there are many more ways to arrange a long partial run than there are to hit the single perfect one. They still stand out at a glance and remain collectible, but the near-miss quality means they trade well below a flawless note.",
+          kind: "richtext",
+          segments: [
+            "A broken ladder has a six- or seven-digit ascending or descending run but is not a full eight-digit ladder; 12345687 is one example. Four digits in sequence do not qualify, and 9 to 0 does not wrap under the checker rule. See the ",
+            { href: "/fancy-serial-numbers/broken-ladder/", label: "broken ladder serial number guide" },
+            " for worked examples, exact odds and condition-based sold samples.",
+          ],
         },
       ],
     },
@@ -134,6 +130,11 @@ export const content: PageContent = {
     },
   ],
   related: [
+    {
+      href: "/fancy-serial-numbers/broken-ladder/",
+      label: "Broken ladder serial numbers",
+      description: "A dedicated guide to long partial runs, rarity and values.",
+    },
     {
       href: "/fancy-serial-numbers/",
       label: "All fancy serial number patterns",

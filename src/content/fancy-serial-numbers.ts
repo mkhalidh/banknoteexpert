@@ -383,7 +383,12 @@ export const spokeLinks = [
   {
     href: "/fancy-serial-numbers/ladder/",
     label: "Ladder serial numbers",
-    description: "True, broken and scrambled ladders.",
+    description: "The six complete ascending and descending ladders.",
+  },
+  {
+    href: "/fancy-serial-numbers/broken-ladder/",
+    label: "Broken ladder serial numbers",
+    description: "Six- and seven-digit runs, examples, odds and recorded sales.",
   },
   {
     href: "/fancy-serial-numbers/low-serial-number/",

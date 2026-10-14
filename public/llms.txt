@@ -36,6 +36,7 @@ comments use a separate server-backed comment service.
 - Fancy serial numbers overview (hub): https://www.banknoteexpert.com/fancy-serial-numbers/
 - Radar serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/radar/
 - Ladder serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/ladder/
+- Broken ladder serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/broken-ladder/
 - Low serial numbers: https://www.banknoteexpert.com/fancy-serial-numbers/low-serial-number/
 - Birthday notes: https://www.banknoteexpert.com/fancy-serial-numbers/birthday-note/
 - Where is the serial number on a dollar bill: https://www.banknoteexpert.com/where-is-the-serial-number-on-a-dollar-bill/

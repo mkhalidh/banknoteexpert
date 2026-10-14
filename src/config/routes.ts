@@ -92,6 +92,16 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/fancy-serial-numbers/broken-ladder/",
+    title: "Broken Ladder Serial Number: Meaning, Odds and Value",
+    description: "A broken ladder has six or more digits in sequence but not all eight. See examples, odds (about 1 in 35,000), value ranges and how to check yours.",
+    silo: "fancy-serial-numbers",
+    pageType: "guide",
+    priority: 0.8,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
     path: "/fancy-serial-numbers/low-serial-number/",
     title: "Low Serial Number Dollar Bill: Rarity and Value",
     description:

@@ -1,8 +1,9 @@
-import { pageModified } from "@/config/page-dates";
+import { pageModified, pagePublished } from "@/config/page-dates";
 import { getRoute, routes } from "@/config/routes";
 import { toolLinks } from "@/config/navigation";
 import { PUBLISHED_ISO } from "@/config/site";
 import { content as fancy, patternCopy } from "@/content/fancy-serial-numbers";
+import { content as brokenLadder } from "@/content/broken-ladder";
 import { content as value } from "@/content/fancy-serial-number-value";
 import { content as serial, denominations, denomIntro, closing } from "@/content/where-is-serial";
 
@@ -17,6 +18,7 @@ const entries = [
   { content: fancy, extra: patternCopy, image: "serial-patterns-detail", alt: "Illustrative close-up of banknote serial digits", popularOrder: 2 },
   { content: value, extra: [], image: "banknote-inspection-detail", alt: "Illustrative banknote inspection scene", popularOrder: 1 },
   { content: serial, extra: [denominations, denomIntro, closing], image: "banknote-collecting-detail", alt: "Illustrative view of banknotes on a collector's desk", popularOrder: 3 },
+  { content: brokenLadder, extra: [], image: "serial-patterns-detail", alt: "Illustrative close-up of banknote serial digits", popularOrder: 4 },
 ];
 
 /** Dates already recorded by the site; override here when a new article is published. */
@@ -24,7 +26,7 @@ export const articles = entries.map(({ content, extra, image, alt, popularOrder 
   ...getRoute(content.meta.path),
   category: "Fancy Serial Numbers",
   categoryId: "fancy-serial-numbers",
-  published: PUBLISHED_ISO,
+  published: pagePublished[content.meta.path] ?? PUBLISHED_ISO,
   readingMinutes: Math.max(1, Math.ceil(prose([content.meta.h1, content.meta.lead, content.takeaways, content.sections, extra]).trim().split(/\s+/).length / 200)),
   image: `/images/editorial/${image}.webp`,
   imageAlt: alt,
@@ -36,6 +38,7 @@ export type EditorialArticle = (typeof articles)[number];
 export const patternIllustrations: Record<string, string> = {
   "/fancy-serial-numbers/radar/": "/images/patterns/radar.svg",
   "/fancy-serial-numbers/ladder/": "/images/patterns/ladder.svg",
+  "/fancy-serial-numbers/broken-ladder/": "/images/patterns/ladder.svg",
   "/fancy-serial-numbers/low-serial-number/": "/images/patterns/low-serial-number.svg",
   "/fancy-serial-numbers/birthday-note/": "/images/patterns/birthday-note.svg",
 };

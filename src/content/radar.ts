@@ -101,8 +101,8 @@ export const content: PageContent = {
           kind: "richtext",
           segments: [
             "In other words, the runs inside a radar are a side effect of the reflection, not evidence of a ladder. To understand what a true sequential run looks like and why the six-digit threshold matters, read our ",
-            { href: "/fancy-serial-numbers/ladder/", label: "companion guide to ladder serial numbers" },
-            ", which covers ladders and broken ladders in full. Keeping the two categories separate is the difference between describing a note accurately and overselling it.",
+              { href: "/fancy-serial-numbers/broken-ladder/", label: "broken ladder serial number guide" },
+              ". Keeping the two categories separate helps describe a note accurately.",
           ],
         },
       ],
@@ -162,10 +162,10 @@ export const content: PageContent = {
         "The hub page explaining every collectible serial pattern and how the categories relate.",
     },
     {
-      href: "/fancy-serial-numbers/ladder/",
-      label: "Compare ladders and broken ladders",
-      description:
-        "Why a true ladder needs six or more sequential digits, and how it differs from a mirrored radar.",
+        href: "/fancy-serial-numbers/broken-ladder/",
+        label: "Compare radars and broken ladders",
+        description:
+          "Why a broken ladder needs a six-digit run and a radar does not qualify.",
     },
     {
       href: "/fancy-serial-number-value/",

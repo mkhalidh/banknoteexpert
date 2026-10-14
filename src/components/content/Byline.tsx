@@ -1,4 +1,4 @@
-import { pageModified } from "@/config/page-dates";
+import { pageModified, pagePublished } from "@/config/page-dates";
 import Link from "next/link";
 import { AUTHOR_NAME, PUBLISHED_ISO } from "@/config/site";
 
@@ -15,7 +15,7 @@ export function Byline({ path, className }: { path: string; className?: string }
         {AUTHOR_NAME}
       </Link>
       {"; published "}
-      <time dateTime={PUBLISHED_ISO}>{PUBLISHED_ISO}</time>{"; updated "}
+      <time dateTime={pagePublished[path] ?? PUBLISHED_ISO}>{pagePublished[path] ?? PUBLISHED_ISO}</time>{"; updated "}
       <time dateTime={pageModified[path]}>{pageModified[path]}</time>
     </p>
   );

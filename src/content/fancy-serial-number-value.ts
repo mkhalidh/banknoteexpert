@@ -119,6 +119,11 @@ export const content: PageContent = {
   ],
   related: [
     {
+      href: "/fancy-serial-numbers/broken-ladder/",
+      label: "Broken ladder value and odds",
+      description: "See the six-digit rule and shared sold-price samples.",
+    },
+    {
       href: "/fancy-serial-numbers/",
       label: "What is a fancy serial number?",
       description: "The full taxonomy of patterns, explained on the hub page.",
