@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "src/app/2-dollar-bill-value/page.tsx": {
-    "mtime": 1791806453.265345,
-    "seen": 1791806790.0416303,
-    "ast_hash": "b3169b8b5040e8c78ade7480f6d90d92",
+    "mtime": 1792024336.3833559,
+    "seen": 1792024366.0977807,
+    "ast_hash": "5e7f0c029dab4707fe7586ae6625e414",
     "semantic_hash": ""
   },
   "src/app/about/page.tsx": {
@@ -108,9 +108,9 @@
     "semantic_hash": ""
   },
   "src/app/methodology/page.tsx": {
-    "mtime": 1791806453.3551526,
-    "seen": 1791806790.0416303,
-    "ast_hash": "3be0bd322c5d615782d91c8e5b1efc22",
+    "mtime": 1792024324.421738,
+    "seen": 1792024366.0977807,
+    "ast_hash": "4f5123b96ad5e1273c228c198a7bd804",
     "semantic_hash": ""
   },
   "src/app/not-found.tsx": {
@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792021354.5504222,
-    "seen": 1792021574.1532304,
-    "ast_hash": "3daec5f56e2b981e89927c5b863641e2",
+    "mtime": 1792023574.1680703,
+    "seen": 1792024366.0977807,
+    "ast_hash": "15541c4fb1bc76ae3cf6354e650cf7ad",
     "semantic_hash": ""
   },
   "src/app/privacy/page.tsx": {
@@ -192,9 +192,9 @@
     "semantic_hash": "0f5e7488c8ed572600550f836d655e4d"
   },
   "src/components/content/ContentSections.tsx": {
-    "mtime": 1789951898.8659513,
-    "seen": 1791806790.0416303,
-    "ast_hash": "7df6ebd2e332ec8da007de281958ca71",
+    "mtime": 1792024324.4187453,
+    "seen": 1792024366.0977807,
+    "ast_hash": "4030d331d91f20d3a106663df98f962a",
     "semantic_hash": ""
   },
   "src/components/content/FaqItem.tsx": {
@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "src/components/content/SerialDiagram.tsx": {
-    "mtime": 1789951898.9267888,
-    "seen": 1791806790.0416303,
+    "mtime": 1792023163.6000478,
+    "seen": 1792024366.0977807,
     "ast_hash": "75c5ebc5a1ede7849af2430ebea76471",
     "semantic_hash": ""
   },
@@ -1008,8 +1008,8 @@
     "semantic_hash": ""
   },
   "src/content/home-faq.ts": {
-    "mtime": 1791806059.2206159,
-    "seen": 1791806790.0416303,
+    "mtime": 1792023163.6020434,
+    "seen": 1792024366.0977807,
     "ast_hash": "5125ca5e134238b0ad9613afd09e1e36",
     "semantic_hash": ""
   },

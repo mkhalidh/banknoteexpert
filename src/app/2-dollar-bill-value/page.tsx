@@ -130,7 +130,20 @@ export default function Page() {
 
       <section aria-labelledby="sources"><h2 id="sources" className="text-h2">Sources</h2>
         <p>The series chart uses the secondary compilation at serialworth.com. Primary reference sites below are already listed in our source data; they are not individual sale citations.</p>
-        <ul className="mt-3 list-disc pl-5"><li><a href="https://serialworth.com/" className="link-accent">SerialWorth price guide (secondary compilation)</a></li>{SOURCE_LINKS.filter(source => /Heritage|Stack|Engraving/.test(source.name)).map(source => <li key={source.url}><a href={source.url} className="link-accent">{source.name}</a></li>)}</ul>
+        <ul className="mt-3 list-disc pl-5">
+          <li>
+            <a href="https://serialworth.com/" rel="nofollow noopener noreferrer" className="link-accent">
+              SerialWorth price guide (secondary compilation)
+            </a>
+          </li>
+          {SOURCE_LINKS.filter(source => /Heritage|Stack|Engraving/.test(source.name)).map(source => (
+            <li key={source.url}>
+              <a href={source.url} rel="nofollow noopener noreferrer" className="link-accent">
+                {source.name}
+              </a>
+            </li>
+          ))}
+        </ul>
         {/* TODO(human): Add exact primary lot/report URLs for each supported price or production claim. */}
       </section>
       <Comments path={content.meta.path} />

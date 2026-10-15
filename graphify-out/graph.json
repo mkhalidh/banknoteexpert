@@ -1454,7 +1454,7 @@
       "file_type": "code",
       "norm_label": "contentsections()",
       "source_file": "src/components/content/ContentSections.tsx",
-      "source_location": "L46"
+      "source_location": "L51"
     },
     {
       "id": "src_components_seo_breadcrumbs_breadcrumbs",
@@ -29402,7 +29402,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/content/ContentSections.tsx",
-      "source_location": "L46",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -33299,5 +33299,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "67d10d60e9125b9fa41d8c27ee63403c78c40a0b"
+  "built_at_commit": "dfe6ffdeac258f99307d0fb2b1ff40b8f38752dc"
 }

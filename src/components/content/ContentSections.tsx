@@ -14,7 +14,12 @@ function Block({ block }: { block: ContentBlock }) {
           typeof segment === "string" ? (
             <span key={index}>{segment}</span>
           ) : (
-            <Link key={index} href={segment.href} className="link-accent">
+            <Link
+              key={index}
+              href={segment.href}
+              rel={/^https?:\/\//.test(segment.href) ? "nofollow noopener noreferrer" : undefined}
+              className="link-accent"
+            >
               {segment.label}
             </Link>
           ),
