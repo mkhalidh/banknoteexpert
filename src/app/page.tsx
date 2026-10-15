@@ -87,6 +87,34 @@ export default function Page() {
         </div>
       </section>
 
+      <section aria-labelledby="denomination-serial-check">
+        <h2 id="denomination-serial-check" className="text-h2">
+          Check a $1, $10, $20 or $100 bill serial number
+        </h2>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          For a one dollar bill serial number check, enter the eight digits
+          between its letters into the checker above. The same fancy serial
+          number check works for $2, $5, $10, $20, $50 and $100 bills: you can
+          type the digits alone or the full serial with its prefix and suffix.
+          The tool looks for rare bill serial numbers, including repeating,
+          mirrored, sequential and unusually low digit patterns.
+        </p>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          A $100 bill serial number lookup or $10 dollar bill serial number
+          lookup here checks the digit pattern in the same way as a $1 bill.
+          The result does not depend on which denomination you hold, so compare
+          your note&rsquo;s series year, condition and denomination separately
+          before deciding what it may be worth. Older notes can also have
+          interesting serials, but this checker does not identify their issue
+          history or price an individual note by year.
+        </p>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          Checking a serial number here cannot establish whether money is
+          counterfeit. A matching or unusual serial is a pattern result, not
+          proof that a note was issued or is genuine.
+        </p>
+      </section>
+
       {/* Section 4, pattern card grid from the registry */}
       <section aria-labelledby="patterns">
         <h2 id="patterns" className="text-h2">
@@ -122,6 +150,19 @@ export default function Page() {
           Treat every band as a starting point for research, not a guarantee.
           Combinations with no recorded sales are left blank rather than guessed,
           and small samples are flagged as indicative.
+        </p>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          If you want to check bill value by serial number, start with the
+          pattern result and the recorded sales below, then compare notes of
+          the same denomination, series and grade. A money serial number
+          lookup for value cannot give an exact price from eight digits alone:
+          many ordinary serials have no collectible premium, and a scarce
+          pattern on a worn note may sell differently from one in crisp
+          condition. See the{" "}
+          <Link href="/fancy-serial-number-value/" className="link-accent">
+            fancy serial number value guide
+          </Link>{" "}
+          for the evidence behind the ranges.
         </p>
         <div className="mt-6">
           <ValueRangeTable />
