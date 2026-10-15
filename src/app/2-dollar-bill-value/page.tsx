@@ -132,9 +132,7 @@ export default function Page() {
         <p>The series chart uses the secondary compilation at serialworth.com. Primary reference sites below are already listed in our source data; they are not individual sale citations.</p>
         <ul className="mt-3 list-disc pl-5">
           <li>
-            <a href="https://serialworth.com/" rel="nofollow noopener noreferrer" className="link-accent">
-              SerialWorth price guide (secondary compilation)
-            </a>
+            SerialWorth price guide (secondary compilation)
           </li>
           {SOURCE_LINKS.filter(source => /Heritage|Stack|Engraving/.test(source.name)).map(source => (
             <li key={source.url}>
