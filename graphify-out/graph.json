@@ -66,7 +66,7 @@
       "file_type": "code",
       "norm_label": "valueband",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L128"
+      "source_location": "L127"
     },
     {
       "id": "src_lib_serial_value_valuecell",
@@ -79,7 +79,7 @@
       "file_type": "code",
       "norm_label": "valuecell",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L172"
+      "source_location": "L171"
     },
     {
       "id": "src_content_types_contentblock",
@@ -222,7 +222,7 @@
       "file_type": "code",
       "norm_label": "directorypage",
       "source_file": "src/config/editorial.ts",
-      "source_location": "L61"
+      "source_location": "L64"
     },
     {
       "id": "src_config_editorial_editorialarticle",
@@ -612,7 +612,7 @@
       "file_type": "code",
       "norm_label": "valueresult",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L136"
+      "source_location": "L135"
     },
     {
       "id": "src_lib_serial_patterns_patterndefinition",
@@ -758,7 +758,7 @@
       "file_type": "code",
       "norm_label": "isgap()",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L162"
+      "source_location": "L161"
     },
     {
       "id": "src_lib_serial_value_valuepatternuniverse",
@@ -770,7 +770,7 @@
       "file_type": "code",
       "norm_label": "valuepatternuniverse()",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L187"
+      "source_location": "L186"
     },
     {
       "id": "src_app_fancy_serial_numbers_low_serial_number_page_page",
@@ -926,7 +926,7 @@
       "file_type": "code",
       "norm_label": "bandsforpattern()",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L158"
+      "source_location": "L157"
     },
     {
       "id": "src_lib_serial_value_estimatevalue",
@@ -938,7 +938,7 @@
       "file_type": "code",
       "norm_label": "estimatevalue()",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L205"
+      "source_location": "L204"
     },
     {
       "id": "scripts_check_data_pad",
@@ -1166,7 +1166,7 @@
       "file_type": "code",
       "norm_label": "getarticle()",
       "source_file": "src/config/editorial.ts",
-      "source_location": "L62"
+      "source_location": "L65"
     },
     {
       "id": "src_config_editorial_prose",
@@ -2834,7 +2834,7 @@
       "file_type": "code",
       "norm_label": "clamp()",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L274"
+      "source_location": "L268"
     },
     {
       "id": "src_lib_serial_score_patternsatisfied",
@@ -2846,7 +2846,7 @@
       "file_type": "code",
       "norm_label": "patternsatisfied()",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L257"
+      "source_location": "L251"
     },
     {
       "id": "src_lib_serial_score_scoreserial",
@@ -2858,7 +2858,7 @@
       "file_type": "code",
       "norm_label": "scoreserial()",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L283"
+      "source_location": "L277"
     },
     {
       "id": "src_lib_serial_score_tierfor",
@@ -2870,7 +2870,7 @@
       "file_type": "code",
       "norm_label": "tierfor()",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L266"
+      "source_location": "L260"
     },
     {
       "id": "src_lib_serial_tests_new_patterns_test_detect",
@@ -3285,7 +3285,7 @@
       "file_type": "code",
       "norm_label": "pattern_values_updated",
       "source_file": "src/data/value-ranges.ts",
-      "source_location": "L174"
+      "source_location": "L173"
     },
     {
       "id": "src_lib_serial_tests_value_test",
@@ -4847,7 +4847,7 @@
       "file_type": "code",
       "norm_label": "patternorder",
       "source_file": "src/content/fancy-serial-numbers.ts",
-      "source_location": "L336"
+      "source_location": "L330"
     },
     {
       "id": "src_content_fancy_serial_numbers_spokelinks",
@@ -4858,7 +4858,7 @@
       "file_type": "code",
       "norm_label": "spokelinks",
       "source_file": "src/content/fancy-serial-numbers.ts",
-      "source_location": "L377"
+      "source_location": "L370"
     },
     {
       "id": "src_content_tests_where_is_serial_test",
@@ -5892,7 +5892,7 @@
       "file_type": "code",
       "norm_label": "axis_of",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L192"
+      "source_location": "L187"
     },
     {
       "id": "src_lib_serial_score_combo_bonus",
@@ -5903,7 +5903,7 @@
       "file_type": "code",
       "norm_label": "combo_bonus",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L247"
+      "source_location": "L241"
     },
     {
       "id": "src_lib_serial_score_combo_cap",
@@ -5914,7 +5914,7 @@
       "file_type": "code",
       "norm_label": "combo_cap",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L249"
+      "source_location": "L243"
     },
     {
       "id": "src_lib_serial_score_fact_axes",
@@ -5925,7 +5925,7 @@
       "file_type": "code",
       "norm_label": "fact_axes",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L244"
+      "source_location": "L238"
     },
     {
       "id": "src_lib_serial_score_implies",
@@ -5936,7 +5936,7 @@
       "file_type": "code",
       "norm_label": "implies",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L160"
+      "source_location": "L156"
     },
     {
       "id": "src_lib_serial_score_superseded_by",
@@ -8708,7 +8708,7 @@
       "file_type": "code",
       "norm_label": "star_bonus",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L251"
+      "source_location": "L245"
     },
     {
       "id": "src_lib_serial_tests_new_patterns_test",
@@ -9210,7 +9210,7 @@
       "file_type": "code",
       "norm_label": "patternsbyid",
       "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L812"
+      "source_location": "L797"
     },
     {
       "id": "src_lib_serial_tests_patterns_test",
@@ -11651,7 +11651,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L284",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
@@ -11663,7 +11663,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L375",
+      "source_location": "L369",
       "weight": 1.0
     },
     {
@@ -11675,7 +11675,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L379",
+      "source_location": "L373",
       "weight": 1.0
     },
     {
@@ -11759,7 +11759,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L232",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -11771,7 +11771,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L257",
+      "source_location": "L256",
       "weight": 1.0
     },
     {
@@ -11783,7 +11783,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L182",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -12387,7 +12387,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L129",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -12399,7 +12399,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L133",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -30249,7 +30249,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/config/editorial.ts",
-      "source_location": "L61",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -30260,7 +30260,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/config/editorial.ts",
-      "source_location": "L62",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -30700,7 +30700,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/fancy-serial-numbers.ts",
-      "source_location": "L336",
+      "source_location": "L330",
       "weight": 1.0
     },
     {
@@ -30711,7 +30711,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/content/fancy-serial-numbers.ts",
-      "source_location": "L377",
+      "source_location": "L370",
       "weight": 1.0
     },
     {
@@ -31206,7 +31206,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/data/value-ranges.ts",
-      "source_location": "L174",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -31701,7 +31701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L812",
+      "source_location": "L797",
       "weight": 1.0
     },
     {
@@ -31745,7 +31745,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L160",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -31756,7 +31756,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L192",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -31767,7 +31767,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L244",
+      "source_location": "L238",
       "weight": 1.0
     },
     {
@@ -31778,7 +31778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L247",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -31789,7 +31789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L249",
+      "source_location": "L243",
       "weight": 1.0
     },
     {
@@ -31800,7 +31800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L251",
+      "source_location": "L245",
       "weight": 1.0
     },
     {
@@ -31811,7 +31811,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L257",
+      "source_location": "L251",
       "weight": 1.0
     },
     {
@@ -31822,7 +31822,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L266",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -31833,7 +31833,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L274",
+      "source_location": "L268",
       "weight": 1.0
     },
     {
@@ -31844,7 +31844,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/score.ts",
-      "source_location": "L283",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -31910,7 +31910,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L128",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -31921,7 +31921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L136",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -31932,7 +31932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L158",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -31943,7 +31943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L162",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -31954,7 +31954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L172",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -31965,7 +31965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L187",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -31976,7 +31976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/serial/value.ts",
-      "source_location": "L205",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -33299,5 +33299,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "dfe6ffdeac258f99307d0fb2b1ff40b8f38752dc"
+  "built_at_commit": "fdb5968bf361e56c4d37006ffb783a80986d9633"
 }

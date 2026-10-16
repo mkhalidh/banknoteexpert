@@ -567,25 +567,10 @@ export const patterns: PatternDefinition[] = [
     href: hub("ladder-four-pairs"),
   },
   {
-    id: "bookends-four-pairs",
-    name: "Bookends Four Pairs",
-    slug: "bookends-four-pairs",
-    description: "Four adjacent pairs whose first pair equals the last (AABBCCDD with A=D).",
-    example: "11334411",
-    detect: (d) => {
-      if (!isFourPairs(d)) return false;
-      const p = pairDigits(d);
-      return p[0] === p[3];
-    },
-    rarityOdds: "1 in 200,000",
-    baseScore: 75,
-    href: hub("bookends-four-pairs"),
-  },
-  {
     id: "four-pairs",
-    name: "Four Pairs",
+    name: "Four Pairs (Quad Doubles)",
     slug: "four-pairs",
-    description: "Four adjacent repeated pairs (AABBCCDD).",
+    description: "Four adjacent repeated pairs (AABBCCDD), known to collectors as Quad Doubles.",
     example: "11557744",
     detect: (d) => isFourPairs(d),
     rarityOdds: "1 in 19,841",

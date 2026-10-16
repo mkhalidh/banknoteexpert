@@ -33,7 +33,17 @@ export default function Page() {
         <div className="mt-6">
           <FancySerialChecker />
         </div>
-      <figure className="article-cover mt-5"><Image src="/images/patterns/birthday-note.svg" alt="Birthday note: 01011990. MM / DD / YYYY: 01 / 01 / 1990." width={1200} height={640} sizes="(max-width: 800px) 100vw, 1000px" preload /></figure>
+      <figure className="article-cover mt-5">
+        <Image
+          src="/birthdaynote.jfif"
+          alt="US $20 bill with birthday-style serial number 04011941."
+          width={447}
+          height={447}
+          sizes="(max-width: 800px) 100vw, 1000px"
+          style={{ objectFit: "contain" }}
+          preload
+        />
+      </figure>
       </header>
       <KeyTakeaways items={content.takeaways} />
       <ContentSections sections={content.sections} />

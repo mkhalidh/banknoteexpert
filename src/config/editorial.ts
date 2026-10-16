@@ -40,7 +40,7 @@ export const patternIllustrations: Record<string, string> = {
   "/fancy-serial-numbers/ladder/": "/images/patterns/ladder.svg",
   "/fancy-serial-numbers/broken-ladder/": "/images/patterns/ladder.svg",
   "/fancy-serial-numbers/low-serial-number/": "/images/patterns/low-serial-number.svg",
-  "/fancy-serial-numbers/birthday-note/": "/images/patterns/birthday-note.svg",
+  "/fancy-serial-numbers/birthday-note/": "/birthdaynote.jfif",
 };
 /** All existing content pages, including tools and company/legal pages. */
 export const directoryPages = routes.filter(route => route.pageType !== "article-index").map((route, index) => {
@@ -51,7 +51,10 @@ export const directoryPages = routes.filter(route => route.pageType !== "article
     ...route, categoryId, category,
     published: "", modified: pageModified[route.path], readingMinutes: 0,
     image: patternIllustrations[route.path] ?? `/images/editorial/${categoryId === "fancy-serial-numbers" ? "serial-patterns" : "banknote-collecting"}-detail.webp`,
-    imageAlt: "Illustrative banknote artwork", popularOrder: index + 10,
+    imageAlt: route.path === "/fancy-serial-numbers/birthday-note/"
+      ? "US $20 bill with birthday-style serial number 04011941."
+      : "Illustrative banknote artwork",
+    popularOrder: index + 10,
     ...article,
     isTool: toolLinks.some(tool => tool.path === route.path),
     hasByline: Boolean(article),

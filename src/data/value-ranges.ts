@@ -158,7 +158,6 @@ export const PATTERN_VALUE_GAPS: { pattern: string; condition: NoteCondition }[]
       "bookends-radar",
       "binary-four-pairs",
       "ladder-four-pairs",
-      "bookends-four-pairs",
       "four-pairs",
       "bookends-binary",
       "bookends",

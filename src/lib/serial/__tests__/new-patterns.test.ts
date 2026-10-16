@@ -122,15 +122,18 @@ describe("new detectors — positive and negative", () => {
     expect(detect("ladder-four-pairs", "44332211")).toBe(false); // descending
   });
 
-  it("bookends-four-pairs: AABBCCDD with first pair = last pair", () => {
-    expect(detect("bookends-four-pairs", "11334411")).toBe(true);
-    expect(detect("bookends-four-pairs", "11557744")).toBe(false); // 1 != 4
-    expect(detect("bookends-four-pairs", "11223311")).toBe(true);
-  });
-
   it("four-pairs: any AABBCCDD", () => {
     expect(detect("four-pairs", "11557744")).toBe(true);
+    expect(detect("four-pairs", "11334411")).toBe(true);
     expect(detect("four-pairs", "11557745")).toBe(false); // last pair broken
+  });
+
+  it("paired bookends remain covered by both parent detectors", () => {
+    expect(patternsById["bookends-four-pairs"]).toBeUndefined();
+    expect(detect("bookends", "11334411")).toBe(true);
+    expect(detect("four-pairs", "11334411")).toBe(true);
+    expect(primary("11334411")).toBe("four-pairs");
+    expect(scoreSerial("11334411").matches[0]?.name).toBe("Four Pairs (Quad Doubles)");
   });
 
   it("bookends-binary: first two = last two AND two distinct digits", () => {
@@ -195,7 +198,7 @@ describe("primary classification — detection order, first match wins", () => {
     ["11112222", "double-quad"],
     ["11331111", "binary-four-pairs"],
     ["11223344", "ladder-four-pairs"],
-    ["11334411", "bookends-four-pairs"],
+    ["11334411", "four-pairs"],
     ["11557744", "four-pairs"],
     ["79997779", "bookends-binary"],
     ["12456712", "bookends"],

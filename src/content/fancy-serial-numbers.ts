@@ -279,15 +279,9 @@ export const patternCopy: Record<string, PatternCopy> = {
     valueNote:
       "A scarce, very tidy pattern that collectors find especially satisfying.",
   },
-  "bookends-four-pairs": {
-    definition:
-      "A bookends four pairs is an AABBCCDD whose first pair matches its last, such as 11334411, so the same doubled digit frames both ends of the serial.",
-    valueNote:
-      "An uncommon paired pattern; the matching ends give it a clean, deliberate look.",
-  },
   "four-pairs": {
     definition:
-      "A four pairs is any AABBCCDD serial, four doubled digits in a row, such as 11557744. Each adjacent pair repeats even when the four values differ.",
+      "Four Pairs (Quad Doubles) describes any AABBCCDD serial: four doubled digits in a row, such as 11557744. Each adjacent pair repeats even when the four values differ.",
     valueNote:
       "A recognisable structured pattern; most are modestly priced, with cleaner arrangements worth more.",
   },
@@ -356,7 +350,6 @@ export const patternOrder: string[] = [
   "double-quad",
   "binary-four-pairs",
   "ladder-four-pairs",
-  "bookends-four-pairs",
   "four-pairs",
   "bookends-binary",
   "bookends",
