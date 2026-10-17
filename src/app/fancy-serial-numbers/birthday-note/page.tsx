@@ -35,12 +35,13 @@ export default function Page() {
         </div>
       <figure className="article-cover mt-5">
         <Image
-          src="/birthdaynote.jfif"
+          src="/birthdaynote.png"
           alt="US $20 bill with birthday-style serial number 04011941."
           width={447}
           height={447}
           sizes="(max-width: 800px) 100vw, 1000px"
           style={{ objectFit: "contain" }}
+          unoptimized
           preload
         />
       </figure>

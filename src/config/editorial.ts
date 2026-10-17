@@ -40,7 +40,7 @@ export const patternIllustrations: Record<string, string> = {
   "/fancy-serial-numbers/ladder/": "/images/patterns/ladder.svg",
   "/fancy-serial-numbers/broken-ladder/": "/images/patterns/ladder.svg",
   "/fancy-serial-numbers/low-serial-number/": "/images/patterns/low-serial-number.svg",
-  "/fancy-serial-numbers/birthday-note/": "/birthdaynote.jfif",
+  "/fancy-serial-numbers/birthday-note/": "/birthdaynote.png",
 };
 /** All existing content pages, including tools and company/legal pages. */
 export const directoryPages = routes.filter(route => route.pageType !== "article-index").map((route, index) => {
