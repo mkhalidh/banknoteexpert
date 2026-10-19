@@ -43,6 +43,19 @@
       "source_location": "L43"
     },
     {
+      "id": "src_lib_serial_score_patternmatch",
+      "label": "PatternMatch",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "value.ts",
+      "file_type": "code",
+      "norm_label": "patternmatch",
+      "source_file": "src/lib/serial/score.ts",
+      "source_location": "L38"
+    },
+    {
       "id": "src_lib_serial_value_valueband",
       "label": "ValueBand",
       "_callable": true,
@@ -69,19 +82,6 @@
       "source_location": "L171"
     },
     {
-      "id": "src_data_two_dollar_series_twodollarseries",
-      "label": "twoDollarSeries",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "twodollarseries",
-      "source_file": "src/data/two-dollar-series.ts",
-      "source_location": "L24"
-    },
-    {
       "id": "scripts_check_data_finding",
       "label": "Finding",
       "_callable": true,
@@ -106,6 +106,19 @@
       "norm_label": "contentblock",
       "source_file": "src/content/types.ts",
       "source_location": "L13"
+    },
+    {
+      "id": "src_content_types_contentlink",
+      "label": "ContentLink",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "pages.ts",
+      "file_type": "code",
+      "norm_label": "contentlink",
+      "source_file": "src/content/types.ts",
+      "source_location": "L52"
     },
     {
       "id": "src_content_types_contentmeta",
@@ -244,7 +257,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "navitem",
       "source_file": "src/components/layout/MobileNav.tsx",
@@ -257,11 +270,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "theme",
       "source_file": "src/components/layout/ThemeToggle.tsx",
       "source_location": "L6"
+    },
+    {
+      "id": "src_config_routes_silo",
+      "label": "Silo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "silo",
+      "source_file": "src/config/routes.ts",
+      "source_location": "L7"
     },
     {
       "id": "src_data_two_dollar_values_twodollarvalue",
@@ -275,19 +301,6 @@
       "norm_label": "twodollarvalue",
       "source_file": "src/data/two-dollar-values.ts",
       "source_location": "L23"
-    },
-    {
-      "id": "src_lib_serial_patterns_patterndefinition",
-      "label": "PatternDefinition",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "patterndefinition",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L22"
     },
     {
       "id": "src_lib_serial_parse_parsedserial",
@@ -342,19 +355,6 @@
       "source_location": "L41"
     },
     {
-      "id": "src_lib_serial_score_patternmatch",
-      "label": "PatternMatch",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "index.ts",
-      "file_type": "code",
-      "norm_label": "patternmatch",
-      "source_file": "src/lib/serial/score.ts",
-      "source_location": "L38"
-    },
-    {
       "id": "src_lib_serial_score_scoreline",
       "label": "ScoreLine",
       "_callable": true,
@@ -394,17 +394,17 @@
       "source_location": "L31"
     },
     {
-      "id": "src_config_routes_pagetype",
-      "label": "PageType",
+      "id": "src_components_seo_jsonld_jsonldprops",
+      "label": "JsonLdProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
-      "norm_label": "pagetype",
-      "source_file": "src/config/routes.ts",
-      "source_location": "L14"
+      "norm_label": "jsonldprops",
+      "source_file": "src/components/seo/JsonLd.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_components_content_comparisontable_comparisontableprops",
@@ -413,7 +413,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "comparisontableprops",
       "source_file": "src/components/content/ComparisonTable.tsx",
@@ -444,19 +444,6 @@
       "norm_label": "articleschemaprops",
       "source_file": "src/components/seo/ArticleSchema.tsx",
       "source_location": "L6"
-    },
-    {
-      "id": "src_components_seo_jsonld_jsonldprops",
-      "label": "JsonLdProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "jsonldprops",
-      "source_file": "src/components/seo/JsonLd.tsx",
-      "source_location": "L5"
     },
     {
       "id": "scripts_audit_links_link",
@@ -498,6 +485,19 @@
       "source_location": "L25"
     },
     {
+      "id": "src_config_routes_pagetype",
+      "label": "PageType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 58,
+      "community_name": "routes.ts",
+      "file_type": "code",
+      "norm_label": "pagetype",
+      "source_file": "src/config/routes.ts",
+      "source_location": "L14"
+    },
+    {
       "id": "src_config_routes_routeentry",
       "label": "RouteEntry",
       "_callable": true,
@@ -509,19 +509,6 @@
       "norm_label": "routeentry",
       "source_file": "src/config/routes.ts",
       "source_location": "L34"
-    },
-    {
-      "id": "src_config_routes_silo",
-      "label": "Silo",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "routes.ts",
-      "file_type": "code",
-      "norm_label": "silo",
-      "source_file": "src/config/routes.ts",
-      "source_location": "L7"
     },
     {
       "id": "src_data_star_notes_runs_starnoterun",
@@ -576,6 +563,19 @@
       "source_location": "L17"
     },
     {
+      "id": "src_data_two_dollar_series_twodollarseries",
+      "label": "twoDollarSeries",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "twodollarseries",
+      "source_file": "src/data/two-dollar-series.ts",
+      "source_location": "L24"
+    },
+    {
       "id": "src_lib_serial_value_valueresult",
       "label": "ValueResult",
       "_callable": true,
@@ -621,24 +621,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "walineinstance",
       "source_file": "src/components/comments/Comments.tsx",
       "source_location": "L7"
     },
     {
-      "id": "src_content_types_contentlink",
-      "label": "ContentLink",
+      "id": "src_lib_serial_patterns_patterndefinition",
+      "label": "PatternDefinition",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 7,
-      "community_name": "RelatedPages.tsx",
+      "community": 73,
+      "community_name": "PatternDefinition",
       "file_type": "code",
-      "norm_label": "contentlink",
-      "source_file": "src/content/types.ts",
-      "source_location": "L52"
+      "norm_label": "patterndefinition",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L22"
     },
     {
       "id": "src_app_fancy_serial_numbers_broken_ladder_page_soldsamples",
@@ -737,6 +737,18 @@
       "source_location": "L15"
     },
     {
+      "id": "src_lib_serial_value_bandsforpattern",
+      "label": "bandsForPattern()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "value.ts",
+      "file_type": "code",
+      "norm_label": "bandsforpattern()",
+      "source_file": "src/lib/serial/value.ts",
+      "source_location": "L157"
+    },
+    {
       "id": "src_lib_serial_value_conditionforgrade",
       "label": "conditionForGrade()",
       "_callable": true,
@@ -747,6 +759,18 @@
       "norm_label": "conditionforgrade()",
       "source_file": "src/lib/serial/value.ts",
       "source_location": "L75"
+    },
+    {
+      "id": "src_lib_serial_value_estimatevalue",
+      "label": "estimateValue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "value.ts",
+      "file_type": "code",
+      "norm_label": "estimatevalue()",
+      "source_file": "src/lib/serial/value.ts",
+      "source_location": "L204"
     },
     {
       "id": "src_lib_serial_value_isgap",
@@ -773,16 +797,124 @@
       "source_location": "L186"
     },
     {
-      "id": "src_app_fancy_serial_numbers_low_serial_number_page_page",
-      "label": "Page()",
+      "id": "tools_retest_leap",
+      "label": "leap()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
-      "source_location": "L19"
+      "norm_label": "leap()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L41"
+    },
+    {
+      "id": "tools_retest_load",
+      "label": "load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "load()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L110"
+    },
+    {
+      "id": "tools_retest_longestrun",
+      "label": "longestRun()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "longestrun()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L49"
+    },
+    {
+      "id": "tools_retest_old_full_ladder",
+      "label": "OLD_FULL_LADDER()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "old_full_ladder()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L60"
+    },
+    {
+      "id": "tools_retest_oldbirthday",
+      "label": "oldBirthday()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "oldbirthday()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L42"
+    },
+    {
+      "id": "tools_retest_olddetect",
+      "label": "oldDetect()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "olddetect()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L61"
+    },
+    {
+      "id": "tools_retest_oldpass",
+      "label": "oldPass()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "oldpass()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L85"
+    },
+    {
+      "id": "tools_retest_oldtags",
+      "label": "oldTags()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "oldtags()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L80"
+    },
+    {
+      "id": "tools_retest_pad",
+      "label": "pad()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "pad()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L139"
+    },
+    {
+      "id": "tools_retest_pct",
+      "label": "pct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "pct()",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L138"
     },
     {
       "id": "src_app_2_dollar_bill_value_page_page",
@@ -807,174 +939,6 @@
       "norm_label": "sectionbyid()",
       "source_file": "src/app/2-dollar-bill-value/page.tsx",
       "source_location": "L43"
-    },
-    {
-      "id": "src_components_content_scarceststarcallout_scarceststarcallout",
-      "label": "ScarcestStarCallout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "scarceststarcallout()",
-      "source_file": "src/components/content/ScarcestStarCallout.tsx",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_components_tools_fancyserialchecker_fancyserialchecker",
-      "label": "FancySerialChecker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "fancyserialchecker()",
-      "source_file": "src/components/tools/FancySerialChecker.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_components_tools_fancyserialchecker_fancyserialchecker_clear",
-      "label": "clear()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "clear()",
-      "source_file": "src/components/tools/FancySerialChecker.tsx",
-      "source_location": "L56"
-    },
-    {
-      "id": "src_components_tools_scoremeter_easeout",
-      "label": "easeOut()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "easeout()",
-      "source_file": "src/components/tools/ScoreMeter.tsx",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_components_tools_scoremeter_scoremeter",
-      "label": "ScoreMeter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "scoremeter()",
-      "source_file": "src/components/tools/ScoreMeter.tsx",
-      "source_location": "L38"
-    },
-    {
-      "id": "src_components_tools_twodollarseriallookup_twodollarseriallookup",
-      "label": "TwoDollarSerialLookup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "twodollarseriallookup()",
-      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_components_tools_twodollarseriallookup_twodollarseriallookup_clear",
-      "label": "clear()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "clear()",
-      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
-      "source_location": "L66"
-    },
-    {
-      "id": "src_components_ui_icons_alerticon",
-      "label": "AlertIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "alerticon()",
-      "source_file": "src/components/ui/icons.tsx",
-      "source_location": "L42"
-    },
-    {
-      "id": "src_components_ui_icons_checkcircleicon",
-      "label": "CheckCircleIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "checkcircleicon()",
-      "source_file": "src/components/ui/icons.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_components_ui_icons_staricon",
-      "label": "StarIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "staricon()",
-      "source_file": "src/components/ui/icons.tsx",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_components_ui_icons_xicon",
-      "label": "XIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "xicon()",
-      "source_file": "src/components/ui/icons.tsx",
-      "source_location": "L77"
-    },
-    {
-      "id": "src_data_two_dollar_series_gettwodollarseries",
-      "label": "getTwoDollarSeries()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "gettwodollarseries()",
-      "source_file": "src/data/two-dollar-series.ts",
-      "source_location": "L49"
-    },
-    {
-      "id": "src_lib_serial_value_bandsforpattern",
-      "label": "bandsForPattern()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "bandsforpattern()",
-      "source_file": "src/lib/serial/value.ts",
-      "source_location": "L157"
-    },
-    {
-      "id": "src_lib_serial_value_estimatevalue",
-      "label": "estimateValue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "estimatevalue()",
-      "source_file": "src/lib/serial/value.ts",
-      "source_location": "L204"
     },
     {
       "id": "scripts_check_data_pad",
@@ -1013,16 +977,16 @@
       "source_location": "L10"
     },
     {
-      "id": "src_components_content_contentsections_block",
-      "label": "Block()",
+      "id": "src_app_fancy_serial_numbers_ladder_page_page",
+      "label": "Page()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
       "community_name": "pages.ts",
       "file_type": "code",
-      "norm_label": "block()",
-      "source_file": "src/components/content/ContentSections.tsx",
-      "source_location": "L4"
+      "norm_label": "page()",
+      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
+      "source_location": "L19"
     },
     {
       "id": "src_app_fancy_serial_numbers_binary_opengraph_image_image",
@@ -1119,18 +1083,6 @@
       "norm_label": "anchornav()",
       "source_file": "src/components/content/AnchorNav.tsx",
       "source_location": "L9"
-    },
-    {
-      "id": "src_components_content_articlebyline_articlebyline",
-      "label": "ArticleByline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "fancy-serial-numbers/page.tsx",
-      "file_type": "code",
-      "norm_label": "articlebyline()",
-      "source_file": "src/components/content/ArticleByline.tsx",
-      "source_location": "L3"
     },
     {
       "id": "src_components_content_articledirectory_articledirectory",
@@ -1246,23 +1198,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "src/app/layout.tsx",
       "source_location": "L55"
     },
     {
-      "id": "src_app_tools_page_toolspage",
-      "label": "ToolsPage()",
+      "id": "src_components_layout_footer_footer",
+      "label": "Footer()",
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
-      "norm_label": "toolspage()",
-      "source_file": "src/app/tools/page.tsx",
-      "source_location": "L8"
+      "norm_label": "footer()",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L17"
     },
     {
       "id": "src_components_layout_header_header",
@@ -1270,7 +1222,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "header()",
       "source_file": "src/components/layout/Header.tsx",
@@ -1282,7 +1234,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "meganavigation()",
       "source_file": "src/components/layout/MegaNavigation.tsx",
@@ -1294,7 +1246,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "mobilenav()",
       "source_file": "src/components/layout/MobileNav.tsx",
@@ -1306,7 +1258,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "themetoggle()",
       "source_file": "src/components/layout/ThemeToggle.tsx",
@@ -1318,10 +1270,58 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "toggle()",
       "source_file": "src/components/layout/ThemeToggle.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_components_tools_scoremeter_easeout",
+      "label": "easeOut()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "easeout()",
+      "source_file": "src/components/tools/ScoreMeter.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_components_tools_scoremeter_scoremeter",
+      "label": "ScoreMeter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "scoremeter()",
+      "source_file": "src/components/tools/ScoreMeter.tsx",
+      "source_location": "L38"
+    },
+    {
+      "id": "src_components_ui_icons_alerticon",
+      "label": "AlertIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "alerticon()",
+      "source_file": "src/components/ui/icons.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_components_ui_icons_checkcircleicon",
+      "label": "CheckCircleIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "checkcircleicon()",
+      "source_file": "src/components/ui/icons.tsx",
       "source_location": "L25"
     },
     {
@@ -1330,7 +1330,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "documenticon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1342,7 +1342,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "icon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1354,7 +1354,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "menuicon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1366,7 +1366,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "moonicon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1378,7 +1378,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "noteicon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1390,7 +1390,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "sealicon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1402,11 +1402,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "sparkleicon()",
       "source_file": "src/components/ui/icons.tsx",
       "source_location": "L69"
+    },
+    {
+      "id": "src_components_ui_icons_staricon",
+      "label": "StarIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "staricon()",
+      "source_file": "src/components/ui/icons.tsx",
+      "source_location": "L34"
     },
     {
       "id": "src_components_ui_icons_sunicon",
@@ -1414,7 +1426,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "sunicon()",
       "source_file": "src/components/ui/icons.tsx",
@@ -1426,11 +1438,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "tagicon()",
       "source_file": "src/components/ui/icons.tsx",
       "source_location": "L93"
+    },
+    {
+      "id": "src_components_ui_icons_xicon",
+      "label": "XIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "xicon()",
+      "source_file": "src/components/ui/icons.tsx",
+      "source_location": "L77"
     },
     {
       "id": "src_config_navigation_links",
@@ -1438,11 +1462,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "links()",
       "source_file": "src/config/navigation.ts",
       "source_location": "L3"
+    },
+    {
+      "id": "src_config_routes_getroutesbysilo",
+      "label": "getRoutesBySilo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "getroutesbysilo()",
+      "source_file": "src/config/routes.ts",
+      "source_location": "L289"
+    },
+    {
+      "id": "src_lib_tests_seo_render_test_normalize",
+      "label": "normalize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "normalize()",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L20"
     },
     {
       "id": "scripts_collect_waline_deps_collect",
@@ -1515,6 +1563,18 @@
       "norm_label": "page()",
       "source_file": "src/app/terms/page.tsx",
       "source_location": "L15"
+    },
+    {
+      "id": "src_components_content_contentsections_block",
+      "label": "Block()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "buildMetadata",
+      "file_type": "code",
+      "norm_label": "block()",
+      "source_file": "src/components/content/ContentSections.tsx",
+      "source_location": "L4"
     },
     {
       "id": "src_components_content_contentsections_contentsections",
@@ -1637,76 +1697,28 @@
       "source_location": "L78"
     },
     {
-      "id": "src_app_1976_2_dollar_bill_value_page_money",
-      "label": "money()",
+      "id": "src_app_tools_page_toolspage",
+      "label": "ToolsPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "community_name": "getRoute",
       "file_type": "code",
-      "norm_label": "money()",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L20"
+      "norm_label": "toolspage()",
+      "source_file": "src/app/tools/page.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "src_app_1976_2_dollar_bill_value_page_page",
-      "label": "Page()",
+      "id": "src_config_routes_getroute",
+      "label": "getRoute()",
       "_callable": true,
       "_origin": "ast",
       "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "community_name": "getRoute",
       "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L48"
-    },
-    {
-      "id": "src_app_1976_2_dollar_bill_value_page_sectionbyid",
-      "label": "sectionById()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "sectionbyid()",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L45"
-    },
-    {
-      "id": "src_app_methodology_page_page",
-      "label": "Page()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/methodology/page.tsx",
-      "source_location": "L23"
-    },
-    {
-      "id": "src_components_content_byline_byline",
-      "label": "Byline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "byline()",
-      "source_file": "src/components/content/Byline.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_components_content_keytakeaways_keytakeaways",
-      "label": "KeyTakeaways()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "keytakeaways()",
-      "source_file": "src/components/content/KeyTakeaways.tsx",
-      "source_location": "L4"
+      "norm_label": "getroute()",
+      "source_file": "src/config/routes.ts",
+      "source_location": "L280"
     },
     {
       "id": "scripts_audit_seo_check",
@@ -1757,18 +1769,6 @@
       "source_location": "L85"
     },
     {
-      "id": "src_lib_serial_patterns_distinctcount",
-      "label": "distinctCount()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "distinctcount()",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L45"
-    },
-    {
       "id": "src_lib_serial_patterns_hub",
       "label": "hub()",
       "_callable": true,
@@ -1791,18 +1791,6 @@
       "norm_label": "isallbinarydigits()",
       "source_file": "src/lib/serial/patterns.ts",
       "source_location": "L73"
-    },
-    {
-      "id": "src_lib_serial_patterns_isbinaryradar",
-      "label": "isBinaryRadar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "isbinaryradar()",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L171"
     },
     {
       "id": "src_lib_serial_patterns_isbirthday",
@@ -1901,18 +1889,6 @@
       "source_location": "L203"
     },
     {
-      "id": "src_lib_serial_patterns_ispalindrome",
-      "label": "isPalindrome()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "ispalindrome()",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L63"
-    },
-    {
       "id": "src_lib_serial_patterns_isradarrepeater",
       "label": "isRadarRepeater()",
       "_callable": true,
@@ -2009,18 +1985,6 @@
       "source_location": "L134"
     },
     {
-      "id": "src_lib_serial_patterns_patterndefinition_detect",
-      "label": ".detect()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": ".detect()",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L28"
-    },
-    {
       "id": "src_lib_serial_patterns_validdate",
       "label": "validDate()",
       "_callable": true,
@@ -2031,138 +1995,6 @@
       "norm_label": "validdate()",
       "source_file": "src/lib/serial/patterns.ts",
       "source_location": "L237"
-    },
-    {
-      "id": "src_lib_serial_tests_patterns_test_detect",
-      "label": "detect()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "detect()",
-      "source_file": "src/lib/serial/__tests__/patterns.test.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "tools_retest_leap",
-      "label": "leap()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "leap()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L41"
-    },
-    {
-      "id": "tools_retest_load",
-      "label": "load()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "load()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L110"
-    },
-    {
-      "id": "tools_retest_longestrun",
-      "label": "longestRun()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "longestrun()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L49"
-    },
-    {
-      "id": "tools_retest_old_full_ladder",
-      "label": "OLD_FULL_LADDER()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "old_full_ladder()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L60"
-    },
-    {
-      "id": "tools_retest_oldbirthday",
-      "label": "oldBirthday()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "oldbirthday()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L42"
-    },
-    {
-      "id": "tools_retest_olddetect",
-      "label": "oldDetect()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "olddetect()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L61"
-    },
-    {
-      "id": "tools_retest_oldpass",
-      "label": "oldPass()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "oldpass()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L85"
-    },
-    {
-      "id": "tools_retest_oldtags",
-      "label": "oldTags()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "oldtags()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L80"
-    },
-    {
-      "id": "tools_retest_pad",
-      "label": "pad()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "pad()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L139"
-    },
-    {
-      "id": "tools_retest_pct",
-      "label": "pct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "pct()",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L138"
     },
     {
       "id": "src_lib_serial_parse_fail",
@@ -2194,11 +2026,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/page.tsx",
-      "source_location": "L32"
+      "source_location": "L33"
     },
     {
       "id": "src_components_content_alltoolsgrid_alltoolsgrid",
@@ -2206,7 +2038,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "alltoolsgrid()",
       "source_file": "src/components/content/AllToolsGrid.tsx",
@@ -2218,7 +2050,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "featuredon()",
       "source_file": "src/components/content/FeaturedOn.tsx",
@@ -2230,11 +2062,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "patterngrid()",
       "source_file": "src/components/content/PatternGrid.tsx",
       "source_location": "L10"
+    },
+    {
+      "id": "src_components_content_serialdiagram_serialdiagram",
+      "label": "SerialDiagram()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "serialdiagram()",
+      "source_file": "src/components/content/SerialDiagram.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_components_seo_jsonld_jsonld",
+      "label": "JsonLd()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonld()",
+      "source_file": "src/components/seo/JsonLd.tsx",
+      "source_location": "L9"
     },
     {
       "id": "src_app_fancy_serial_numbers_birthday_note_page_page",
@@ -2242,10 +2098,34 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/fancy-serial-numbers/birthday-note/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_broken_ladder_page_page",
+      "label": "Page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "page()",
+      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_low_serial_number_page_page",
+      "label": "Page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "page()",
+      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
       "source_location": "L19"
     },
     {
@@ -2254,11 +2134,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/fancy-serial-numbers/radar/page.tsx",
       "source_location": "L19"
+    },
+    {
+      "id": "src_components_content_byline_byline",
+      "label": "Byline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "byline()",
+      "source_file": "src/components/content/Byline.tsx",
+      "source_location": "L10"
     },
     {
       "id": "src_components_content_comparisontable_comparisontable",
@@ -2266,11 +2158,47 @@
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "comparisontable()",
       "source_file": "src/components/content/ComparisonTable.tsx",
       "source_location": "L14"
+    },
+    {
+      "id": "src_components_content_keytakeaways_keytakeaways",
+      "label": "KeyTakeaways()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "keytakeaways()",
+      "source_file": "src/components/content/KeyTakeaways.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_components_tools_fancyserialchecker_fancyserialchecker",
+      "label": "FancySerialChecker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "fancyserialchecker()",
+      "source_file": "src/components/tools/FancySerialChecker.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_components_tools_fancyserialchecker_fancyserialchecker_clear",
+      "label": "clear()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "clear()",
+      "source_file": "src/components/tools/FancySerialChecker.tsx",
+      "source_location": "L56"
     },
     {
       "id": "src_app_1976_2_dollar_bill_value_opengraph_image_image",
@@ -2405,6 +2333,18 @@
       "source_location": "L8"
     },
     {
+      "id": "src_components_content_articlebyline_articlebyline",
+      "label": "ArticleByline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "articlebyline()",
+      "source_file": "src/components/content/ArticleByline.tsx",
+      "source_location": "L3"
+    },
+    {
       "id": "src_components_content_sourcesblock_sourcesblock",
       "label": "SourcesBlock()",
       "_callable": true,
@@ -2427,18 +2367,6 @@
       "norm_label": "articleschema()",
       "source_file": "src/components/seo/ArticleSchema.tsx",
       "source_location": "L20"
-    },
-    {
-      "id": "src_components_seo_jsonld_jsonld",
-      "label": "JsonLd()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "jsonld()",
-      "source_file": "src/components/seo/JsonLd.tsx",
-      "source_location": "L9"
     },
     {
       "id": "src_app_fancy_serial_numbers_low_serial_number_opengraph_image_image",
@@ -2621,40 +2549,16 @@
       "source_location": "L8"
     },
     {
-      "id": "src_components_layout_footer_footer",
-      "label": "Footer()",
+      "id": "src_components_content_scarceststarcallout_scarceststarcallout",
+      "label": "ScarcestStarCallout()",
       "_callable": true,
       "_origin": "ast",
-      "community": 58,
-      "community_name": "routes.ts",
+      "community": 6,
+      "community_name": "StarNoteLookup.tsx",
       "file_type": "code",
-      "norm_label": "footer()",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_config_routes_getroute",
-      "label": "getRoute()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "routes.ts",
-      "file_type": "code",
-      "norm_label": "getroute()",
-      "source_file": "src/config/routes.ts",
-      "source_location": "L280"
-    },
-    {
-      "id": "src_config_routes_getroutesbysilo",
-      "label": "getRoutesBySilo()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 58,
-      "community_name": "routes.ts",
-      "file_type": "code",
-      "norm_label": "getroutesbysilo()",
-      "source_file": "src/config/routes.ts",
-      "source_location": "L289"
+      "norm_label": "scarceststarcallout()",
+      "source_file": "src/components/content/ScarcestStarCallout.tsx",
+      "source_location": "L18"
     },
     {
       "id": "src_components_tools_starnotelookup_fact",
@@ -2786,6 +2690,42 @@
       "file_type": "code",
       "norm_label": "seriesfordenomination()",
       "source_file": "src/lib/star-note/lookup.ts",
+      "source_location": "L49"
+    },
+    {
+      "id": "src_components_tools_twodollarseriallookup_twodollarseriallookup",
+      "label": "TwoDollarSerialLookup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "twodollarseriallookup()",
+      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_components_tools_twodollarseriallookup_twodollarseriallookup_clear",
+      "label": "clear()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "clear()",
+      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
+      "source_location": "L66"
+    },
+    {
+      "id": "src_data_two_dollar_series_gettwodollarseries",
+      "label": "getTwoDollarSeries()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "gettwodollarseries()",
+      "source_file": "src/data/two-dollar-series.ts",
       "source_location": "L49"
     },
     {
@@ -2981,7 +2921,7 @@
       "source_location": "L20"
     },
     {
-      "id": "src_app_fancy_serial_numbers_ladder_page_page",
+      "id": "src_app_methodology_page_page",
       "label": "Page()",
       "_callable": true,
       "_origin": "ast",
@@ -2989,8 +2929,8 @@
       "community_name": "Breadcrumbs.tsx",
       "file_type": "code",
       "norm_label": "page()",
-      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
-      "source_location": "L19"
+      "source_file": "src/app/methodology/page.tsx",
+      "source_location": "L23"
     },
     {
       "id": "src_components_seo_breadcrumbs_breadcrumbs",
@@ -3029,12 +2969,48 @@
       "source_location": "L16"
     },
     {
+      "id": "src_app_1976_2_dollar_bill_value_page_money",
+      "label": "money()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "money()",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_app_1976_2_dollar_bill_value_page_page",
+      "label": "Page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "page()",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L48"
+    },
+    {
+      "id": "src_app_1976_2_dollar_bill_value_page_sectionbyid",
+      "label": "sectionById()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "sectionbyid()",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L45"
+    },
+    {
       "id": "src_app_fancy_serial_number_value_page_page",
       "label": "Page()",
       "_callable": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/fancy-serial-number-value/page.tsx",
@@ -3046,23 +3022,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "comments()",
       "source_file": "src/components/comments/Comments.tsx",
       "source_location": "L18"
-    },
-    {
-      "id": "src_components_content_serialdiagram_serialdiagram",
-      "label": "SerialDiagram()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "Design System: Banknote Expert",
-      "file_type": "code",
-      "norm_label": "serialdiagram()",
-      "source_file": "src/components/content/SerialDiagram.tsx",
-      "source_location": "L6"
     },
     {
       "id": "src_app_fancy_serial_numbers_binary_page_money",
@@ -3101,16 +3065,16 @@
       "source_location": "L11"
     },
     {
-      "id": "src_app_fancy_serial_numbers_broken_ladder_page_page",
-      "label": "Page()",
+      "id": "src_lib_serial_tests_patterns_test_detect",
+      "label": "detect()",
       "_callable": true,
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
-      "source_location": "L42"
+      "norm_label": "detect()",
+      "source_file": "src/lib/serial/__tests__/patterns.test.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_app_about_page_page",
@@ -3161,16 +3125,40 @@
       "source_location": "L9"
     },
     {
-      "id": "src_lib_tests_seo_render_test_normalize",
-      "label": "normalize()",
+      "id": "src_lib_serial_patterns_distinctcount",
+      "label": "distinctCount()",
       "_callable": true,
       "_origin": "ast",
       "community": 70,
-      "community_name": "seo-render.test.ts",
+      "community_name": "isBinaryRadar",
       "file_type": "code",
-      "norm_label": "normalize()",
-      "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L18"
+      "norm_label": "distinctcount()",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L45"
+    },
+    {
+      "id": "src_lib_serial_patterns_isbinaryradar",
+      "label": "isBinaryRadar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "isBinaryRadar",
+      "file_type": "code",
+      "norm_label": "isbinaryradar()",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L171"
+    },
+    {
+      "id": "src_lib_serial_patterns_ispalindrome",
+      "label": "isPalindrome()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 70,
+      "community_name": "isBinaryRadar",
+      "file_type": "code",
+      "norm_label": "ispalindrome()",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L63"
     },
     {
       "id": "src_app_opengraph_image_image",
@@ -3195,6 +3183,18 @@
       "norm_label": "image()",
       "source_file": "src/app/fancy-serial-numbers/broken-ladder/opengraph-image.tsx",
       "source_location": "L8"
+    },
+    {
+      "id": "src_lib_serial_patterns_patterndefinition_detect",
+      "label": ".detect()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 73,
+      "community_name": "PatternDefinition",
+      "file_type": "code",
+      "norm_label": ".detect()",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L28"
     },
     {
       "id": "scripts_validate_phase1_check",
@@ -3391,59 +3391,81 @@
       "source_location": "L22"
     },
     {
-      "id": "src_app_fancy_serial_numbers_low_serial_number_page",
-      "label": "low-serial-number/page.tsx",
+      "id": "tools_retest",
+      "label": "retest.mjs",
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "low-serial-number/page.tsx",
-      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
+      "norm_label": "retest.mjs",
+      "source_file": "tools/retest.mjs",
       "source_location": "L1"
     },
     {
-      "id": "src_app_fancy_serial_numbers_low_serial_number_page_metadata",
-      "label": "metadata",
+      "id": "tools_retest_builtin",
+      "label": "BUILTIN",
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
-      "source_location": "L13"
+      "norm_label": "builtin",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L92"
     },
     {
-      "id": "src_content_low_serial_number",
-      "label": "low-serial-number.ts",
+      "id": "tools_retest_bypattern",
+      "label": "byPattern",
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "low-serial-number.ts",
-      "source_file": "src/content/low-serial-number.ts",
-      "source_location": "L1"
+      "norm_label": "bypattern",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L123"
     },
     {
-      "id": "src_content_low_serial_number_comparison",
-      "label": "comparison",
+      "id": "tools_retest_data",
+      "label": "data",
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "comparison",
-      "source_file": "src/content/low-serial-number.ts",
-      "source_location": "L172"
+      "norm_label": "data",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L120"
     },
     {
-      "id": "src_content_low_serial_number_content",
-      "label": "content",
+      "id": "tools_retest_days",
+      "label": "DAYS",
       "_origin": "ast",
       "community": 1,
-      "community_name": "low-serial-number/page.tsx",
+      "community_name": "retest.mjs",
       "file_type": "code",
-      "norm_label": "content",
-      "source_file": "src/content/low-serial-number.ts",
-      "source_location": "L3"
+      "norm_label": "days",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L40"
+    },
+    {
+      "id": "tools_retest_label_to_ids",
+      "label": "LABEL_TO_IDS",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "label_to_ids",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L20"
+    },
+    {
+      "id": "tools_retest_old_suppressed_by",
+      "label": "OLD_SUPPRESSED_BY",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "retest.mjs",
+      "file_type": "code",
+      "norm_label": "old_suppressed_by",
+      "source_file": "tools/retest.mjs",
+      "source_location": "L67"
     },
     {
       "id": "tsconfig",
@@ -3875,50 +3897,6 @@
       "source_location": "L30"
     },
     {
-      "id": "src_components_content_scarceststarcallout",
-      "label": "ScarcestStarCallout.tsx",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "scarceststarcallout.tsx",
-      "source_file": "src/components/content/ScarcestStarCallout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_content_scarceststarcallout_global_min",
-      "label": "GLOBAL_MIN",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "global_min",
-      "source_file": "src/components/content/ScarcestStarCallout.tsx",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_components_content_scarceststarcallout_runs_2003",
-      "label": "RUNS_2003",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "runs_2003",
-      "source_file": "src/components/content/ScarcestStarCallout.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_config_site_source_links",
-      "label": "SOURCE_LINKS",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "source_links",
-      "source_file": "src/config/site.ts",
-      "source_location": "L53"
-    },
-    {
       "id": "src_content_two_dollar_value",
       "label": "two-dollar-value.ts",
       "_origin": "ast",
@@ -3963,70 +3941,48 @@
       "source_location": "L367"
     },
     {
-      "id": "src_components_tools_fancyserialchecker",
-      "label": "FancySerialChecker.tsx",
+      "id": "src_lib_comments_email_template",
+      "label": "email-template.ts",
       "_origin": "ast",
       "community": 14,
-      "community_name": "FancySerialChecker.tsx",
+      "community_name": "email-template.test.ts",
       "file_type": "code",
-      "norm_label": "fancyserialchecker.tsx",
-      "source_file": "src/components/tools/FancySerialChecker.tsx",
+      "norm_label": "email-template.ts",
+      "source_file": "src/lib/comments/email-template.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_components_tools_scoremeter",
-      "label": "ScoreMeter.tsx",
+      "id": "src_lib_comments_email_template_replyemailtemplate",
+      "label": "replyEmailTemplate",
       "_origin": "ast",
       "community": 14,
-      "community_name": "FancySerialChecker.tsx",
+      "community_name": "email-template.test.ts",
       "file_type": "code",
-      "norm_label": "scoremeter.tsx",
-      "source_file": "src/components/tools/ScoreMeter.tsx",
+      "norm_label": "replyemailtemplate",
+      "source_file": "src/lib/comments/email-template.ts",
+      "source_location": "L2"
+    },
+    {
+      "id": "src_lib_comments_tests_email_template_test",
+      "label": "email-template.test.ts",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "email-template.test.ts",
+      "file_type": "code",
+      "norm_label": "email-template.test.ts",
+      "source_file": "src/lib/comments/__tests__/email-template.test.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_components_tools_scoremeter_score_tier_styles",
-      "label": "SCORE_TIER_STYLES",
+      "id": "src_lib_comments_tests_email_template_test_nunjucks",
+      "label": "nunjucks",
       "_origin": "ast",
       "community": 14,
-      "community_name": "FancySerialChecker.tsx",
+      "community_name": "email-template.test.ts",
       "file_type": "code",
-      "norm_label": "score_tier_styles",
-      "source_file": "src/components/tools/ScoreMeter.tsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_components_tools_twodollarseriallookup",
-      "label": "TwoDollarSerialLookup.tsx",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "twodollarseriallookup.tsx",
-      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_data_two_dollar_series",
-      "label": "two-dollar-series.ts",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "two-dollar-series.ts",
-      "source_file": "src/data/two-dollar-series.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_serial_tests_two_dollar_test",
-      "label": "two-dollar.test.ts",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "FancySerialChecker.tsx",
-      "file_type": "code",
-      "norm_label": "two-dollar.test.ts",
-      "source_file": "src/lib/serial/__tests__/two-dollar.test.ts",
-      "source_location": "L1"
+      "norm_label": "nunjucks",
+      "source_file": "src/lib/comments/__tests__/email-template.test.ts",
+      "source_location": "L6"
     },
     {
       "id": "package_scripts",
@@ -4260,48 +4216,26 @@
       "source_location": "L8"
     },
     {
-      "id": "vitest_config",
-      "label": "vitest.config.mts",
-      "_origin": "ast",
-      "community": 16,
-      "community_name": "check-data.ts",
-      "file_type": "code",
-      "norm_label": "vitest.config.mts",
-      "source_file": "vitest.config.mts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_content_contentsections",
-      "label": "ContentSections.tsx",
+      "id": "src_app_fancy_serial_numbers_ladder_page",
+      "label": "ladder/page.tsx",
       "_origin": "ast",
       "community": 17,
       "community_name": "pages.ts",
       "file_type": "code",
-      "norm_label": "contentsections.tsx",
-      "source_file": "src/components/content/ContentSections.tsx",
+      "norm_label": "ladder/page.tsx",
+      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_content_1976_two_dollar_value",
-      "label": "1976-two-dollar-value.ts",
+      "id": "src_app_fancy_serial_numbers_ladder_page_metadata",
+      "label": "metadata",
       "_origin": "ast",
       "community": 17,
       "community_name": "pages.ts",
       "file_type": "code",
-      "norm_label": "1976-two-dollar-value.ts",
-      "source_file": "src/content/1976-two-dollar-value.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_content_1976_two_dollar_value_content",
-      "label": "content",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "pages.ts",
-      "file_type": "code",
-      "norm_label": "content",
-      "source_file": "src/content/1976-two-dollar-value.ts",
-      "source_location": "L3"
+      "norm_label": "metadata",
+      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
+      "source_location": "L13"
     },
     {
       "id": "src_content_about",
@@ -4348,25 +4282,36 @@
       "source_location": "L3"
     },
     {
-      "id": "src_content_methodology",
-      "label": "methodology.ts",
+      "id": "src_content_ladder",
+      "label": "ladder.ts",
       "_origin": "ast",
       "community": 17,
       "community_name": "pages.ts",
       "file_type": "code",
-      "norm_label": "methodology.ts",
-      "source_file": "src/content/methodology.ts",
+      "norm_label": "ladder.ts",
+      "source_file": "src/content/ladder.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_content_methodology_content",
+      "id": "src_content_ladder_comparison",
+      "label": "comparison",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "pages.ts",
+      "file_type": "code",
+      "norm_label": "comparison",
+      "source_file": "src/content/ladder.ts",
+      "source_location": "L164"
+    },
+    {
+      "id": "src_content_ladder_content",
       "label": "content",
       "_origin": "ast",
       "community": 17,
       "community_name": "pages.ts",
       "file_type": "code",
       "norm_label": "content",
-      "source_file": "src/content/methodology.ts",
+      "source_file": "src/content/ladder.ts",
       "source_location": "L3"
     },
     {
@@ -4832,17 +4777,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_content_articlebyline",
-      "label": "ArticleByline.tsx",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "fancy-serial-numbers/page.tsx",
-      "file_type": "code",
-      "norm_label": "articlebyline.tsx",
-      "source_file": "src/components/content/ArticleByline.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_content_articledirectory",
       "label": "ArticleDirectory.tsx",
       "_origin": "ast",
@@ -5177,7 +5111,7 @@
       "label": "layout.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "layout.tsx",
       "source_file": "src/app/layout.tsx",
@@ -5188,7 +5122,7 @@
       "label": "dynamic",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "dynamic",
       "source_file": "src/app/layout.tsx",
@@ -5199,7 +5133,7 @@
       "label": "geistMono",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "geistmono",
       "source_file": "src/app/layout.tsx",
@@ -5210,7 +5144,7 @@
       "label": "geistSans",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "geistsans",
       "source_file": "src/app/layout.tsx",
@@ -5221,7 +5155,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/layout.tsx",
@@ -5232,43 +5166,32 @@
       "label": "serifDisplay",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "serifdisplay",
       "source_file": "src/app/layout.tsx",
       "source_location": "L31"
     },
     {
-      "id": "src_app_tools_page",
-      "label": "tools/page.tsx",
+      "id": "src_components_layout_footer",
+      "label": "Footer.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
-      "norm_label": "tools/page.tsx",
-      "source_file": "src/app/tools/page.tsx",
+      "norm_label": "footer.tsx",
+      "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_tools_page_metadata",
-      "label": "metadata",
+      "id": "src_components_layout_footer_footer_silos",
+      "label": "FOOTER_SILOS",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/tools/page.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_tools_page_page",
-      "label": "page",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "icons.tsx",
-      "file_type": "code",
-      "norm_label": "page",
-      "source_file": "src/app/tools/page.tsx",
+      "norm_label": "footer_silos",
+      "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L6"
     },
     {
@@ -5276,7 +5199,7 @@
       "label": "Header.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "header.tsx",
       "source_file": "src/components/layout/Header.tsx",
@@ -5287,7 +5210,7 @@
       "label": "MegaNavigation.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "meganavigation.tsx",
       "source_file": "src/components/layout/MegaNavigation.tsx",
@@ -5298,7 +5221,7 @@
       "label": "MobileNav.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "mobilenav.tsx",
       "source_file": "src/components/layout/MobileNav.tsx",
@@ -5309,10 +5232,54 @@
       "label": "ThemeToggle.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "themetoggle.tsx",
       "source_file": "src/components/layout/ThemeToggle.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_tools_fancyserialchecker",
+      "label": "FancySerialChecker.tsx",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "fancyserialchecker.tsx",
+      "source_file": "src/components/tools/FancySerialChecker.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_tools_scoremeter",
+      "label": "ScoreMeter.tsx",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "scoremeter.tsx",
+      "source_file": "src/components/tools/ScoreMeter.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_tools_scoremeter_score_tier_styles",
+      "label": "SCORE_TIER_STYLES",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "score_tier_styles",
+      "source_file": "src/components/tools/ScoreMeter.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_tools_twodollarseriallookup",
+      "label": "TwoDollarSerialLookup.tsx",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "twodollarseriallookup.tsx",
+      "source_file": "src/components/tools/TwoDollarSerialLookup.tsx",
       "source_location": "L1"
     },
     {
@@ -5320,7 +5287,7 @@
       "label": "icons.tsx",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "icons.tsx",
       "source_file": "src/components/ui/icons.tsx",
@@ -5331,7 +5298,7 @@
       "label": "navigation.ts",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "navigation.ts",
       "source_file": "src/config/navigation.ts",
@@ -5342,18 +5309,18 @@
       "label": "companyLinks",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "companylinks",
       "source_file": "src/config/navigation.ts",
-      "source_location": "L6"
+      "source_location": "L7"
     },
     {
       "id": "src_config_navigation_fancyarticles",
       "label": "fancyArticles",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "fancyarticles",
       "source_file": "src/config/navigation.ts",
@@ -5364,33 +5331,110 @@
       "label": "navigation",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "navigation",
       "source_file": "src/config/navigation.ts",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "src_config_navigation_toollinks",
       "label": "toolLinks",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "code",
       "norm_label": "toollinks",
       "source_file": "src/config/navigation.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_config_routes_silolabels",
+      "label": "siloLabels",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "silolabels",
+      "source_file": "src/config/routes.ts",
+      "source_location": "L271"
+    },
+    {
+      "id": "src_lib_tests_seo_render_test",
+      "label": "seo-render.test.ts",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "seo-render.test.ts",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_tests_seo_render_test_jsdom",
+      "label": "{ JSDOM }",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "{ jsdom }",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
       "source_location": "L5"
+    },
+    {
+      "id": "src_lib_tests_seo_render_test_pages",
+      "label": "pages",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "pages",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "tools_register",
+      "label": "register.mjs",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "code",
+      "norm_label": "register.mjs",
+      "source_file": "tools/register.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_next",
+      "label": "next",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "concept",
+      "norm_label": "next",
+      "source_file": "package.json",
+      "source_location": "L24"
     },
     {
       "id": "ref_react",
       "label": "react",
       "_origin": "ast",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
       "source_location": "L25"
+    },
+    {
+      "id": "ref_react_dom",
+      "label": "react-dom",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "next",
+      "file_type": "concept",
+      "norm_label": "react-dom",
+      "source_file": "package.json",
+      "source_location": "L26"
     },
     {
       "id": "scripts_collect_waline_deps",
@@ -5468,50 +5512,6 @@
       "norm_label": "sorted",
       "source_file": "scripts/collect-waline-deps.cjs",
       "source_location": "L68"
-    },
-    {
-      "id": "src_lib_comments_email_template",
-      "label": "email-template.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[...all].ts",
-      "file_type": "code",
-      "norm_label": "email-template.ts",
-      "source_file": "src/lib/comments/email-template.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_comments_email_template_replyemailtemplate",
-      "label": "replyEmailTemplate",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[...all].ts",
-      "file_type": "code",
-      "norm_label": "replyemailtemplate",
-      "source_file": "src/lib/comments/email-template.ts",
-      "source_location": "L2"
-    },
-    {
-      "id": "src_lib_comments_tests_email_template_test",
-      "label": "email-template.test.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[...all].ts",
-      "file_type": "code",
-      "norm_label": "email-template.test.ts",
-      "source_file": "src/lib/comments/__tests__/email-template.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_comments_tests_email_template_test_nunjucks",
-      "label": "nunjucks",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "[...all].ts",
-      "file_type": "code",
-      "norm_label": "nunjucks",
-      "source_file": "src/lib/comments/__tests__/email-template.test.ts",
-      "source_location": "L6"
     },
     {
       "id": "src_pages_api_all",
@@ -5679,26 +5679,15 @@
       "source_location": "L8"
     },
     {
-      "id": "src_components_content_lastupdated",
-      "label": "LastUpdated.tsx",
+      "id": "src_components_content_contentsections",
+      "label": "ContentSections.tsx",
       "_origin": "ast",
       "community": 24,
       "community_name": "buildMetadata",
       "file_type": "code",
-      "norm_label": "lastupdated.tsx",
-      "source_file": "src/components/content/LastUpdated.tsx",
+      "norm_label": "contentsections.tsx",
+      "source_file": "src/components/content/ContentSections.tsx",
       "source_location": "L1"
-    },
-    {
-      "id": "src_config_site_last_updated",
-      "label": "LAST_UPDATED",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "buildMetadata",
-      "file_type": "code",
-      "norm_label": "last_updated",
-      "source_file": "src/config/site.ts",
-      "source_location": "L7"
     },
     {
       "id": "src_app_2_dollar_bill_serial_number_lookup_page",
@@ -5833,92 +5822,37 @@
       "source_location": "L62"
     },
     {
-      "id": "src_app_1976_2_dollar_bill_value_page",
-      "label": "1976-2-dollar-bill-value/page.tsx",
+      "id": "src_app_tools_page",
+      "label": "tools/page.tsx",
       "_origin": "ast",
       "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "community_name": "getRoute",
       "file_type": "code",
-      "norm_label": "1976-2-dollar-bill-value/page.tsx",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "norm_label": "tools/page.tsx",
+      "source_file": "src/app/tools/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_1976_2_dollar_bill_value_page_metadata",
+      "id": "src_app_tools_page_metadata",
       "label": "metadata",
       "_origin": "ast",
       "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "community_name": "getRoute",
       "file_type": "code",
       "norm_label": "metadata",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L14"
+      "source_file": "src/app/tools/page.tsx",
+      "source_location": "L7"
     },
     {
-      "id": "src_app_1976_2_dollar_bill_value_page_premiumrows",
-      "label": "premiumRows",
+      "id": "src_app_tools_page_page",
+      "label": "page",
       "_origin": "ast",
       "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "community_name": "getRoute",
       "file_type": "code",
-      "norm_label": "premiumrows",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_app_1976_2_dollar_bill_value_page_v1976",
-      "label": "v1976",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "v1976",
-      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_app_methodology_page",
-      "label": "methodology/page.tsx",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "methodology/page.tsx",
-      "source_file": "src/app/methodology/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_methodology_page_anchoritems",
-      "label": "anchorItems",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "anchoritems",
-      "source_file": "src/app/methodology/page.tsx",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_app_methodology_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/methodology/page.tsx",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_components_content_keytakeaways",
-      "label": "KeyTakeaways.tsx",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "1976-2-dollar-bill-value/page.tsx",
-      "file_type": "code",
-      "norm_label": "keytakeaways.tsx",
-      "source_file": "src/components/content/KeyTakeaways.tsx",
-      "source_location": "L1"
+      "norm_label": "page",
+      "source_file": "src/app/tools/page.tsx",
+      "source_location": "L6"
     },
     {
       "id": "scripts_audit_seo",
@@ -6031,17 +5965,6 @@
       "source_location": "L230"
     },
     {
-      "id": "src_lib_serial_patterns_patternsbyid",
-      "label": "patternsById",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "patternsbyid",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L797"
-    },
-    {
       "id": "src_lib_serial_patterns_strobo",
       "label": "STROBO",
       "_origin": "ast",
@@ -6051,94 +5974,6 @@
       "norm_label": "strobo",
       "source_file": "src/lib/serial/patterns.ts",
       "source_location": "L211"
-    },
-    {
-      "id": "src_lib_serial_tests_patterns_test",
-      "label": "patterns.test.ts",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "patterns.test.ts",
-      "source_file": "src/lib/serial/__tests__/patterns.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "tools_retest",
-      "label": "retest.mjs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "retest.mjs",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tools_retest_builtin",
-      "label": "BUILTIN",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "builtin",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L92"
-    },
-    {
-      "id": "tools_retest_bypattern",
-      "label": "byPattern",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "bypattern",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L123"
-    },
-    {
-      "id": "tools_retest_data",
-      "label": "data",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "data",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L120"
-    },
-    {
-      "id": "tools_retest_days",
-      "label": "DAYS",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "days",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L40"
-    },
-    {
-      "id": "tools_retest_label_to_ids",
-      "label": "LABEL_TO_IDS",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "label_to_ids",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L20"
-    },
-    {
-      "id": "tools_retest_old_suppressed_by",
-      "label": "OLD_SUPPRESSED_BY",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "patterns.ts",
-      "file_type": "code",
-      "norm_label": "old_suppressed_by",
-      "source_file": "tools/retest.mjs",
-      "source_location": "L67"
     },
     {
       "id": "src_lib_serial_index",
@@ -6161,17 +5996,6 @@
       "norm_label": "parse.ts",
       "source_file": "src/lib/serial/parse.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_lib_serial_patterns_patterns",
-      "label": "patterns",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "index.ts",
-      "file_type": "code",
-      "norm_label": "patterns",
-      "source_file": "src/lib/serial/patterns.ts",
-      "source_location": "L264"
     },
     {
       "id": "src_lib_serial_score",
@@ -6240,17 +6064,6 @@
       "source_location": "L156"
     },
     {
-      "id": "src_lib_serial_score_star_bonus",
-      "label": "STAR_BONUS",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "index.ts",
-      "file_type": "code",
-      "norm_label": "star_bonus",
-      "source_file": "src/lib/serial/score.ts",
-      "source_location": "L245"
-    },
-    {
       "id": "src_lib_serial_score_superseded_by",
       "label": "SUPERSEDED_BY",
       "_origin": "ast",
@@ -6260,17 +6073,6 @@
       "norm_label": "superseded_by",
       "source_file": "src/lib/serial/score.ts",
       "source_location": "L73"
-    },
-    {
-      "id": "src_lib_serial_tests_parse_test",
-      "label": "parse.test.ts",
-      "_origin": "ast",
-      "community": 30,
-      "community_name": "index.ts",
-      "file_type": "code",
-      "norm_label": "parse.test.ts",
-      "source_file": "src/lib/serial/__tests__/parse.test.ts",
-      "source_location": "L1"
     },
     {
       "id": "seo_fix_report",
@@ -6611,18 +6413,29 @@
       "label": "app/page.tsx",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "app/page.tsx",
       "source_file": "src/app/page.tsx",
       "source_location": "L1"
     },
     {
+      "id": "src_app_page_binaryguide",
+      "label": "binaryGuide",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "binaryguide",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L31"
+    },
+    {
       "id": "src_app_page_metadata",
       "label": "metadata",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/page.tsx",
@@ -6633,7 +6446,7 @@
       "label": "structuredData",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "structureddata",
       "source_file": "src/app/page.tsx",
@@ -6644,7 +6457,7 @@
       "label": "twoDollarLookup",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "twodollarlookup",
       "source_file": "src/app/page.tsx",
@@ -6655,7 +6468,7 @@
       "label": "twoDollarValue",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "twodollarvalue",
       "source_file": "src/app/page.tsx",
@@ -6666,40 +6479,18 @@
       "label": "whereIsSerial",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "whereisserial",
       "source_file": "src/app/page.tsx",
       "source_location": "L30"
     },
     {
-      "id": "src_components_content_alltoolsgrid",
-      "label": "AllToolsGrid.tsx",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "alltoolsgrid.tsx",
-      "source_file": "src/components/content/AllToolsGrid.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_content_alltoolsgrid_tool_types",
-      "label": "TOOL_TYPES",
-      "_origin": "ast",
-      "community": 35,
-      "community_name": "next",
-      "file_type": "code",
-      "norm_label": "tool_types",
-      "source_file": "src/components/content/AllToolsGrid.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "src_components_content_featuredon",
       "label": "FeaturedOn.tsx",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "featuredon.tsx",
       "source_file": "src/components/content/FeaturedOn.tsx",
@@ -6710,29 +6501,63 @@
       "label": "PatternGrid.tsx",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "patterngrid.tsx",
       "source_file": "src/components/content/PatternGrid.tsx",
       "source_location": "L1"
     },
     {
-      "id": "ref_next",
-      "label": "next",
+      "id": "src_components_content_serialdiagram",
+      "label": "SerialDiagram.tsx",
       "_origin": "ast",
       "community": 35,
-      "community_name": "next",
-      "file_type": "concept",
-      "norm_label": "next",
-      "source_file": "package.json",
-      "source_location": "L24"
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "serialdiagram.tsx",
+      "source_file": "src/components/content/SerialDiagram.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_seo_jsonld",
+      "label": "JsonLd.tsx",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonld.tsx",
+      "source_file": "src/components/seo/JsonLd.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_serial_patterns_patterns",
+      "label": "patterns",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "patterns",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L264"
+    },
+    {
+      "id": "design_components",
+      "label": "Components",
+      "_origin": "ast",
+      "community": 35,
+      "community_name": "app/page.tsx",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "components",
+      "source_file": "DESIGN.md",
+      "source_location": "L109"
     },
     {
       "id": "src_app_fancy_serial_numbers_birthday_note_page",
       "label": "birthday-note/page.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "birthday-note/page.tsx",
       "source_file": "src/app/fancy-serial-numbers/birthday-note/page.tsx",
@@ -6743,10 +6568,65 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/fancy-serial-numbers/birthday-note/page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_broken_ladder_page",
+      "label": "broken-ladder/page.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "broken-ladder/page.tsx",
+      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_broken_ladder_page_comparison",
+      "label": "comparison",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "comparison",
+      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_broken_ladder_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_low_serial_number_page",
+      "label": "low-serial-number/page.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "low-serial-number/page.tsx",
+      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_fancy_serial_numbers_low_serial_number_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/fancy-serial-numbers/low-serial-number/page.tsx",
       "source_location": "L13"
     },
     {
@@ -6754,7 +6634,7 @@
       "label": "radar/page.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "radar/page.tsx",
       "source_file": "src/app/fancy-serial-numbers/radar/page.tsx",
@@ -6765,7 +6645,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/fancy-serial-numbers/radar/page.tsx",
@@ -6776,10 +6656,21 @@
       "label": "ComparisonTable.tsx",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "comparisontable.tsx",
       "source_file": "src/components/content/ComparisonTable.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_content_keytakeaways",
+      "label": "KeyTakeaways.tsx",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "keytakeaways.tsx",
+      "source_file": "src/components/content/KeyTakeaways.tsx",
       "source_location": "L1"
     },
     {
@@ -6787,7 +6678,7 @@
       "label": "birthday-note.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "birthday-note.ts",
       "source_file": "src/content/birthday-note.ts",
@@ -6798,7 +6689,7 @@
       "label": "comparison",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "comparison",
       "source_file": "src/content/birthday-note.ts",
@@ -6809,10 +6700,43 @@
       "label": "content",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "content",
       "source_file": "src/content/birthday-note.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_content_low_serial_number",
+      "label": "low-serial-number.ts",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "low-serial-number.ts",
+      "source_file": "src/content/low-serial-number.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_low_serial_number_comparison",
+      "label": "comparison",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "comparison",
+      "source_file": "src/content/low-serial-number.ts",
+      "source_location": "L172"
+    },
+    {
+      "id": "src_content_low_serial_number_content",
+      "label": "content",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "broken-ladder/page.tsx",
+      "file_type": "code",
+      "norm_label": "content",
+      "source_file": "src/content/low-serial-number.ts",
       "source_location": "L3"
     },
     {
@@ -6820,7 +6744,7 @@
       "label": "radar.ts",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "radar.ts",
       "source_file": "src/content/radar.ts",
@@ -6831,7 +6755,7 @@
       "label": "comparison",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "comparison",
       "source_file": "src/content/radar.ts",
@@ -6842,7 +6766,7 @@
       "label": "content",
       "_origin": "ast",
       "community": 36,
-      "community_name": "birthday-note/page.tsx",
+      "community_name": "broken-ladder/page.tsx",
       "file_type": "code",
       "norm_label": "content",
       "source_file": "src/content/radar.ts",
@@ -7097,15 +7021,15 @@
       "source_location": "L4"
     },
     {
-      "id": "src_config_routes_routes",
-      "label": "routes",
+      "id": "src_config_site_author_bio",
+      "label": "AUTHOR_BIO",
       "_origin": "ast",
       "community": 4,
       "community_name": "seo.ts",
       "file_type": "code",
-      "norm_label": "routes",
-      "source_file": "src/config/routes.ts",
-      "source_location": "L47"
+      "norm_label": "author_bio",
+      "source_file": "src/config/site.ts",
+      "source_location": "L19"
     },
     {
       "id": "src_config_site_author_same_as",
@@ -7592,6 +7516,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_content_articlebyline",
+      "label": "ArticleByline.tsx",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "articlebyline.tsx",
+      "source_file": "src/components/content/ArticleByline.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_content_lastupdated",
+      "label": "LastUpdated.tsx",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "lastupdated.tsx",
+      "source_file": "src/components/content/LastUpdated.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_components_content_sourcesblock",
       "label": "SourcesBlock.tsx",
       "_origin": "ast",
@@ -7611,17 +7557,6 @@
       "file_type": "code",
       "norm_label": "articleschema.tsx",
       "source_file": "src/components/seo/ArticleSchema.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_seo_jsonld",
-      "label": "JsonLd.tsx",
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "site.ts",
-      "file_type": "code",
-      "norm_label": "jsonld.tsx",
-      "source_file": "src/components/seo/JsonLd.tsx",
       "source_location": "L1"
     },
     {
@@ -7645,6 +7580,17 @@
       "norm_label": "author_name",
       "source_file": "src/config/site.ts",
       "source_location": "L16"
+    },
+    {
+      "id": "src_config_site_last_updated",
+      "label": "LAST_UPDATED",
+      "_origin": "ast",
+      "community": 47,
+      "community_name": "site.ts",
+      "file_type": "code",
+      "norm_label": "last_updated",
+      "source_file": "src/config/site.ts",
+      "source_location": "L7"
     },
     {
       "id": "src_config_site_last_updated_iso",
@@ -8483,26 +8429,26 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_layout_footer",
-      "label": "Footer.tsx",
+      "id": "src_components_content_alltoolsgrid",
+      "label": "AllToolsGrid.tsx",
       "_origin": "ast",
       "community": 58,
       "community_name": "routes.ts",
       "file_type": "code",
-      "norm_label": "footer.tsx",
-      "source_file": "src/components/layout/Footer.tsx",
+      "norm_label": "alltoolsgrid.tsx",
+      "source_file": "src/components/content/AllToolsGrid.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_components_layout_footer_footer_silos",
-      "label": "FOOTER_SILOS",
+      "id": "src_components_content_alltoolsgrid_tool_types",
+      "label": "TOOL_TYPES",
       "_origin": "ast",
       "community": 58,
       "community_name": "routes.ts",
       "file_type": "code",
-      "norm_label": "footer_silos",
-      "source_file": "src/components/layout/Footer.tsx",
-      "source_location": "L6"
+      "norm_label": "tool_types",
+      "source_file": "src/components/content/AllToolsGrid.tsx",
+      "source_location": "L4"
     },
     {
       "id": "src_config_routes",
@@ -8516,15 +8462,48 @@
       "source_location": "L1"
     },
     {
-      "id": "src_config_routes_silolabels",
-      "label": "siloLabels",
+      "id": "src_config_routes_routes",
+      "label": "routes",
       "_origin": "ast",
       "community": 58,
       "community_name": "routes.ts",
       "file_type": "code",
-      "norm_label": "silolabels",
+      "norm_label": "routes",
       "source_file": "src/config/routes.ts",
-      "source_location": "L271"
+      "source_location": "L47"
+    },
+    {
+      "id": "src_components_content_scarceststarcallout",
+      "label": "ScarcestStarCallout.tsx",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StarNoteLookup.tsx",
+      "file_type": "code",
+      "norm_label": "scarceststarcallout.tsx",
+      "source_file": "src/components/content/ScarcestStarCallout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_content_scarceststarcallout_global_min",
+      "label": "GLOBAL_MIN",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StarNoteLookup.tsx",
+      "file_type": "code",
+      "norm_label": "global_min",
+      "source_file": "src/components/content/ScarcestStarCallout.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_components_content_scarceststarcallout_runs_2003",
+      "label": "RUNS_2003",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StarNoteLookup.tsx",
+      "file_type": "code",
+      "norm_label": "runs_2003",
+      "source_file": "src/components/content/ScarcestStarCallout.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_components_tools_starnotelookup",
@@ -8659,6 +8638,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_data_two_dollar_series",
+      "label": "two-dollar-series.ts",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "two-dollar-series.ts",
+      "source_file": "src/data/two-dollar-series.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_serial_score_star_bonus",
+      "label": "STAR_BONUS",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "star_bonus",
+      "source_file": "src/lib/serial/score.ts",
+      "source_location": "L245"
+    },
+    {
       "id": "src_lib_serial_tests_new_patterns_test",
       "label": "new-patterns.test.ts",
       "_origin": "ast",
@@ -8670,6 +8671,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_lib_serial_tests_parse_test",
+      "label": "parse.test.ts",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "parse.test.ts",
+      "source_file": "src/lib/serial/__tests__/parse.test.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_serial_tests_score_test",
       "label": "score.test.ts",
       "_origin": "ast",
@@ -8678,6 +8690,28 @@
       "file_type": "code",
       "norm_label": "score.test.ts",
       "source_file": "src/lib/serial/__tests__/score.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_serial_tests_two_dollar_test",
+      "label": "two-dollar.test.ts",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "two-dollar.test.ts",
+      "source_file": "src/lib/serial/__tests__/two-dollar.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "vitest_config",
+      "label": "vitest.config.mts",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "scoreSerial",
+      "file_type": "code",
+      "norm_label": "vitest.config.mts",
+      "source_file": "vitest.config.mts",
       "source_location": "L1"
     },
     {
@@ -8813,26 +8847,37 @@
       "source_location": "L91"
     },
     {
-      "id": "src_app_fancy_serial_numbers_ladder_page",
-      "label": "ladder/page.tsx",
+      "id": "src_app_methodology_page",
+      "label": "methodology/page.tsx",
       "_origin": "ast",
       "community": 64,
       "community_name": "Breadcrumbs.tsx",
       "file_type": "code",
-      "norm_label": "ladder/page.tsx",
-      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
+      "norm_label": "methodology/page.tsx",
+      "source_file": "src/app/methodology/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_fancy_serial_numbers_ladder_page_metadata",
+      "id": "src_app_methodology_page_anchoritems",
+      "label": "anchorItems",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Breadcrumbs.tsx",
+      "file_type": "code",
+      "norm_label": "anchoritems",
+      "source_file": "src/app/methodology/page.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_app_methodology_page_metadata",
       "label": "metadata",
       "_origin": "ast",
       "community": 64,
       "community_name": "Breadcrumbs.tsx",
       "file_type": "code",
       "norm_label": "metadata",
-      "source_file": "src/app/fancy-serial-numbers/ladder/page.tsx",
-      "source_location": "L13"
+      "source_file": "src/app/methodology/page.tsx",
+      "source_location": "L12"
     },
     {
       "id": "src_components_seo_breadcrumbs",
@@ -8846,36 +8891,36 @@
       "source_location": "L1"
     },
     {
-      "id": "src_content_ladder",
-      "label": "ladder.ts",
+      "id": "src_config_site_source_links",
+      "label": "SOURCE_LINKS",
       "_origin": "ast",
       "community": 64,
       "community_name": "Breadcrumbs.tsx",
       "file_type": "code",
-      "norm_label": "ladder.ts",
-      "source_file": "src/content/ladder.ts",
+      "norm_label": "source_links",
+      "source_file": "src/config/site.ts",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_content_methodology",
+      "label": "methodology.ts",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "Breadcrumbs.tsx",
+      "file_type": "code",
+      "norm_label": "methodology.ts",
+      "source_file": "src/content/methodology.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_content_ladder_comparison",
-      "label": "comparison",
-      "_origin": "ast",
-      "community": 64,
-      "community_name": "Breadcrumbs.tsx",
-      "file_type": "code",
-      "norm_label": "comparison",
-      "source_file": "src/content/ladder.ts",
-      "source_location": "L164"
-    },
-    {
-      "id": "src_content_ladder_content",
+      "id": "src_content_methodology_content",
       "label": "content",
       "_origin": "ast",
       "community": 64,
       "community_name": "Breadcrumbs.tsx",
       "file_type": "code",
       "norm_label": "content",
-      "source_file": "src/content/ladder.ts",
+      "source_file": "src/content/methodology.ts",
       "source_location": "L3"
     },
     {
@@ -8916,18 +8961,62 @@
       "label": "@waline/client",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "confidence": "EXTRACTED",
       "file_type": "code",
       "norm_label": "@waline/client",
       "source_file": "@waline/client"
     },
     {
+      "id": "src_app_1976_2_dollar_bill_value_page",
+      "label": "1976-2-dollar-bill-value/page.tsx",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "1976-2-dollar-bill-value/page.tsx",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_1976_2_dollar_bill_value_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_app_1976_2_dollar_bill_value_page_premiumrows",
+      "label": "premiumRows",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "premiumrows",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_app_1976_2_dollar_bill_value_page_v1976",
+      "label": "v1976",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "v1976",
+      "source_file": "src/app/1976-2-dollar-bill-value/page.tsx",
+      "source_location": "L21"
+    },
+    {
       "id": "src_app_fancy_serial_number_value_page",
       "label": "fancy-serial-number-value/page.tsx",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "fancy-serial-number-value/page.tsx",
       "source_file": "src/app/fancy-serial-number-value/page.tsx",
@@ -8938,7 +9027,7 @@
       "label": "anchorItems",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "anchoritems",
       "source_file": "src/app/fancy-serial-number-value/page.tsx",
@@ -8949,7 +9038,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/fancy-serial-number-value/page.tsx",
@@ -8960,33 +9049,44 @@
       "label": "Comments.tsx",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "code",
       "norm_label": "comments.tsx",
       "source_file": "src/components/comments/Comments.tsx",
       "source_location": "L1"
     },
     {
+      "id": "src_content_1976_two_dollar_value",
+      "label": "1976-two-dollar-value.ts",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "1976-two-dollar-value.ts",
+      "source_file": "src/content/1976-two-dollar-value.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_content_1976_two_dollar_value_content",
+      "label": "content",
+      "_origin": "ast",
+      "community": 66,
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
+      "file_type": "code",
+      "norm_label": "content",
+      "source_file": "src/content/1976-two-dollar-value.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "ref_waline_client",
       "label": "@waline/client",
       "_origin": "ast",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "file_type": "concept",
       "norm_label": "@waline/client",
       "source_file": "package.json",
       "source_location": "L21"
-    },
-    {
-      "id": "src_components_content_serialdiagram",
-      "label": "SerialDiagram.tsx",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "Design System: Banknote Expert",
-      "file_type": "code",
-      "norm_label": "serialdiagram.tsx",
-      "source_file": "src/components/content/SerialDiagram.tsx",
-      "source_location": "L1"
     },
     {
       "id": "design",
@@ -9086,18 +9186,6 @@
       "norm_label": "colors",
       "source_file": "DESIGN.md",
       "source_location": "L81"
-    },
-    {
-      "id": "design_components",
-      "label": "Components",
-      "_origin": "ast",
-      "community": 67,
-      "community_name": "Design System: Banknote Expert",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "components",
-      "source_file": "DESIGN.md",
-      "source_location": "L109"
     },
     {
       "id": "design_design_system_banknote_expert",
@@ -9261,44 +9349,11 @@
       "source_location": "L125"
     },
     {
-      "id": "src_app_fancy_serial_numbers_broken_ladder_page",
-      "label": "broken-ladder/page.tsx",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "broken-ladder/page.tsx",
-      "file_type": "code",
-      "norm_label": "broken-ladder/page.tsx",
-      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_fancy_serial_numbers_broken_ladder_page_comparison",
-      "label": "comparison",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "broken-ladder/page.tsx",
-      "file_type": "code",
-      "norm_label": "comparison",
-      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_app_fancy_serial_numbers_broken_ladder_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 69,
-      "community_name": "broken-ladder/page.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/fancy-serial-numbers/broken-ladder/page.tsx",
-      "source_location": "L13"
-    },
-    {
       "id": "src_content_broken_ladder",
       "label": "broken-ladder.ts",
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
       "norm_label": "broken-ladder.ts",
       "source_file": "src/content/broken-ladder.ts",
@@ -9309,7 +9364,7 @@
       "label": "content",
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
       "norm_label": "content",
       "source_file": "src/content/broken-ladder.ts",
@@ -9320,7 +9375,7 @@
       "label": "examples",
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
       "norm_label": "examples",
       "source_file": "src/content/broken-ladder.ts",
@@ -9331,7 +9386,7 @@
       "label": "path",
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "src/content/broken-ladder.ts",
@@ -9342,10 +9397,32 @@
       "label": "broken-ladder.test.ts",
       "_origin": "ast",
       "community": 69,
-      "community_name": "broken-ladder/page.tsx",
+      "community_name": "broken-ladder.test.ts",
       "file_type": "code",
       "norm_label": "broken-ladder.test.ts",
       "source_file": "src/content/__tests__/broken-ladder.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_serial_patterns_patternsbyid",
+      "label": "patternsById",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "broken-ladder.test.ts",
+      "file_type": "code",
+      "norm_label": "patternsbyid",
+      "source_file": "src/lib/serial/patterns.ts",
+      "source_location": "L797"
+    },
+    {
+      "id": "src_lib_serial_tests_patterns_test",
+      "label": "patterns.test.ts",
+      "_origin": "ast",
+      "community": 69,
+      "community_name": "broken-ladder.test.ts",
+      "file_type": "code",
+      "norm_label": "patterns.test.ts",
+      "source_file": "src/lib/serial/__tests__/patterns.test.ts",
       "source_location": "L1"
     },
     {
@@ -9426,17 +9503,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_config_site_author_bio",
-      "label": "AUTHOR_BIO",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "RelatedPages.tsx",
-      "file_type": "code",
-      "norm_label": "author_bio",
-      "source_file": "src/config/site.ts",
-      "source_location": "L19"
-    },
-    {
       "id": "src_config_site_authordetails",
       "label": "authorDetails",
       "_origin": "ast",
@@ -9446,61 +9512,6 @@
       "norm_label": "authordetails",
       "source_file": "src/config/site.ts",
       "source_location": "L62"
-    },
-    {
-      "id": "src_lib_tests_seo_render_test",
-      "label": "seo-render.test.ts",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "file_type": "code",
-      "norm_label": "seo-render.test.ts",
-      "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_tests_seo_render_test_jsdom",
-      "label": "{ JSDOM }",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "file_type": "code",
-      "norm_label": "{ jsdom }",
-      "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_lib_tests_seo_render_test_pages",
-      "label": "pages",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "file_type": "code",
-      "norm_label": "pages",
-      "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L17"
-    },
-    {
-      "id": "tools_register",
-      "label": "register.mjs",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "file_type": "code",
-      "norm_label": "register.mjs",
-      "source_file": "tools/register.mjs",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_react_dom",
-      "label": "react-dom",
-      "_origin": "ast",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "file_type": "concept",
-      "norm_label": "react-dom",
-      "source_file": "package.json",
-      "source_location": "L26"
     },
     {
       "id": "src_app_opengraph_image",
@@ -10679,6 +10690,18 @@
       "source_url": null
     },
     {
+      "id": "ref_nunjucks",
+      "label": "ref_nunjucks",
+      "_origin": "semantic",
+      "community": 14,
+      "community_name": "email-template.test.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_nunjucks",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "ref_node_path",
       "label": "ref_node_path",
       "_origin": "semantic",
@@ -10715,11 +10738,23 @@
       "type": "external"
     },
     {
+      "id": "ref_node_module",
+      "label": "ref_node_module",
+      "_origin": "semantic",
+      "community": 21,
+      "community_name": "next",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_module",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "src_app_globals",
       "label": "src_app_globals",
       "_origin": "semantic",
       "community": 21,
-      "community_name": "icons.tsx",
+      "community_name": "next",
       "external": true,
       "file_type": "concept",
       "norm_label": "src_app_globals",
@@ -10763,18 +10798,6 @@
       "type": "external"
     },
     {
-      "id": "ref_nunjucks",
-      "label": "ref_nunjucks",
-      "_origin": "semantic",
-      "community": 23,
-      "community_name": "[...all].ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_nunjucks",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_node_fs",
       "label": "ref_node_fs",
       "_origin": "semantic",
@@ -10791,22 +10814,10 @@
       "label": "src_components_comments_comments_theme",
       "_origin": "semantic",
       "community": 66,
-      "community_name": "fancy-serial-number-value/page.tsx",
+      "community_name": "1976-2-dollar-bill-value/page.tsx",
       "external": true,
       "file_type": "concept",
       "norm_label": "src_components_comments_comments_theme",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_module",
-      "label": "ref_node_module",
-      "_origin": "semantic",
-      "community": 70,
-      "community_name": "seo-render.test.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_module",
       "source_file": "",
       "type": "external"
     },
@@ -12321,7 +12332,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -18738,6 +18749,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_tests_seo_render_test",
+      "target": "src_config_navigation_fancyarticles",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_tests_seo_test",
       "target": "src_lib_page_schema_pagegraph",
       "relation": "imports",
@@ -24838,6 +24861,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_tests_seo_render_test",
+      "target": "src_config_navigation",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_tests_seo_render_test",
+      "target": "src_components_layout_footer",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_tests_seo_test",
       "target": "ref_vitest",
       "relation": "imports_from",
@@ -29554,13 +29601,24 @@
     },
     {
       "source": "src_app_page",
+      "target": "src_app_page_binaryguide",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/page.tsx",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_page",
       "target": "src_app_page_page",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -31133,7 +31191,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/config/navigation.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -31144,7 +31202,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/config/navigation.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -31155,7 +31213,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/config/navigation.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -33014,7 +33072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -33573,6 +33631,18 @@
       "context": "argument",
       "source_file": "src/components/content/ArticleDirectory.tsx",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_tests_seo_render_test",
+      "target": "src_components_layout_footer_footer",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "src/lib/__tests__/seo-render.test.ts",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -34161,5 +34231,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1a7d999b6e0c2ba83a789842785f998685e5af22"
+  "built_at_commit": "58c6446aaf9451182628ad3ecc1b4c79e1c42cef"
 }

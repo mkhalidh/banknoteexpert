@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792023574.1680703,
-    "seen": 1792024366.0977807,
-    "ast_hash": "15541c4fb1bc76ae3cf6354e650cf7ad",
+    "mtime": 1792416072.1641016,
+    "seen": 1792416094.8129559,
+    "ast_hash": "9ce4553267f9ddf4ef3f8d64a26aa70f",
     "semantic_hash": ""
   },
   "src/app/privacy/page.tsx": {
@@ -678,9 +678,9 @@
     "semantic_hash": ""
   },
   "src/config/navigation.ts": {
-    "mtime": 1791928804.4540467,
-    "seen": 1791929948.7625132,
-    "ast_hash": "429dabafc0397cbe2ad3673895bd8b8f",
+    "mtime": 1792415886.0428278,
+    "seen": 1792416049.9317498,
+    "ast_hash": "7eb1ed32ae3a6df4c155f4c8fe0b260d",
     "semantic_hash": ""
   },
   "public/images/editorial/banknote-collecting-detail.webp": {
@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792415038.972067,
-    "seen": 1792415446.3730752,
-    "ast_hash": "c7f68693a2815f6e4ebec2371be6d15c",
+    "mtime": 1792416014.035237,
+    "seen": 1792416049.9317498,
+    "ast_hash": "9a88987d9e1c8fe8365913f624e63204",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {

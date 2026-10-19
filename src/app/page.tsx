@@ -28,6 +28,7 @@ const structuredData = pageGraph("/", []);
 const twoDollarValue = getRoute("/2-dollar-bill-value/");
 const twoDollarLookup = getRoute("/2-dollar-bill-serial-number-lookup/");
 const whereIsSerial = getRoute("/where-is-the-serial-number-on-a-dollar-bill/");
+const binaryGuide = getRoute("/fancy-serial-numbers/binary/");
 
 export default function Page() {
   return (
@@ -127,8 +128,10 @@ export default function Page() {
           prized because so few notes carry them. This fancy serial number
           lookup checks every pattern below at once. Each card shows a worked
           example, a plain definition and rough odds;
-          four patterns have their own page, and the rest are explained on the
-          hub.
+          several patterns have their own guide, including the{" "}
+          <Link href={binaryGuide.path} className="link-accent">
+            binary serial number guide
+          </Link>. The rest are explained on the hub.
         </p>
         <div className="mt-6">
           <PatternGrid />

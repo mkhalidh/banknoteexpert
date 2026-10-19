@@ -5,6 +5,8 @@ import { createRequire } from "node:module";
 const { JSDOM } = createRequire(import.meta.url)("jsdom") as { JSDOM: new (html: string) => { window: { document: Document } } };
 import { describe, expect, it, vi } from "vitest";
 import { routes } from "@/config/routes";
+import { fancyArticles } from "@/config/navigation";
+import { Footer } from "@/components/layout/Footer";
 
 // Verify server content without browser-only checker/widget initialization.
 vi.mock("@/components/tools/FancySerialChecker", () => ({ FancySerialChecker: () => null }));
@@ -58,6 +60,12 @@ describe("rendered SEO content (browser tools excluded)", () => {
     const Hub = (await pages["../../app/fancy-serial-numbers/page.tsx"]()).default;
     const home = new JSDOM(renderToStaticMarkup(React.createElement(Home))).window.document;
     const hub = new JSDOM(renderToStaticMarkup(React.createElement(Hub))).window.document;
+    const footer = new JSDOM(renderToStaticMarkup(React.createElement(Footer))).window.document;
+    const binaryPath = "/fancy-serial-numbers/binary/";
+    const binaryHref = binaryPath.slice(0, -1);
+    expect(home.querySelectorAll(`a[href="${binaryHref}"]`).length).toBeGreaterThanOrEqual(2);
+    expect(fancyArticles).toContainEqual({ path: binaryPath, label: "Binary serial numbers" });
+    expect(footer.querySelector(`a[href="${binaryHref}"]`)).not.toBeNull();
     for (const link of home.querySelectorAll('a[href^="/fancy-serial-numbers/#"]')) {
       const id = link.getAttribute("href")!.split("#")[1];
       expect(hub.getElementById(id), id).not.toBeNull();
