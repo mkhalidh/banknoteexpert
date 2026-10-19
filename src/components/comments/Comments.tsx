@@ -67,13 +67,22 @@ export function Comments({ path }: { path?: string }) {
         containerRef.current?.scrollIntoView({ block: "start" });
       }
     };
-    const markUserLinks = () => {
-      mount.querySelectorAll<HTMLAnchorElement>(".wl-content a, .wl-nick").forEach(link => {
-        link.relList.add("ugc", "nofollow", "noopener", "noreferrer");
+    const sanitizeLinks = () => {
+      mount.querySelectorAll<HTMLAnchorElement>("a[href]").forEach(link => {
+        const destination = new URL(link.href, window.location.origin);
+        if (destination.protocol === "http:" || destination.protocol === "https:") {
+          if (destination.origin !== window.location.origin) {
+            link.replaceWith(document.createTextNode(link.textContent ?? ""));
+            return;
+          }
+        }
+        if (link.matches(".wl-content a, .wl-nick")) {
+          link.relList.add("ugc", "nofollow", "noopener", "noreferrer");
+        }
       });
       scrollToLinkedComment();
     };
-    const linksObserver = new MutationObserver(markUserLinks);
+    const linksObserver = new MutationObserver(sanitizeLinks);
     linksObserver.observe(mount, { childList: true, subtree: true, attributes: true, attributeFilter: ["href"] });
     window.addEventListener("hashchange", scrollToLinkedComment);
 
@@ -92,7 +101,7 @@ export function Comments({ path }: { path?: string }) {
         serverURL: window.location.origin,
         emoji: ["https://unpkg.com/@waline/emojis@1.1.0/weibo"],
         path,
-        meta: ["nick", "mail", "link"],
+        meta: ["nick", "mail"],
         requiredMeta: ["nick"],
         imageUploader: false,
         // The widget's own in-place "Login" button builds its popup URL

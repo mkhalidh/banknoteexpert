@@ -34,7 +34,7 @@ export default function Page() {
       <div className="mt-6"><FancySerialChecker /></div>
       <figure className="article-cover mt-5">
         <Image src="/images/patterns/super-radar-note.jpg" alt="Official US $20 specimen note showing where the serial number appears; its printed serial is not a super radar" width={1055} height={433} sizes="(max-width: 800px) 100vw, 1000px" preload />
-        <figcaption className="mt-2 text-sm text-zinc-500">Illustrative specimen note. Its printed serial is not a super radar. Image: <a href="https://www.uscurrency.gov/media/60" className="link-accent">U.S. Currency Education Program</a>.</figcaption>
+        <figcaption className="mt-2 text-sm text-zinc-500">Illustrative specimen note. Its printed serial is not a super radar. Image: U.S. Currency Education Program.</figcaption>
       </figure>
     </header>
     <KeyTakeaways items={content.takeaways} />

@@ -1334,7 +1334,7 @@
       "file_type": "code",
       "norm_label": "contentsections()",
       "source_file": "src/components/content/ContentSections.tsx",
-      "source_location": "L51"
+      "source_location": "L50"
     },
     {
       "id": "src_app_2_dollar_bill_serial_number_lookup_page_page",
@@ -1982,7 +1982,7 @@
       "file_type": "code",
       "norm_label": "featuredon()",
       "source_file": "src/components/content/FeaturedOn.tsx",
-      "source_location": "L8"
+      "source_location": "L6"
     },
     {
       "id": "src_components_content_patterngrid_patterngrid",
@@ -2558,7 +2558,7 @@
       "file_type": "code",
       "norm_label": "fact()",
       "source_file": "src/components/tools/StarNoteLookup.tsx",
-      "source_location": "L270"
+      "source_location": "L261"
     },
     {
       "id": "src_components_tools_starnotelookup_fancyblock",
@@ -2570,7 +2570,7 @@
       "file_type": "code",
       "norm_label": "fancyblock()",
       "source_file": "src/components/tools/StarNoteLookup.tsx",
-      "source_location": "L279"
+      "source_location": "L270"
     },
     {
       "id": "src_components_tools_starnotelookup_formatint",
@@ -12946,7 +12946,7 @@
       "context": "import",
       "deferred": true,
       "source_file": "src/components/comments/Comments.tsx",
-      "source_location": "L80",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -31162,7 +31162,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/content/ContentSections.tsx",
-      "source_location": "L51",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -31184,7 +31184,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/content/FeaturedOn.tsx",
-      "source_location": "L8",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -31690,7 +31690,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/tools/StarNoteLookup.tsx",
-      "source_location": "L270",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -31701,7 +31701,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/tools/StarNoteLookup.tsx",
-      "source_location": "L279",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -34526,7 +34526,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L66",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -35115,5 +35115,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "85269a4ab83750b01389fa5575e93f723c0a26a8"
+  "built_at_commit": "4bf888d0fc5c34fd2069c7af85d1e285cb75fa42"
 }

@@ -136,9 +136,7 @@ export default function Page() {
           </li>
           {SOURCE_LINKS.filter(source => /Heritage|Stack|Engraving/.test(source.name)).map(source => (
             <li key={source.url}>
-              <a href={source.url} rel="nofollow noopener noreferrer" className="link-accent">
-                {source.name}
-              </a>
+              {source.name}
             </li>
           ))}
         </ul>

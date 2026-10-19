@@ -27,6 +27,11 @@ describe("rendered SEO content (browser tools excluded)", () => {
       const page = await load();
       const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
       expect(doc.querySelectorAll("h1"), file).toHaveLength(1);
+      const externalAnchors = [...doc.querySelectorAll("a[href]")].filter(anchor => {
+        const url = new URL(anchor.getAttribute("href")!, "https://www.banknoteexpert.com/");
+        return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname);
+      });
+      expect(externalAnchors, file).toHaveLength(0);
       if (file.endsWith("/fancy-serial-numbers/binary/page.tsx")) {
         expect(page.metadata.title).toBe("Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
         expect(page.metadata.description).toBe("What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.");

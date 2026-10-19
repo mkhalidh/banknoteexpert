@@ -11,13 +11,12 @@ function Block({ block }: { block: ContentBlock }) {
     return (
       <p className="mt-3 text-zinc-700 dark:text-zinc-300">
         {block.segments.map((segment, index) =>
-          typeof segment === "string" ? (
-            <span key={index}>{segment}</span>
+          typeof segment === "string" || /^https?:\/\//.test(segment.href) ? (
+            <span key={index}>{typeof segment === "string" ? segment : segment.label}</span>
           ) : (
             <Link
               key={index}
               href={segment.href}
-              rel={/^https?:\/\//.test(segment.href) ? "nofollow noopener noreferrer" : undefined}
               className="link-accent"
             >
               {segment.label}

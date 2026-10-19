@@ -52,9 +52,7 @@ export default function Page() {
         <ul className="mt-4 flex flex-col gap-2">
           {SOURCE_LINKS.map((source) => (
             <li key={source.url}>
-              <a href={source.url} rel="nofollow noopener noreferrer" className="underline underline-offset-2">
-                {source.name}
-              </a>
+              {source.name}
             </li>
           ))}
         </ul>

@@ -51,7 +51,10 @@ if (!metadataOnly) {
     for (const link of doc.querySelectorAll("a[href]")) {
       const raw = link.getAttribute("href");
       const url = new URL(raw, origin + path);
-      if (!/^(www\.)?banknoteexpert\.com$/.test(url.hostname)) continue;
+      if (!/^(www\.)?banknoteexpert\.com$/.test(url.hostname)) {
+        check(!/^https?:$/.test(url.protocol), `${path}: external link not allowed ${raw}`);
+        continue;
+      }
       check(url.origin === origin, `${path}: noncanonical host ${raw}`);
       if (/\.[a-z0-9]+$/i.test(url.pathname)) continue;
       check(url.pathname.endsWith("/"), `${path}: missing trailing slash ${raw}`);

@@ -250,16 +250,7 @@ export function StarNoteLookup() {
               <ValueResultPanel result={fancy.value} />
             ) : null}
 
-            <p className="text-sm">
-              <a
-                href={result.runs[0].sourcePdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-accent font-medium"
-              >
-                Verify this run in the BEP report it came from
-              </a>
-            </p>
+            <p className="text-sm">Source: Bureau of Engraving and Printing monthly production report.</p>
           </div>
         )}
       </div>
