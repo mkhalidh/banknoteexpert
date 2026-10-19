@@ -372,7 +372,7 @@ export const patterns: PatternDefinition[] = [
     detect: (d) => isRadarRepeater(d),
     rarityOdds: "1 in 1,100,000",
     baseScore: 90,
-    href: RADAR_HREF,
+    href: "/fancy-serial-numbers/radar-repeater/",
   },
   {
     id: "double-binary-repeater",

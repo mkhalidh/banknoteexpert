@@ -30,6 +30,7 @@ const twoDollarLookup = getRoute("/2-dollar-bill-serial-number-lookup/");
 const whereIsSerial = getRoute("/where-is-the-serial-number-on-a-dollar-bill/");
 const binaryGuide = getRoute("/fancy-serial-numbers/binary/");
 const superRadarGuide = getRoute("/fancy-serial-numbers/super-radar/");
+const radarRepeaterGuide = getRoute("/fancy-serial-numbers/radar-repeater/");
 
 export default function Page() {
   return (
@@ -135,6 +136,9 @@ export default function Page() {
           </Link>{" "}and the{" "}
           <Link href={superRadarGuide.path} className="link-accent">
             super radar serial number guide
+          </Link>{", and the "}
+          <Link href={radarRepeaterGuide.path} className="link-accent">
+            radar repeater serial number guide
           </Link>. The rest are explained on the hub.
         </p>
         <div className="mt-6">

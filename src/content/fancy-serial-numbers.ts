@@ -221,7 +221,7 @@ export const patternCopy: Record<string, PatternCopy> = {
       "A radar repeater repeats a four-digit block that is itself a radar, giving an ABBA|ABBA shape such as 12211221. It is both a repeater and a palindrome at once.",
     valueNote:
       "A scarce double pattern that commands a clear premium over a plain repeater or a plain radar.",
-    linkLabel: "See radars and super radars in full",
+    linkLabel: "Read the radar repeater serial number guide",
   },
   "double-binary-repeater": {
     definition:
@@ -367,8 +367,13 @@ export const patternOrder: string[] = [
   "super-high-serial",
 ];
 
-/** The four dedicated spoke pages, linked down from the hub. */
+/** Dedicated spoke pages, linked down from the hub. */
 export const spokeLinks = [
+  {
+    href: "/fancy-serial-numbers/radar-repeater/",
+    label: "Radar repeater serial numbers",
+    description: "How the palindrome and repeater rules overlap, with exact odds and honest value data.",
+  },
   {
     href: "/fancy-serial-numbers/super-radar/",
     label: "Super radar serial numbers",

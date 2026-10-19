@@ -27,6 +27,10 @@ for (const route of routes) {
       title: "Super Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
       description: "What is a super radar serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what super radar notes actually sold for.",
     },
+    "/fancy-serial-numbers/radar-repeater/": {
+      title: "Radar Repeater Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a radar repeater serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what radar repeater notes actually sold for.",
+    },
   }[route.path];
   check(title && (requestedMetadata ? title === requestedMetadata.title : title.length <= 60) && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
   check(description && (requestedMetadata ? description === requestedMetadata.description : description.length <= 160) && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);

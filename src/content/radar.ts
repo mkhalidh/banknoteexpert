@@ -156,6 +156,11 @@ export const content: PageContent = {
   ],
   related: [
     {
+      href: "/fancy-serial-numbers/radar-repeater/",
+      label: "Radar repeater serial numbers",
+      description: "Compare a general palindrome with a repeating mirrored block.",
+    },
+    {
       href: "/fancy-serial-numbers/super-radar/",
       label: "Super radar serial numbers",
       description: "See the stricter palindrome shape, exact odds and sold-price bands.",

@@ -1,8 +1,8 @@
 import { getRoute } from "@/config/routes";
 
 const links = (paths: string[]) => paths.map(path => { const route = getRoute(path); return { path, label: route.title }; });
-export const fancyArticles = links(["/fancy-serial-numbers/", "/fancy-serial-number-value/", "/where-is-the-serial-number-on-a-dollar-bill/", "/fancy-serial-numbers/binary/", "/fancy-serial-numbers/radar/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/ladder/", "/fancy-serial-numbers/broken-ladder/", "/fancy-serial-numbers/low-serial-number/", "/fancy-serial-numbers/birthday-note/"])
-  .map(link => link.path === "/fancy-serial-numbers/binary/" ? { ...link, label: "Binary serial numbers" } : link.path === "/fancy-serial-numbers/super-radar/" ? { ...link, label: "Super radar serial numbers" } : link);
+export const fancyArticles = links(["/fancy-serial-numbers/", "/fancy-serial-number-value/", "/where-is-the-serial-number-on-a-dollar-bill/", "/fancy-serial-numbers/binary/", "/fancy-serial-numbers/radar/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/", "/fancy-serial-numbers/ladder/", "/fancy-serial-numbers/broken-ladder/", "/fancy-serial-numbers/low-serial-number/", "/fancy-serial-numbers/birthday-note/"])
+  .map(link => link.path === "/fancy-serial-numbers/binary/" ? { ...link, label: "Binary serial numbers" } : link.path === "/fancy-serial-numbers/super-radar/" ? { ...link, label: "Super radar serial numbers" } : link.path === "/fancy-serial-numbers/radar-repeater/" ? { ...link, label: "Radar repeater serial numbers" } : link);
 export const toolLinks = links(["/", "/fancy-serial-numbers/radar/", "/fancy-serial-numbers/ladder/", "/fancy-serial-numbers/low-serial-number/", "/fancy-serial-numbers/birthday-note/", "/star-note-lookup/", "/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/"]);
 export const companyLinks = links(["/methodology/", "/privacy/", "/about/", "/about-the-author/", "/terms/"]);
 export const navigation = [

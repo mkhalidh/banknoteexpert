@@ -29,7 +29,7 @@ export const content: PageContent = {
       heading: "Super radar vs radar: what makes it super?",
       blocks: [
         { kind: "paragraph", text: "Every super radar is a radar, but an ordinary radar can have several different digits in its mirrored halves. For example, 12344321 reads the same in reverse, yet its inner six digits are not identical. The extra requirement is the continuous six-digit center, not merely the matching ends." },
-        { kind: "richtext", segments: ["The ", { href: "/fancy-serial-numbers/radar/", label: "radar serial number guide" }, " explains the broader palindrome family. A ", { href: "/fancy-serial-numbers/#radar-repeater", label: "radar repeater" }, " also repeats a block, which is a different extra rule."] },
+        { kind: "richtext", segments: ["The ", { href: "/fancy-serial-numbers/radar/", label: "radar serial number guide" }, " explains the broader palindrome family. A ", { href: "/fancy-serial-numbers/radar-repeater/", label: "radar repeater" }, " also repeats a block, which is a different extra rule."] },
       ],
     },
     {
@@ -117,7 +117,7 @@ export const content: PageContent = {
   ],
   related: [
     { href: "/fancy-serial-numbers/radar/", label: "Radar serial numbers", description: "Compare the broader palindrome family." },
-    { href: "/fancy-serial-numbers/#radar-repeater", label: "Radar repeaters", description: "See the different repeater overlap." },
+    { href: "/fancy-serial-numbers/radar-repeater/", label: "Radar repeaters", description: "See the different repeater overlap." },
     { href: "/fancy-serial-numbers/binary/", label: "Binary serial numbers", description: "Why non-solid super radars also use two distinct digits." },
     { href: "/fancy-serial-numbers/", label: "All fancy serial patterns", description: "Browse the full pattern directory." },
   ],

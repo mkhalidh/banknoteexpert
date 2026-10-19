@@ -52,7 +52,7 @@ describe("SEO publication contracts", () => {
     const descriptions = new Set();
     for (const route of routes) {
       const meta = pageContents.find(page => page.meta.path === route.path)?.meta ?? route;
-      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/"].includes(route.path) })).not.toThrow();
+      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/"].includes(route.path) })).not.toThrow();
       expect(titles.has(meta.title)).toBe(false);
       expect(descriptions.has(meta.description)).toBe(false);
       titles.add(meta.title); descriptions.add(meta.description);

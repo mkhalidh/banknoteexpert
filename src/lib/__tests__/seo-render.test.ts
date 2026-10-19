@@ -38,6 +38,17 @@ describe("rendered SEO content (browser tools excluded)", () => {
       } else if (file.endsWith("/fancy-serial-numbers/super-radar/page.tsx")) {
         expect(page.metadata.title).toBe("Super Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
         expect(page.metadata.description).toBe("What is a super radar serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what super radar notes actually sold for.");
+      } else if (file.endsWith("/fancy-serial-numbers/radar-repeater/page.tsx")) {
+        expect(page.metadata.title).toBe("Radar Repeater Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
+        expect(page.metadata.description).toBe("What is a radar repeater serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what radar repeater notes actually sold for.");
+        expect(doc.querySelectorAll("#faq .card").length).toBe(7);
+        const valueTable = [...doc.querySelectorAll("table")].find(table => table.querySelector("caption")?.textContent?.includes("Recorded Radar Repeater"));
+        expect(valueTable).toBeDefined();
+        expect(valueTable!.querySelectorAll("tbody tr").length).toBe(3);
+        for (const row of valueTable!.querySelectorAll("tbody tr")) {
+          expect(row.querySelectorAll("td")[0]?.textContent).toBe("");
+          expect(row.querySelectorAll("td")[1]?.textContent).toBe("");
+        }
       } else {
         expect(page.metadata.title.length, file).toBeLessThanOrEqual(60);
         expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
@@ -79,6 +90,11 @@ describe("rendered SEO content (browser tools excluded)", () => {
     expect(home.querySelectorAll(`a[href="${superRadarHref}"]`).length).toBeGreaterThanOrEqual(2);
     expect(fancyArticles).toContainEqual({ path: superRadarPath, label: "Super radar serial numbers" });
     expect(footer.querySelector(`a[href="${superRadarHref}"]`)).not.toBeNull();
+    const radarRepeaterPath = "/fancy-serial-numbers/radar-repeater/";
+    const radarRepeaterHref = radarRepeaterPath.slice(0, -1);
+    expect(home.querySelectorAll(`a[href="${radarRepeaterHref}"]`).length).toBeGreaterThanOrEqual(2);
+    expect(fancyArticles).toContainEqual({ path: radarRepeaterPath, label: "Radar repeater serial numbers" });
+    expect(footer.querySelector(`a[href="${radarRepeaterHref}"]`)).not.toBeNull();
     for (const link of home.querySelectorAll('a[href^="/fancy-serial-numbers/#"]')) {
       const id = link.getAttribute("href")!.split("#")[1];
       expect(hub.getElementById(id), id).not.toBeNull();
