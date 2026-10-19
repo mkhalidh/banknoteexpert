@@ -471,9 +471,9 @@ export const patterns: PatternDefinition[] = [
       const inner = d.slice(1, 7);
       return maxRepeat(inner) === inner.length;
     },
-    rarityOdds: "1 in 1,000,000",
+    rarityOdds: "1 in 1,111,111",
     baseScore: 88,
-    href: RADAR_HREF,
+    href: "/fancy-serial-numbers/super-radar/",
   },
   {
     id: "binary-radar",

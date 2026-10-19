@@ -52,7 +52,7 @@ describe("SEO publication contracts", () => {
     const descriptions = new Set();
     for (const route of routes) {
       const meta = pageContents.find(page => page.meta.path === route.path)?.meta ?? route;
-      expect(() => buildMetadata({ ...meta, allowLongMetadata: route.path === "/fancy-serial-numbers/binary/" })).not.toThrow();
+      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/"].includes(route.path) })).not.toThrow();
       expect(titles.has(meta.title)).toBe(false);
       expect(descriptions.has(meta.description)).toBe(false);
       titles.add(meta.title); descriptions.add(meta.description);
@@ -80,6 +80,10 @@ describe("SEO publication contracts", () => {
     const binaryFaq = pageGraph("/fancy-serial-numbers/binary/", [])["@graph"].find(node => node["@type"] === "FAQPage");
     expect(binaryFaq?.mainEntity).toHaveLength(binaryQuestions.length);
     expect(binaryQuestions).toHaveLength(10);
+    const superRadarQuestions = pageContents.find(page => page.meta.path === "/fancy-serial-numbers/super-radar/")!.sections.find(section => section.id === "faq")!.blocks.filter(block => block.kind === "subheading");
+    const superRadarFaq = pageGraph("/fancy-serial-numbers/super-radar/", [])["@graph"].find(node => node["@type"] === "FAQPage");
+    expect(superRadarFaq?.mainEntity).toHaveLength(superRadarQuestions.length);
+    expect(superRadarQuestions).toHaveLength(11);
   });
 
 });

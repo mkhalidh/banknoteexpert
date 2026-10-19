@@ -1,28 +1,28 @@
 # Graph Report - banknoteexpert  (2026-10-19)
 
 ## Corpus Check
-- 193 files · ~110,327 words
+- 197 files · ~118,018 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 9, .css 2, .ico 1)
 
 ## Summary
-- 927 nodes · 2003 edges · 74 communities (72 shown, 2 thin omitted)
+- 946 nodes · 2060 edges · 64 communities (63 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `58c6446a`
+- Built from commit: `85269a4a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - value.ts
-- retest.mjs
+- super-radar/page.tsx
 - fancy-serial-numbers/page.tsx
 - patterns.ts
 - seo.ts
 - audit-links.ts
-- StarNoteLookup.tsx
+- next
 - RelatedPages.tsx
 - AI Fix Plan: banknoteexpert.com SEO issues
 - validate-phase1.mjs
@@ -37,22 +37,21 @@
 - devDependencies
 - socialImage
 - capture-phase1-baseline.mjs
-- next
+- layout.tsx
 - collect-waline-deps.cjs
 - [...all].ts
-- buildMetadata
+- ContentSections.tsx
 - Waline comment moderation implementation guide
 - 2-dollar-bill-serial-number-lookup/page.tsx
 - TwoDollarValueChart.tsx
 - getRoute
 - audit-seo.mjs
-- index.ts
 - Fixplan SEO implementation report
 - security-headers.mjs
 - dependencies
 - Banknote Expert
 - app/page.tsx
-- broken-ladder/page.tsx
+- birthday-note/page.tsx
 - UI redesign and SEO fixes
 - 1976-2-dollar-bill-value/opengraph-image.tsx
 - 2-dollar-bill-serial-number-lookup/opengraph-image.tsx
@@ -63,9 +62,7 @@
 - fancy-serial-number-value/opengraph-image.tsx
 - birthday-note/opengraph-image.tsx
 - ladder/opengraph-image.tsx
-- site.ts
 - low-serial-number/opengraph-image.tsx
-- SEO implementation report with production acceptance pending
 - fancy-serial-numbers/opengraph-image.tsx
 - radar/opengraph-image.tsx
 - methodology/opengraph-image.tsx
@@ -77,31 +74,24 @@
 - routes.ts
 - Next.js agent rules and saved Graphify map guidance
 - postcss.config.mjs
-- scoreSerial
 - star-note-lookup/page.tsx
-- ValueResultPanel.tsx
 - Breadcrumbs.tsx
 - ref_node_fs
 - 1976-2-dollar-bill-value/page.tsx
-- Design System: Banknote Expert
-- binary/page.tsx
-- broken-ladder.test.ts
-- isBinaryRadar
-- app/opengraph-image.tsx
+- broken-ladder/page.tsx
 - broken-ladder/opengraph-image.tsx
-- PatternDefinition
 
 ## God Nodes (most connected - your core abstractions)
-1. `next` - 48 edges
-2. `socialImage()` - 47 edges
-3. `getRoute()` - 38 edges
-4. `buildMetadata()` - 25 edges
-5. `Breadcrumbs()` - 22 edges
+1. `socialImage()` - 51 edges
+2. `next` - 49 edges
+3. `getRoute()` - 40 edges
+4. `buildMetadata()` - 26 edges
+5. `Breadcrumbs()` - 23 edges
 6. `scoreSerial()` - 21 edges
-7. `ContentSections()` - 18 edges
-8. `PageContent` - 18 edges
-9. `RelatedPages()` - 17 edges
-10. `KeyTakeaways()` - 16 edges
+7. `ContentSections()` - 19 edges
+8. `PageContent` - 19 edges
+9. `RelatedPages()` - 18 edges
+10. `KeyTakeaways()` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Components` --references--> `SerialDiagram()`  [INFERRED]
@@ -118,35 +108,35 @@
 ## Import Cycles
 - None detected.
 
-## Communities (74 total, 2 thin omitted)
+## Communities (64 total, 1 thin omitted)
 
 ### Community 0 - "value.ts"
-Cohesion: 0.15
-Nodes (24): SoldSamples(), Page(), Cell(), formatUsd(), maxHigh(), patternLabel(), ValueRangeTable(), NoteCondition (+16 more)
+Cohesion: 0.08
+Nodes (45): faqs, metadata, money(), Page(), Page(), Cell(), formatUsd(), maxHigh() (+37 more)
 
-### Community 1 - "retest.mjs"
-Cohesion: 0.16
-Nodes (13): BUILTIN, byPattern, data, DAYS, LABEL_TO_IDS, leap(), longestRun(), OLD_FULL_LADDER() (+5 more)
+### Community 1 - "super-radar/page.tsx"
+Cohesion: 0.36
+Nodes (6): faqs, metadata, money(), Page(), content, examples
 
 ### Community 2 - "fancy-serial-numbers/page.tsx"
 Cohesion: 0.07
-Nodes (35): metadata, page, anchorItems, metadata, anchorItems, metadata, AnchorNav(), AnchorNavItem (+27 more)
+Nodes (36): metadata, page, anchorItems, metadata, anchorItems, metadata, AnchorNav(), AnchorNavItem (+28 more)
 
 ### Community 3 - "patterns.ts"
-Cohesion: 0.10
-Nodes (12): blockIsRadar(), DAYS_IN_MONTH, isBirthday(), isFourRepeat(), isFullLadder(), isLeapYear(), isNearTrueBinary(), isRadarRepeater() (+4 more)
+Cohesion: 0.05
+Nodes (33): blockIsRadar(), DAYS_IN_MONTH, distinctCount(), isBinaryRadar(), isBirthday(), isFourRepeat(), isFullLadder(), isLeapYear() (+25 more)
 
 ### Community 4 - "seo.ts"
-Cohesion: 0.23
-Nodes (11): robots(), sitemap(), pageModified, pagePublished, AUTHOR_BIO, AUTHOR_SAME_AS, homeFaqs, pageContents (+3 more)
+Cohesion: 0.07
+Nodes (37): Statically rendered public content and trust-page links, Banknote Expert LLM site description, Client-side serial checks; optional comments use a separate server-backed service, Serial checker, star lookup, $2 serial lookup and price guide, Recorded sold-price samples and BEP print-run data, SEO implementation report with production acceptance pending, True performance baseline requires original revision, Production acceptance incomplete (+29 more)
 
 ### Community 5 - "audit-links.ts"
 Cohesion: 0.07
 Nodes (33): adjacency, anchorByTarget, APP_DIR, broken, COMPONENTS_DIR, depth, extractLinks(), hardcoded (+25 more)
 
-### Community 6 - "StarNoteLookup.tsx"
-Cohesion: 0.13
-Nodes (21): GLOBAL_MIN, RUNS_2003, ScarcestStarCallout(), DEFAULT_DENOM, DENOMINATIONS, formatInt(), RARITY_STYLE, StarNoteLookup() (+13 more)
+### Community 6 - "next"
+Cohesion: 0.05
+Nodes (55): next, react, vitest, GLOBAL_MIN, RUNS_2003, ScarcestStarCallout(), NavItem, Theme (+47 more)
 
 ### Community 7 - "RelatedPages.tsx"
 Cohesion: 0.24
@@ -185,28 +175,28 @@ Cohesion: 0.14
 Nodes (14): scripts, audit:links, audit:seo, build, check:data, check:metadata, check:value-anomalies, dev (+6 more)
 
 ### Community 16 - "check-data.ts"
-Cohesion: 0.17
+Cohesion: 0.15
 Nodes (9): ref_node_path, ref_node_url, DATA_DIR, Finding, findings, REPLACEMENT, ROOT, walk() (+1 more)
 
 ### Community 17 - "pages.ts"
-Cohesion: 0.16
-Nodes (13): metadata, content, content, comparison, content, content, content, ContentBlock (+5 more)
+Cohesion: 0.19
+Nodes (12): content, content, content, comparison, content, content, content, content (+4 more)
 
 ### Community 18 - "devDependencies"
 Cohesion: 0.15
 Nodes (13): devDependencies, eslint, eslint-config-next, jsdom, lighthouse, playwright, tailwindcss, @tailwindcss/postcss (+5 more)
 
 ### Community 19 - "socialImage"
-Cohesion: 0.16
-Nodes (13): alt, contentType, Image(), size, alt, contentType, Image(), size (+5 more)
+Cohesion: 0.11
+Nodes (21): alt, contentType, Image(), size, alt, contentType, Image(), size (+13 more)
 
 ### Community 20 - "capture-phase1-baseline.mjs"
 Cohesion: 0.20
 Nodes (9): ref_chrome_launcher, lighthouse, playwright, headings, paths, requests, xml, report (+1 more)
 
-### Community 21 - "next"
-Cohesion: 0.06
-Nodes (38): next, ref_node_module, react, react-dom, src_app_globals, dynamic, geistMono, geistSans (+30 more)
+### Community 21 - "layout.tsx"
+Cohesion: 0.08
+Nodes (23): ref_node_module, react-dom, src_app_globals, dynamic, geistMono, geistSans, metadata, serifDisplay (+15 more)
 
 ### Community 22 - "collect-waline-deps.cjs"
 Cohesion: 0.20
@@ -216,9 +206,9 @@ Nodes (10): ref_fs, ref_path, collect(), fs, includePaths, path, projectRoot, re
 Cohesion: 0.22
 Nodes (9): i18n-iso-countries, ref_ip2region, @waline/vercel, Application, config, handler(), ip2regionInstance, isoCountries (+1 more)
 
-### Community 24 - "buildMetadata"
-Cohesion: 0.17
-Nodes (7): metadata, TOOLS, metadata, metadata, ContentSections(), LastUpdated(), buildMetadata()
+### Community 24 - "ContentSections.tsx"
+Cohesion: 0.19
+Nodes (7): metadata, metadata, ContentSections(), comparison, content, ContentBlock, ContentSection
 
 ### Community 25 - "Waline comment moderation implementation guide"
 Cohesion: 0.27
@@ -233,16 +223,12 @@ Cohesion: 0.29
 Nodes (6): money(), range(), TwoDollarValueChart(), TWO_DOLLAR_VALUES, TWO_DOLLAR_VALUES_UPDATED, TwoDollarValue
 
 ### Community 28 - "getRoute"
-Cohesion: 0.50
-Nodes (4): metadata, page, ToolsPage(), getRoute()
+Cohesion: 0.22
+Nodes (8): alt, contentType, Image(), size, metadata, page, ToolsPage(), getRoute()
 
 ### Community 29 - "audit-seo.mjs"
 Cohesion: 0.22
 Nodes (7): jsdom, base, descriptions, documents, errors, metadataOnly, titles
-
-### Community 30 - "index.ts"
-Cohesion: 0.20
-Nodes (15): fail(), ParsedSerial, ParseError, ParseErrorCode, ParseResult, parseSerial(), AXIS_OF, COMBO_BONUS (+7 more)
 
 ### Community 31 - "Fixplan SEO implementation report"
 Cohesion: 0.25
@@ -261,12 +247,12 @@ Cohesion: 0.29
 Nodes (6): Banknote Expert, Brand Commitments, Capabilities and Constraints, Evidence on Hand, Platform, Product Purpose
 
 ### Community 35 - "app/page.tsx"
-Cohesion: 0.12
-Nodes (14): Components, binaryGuide, metadata, structuredData, twoDollarLookup, twoDollarValue, whereIsSerial, AllToolsGrid() (+6 more)
+Cohesion: 0.08
+Nodes (21): Colors, Components, Design System: Banknote Expert, Do's and Don'ts, Elevation & Depth, Layout, Overview, Shapes (+13 more)
 
-### Community 36 - "broken-ladder/page.tsx"
-Cohesion: 0.12
-Nodes (16): metadata, comparison, metadata, metadata, metadata, Byline(), ComparisonTable(), ComparisonTableProps (+8 more)
+### Community 36 - "birthday-note/page.tsx"
+Cohesion: 0.16
+Nodes (10): metadata, metadata, metadata, ComparisonTable(), ComparisonTableProps, KeyTakeaways(), comparison, content (+2 more)
 
 ### Community 37 - "UI redesign and SEO fixes"
 Cohesion: 0.33
@@ -308,17 +294,9 @@ Nodes (4): alt, contentType, Image(), size
 Cohesion: 0.53
 Nodes (4): alt, contentType, Image(), size
 
-### Community 47 - "site.ts"
-Cohesion: 0.20
-Nodes (10): ArticleByline(), SourcesBlock(), ArticleSchemaProps, AUTHOR_NAME, LAST_UPDATED, LAST_UPDATED_ISO, ORG_LOGO_PATH, ORG_SAME_AS (+2 more)
-
 ### Community 48 - "low-serial-number/opengraph-image.tsx"
 Cohesion: 0.53
 Nodes (4): alt, contentType, Image(), size
-
-### Community 49 - "SEO implementation report with production acceptance pending"
-Cohesion: 0.17
-Nodes (12): Statically rendered public content and trust-page links, Banknote Expert LLM site description, Client-side serial checks; optional comments use a separate server-backed service, Serial checker, star lookup, $2 serial lookup and price guide, Recorded sold-price samples and BEP print-run data, SEO implementation report with production acceptance pending, True performance baseline requires original revision, Production acceptance incomplete (+4 more)
 
 ### Community 50 - "fancy-serial-numbers/opengraph-image.tsx"
 Cohesion: 0.53
@@ -360,49 +338,25 @@ Nodes (5): TOOL_TYPES, ChangeFrequency, PageType, RouteEntry, routes
 Cohesion: 0.50
 Nodes (4): Next.js agent rules and saved Graphify map guidance, Read installed Next.js guides before code changes, Graphify GRAPH_REPORT.md and graph.json query-first navigation, Claude instructions referencing AGENTS.md
 
-### Community 61 - "scoreSerial"
-Cohesion: 0.14
-Nodes (15): vitest, TwoDollarSerialLookup(), getTwoDollarSeries(), twoDollarSeries, clamp(), patternSatisfied(), scoreSerial(), STAR_BONUS (+7 more)
-
 ### Community 62 - "star-note-lookup/page.tsx"
 Cohesion: 0.27
 Nodes (8): metadata, Page(), patternLinks, sectionById(), content, patternLinkLabels, patternPageIds, rarityTierRows
 
-### Community 63 - "ValueResultPanel.tsx"
-Cohesion: 0.38
-Nodes (6): formatUsd(), patternLabel(), ValueResultPanel(), CONDITION_LABELS, VALUE_PATTERN_LABELS, ValueResult
-
 ### Community 64 - "Breadcrumbs.tsx"
-Cohesion: 0.19
-Nodes (9): anchorItems, metadata, BreadcrumbItem, Breadcrumbs(), BreadcrumbsProps, SOURCE_LINKS, content, blockText() (+1 more)
+Cohesion: 0.16
+Nodes (11): anchorItems, metadata, BreadcrumbItem, Breadcrumbs(), BreadcrumbsProps, JsonLd(), JsonLdProps, SOURCE_LINKS (+3 more)
 
 ### Community 65 - "ref_node_fs"
 Cohesion: 0.50
 Nodes (3): ref_node_fs, anomalies, grades
 
 ### Community 66 - "1976-2-dollar-bill-value/page.tsx"
-Cohesion: 0.13
-Nodes (12): @waline/client, metadata, Page(), premiumRows, sectionById(), v1976, anchorItems, metadata (+4 more)
+Cohesion: 0.15
+Nodes (11): @waline/client, metadata, Page(), premiumRows, sectionById(), v1976, anchorItems, metadata (+3 more)
 
-### Community 67 - "Design System: Banknote Expert"
-Cohesion: 0.22
-Nodes (8): Colors, Design System: Banknote Expert, Do's and Don'ts, Elevation & Depth, Layout, Overview, Shapes, Typography
-
-### Community 68 - "binary/page.tsx"
-Cohesion: 0.29
-Nodes (7): faqs, metadata, money(), Page(), FaqItem(), content, examples
-
-### Community 69 - "broken-ladder.test.ts"
-Cohesion: 0.32
-Nodes (5): content, examples, path, patternsById, detect()
-
-### Community 70 - "isBinaryRadar"
-Cohesion: 0.67
-Nodes (3): distinctCount(), isBinaryRadar(), isPalindrome()
-
-### Community 71 - "app/opengraph-image.tsx"
-Cohesion: 0.53
-Nodes (4): alt, contentType, Image(), size
+### Community 69 - "broken-ladder/page.tsx"
+Cohesion: 0.25
+Nodes (7): comparison, metadata, SoldSamples(), Byline(), content, examples, path
 
 ### Community 72 - "broken-ladder/opengraph-image.tsx"
 Cohesion: 0.53
@@ -413,24 +367,24 @@ Nodes (4): alt, contentType, Image(), size
   README.md · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **290 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+285 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 376 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **299 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+294 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 385 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `README placeholder check:data gate warns but exits zero` and `Documented real BEP dataset: 438 runs, seven denominations, 15 series, extracted 2026-09-12`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `next` connect `next` to `fancy-serial-numbers/page.tsx`, `seo.ts`, `StarNoteLookup.tsx`, `RelatedPages.tsx`, `package.json`, `2-dollar-bill-value/page.tsx`, `pages.ts`, `socialImage`, `[...all].ts`, `buildMetadata`, `2-dollar-bill-serial-number-lookup/page.tsx`, `getRoute`, `security-headers.mjs`, `app/page.tsx`, `broken-ladder/page.tsx`, `site.ts`, `routes.ts`, `star-note-lookup/page.tsx`, `Breadcrumbs.tsx`, `1976-2-dollar-bill-value/page.tsx`, `binary/page.tsx`?**
-  _High betweenness centrality (0.214) - this node is a cross-community bridge._
-- **Why does `getRoute()` connect `getRoute` to `fancy-serial-numbers/page.tsx`, `seo.ts`, `RelatedPages.tsx`, `socialImage`, `next`, `app/page.tsx`, `1976-2-dollar-bill-value/opengraph-image.tsx`, `2-dollar-bill-serial-number-lookup/opengraph-image.tsx`, `2-dollar-bill-value/opengraph-image.tsx`, `about/opengraph-image.tsx`, `about-the-author/opengraph-image.tsx`, `blog/opengraph-image.tsx`, `fancy-serial-number-value/opengraph-image.tsx`, `birthday-note/opengraph-image.tsx`, `ladder/opengraph-image.tsx`, `low-serial-number/opengraph-image.tsx`, `fancy-serial-numbers/opengraph-image.tsx`, `radar/opengraph-image.tsx`, `methodology/opengraph-image.tsx`, `privacy/opengraph-image.tsx`, `star-note-lookup/opengraph-image.tsx`, `terms/opengraph-image.tsx`, `tools/opengraph-image.tsx`, `where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx`, `routes.ts`, `Breadcrumbs.tsx`, `broken-ladder.test.ts`, `broken-ladder/opengraph-image.tsx`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `SEO implementation report with production acceptance pending` connect `SEO implementation report with production acceptance pending` to `ref_node_fs`, `seo.ts`, `site.ts`, `capture-phase1-baseline.mjs`, `audit-seo.mjs`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `next` connect `next` to `value.ts`, `super-radar/page.tsx`, `fancy-serial-numbers/page.tsx`, `seo.ts`, `RelatedPages.tsx`, `package.json`, `2-dollar-bill-value/page.tsx`, `socialImage`, `layout.tsx`, `[...all].ts`, `ContentSections.tsx`, `2-dollar-bill-serial-number-lookup/page.tsx`, `getRoute`, `security-headers.mjs`, `app/page.tsx`, `birthday-note/page.tsx`, `routes.ts`, `star-note-lookup/page.tsx`, `Breadcrumbs.tsx`, `1976-2-dollar-bill-value/page.tsx`, `broken-ladder/page.tsx`?**
+  _High betweenness centrality (0.216) - this node is a cross-community bridge._
+- **Why does `getRoute()` connect `getRoute` to `fancy-serial-numbers/page.tsx`, `seo.ts`, `RelatedPages.tsx`, `socialImage`, `layout.tsx`, `app/page.tsx`, `1976-2-dollar-bill-value/opengraph-image.tsx`, `2-dollar-bill-serial-number-lookup/opengraph-image.tsx`, `2-dollar-bill-value/opengraph-image.tsx`, `about/opengraph-image.tsx`, `about-the-author/opengraph-image.tsx`, `blog/opengraph-image.tsx`, `fancy-serial-number-value/opengraph-image.tsx`, `birthday-note/opengraph-image.tsx`, `ladder/opengraph-image.tsx`, `low-serial-number/opengraph-image.tsx`, `fancy-serial-numbers/opengraph-image.tsx`, `radar/opengraph-image.tsx`, `methodology/opengraph-image.tsx`, `privacy/opengraph-image.tsx`, `star-note-lookup/opengraph-image.tsx`, `terms/opengraph-image.tsx`, `tools/opengraph-image.tsx`, `where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx`, `routes.ts`, `Breadcrumbs.tsx`, `broken-ladder/page.tsx`, `broken-ladder/opengraph-image.tsx`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Why does `SEO implementation report with production acceptance pending` connect `seo.ts` to `ref_node_fs`, `capture-phase1-baseline.mjs`, `audit-seo.mjs`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _290 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _299 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `value.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.1477832512315271 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08106219426974144 - nodes in this community are weakly interconnected._
 - **Should `fancy-serial-numbers/page.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.07397959183673469 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07215686274509804 - nodes in this community are weakly interconnected._

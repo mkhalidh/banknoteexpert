@@ -18,11 +18,18 @@ for (const route of routes) {
   documents.set(route.path, doc);
   const title = doc.title;
   const description = doc.querySelector('meta[name="description"]')?.content;
-  const binaryException = route.path === "/fancy-serial-numbers/binary/";
-  const requestedTitle = "Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert";
-  const requestedDescription = "What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.";
-  check(title && (binaryException ? title === requestedTitle : title.length <= 60) && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
-  check(description && (binaryException ? description === requestedDescription : description.length <= 160) && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);
+  const requestedMetadata = {
+    "/fancy-serial-numbers/binary/": {
+      title: "Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.",
+    },
+    "/fancy-serial-numbers/super-radar/": {
+      title: "Super Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a super radar serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what super radar notes actually sold for.",
+    },
+  }[route.path];
+  check(title && (requestedMetadata ? title === requestedMetadata.title : title.length <= 60) && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
+  check(description && (requestedMetadata ? description === requestedMetadata.description : description.length <= 160) && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);
   titles.add(title); descriptions.add(description);
 }
 if (!metadataOnly) {

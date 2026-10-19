@@ -99,7 +99,7 @@ export const patternCopy: Record<string, PatternCopy> = {
       "A super radar is a radar whose inner six digits are all identical, such as 71111117. It reads the same in both directions and has a clean block of repeats in the middle, making it far scarcer than a plain radar.",
     valueNote:
       "Super radars are prized well above standard radars because so few exist.",
-    linkLabel: "See radars and super radars in full",
+    linkLabel: "Read the super radar serial number guide",
   },
   radar: {
     definition:
@@ -369,6 +369,11 @@ export const patternOrder: string[] = [
 
 /** The four dedicated spoke pages, linked down from the hub. */
 export const spokeLinks = [
+  {
+    href: "/fancy-serial-numbers/super-radar/",
+    label: "Super radar serial numbers",
+    description: "The six-digit center, exact odds, examples and recorded sales.",
+  },
   {
     href: "/fancy-serial-numbers/binary/",
     label: "Binary serial numbers",

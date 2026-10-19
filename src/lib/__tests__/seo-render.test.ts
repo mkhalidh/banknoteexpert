@@ -30,6 +30,9 @@ describe("rendered SEO content (browser tools excluded)", () => {
       if (file.endsWith("/fancy-serial-numbers/binary/page.tsx")) {
         expect(page.metadata.title).toBe("Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
         expect(page.metadata.description).toBe("What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.");
+      } else if (file.endsWith("/fancy-serial-numbers/super-radar/page.tsx")) {
+        expect(page.metadata.title).toBe("Super Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
+        expect(page.metadata.description).toBe("What is a super radar serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what super radar notes actually sold for.");
       } else {
         expect(page.metadata.title.length, file).toBeLessThanOrEqual(60);
         expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
@@ -66,6 +69,11 @@ describe("rendered SEO content (browser tools excluded)", () => {
     expect(home.querySelectorAll(`a[href="${binaryHref}"]`).length).toBeGreaterThanOrEqual(2);
     expect(fancyArticles).toContainEqual({ path: binaryPath, label: "Binary serial numbers" });
     expect(footer.querySelector(`a[href="${binaryHref}"]`)).not.toBeNull();
+    const superRadarPath = "/fancy-serial-numbers/super-radar/";
+    const superRadarHref = superRadarPath.slice(0, -1);
+    expect(home.querySelectorAll(`a[href="${superRadarHref}"]`).length).toBeGreaterThanOrEqual(2);
+    expect(fancyArticles).toContainEqual({ path: superRadarPath, label: "Super radar serial numbers" });
+    expect(footer.querySelector(`a[href="${superRadarHref}"]`)).not.toBeNull();
     for (const link of home.querySelectorAll('a[href^="/fancy-serial-numbers/#"]')) {
       const id = link.getAttribute("href")!.split("#")[1];
       expect(hub.getElementById(id), id).not.toBeNull();

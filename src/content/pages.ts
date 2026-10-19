@@ -15,5 +15,6 @@ import { content as c13 } from "@/content/two-dollar-value";
 import { content as c14 } from "@/content/where-is-serial";
 import { content as c15 } from "@/content/broken-ladder";
 import { content as c16 } from "@/content/binary";
+import { content as c17 } from "@/content/super-radar";
 
-export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16];
+export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17];

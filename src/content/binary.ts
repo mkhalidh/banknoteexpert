@@ -114,6 +114,7 @@ export const content: PageContent = {
     },
   ],
   related: [
+    { href: "/fancy-serial-numbers/super-radar/", label: "Super radar serial numbers", description: "See a two-digit palindrome with a solid center." },
     { href: "/fancy-serial-numbers/", label: "All fancy serial patterns", description: "Compare Binary with the full pattern directory." },
     { href: "/fancy-serial-numbers/#trinary", label: "Trinary serial numbers", description: "Compare three-digit and two-digit serials." },
     { href: "/fancy-serial-numbers/ladder/", label: "Ladder serial numbers", description: "Explore eight-digit sequences." },

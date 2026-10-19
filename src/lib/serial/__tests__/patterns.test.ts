@@ -18,6 +18,9 @@ describe("detectors — true and false cases", () => {
 
   it("super-radar", () => {
     expect(detect("super-radar", "71111117")).toBe(true);
+    expect(detect("super-radar", "14444441")).toBe(true);
+    expect(detect("super-radar", "01111110")).toBe(true);
+    expect(detect("super-radar", "77777777")).toBe(true); // raw detector includes solids
     expect(detect("super-radar", "12344321")).toBe(false);
     expect(detect("super-radar", "12345678")).toBe(false);
   });

@@ -84,6 +84,12 @@ describe("scoreSerial — same-axis supersession hides ONLY weaker same-axis for
     expect(matched).not.toContain("radar");
   });
 
+  it("shows a more specific label for solid and true-binary super radar shapes", () => {
+    expect(ids("77777777")).not.toContain("super-radar");
+    expect(ids("01111110")).toContain("true-binary-radar");
+    expect(ids("01111110")).not.toContain("super-radar");
+  });
+
   it("the tightest low-serial tier hides looser tiers (same axis)", () => {
     const matched = ids("00000001");
     expect(matched).toContain("low-serial-10");

@@ -156,6 +156,11 @@ export const content: PageContent = {
   ],
   related: [
     {
+      href: "/fancy-serial-numbers/super-radar/",
+      label: "Super radar serial numbers",
+      description: "See the stricter palindrome shape, exact odds and sold-price bands.",
+    },
+    {
       href: "/fancy-serial-numbers/binary/",
       label: "Binary serial numbers",
       description: "See when a mirrored note also uses exactly two digits.",
