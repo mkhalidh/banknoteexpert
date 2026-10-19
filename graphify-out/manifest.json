@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792423928.719202,
-    "seen": 1792424167.7124355,
-    "ast_hash": "171297f37cd178fd62484905a1fa5e75",
+    "mtime": 1792425793.2708495,
+    "seen": 1792425865.961563,
+    "ast_hash": "11b5a3cd65abf87ab94d54569f223455",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {
@@ -1170,9 +1170,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/binary/page.tsx": {
-    "mtime": 1792423906.6994917,
-    "seen": 1792424167.7124355,
-    "ast_hash": "c1ae68da1ef5a7fc41ed3faeae266791",
+    "mtime": 1792425793.266864,
+    "seen": 1792425865.9605644,
+    "ast_hash": "e901177ef70ea31963ac0f687f2c9714",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/binary/twitter-image.tsx": {
@@ -1194,9 +1194,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/super-radar/page.tsx": {
-    "mtime": 1792423906.7004893,
-    "seen": 1792424167.7124355,
-    "ast_hash": "abb34efbbb9e29b2279c1f610d7b27fe",
+    "mtime": 1792425793.268855,
+    "seen": 1792425865.9605644,
+    "ast_hash": "5b9e1640c6e1a9e0d756d9abac9119ad",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/super-radar/twitter-image.tsx": {
@@ -1218,9 +1218,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/radar-repeater/page.tsx": {
-    "mtime": 1792423906.7004893,
-    "seen": 1792424167.7124355,
-    "ast_hash": "01561c18074fae687f4333dceaaea51c",
+    "mtime": 1792425793.2698514,
+    "seen": 1792425865.9605644,
+    "ast_hash": "994010b0de4291a155826e7f80774278",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/radar-repeater/twitter-image.tsx": {
@@ -1235,10 +1235,22 @@
     "ast_hash": "6fa2da3eba6600b4df994d13b6145533",
     "semantic_hash": ""
   },
-  "src/components/content/PatternNote.tsx": {
-    "mtime": 1792423906.6974986,
-    "seen": 1792424167.7124355,
-    "ast_hash": "1d134248d05aa7666635379a6200e178",
+  "public/images/patterns/binary-real-note.jpg": {
+    "mtime": 1792425708.3823855,
+    "seen": 1792425865.9625592,
+    "ast_hash": "995563d999d4281a8b64907e7e99336f",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/radar-repeater-real-note.jpg": {
+    "mtime": 1792425759.292778,
+    "seen": 1792425865.9625592,
+    "ast_hash": "23ddb395baf1b4bcf06c7f4cc11de83c",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/super-radar-real-note.jpg": {
+    "mtime": 1792425759.5820029,
+    "seen": 1792425865.9625592,
+    "ast_hash": "ba342942d1487bcb603fc859dd76da7f",
     "semantic_hash": ""
   }
 }

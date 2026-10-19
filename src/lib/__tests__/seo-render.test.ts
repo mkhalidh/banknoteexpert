@@ -21,18 +21,19 @@ const pages = import.meta.glob("../../app/**/page.tsx") as Record<string, () => 
 const normalize = (text: string | null) => (text ?? "").replace(/\s+/g, " ").trim();
 
 describe("rendered SEO content (browser tools excluded)", () => {
-  it("shows a matching serial on each illustrated pattern note", async () => {
+  it("shows a real note photo with a matching serial on each pattern guide", async () => {
     const guides = [
-      ["binary", "22727277", "binary"],
-      ["super-radar", "17777771", "super-radar"],
+      ["binary", "77555775", "binary"],
+      ["super-radar", "10000001", "true-binary-radar"],
       ["radar-repeater", "12211221", "radar-repeater"],
     ] as const;
     for (const [slug, serial, pattern] of guides) {
       const page = await pages[`../../app/fancy-serial-numbers/${slug}/page.tsx`]();
       const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
-      const note = doc.querySelector("figure.article-cover svg[role='img']");
-      expect(note?.getAttribute("aria-label")).toContain(serial);
-      expect([...note!.querySelectorAll("text")].filter(node => node.textContent === serial)).toHaveLength(3);
+      const note = doc.querySelector("figure.article-cover img");
+      expect(note?.getAttribute("src")).toBe(`/images/patterns/${slug}-real-note.jpg`);
+      expect(note?.getAttribute("alt")).toContain(serial);
+      expect(doc.querySelector("figure.article-cover figcaption")?.textContent).toContain(serial);
       expect(scoreSerial(serial).matches[0]?.id).toBe(pattern);
     }
   });

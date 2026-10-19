@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Byline } from "@/components/content/Byline";
@@ -9,7 +10,6 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FaqItem } from "@/components/content/FaqItem";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
-import { PatternNote } from "@/components/content/PatternNote";
 import { ALL_CONDITIONS, CONDITION_LABELS, valueCell } from "@/lib/serial/value";
 import { content, examples } from "@/content/binary";
 
@@ -33,8 +33,8 @@ export default function Page() {
       <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
       <div className="mt-6"><FancySerialChecker /></div>
       <figure className="article-cover mt-5">
-        <PatternNote serial="22727277" pattern="Binary" detail="Only the digits 2 and 7 appear." />
-        <figcaption className="mt-2 text-sm text-zinc-500">Illustrated note showing a binary serial made from only 2s and 7s. Original diagram created for this guide.</figcaption>
+        <Image src="/images/patterns/binary-real-note.jpg" alt="Real one-dollar bill with binary serial number 77555775, made from only 5s and 7s" width={1200} height={899} sizes="(max-width: 800px) 100vw, 1000px" preload />
+        <figcaption className="mt-2 text-sm text-zinc-500">Real $1 note with binary serial 77555775. Photo source: eBay listing 186162861295.</figcaption>
       </figure>
     </header>
     <KeyTakeaways items={content.takeaways} />
