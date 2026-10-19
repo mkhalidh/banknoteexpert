@@ -156,6 +156,11 @@ export const content: PageContent = {
   ],
   related: [
     {
+      href: "/fancy-serial-numbers/binary/",
+      label: "Binary serial numbers",
+      description: "See when a mirrored note also uses exactly two digits.",
+    },
+    {
       href: "/fancy-serial-numbers/",
       label: "Browse the full fancy serial number guide",
       description:

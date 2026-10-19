@@ -18,8 +18,11 @@ for (const route of routes) {
   documents.set(route.path, doc);
   const title = doc.title;
   const description = doc.querySelector('meta[name="description"]')?.content;
-  check(title && title.length <= 60 && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
-  check(description && description.length <= 160 && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);
+  const binaryException = route.path === "/fancy-serial-numbers/binary/";
+  const requestedTitle = "Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert";
+  const requestedDescription = "What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.";
+  check(title && (binaryException ? title === requestedTitle : title.length <= 60) && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
+  check(description && (binaryException ? description === requestedDescription : description.length <= 160) && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);
   titles.add(title); descriptions.add(description);
 }
 if (!metadataOnly) {

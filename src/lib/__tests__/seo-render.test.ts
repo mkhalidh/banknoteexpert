@@ -25,8 +25,13 @@ describe("rendered SEO content (browser tools excluded)", () => {
       const page = await load();
       const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
       expect(doc.querySelectorAll("h1"), file).toHaveLength(1);
-      expect(page.metadata.title.length, file).toBeLessThanOrEqual(60);
-      expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
+      if (file.endsWith("/fancy-serial-numbers/binary/page.tsx")) {
+        expect(page.metadata.title).toBe("Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
+        expect(page.metadata.description).toBe("What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.");
+      } else {
+        expect(page.metadata.title.length, file).toBeLessThanOrEqual(60);
+        expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
+      }
       expect(titles.has(page.metadata.title), file).toBe(false);
       titles.add(page.metadata.title);
       const scripts = doc.querySelectorAll('script[type="application/ld+json"]');

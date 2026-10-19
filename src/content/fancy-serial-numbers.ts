@@ -15,7 +15,7 @@ export const content: PageContent = {
     "Only the eight digits form the pattern; the prefix and suffix letters do not.",
     "Patterns range from common (birthday dates) to trophy-rare (solids and true ladders).",
     "Rarer patterns set a higher ceiling, but condition and demand decide the final price.",
-    "Every pattern the checker detects is explained below; radar, ladder, low serial and birthday also have their own in-depth guides.",
+    "Every pattern the checker detects is explained below; binary, radar, ladder, low serial and birthday also have their own in-depth guides.",
   ],
   sections: [
     {
@@ -145,6 +145,7 @@ export const patternCopy: Record<string, PatternCopy> = {
       "A binary serial is built from only two different digits across all eight positions, such as 10011010 or 88998989. The name comes from the two-value alphabet, not from actual binary code: any pair of digits qualifies, so long as no third digit appears. The result is a note that looks patterned and deliberate even when the two digits are arranged irregularly, and the tighter and more rhythmic that arrangement, the more eye-catching the note becomes.",
     valueNote:
       "Binaries are a broad and accessible category, so most are modestly priced, but the appeal rises sharply with a clean arrangement. A binary that also forms a repeater or a near-solid can jump in desirability, and grade matters as always. Because they are relatively common, binaries reward patience: hold out for a crisp, visually strong example and value it against comparable sold notes rather than optimistic listings.",
+    linkLabel: "Read the binary serial number guide",
   },
   trinary: {
     definition:
@@ -368,6 +369,11 @@ export const patternOrder: string[] = [
 
 /** The four dedicated spoke pages, linked down from the hub. */
 export const spokeLinks = [
+  {
+    href: "/fancy-serial-numbers/binary/",
+    label: "Binary serial numbers",
+    description: "Two-digit patterns, true binary, rarity and recorded sales.",
+  },
   {
     href: "/fancy-serial-numbers/radar/",
     label: "Radar serial numbers",

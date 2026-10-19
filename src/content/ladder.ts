@@ -131,6 +131,11 @@ export const content: PageContent = {
   ],
   related: [
     {
+      href: "/fancy-serial-numbers/binary/",
+      label: "Binary serial numbers",
+      description: "Compare eight-digit sequences with two-digit serial patterns.",
+    },
+    {
       href: "/fancy-serial-numbers/broken-ladder/",
       label: "Broken ladder serial numbers",
       description: "A dedicated guide to long partial runs, rarity and values.",

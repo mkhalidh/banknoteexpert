@@ -3,6 +3,7 @@
 // Pages omitted here use the original site-wide publication date.
 export const pagePublished: Record<string, string> = {
   "/fancy-serial-numbers/broken-ladder/": "2026-10-14",
+  "/fancy-serial-numbers/binary/": "2026-10-19",
 };
 
 export const pageModified: Record<string, string> = {
@@ -11,6 +12,7 @@ export const pageModified: Record<string, string> = {
   "/fancy-serial-numbers/radar/": "2026-10-14",
   "/fancy-serial-numbers/ladder/": "2026-10-14",
   "/fancy-serial-numbers/broken-ladder/": "2026-10-14",
+  "/fancy-serial-numbers/binary/": "2026-10-19",
   "/fancy-serial-numbers/low-serial-number/": "2026-10-15",
   "/fancy-serial-numbers/birthday-note/": "2026-10-06",
   "/fancy-serial-number-value/": "2026-10-14",

@@ -675,9 +675,9 @@ export const patterns: PatternDefinition[] = [
     description: "Built from exactly two different digits.",
     example: "10101100",
     detect: (d) => distinctCount(d) === 2,
-    rarityOdds: "1 in 1,500",
+    rarityOdds: "1 in 8,749",
     baseScore: 55,
-    href: hub("binary"),
+    href: "/fancy-serial-numbers/binary/",
   },
   {
     id: "trinary",

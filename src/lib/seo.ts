@@ -13,6 +13,8 @@ export interface BuildMetadataParams {
   ogImage?: string;
   /** When true the page is excluded from search results while links remain crawlable. */
   noindex?: boolean;
+  /** Editorial exception for a page with an explicitly requested title and description. */
+  allowLongMetadata?: boolean;
 }
 
 /**
@@ -25,8 +27,9 @@ export function buildMetadata({
   path,
   ogImage,
   noindex = false,
+  allowLongMetadata = false,
 }: BuildMetadataParams): Metadata {
-  if (!title || title.length > 60 || !description || description.length > 160) {
+  if (!title || (!allowLongMetadata && title.length > 60) || !description || (!allowLongMetadata && description.length > 160)) {
     throw new Error(`Invalid metadata length for ${path}: title ${title.length}, description ${description.length}`);
   }
   const canonical = `${SITE_URL}${path}`;

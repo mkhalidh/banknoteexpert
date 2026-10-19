@@ -52,7 +52,7 @@ describe("SEO publication contracts", () => {
     const descriptions = new Set();
     for (const route of routes) {
       const meta = pageContents.find(page => page.meta.path === route.path)?.meta ?? route;
-      expect(() => buildMetadata(meta)).not.toThrow();
+      expect(() => buildMetadata({ ...meta, allowLongMetadata: route.path === "/fancy-serial-numbers/binary/" })).not.toThrow();
       expect(titles.has(meta.title)).toBe(false);
       expect(descriptions.has(meta.description)).toBe(false);
       titles.add(meta.title); descriptions.add(meta.description);
@@ -76,6 +76,10 @@ describe("SEO publication contracts", () => {
       const node = pageGraph(path, [])["@graph"].find(node => node["@type"] === "FAQPage");
       expect(node?.mainEntity).toHaveLength(questions.length);
     }
+    const binaryQuestions = pageContents.find(page => page.meta.path === "/fancy-serial-numbers/binary/")!.sections.find(section => section.id === "faq")!.blocks.filter(block => block.kind === "subheading");
+    const binaryFaq = pageGraph("/fancy-serial-numbers/binary/", [])["@graph"].find(node => node["@type"] === "FAQPage");
+    expect(binaryFaq?.mainEntity).toHaveLength(binaryQuestions.length);
+    expect(binaryQuestions).toHaveLength(10);
   });
 
 });

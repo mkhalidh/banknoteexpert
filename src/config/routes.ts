@@ -102,6 +102,16 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/fancy-serial-numbers/binary/",
+    title: "Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a binary serial number on a dollar bill? Learn the definition, see examples, check the 1 in 8,749 rarity odds, and find what binary notes actually sold for.",
+    silo: "fancy-serial-numbers",
+    pageType: "guide",
+    priority: 0.8,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
     path: "/fancy-serial-numbers/low-serial-number/",
     title: "Low Serial Number Dollar Bill: Rarity and Value",
     description:
