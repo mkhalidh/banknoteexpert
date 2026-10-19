@@ -9,6 +9,7 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FaqItem } from "@/components/content/FaqItem";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { PatternNote } from "@/components/content/PatternNote";
 import { ALL_CONDITIONS, CONDITION_LABELS, valueCell } from "@/lib/serial/value";
 import { content, examples } from "@/content/binary";
 
@@ -31,6 +32,10 @@ export default function Page() {
       <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
       <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
       <div className="mt-6"><FancySerialChecker /></div>
+      <figure className="article-cover mt-5">
+        <PatternNote serial="22727277" pattern="Binary" detail="Only the digits 2 and 7 appear." />
+        <figcaption className="mt-2 text-sm text-zinc-500">Illustrated note showing a binary serial made from only 2s and 7s. Original diagram created for this guide.</figcaption>
+      </figure>
     </header>
     <KeyTakeaways items={content.takeaways} />
     {content.sections.filter(section => section.id !== "faq").map(section => <div key={section.id}>

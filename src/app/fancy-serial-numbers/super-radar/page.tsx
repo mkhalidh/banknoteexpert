@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -10,6 +9,7 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FaqItem } from "@/components/content/FaqItem";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { PatternNote } from "@/components/content/PatternNote";
 import { ALL_CONDITIONS, CONDITION_LABELS, valueCell } from "@/lib/serial/value";
 import { content, examples } from "@/content/super-radar";
 
@@ -33,8 +33,8 @@ export default function Page() {
       <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
       <div className="mt-6"><FancySerialChecker /></div>
       <figure className="article-cover mt-5">
-        <Image src="/images/patterns/super-radar-note.jpg" alt="Official US $20 specimen note showing where the serial number appears; its printed serial is not a super radar" width={1055} height={433} sizes="(max-width: 800px) 100vw, 1000px" preload />
-        <figcaption className="mt-2 text-sm text-zinc-500">Illustrative specimen note. Its printed serial is not a super radar. Image: U.S. Currency Education Program.</figcaption>
+        <PatternNote serial="17777771" pattern="Super Radar" detail="Six 7s sit between matching outer 1s." />
+        <figcaption className="mt-2 text-sm text-zinc-500">Illustrated note showing a super radar serial with six 7s between matching 1s. Original diagram created for this guide.</figcaption>
       </figure>
     </header>
     <KeyTakeaways items={content.takeaways} />

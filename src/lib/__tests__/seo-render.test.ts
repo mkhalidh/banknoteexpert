@@ -7,6 +7,7 @@ import { describe, expect, it, vi } from "vitest";
 import { routes } from "@/config/routes";
 import { fancyArticles } from "@/config/navigation";
 import { Footer } from "@/components/layout/Footer";
+import { scoreSerial } from "@/lib/serial/score";
 
 // Verify server content without browser-only checker/widget initialization.
 vi.mock("@/components/tools/FancySerialChecker", () => ({ FancySerialChecker: () => null }));
@@ -20,6 +21,22 @@ const pages = import.meta.glob("../../app/**/page.tsx") as Record<string, () => 
 const normalize = (text: string | null) => (text ?? "").replace(/\s+/g, " ").trim();
 
 describe("rendered SEO content (browser tools excluded)", () => {
+  it("shows a matching serial on each illustrated pattern note", async () => {
+    const guides = [
+      ["binary", "22727277", "binary"],
+      ["super-radar", "17777771", "super-radar"],
+      ["radar-repeater", "12211221", "radar-repeater"],
+    ] as const;
+    for (const [slug, serial, pattern] of guides) {
+      const page = await pages[`../../app/fancy-serial-numbers/${slug}/page.tsx`]();
+      const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
+      const note = doc.querySelector("figure.article-cover svg[role='img']");
+      expect(note?.getAttribute("aria-label")).toContain(serial);
+      expect([...note!.querySelectorAll("text")].filter(node => node.textContent === serial)).toHaveLength(3);
+      expect(scoreSerial(serial).matches[0]?.id).toBe(pattern);
+    }
+  });
+
   it("renders one H1 and graph per page, with matching visible FAQ and article dates", async () => {
     expect(Object.keys(pages)).toHaveLength(routes.length);
     const titles = new Set();

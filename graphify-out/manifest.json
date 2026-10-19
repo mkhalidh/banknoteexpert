@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792422324.7908068,
-    "seen": 1792422377.9289722,
-    "ast_hash": "4c348ccd842f0f16ab8b526cb14cf0ef",
+    "mtime": 1792423928.719202,
+    "seen": 1792424167.7124355,
+    "ast_hash": "171297f37cd178fd62484905a1fa5e75",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {
@@ -1170,9 +1170,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/binary/page.tsx": {
-    "mtime": 1792414933.638243,
-    "seen": 1792415446.3730752,
-    "ast_hash": "3dfce26d2b03a7b7a3bb3edd12ca42ec",
+    "mtime": 1792423906.6994917,
+    "seen": 1792424167.7124355,
+    "ast_hash": "c1ae68da1ef5a7fc41ed3faeae266791",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/binary/twitter-image.tsx": {
@@ -1194,9 +1194,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/super-radar/page.tsx": {
-    "mtime": 1792421156.0723746,
-    "seen": 1792421248.894102,
-    "ast_hash": "f5c0453a30f75f29d40f17c86028b0d6",
+    "mtime": 1792423906.7004893,
+    "seen": 1792424167.7124355,
+    "ast_hash": "abb34efbbb9e29b2279c1f610d7b27fe",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/super-radar/twitter-image.tsx": {
@@ -1211,12 +1211,6 @@
     "ast_hash": "a891425c79d019e7bed97535e8b05513",
     "semantic_hash": ""
   },
-  "public/images/patterns/super-radar-note.jpg": {
-    "mtime": 1792420054.6214027,
-    "seen": 1792420373.7691166,
-    "ast_hash": "d9da740a9e79e198a5dae3db39c29da1",
-    "semantic_hash": ""
-  },
   "src/app/fancy-serial-numbers/radar-repeater/opengraph-image.tsx": {
     "mtime": 1792422202.109016,
     "seen": 1792422377.9289722,
@@ -1224,9 +1218,9 @@
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/radar-repeater/page.tsx": {
-    "mtime": 1792422202.1070137,
-    "seen": 1792422377.9289722,
-    "ast_hash": "412e6650d9cc934983fc100637369cba",
+    "mtime": 1792423906.7004893,
+    "seen": 1792424167.7124355,
+    "ast_hash": "01561c18074fae687f4333dceaaea51c",
     "semantic_hash": ""
   },
   "src/app/fancy-serial-numbers/radar-repeater/twitter-image.tsx": {
@@ -1239,6 +1233,12 @@
     "mtime": 1792422572.2730417,
     "seen": 1792422595.3704054,
     "ast_hash": "6fa2da3eba6600b4df994d13b6145533",
+    "semantic_hash": ""
+  },
+  "src/components/content/PatternNote.tsx": {
+    "mtime": 1792423906.6974986,
+    "seen": 1792424167.7124355,
+    "ast_hash": "1d134248d05aa7666635379a6200e178",
     "semantic_hash": ""
   }
 }

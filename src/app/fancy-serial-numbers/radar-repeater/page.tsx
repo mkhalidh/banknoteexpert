@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
@@ -10,6 +9,7 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FaqItem } from "@/components/content/FaqItem";
 import { FancySerialChecker } from "@/components/tools/FancySerialChecker";
+import { PatternNote } from "@/components/content/PatternNote";
 import { ALL_CONDITIONS, CONDITION_LABELS, valueCell } from "@/lib/serial/value";
 import { content, examples } from "@/content/radar-repeater";
 
@@ -34,8 +34,8 @@ export default function Page() {
       <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
       <div className="mt-6"><FancySerialChecker /></div>
       <figure className="article-cover mt-5">
-        <Image src="/images/patterns/radar-repeater.svg" alt="Radar repeater serial 12211221 with the mirrored 1221 block repeated twice" width={1200} height={640} sizes="(max-width: 800px) 100vw, 1000px" preload />
-        <figcaption className="mt-2 text-sm text-zinc-500">Original pattern diagram created for this guide.</figcaption>
+        <PatternNote serial="12211221" pattern="Radar Repeater" detail="The mirrored block 1221 repeats twice." />
+        <figcaption className="mt-2 text-sm text-zinc-500">Illustrated note showing the radar block 1221 printed twice as 12211221. Original diagram created for this guide.</figcaption>
       </figure>
     </header>
     <KeyTakeaways items={content.takeaways} />
