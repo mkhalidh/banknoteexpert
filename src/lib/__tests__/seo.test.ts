@@ -11,6 +11,7 @@ import { pageGraph } from "@/lib/page-schema";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 import { homeFaqs } from "@/content/home-faq";
+import { siloAGuides } from "@/content/silo-a-guides";
 
 describe("SEO publication contracts", () => {
   it("lists canonical indexable pages with durable dates", () => {
@@ -52,7 +53,7 @@ describe("SEO publication contracts", () => {
     const descriptions = new Set();
     for (const route of routes) {
       const meta = pageContents.find(page => page.meta.path === route.path)?.meta ?? route;
-      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/"].includes(route.path) })).not.toThrow();
+      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/", "/fancy-serial-numbers/solid/", "/fancy-serial-numbers/trinary/", "/fancy-serial-numbers/seven-of-a-kind/", "/fancy-serial-numbers/six-of-a-kind/", "/fancy-serial-numbers/five-of-a-kind/", "/fancy-serial-numbers/binary-radar/", "/fancy-serial-numbers/bookends/", "/fancy-serial-numbers/four-pairs/"].includes(route.path) })).not.toThrow();
       expect(titles.has(meta.title)).toBe(false);
       expect(descriptions.has(meta.description)).toBe(false);
       titles.add(meta.title); descriptions.add(meta.description);
@@ -65,6 +66,22 @@ describe("SEO publication contracts", () => {
       expect(types).not.toContain("Product");
       expect(types).not.toContain("AggregateRating");
       JSON.parse(JSON.stringify(graph));
+    }
+  });
+
+  it("uses detector-derived odds for the new guide patterns and registers visible FAQs", () => {
+    expect(patternsById.solid.rarityOdds).toBe("1 in 10,000,000");
+    expect(patternsById.trinary.rarityOdds).toBe("1 in 144");
+    expect(patternsById["seven-of-a-kind"].rarityOdds).toBe("1 in 138,889");
+    expect(patternsById["six-of-a-kind"].rarityOdds).toBe("1 in 4,960");
+    expect(patternsById["five-of-a-kind"].rarityOdds).toBe("1 in 245");
+    expect(patternsById["binary-radar"].rarityOdds).toBe("1 in 158,730");
+    expect(patternsById.bookends.rarityOdds).toBe("1 in 100");
+    expect(patternsById["four-pairs"].rarityOdds).toBe("1 in 10,000");
+    for (const content of siloAGuides) {
+      const questions = content.sections.find(section => section.id === "faq")!.blocks.filter(block => block.kind === "subheading");
+      const faq = pageGraph(content.meta.path, [])['@graph'].find(item => item['@type'] === "FAQPage");
+      expect(faq?.mainEntity).toHaveLength(questions.length);
     }
   });
 

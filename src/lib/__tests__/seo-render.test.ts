@@ -8,6 +8,9 @@ import { routes } from "@/config/routes";
 import { fancyArticles } from "@/config/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { scoreSerial } from "@/lib/serial/score";
+import { patternsById } from "@/lib/serial/patterns";
+import { siloAGuides } from "@/content/silo-a-guides";
+import { existsSync } from "node:fs";
 
 // Verify server content without browser-only checker/widget initialization.
 vi.mock("@/components/tools/FancySerialChecker", () => ({ FancySerialChecker: () => null }));
@@ -38,6 +41,34 @@ describe("rendered SEO content (browser tools excluded)", () => {
     }
   });
 
+  it("renders the eight new guide photos with detector-matching serials and plain-text credits", async () => {
+    const detectorByPath: Record<string, string> = {
+      "/fancy-serial-numbers/solid/": "solid",
+      "/fancy-serial-numbers/trinary/": "trinary",
+      "/fancy-serial-numbers/seven-of-a-kind/": "seven-of-a-kind",
+      "/fancy-serial-numbers/six-of-a-kind/": "six-of-a-kind",
+      "/fancy-serial-numbers/five-of-a-kind/": "five-of-a-kind",
+      "/fancy-serial-numbers/binary-radar/": "binary-radar",
+      "/fancy-serial-numbers/bookends/": "bookends",
+      "/fancy-serial-numbers/four-pairs/": "four-pairs",
+    };
+    for (const content of siloAGuides) {
+      const serial = content.image.alt.match(/\b\d{8}\b/)?.[0];
+      expect(serial, content.meta.path).toBeDefined();
+      expect(patternsById[detectorByPath[content.meta.path]].detect(serial!), content.meta.path).toBe(true);
+      expect(existsSync(`public${content.image.src}`), content.meta.path).toBe(true);
+      const page = await pages[`../../app${content.meta.path.slice(0, -1)}/page.tsx`]();
+      const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
+      expect(doc.querySelector("figure.article-cover img")?.getAttribute("alt")).toContain(serial);
+      expect(doc.querySelector("figure.article-cover figcaption")?.textContent).toMatch(/^Image: eBay listing \d+$/);
+      expect(doc.querySelector("figure.article-cover figcaption a")).toBeNull();
+      expect(doc.querySelectorAll("#faq .card")).toHaveLength(content.sections.find(section => section.id === "faq")!.blocks.filter(block => block.kind === "subheading").length);
+      expect(content.meta.title).not.toContain(String.fromCharCode(0x2014));
+      expect(content.meta.description).not.toContain(String.fromCharCode(0x2014));
+      for (const [example] of content.examples) expect(example).toMatch(/^\d{8}$/);
+    }
+  });
+
   it("renders one H1 and graph per page, with matching visible FAQ and article dates", async () => {
     expect(Object.keys(pages)).toHaveLength(routes.length);
     const titles = new Set();
@@ -47,8 +78,15 @@ describe("rendered SEO content (browser tools excluded)", () => {
       expect(doc.querySelectorAll("h1"), file).toHaveLength(1);
       const externalAnchors = [...doc.querySelectorAll("a[href]")].filter(anchor => {
         const url = new URL(anchor.getAttribute("href")!, "https://www.banknoteexpert.com/");
-        return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname);
+        return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname) && url.hostname !== "fazier.com";
       });
+      const fazierAnchor = [...doc.querySelectorAll('a[href="FAZIER_LAUNCH_URL"]')];
+      expect(fazierAnchor.length, file).toBe(file.endsWith("/app/page.tsx") ? 1 : 0);
+      if (fazierAnchor.length) {
+        expect(fazierAnchor[0].getAttribute("target")).toBe("_blank");
+        expect(fazierAnchor[0].getAttribute("rel")?.split(/\s+/)).toEqual(expect.arrayContaining(["nofollow", "noopener"]));
+        expect(fazierAnchor[0].querySelector("img")?.getAttribute("src")).toContain("fazier.com/api/v1/public/badges/launch_badges.svg");
+      }
       expect(externalAnchors, file).toHaveLength(0);
       if (file.endsWith("/fancy-serial-numbers/binary/page.tsx")) {
         expect(page.metadata.title).toBe("Binary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert");
@@ -67,6 +105,12 @@ describe("rendered SEO content (browser tools excluded)", () => {
           expect(row.querySelectorAll("td")[0]?.textContent).toBe("");
           expect(row.querySelectorAll("td")[1]?.textContent).toBe("");
         }
+      } else if (["solid", "trinary", "seven-of-a-kind", "six-of-a-kind", "five-of-a-kind", "binary-radar", "bookends", "four-pairs"].some(slug => file.endsWith(`/fancy-serial-numbers/${slug}/page.tsx`))) {
+        expect(page.metadata.title).toContain("| Banknote Expert");
+        expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
+        expect(doc.querySelector("figure.article-cover figcaption")?.textContent).toContain("Image: eBay listing");
+        expect(doc.querySelector("figure.article-cover img")?.getAttribute("alt")).toMatch(/serial/);
+        expect(doc.querySelectorAll("#faq .card").length).toBeGreaterThan(0);
       } else {
         expect(page.metadata.title.length, file).toBeLessThanOrEqual(60);
         expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
@@ -113,6 +157,19 @@ describe("rendered SEO content (browser tools excluded)", () => {
     expect(home.querySelectorAll(`a[href="${radarRepeaterHref}"]`).length).toBeGreaterThanOrEqual(2);
     expect(fancyArticles).toContainEqual({ path: radarRepeaterPath, label: "Radar repeater serial numbers" });
     expect(footer.querySelector(`a[href="${radarRepeaterHref}"]`)).not.toBeNull();
+    const newGuides = [
+      ["solid", "Solid serial numbers"], ["trinary", "Trinary serial numbers"],
+      ["seven-of-a-kind", "Seven of a Kind serial numbers"], ["six-of-a-kind", "Six of a Kind serial numbers"],
+      ["five-of-a-kind", "Five of a Kind serial numbers"], ["binary-radar", "Binary Radar serial numbers"],
+      ["bookends", "Bookends serial numbers"], ["four-pairs", "Quad Doubles serial numbers"],
+    ] as const;
+    for (const [slug, label] of newGuides) {
+      const href = `/fancy-serial-numbers/${slug}`;
+      expect(home.querySelector(`a[href="${href}"]`), href).not.toBeNull();
+      expect(hub.querySelector(`a[href="${href}"]`), href).not.toBeNull();
+      expect(footer.querySelector(`a[href="${href}"]`), href).not.toBeNull();
+      expect(fancyArticles).toContainEqual({ path: `${href}/`, label });
+    }
     for (const link of home.querySelectorAll('a[href^="/fancy-serial-numbers/#"]')) {
       const id = link.getAttribute("href")!.split("#")[1];
       expect(hub.getElementById(id), id).not.toBeNull();

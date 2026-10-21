@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792422258.075897,
-    "seen": 1792422377.9289722,
-    "ast_hash": "229c08fe913e7242bc781b1ce822b968",
+    "mtime": 1792589432.1424706,
+    "seen": 1792589647.9089174,
+    "ast_hash": "ceed610515c994eb370d62761cd12719",
     "semantic_hash": ""
   },
   "src/app/privacy/page.tsx": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "src/config/routes.ts": {
-    "mtime": 1792422234.0048647,
-    "seen": 1792422377.9289722,
-    "ast_hash": "616128bf2036464e6d6416495b80fcda",
+    "mtime": 1792589367.1082916,
+    "seen": 1792589647.9089174,
+    "ast_hash": "e64341a498ceb9932bc52b7d1ec54276",
     "semantic_hash": ""
   },
   "src/config/site.ts": {
@@ -372,9 +372,9 @@
     "semantic_hash": ""
   },
   "src/content/fancy-serial-numbers.ts": {
-    "mtime": 1792422351.0369422,
-    "seen": 1792422377.9289722,
-    "ast_hash": "b72d238ffaccae53a5a8b4b3e509cff9",
+    "mtime": 1792589367.11627,
+    "seen": 1792589647.9089174,
+    "ast_hash": "876c75c88e3079c3db70d37566a65e58",
     "semantic_hash": ""
   },
   "src/content/ladder.ts": {
@@ -516,9 +516,9 @@
     "semantic_hash": "c7fc273c6ed030caf4414e82532a63ea"
   },
   "src/lib/serial/patterns.ts": {
-    "mtime": 1792422244.833115,
-    "seen": 1792422377.9289722,
-    "ast_hash": "dae9ae3ddf26f6127d54830347375ed6",
+    "mtime": 1792589367.1142757,
+    "seen": 1792589647.9099147,
+    "ast_hash": "8327e061ef37c4c5398231142b67af77",
     "semantic_hash": ""
   },
   "src/lib/serial/score.ts": {
@@ -678,9 +678,9 @@
     "semantic_hash": ""
   },
   "src/config/navigation.ts": {
-    "mtime": 1792422234.0058477,
-    "seen": 1792422377.9289722,
-    "ast_hash": "cc86848297f84370a19cc28c25507c32",
+    "mtime": 1792589367.1172678,
+    "seen": 1792589647.9089174,
+    "ast_hash": "09cbfd60767166c651de9efde8525ee4",
     "semantic_hash": ""
   },
   "public/images/editorial/banknote-collecting-detail.webp": {
@@ -984,15 +984,15 @@
     "semantic_hash": ""
   },
   "src/components/content/FeaturedOn.tsx": {
-    "mtime": 1792421156.076363,
-    "seen": 1792421248.894102,
-    "ast_hash": "7032513cddd39961c6f0812463fd1a23",
+    "mtime": 1792589956.725678,
+    "seen": 1792590017.4061253,
+    "ast_hash": "558039f28d982c5fdeaa1f47715dbca2",
     "semantic_hash": ""
   },
   "src/config/page-dates.ts": {
-    "mtime": 1792422234.006844,
-    "seen": 1792422377.9289722,
-    "ast_hash": "b87cc43ab616c2aede003de09493b61c",
+    "mtime": 1792589367.111284,
+    "seen": 1792589647.9089174,
+    "ast_hash": "9e2601312f4ebddf69d450ffa416c14a",
     "semantic_hash": ""
   },
   "src/config/security-headers.mjs": {
@@ -1014,9 +1014,9 @@
     "semantic_hash": ""
   },
   "src/content/pages.ts": {
-    "mtime": 1792422234.0078416,
-    "seen": 1792422377.9289722,
-    "ast_hash": "5ddee7733a2ab8f6143a3efe23fc4ec7",
+    "mtime": 1792589367.1102865,
+    "seen": 1792589647.9099147,
+    "ast_hash": "68e9d57a91c1112faee7cbf9031a5670",
     "semantic_hash": ""
   },
   "src/data/value-bands-evidence.json": {
@@ -1026,9 +1026,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo.test.ts": {
-    "mtime": 1792422324.789809,
-    "seen": 1792422377.9289722,
-    "ast_hash": "98976debb8c35add08ac2712b8f106db",
+    "mtime": 1792589525.8876786,
+    "seen": 1792589647.9099147,
+    "ast_hash": "648909694a8e989f719981627579dc46",
     "semantic_hash": ""
   },
   "src/lib/page-schema.ts": {
@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792425793.2708495,
-    "seen": 1792425865.961563,
-    "ast_hash": "11b5a3cd65abf87ab94d54569f223455",
+    "mtime": 1792589975.867859,
+    "seen": 1792590017.4061253,
+    "ast_hash": "a195f1bf61f5b1b6985cbeb52eb31bb7",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {
@@ -1251,6 +1251,210 @@
     "mtime": 1792425759.5820029,
     "seen": 1792425865.9625592,
     "ast_hash": "ba342942d1487bcb603fc859dd76da7f",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/binary-radar/opengraph-image.tsx": {
+    "mtime": 1792589328.8573344,
+    "seen": 1792589647.9089174,
+    "ast_hash": "950ef0031faba1e3bddde0822d0c42b6",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/binary-radar/page.tsx": {
+    "mtime": 1792589328.8543427,
+    "seen": 1792589647.9089174,
+    "ast_hash": "3d05ed0b981c96c64e6229040882cc0b",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/binary-radar/twitter-image.tsx": {
+    "mtime": 1792589328.8603263,
+    "seen": 1792589647.9089174,
+    "ast_hash": "950ef0031faba1e3bddde0822d0c42b6",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/bookends/opengraph-image.tsx": {
+    "mtime": 1792589328.8732917,
+    "seen": 1792589647.9089174,
+    "ast_hash": "405626b889976fc07616db8e3b80bcd9",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/bookends/page.tsx": {
+    "mtime": 1792589328.8673081,
+    "seen": 1792589647.9089174,
+    "ast_hash": "cee9901ae4c0af0c793cabf2be6110ba",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/bookends/twitter-image.tsx": {
+    "mtime": 1792589328.8762846,
+    "seen": 1792589647.9089174,
+    "ast_hash": "405626b889976fc07616db8e3b80bcd9",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/five-of-a-kind/opengraph-image.tsx": {
+    "mtime": 1792589328.8363907,
+    "seen": 1792589647.9089174,
+    "ast_hash": "ab8904609322bf861d516ef4b5290d85",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/five-of-a-kind/page.tsx": {
+    "mtime": 1792589328.833398,
+    "seen": 1792589647.9089174,
+    "ast_hash": "bfa0512d00ab0609e4fe1ca62e43153c",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/five-of-a-kind/twitter-image.tsx": {
+    "mtime": 1792589328.8393826,
+    "seen": 1792589647.9089174,
+    "ast_hash": "ab8904609322bf861d516ef4b5290d85",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/four-pairs/opengraph-image.tsx": {
+    "mtime": 1792589328.889249,
+    "seen": 1792589647.9089174,
+    "ast_hash": "e8c8457cdfca39cc591b06082fb2d5b9",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/four-pairs/page.tsx": {
+    "mtime": 1792589328.8812706,
+    "seen": 1792589647.9089174,
+    "ast_hash": "57b0566a4df514122f310b3c56836597",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/four-pairs/twitter-image.tsx": {
+    "mtime": 1792589328.892241,
+    "seen": 1792589647.9089174,
+    "ast_hash": "e8c8457cdfca39cc591b06082fb2d5b9",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/seven-of-a-kind/opengraph-image.tsx": {
+    "mtime": 1792589328.7865236,
+    "seen": 1792589647.9089174,
+    "ast_hash": "501d9aeae68306d8f95f1f33e848f71e",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/seven-of-a-kind/page.tsx": {
+    "mtime": 1792589328.754609,
+    "seen": 1792589647.9089174,
+    "ast_hash": "8fbbda56d6b86cd4606763f347827204",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/seven-of-a-kind/twitter-image.tsx": {
+    "mtime": 1792589328.789516,
+    "seen": 1792589647.9089174,
+    "ast_hash": "501d9aeae68306d8f95f1f33e848f71e",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/six-of-a-kind/opengraph-image.tsx": {
+    "mtime": 1792589328.8224347,
+    "seen": 1792589647.9089174,
+    "ast_hash": "e406ff7a7411bd3a839b1c855784c920",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/six-of-a-kind/page.tsx": {
+    "mtime": 1792589328.8194354,
+    "seen": 1792589647.9089174,
+    "ast_hash": "ae14ef46a7ae2c244e522f617194d455",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/six-of-a-kind/twitter-image.tsx": {
+    "mtime": 1792589328.82542,
+    "seen": 1792589647.9089174,
+    "ast_hash": "e406ff7a7411bd3a839b1c855784c920",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/solid/opengraph-image.tsx": {
+    "mtime": 1792589328.7266848,
+    "seen": 1792589647.9089174,
+    "ast_hash": "f3ad00409707e7ef5142dc6fcadeca63",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/solid/page.tsx": {
+    "mtime": 1792589328.722695,
+    "seen": 1792589647.9089174,
+    "ast_hash": "8e4877e8e48d6a923b6e2b72cecc0a96",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/solid/twitter-image.tsx": {
+    "mtime": 1792589328.7326734,
+    "seen": 1792589647.9089174,
+    "ast_hash": "f3ad00409707e7ef5142dc6fcadeca63",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/trinary/opengraph-image.tsx": {
+    "mtime": 1792589328.741644,
+    "seen": 1792589647.9089174,
+    "ast_hash": "f5beb3c0504fd32a1e626c5a936bac85",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/trinary/page.tsx": {
+    "mtime": 1792589328.7386532,
+    "seen": 1792589647.9089174,
+    "ast_hash": "ba9314b2dd335233eb8cf671333d6ca4",
+    "semantic_hash": ""
+  },
+  "src/app/fancy-serial-numbers/trinary/twitter-image.tsx": {
+    "mtime": 1792589328.745633,
+    "seen": 1792589647.9089174,
+    "ast_hash": "f5beb3c0504fd32a1e626c5a936bac85",
+    "semantic_hash": ""
+  },
+  "src/components/content/PatternGuidePage.tsx": {
+    "mtime": 1792589463.65543,
+    "seen": 1792589647.9089174,
+    "ast_hash": "3ab3a5d84b29cd86161fc48fe36abaab",
+    "semantic_hash": ""
+  },
+  "src/content/silo-a-guides.ts": {
+    "mtime": 1792589525.8846874,
+    "seen": 1792589647.9099147,
+    "ast_hash": "f34c26c279589539a5df90c35ab01ca6",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/binary-radar-real-note.webp": {
+    "mtime": 1792589000.716319,
+    "seen": 1792589647.9099147,
+    "ast_hash": "dee47e8424ec1273aead698ef8a6380e",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/bookends-real-note.jpg": {
+    "mtime": 1792589000.5771153,
+    "seen": 1792589647.9099147,
+    "ast_hash": "a018185d68f153ff7229697a21f4e7e0",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/five-of-a-kind-real-note.jpg": {
+    "mtime": 1792589000.7879426,
+    "seen": 1792589647.9099147,
+    "ast_hash": "e02fd9913218316ca7068e02d86d78a3",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/four-pairs-real-note.webp": {
+    "mtime": 1792588999.9866858,
+    "seen": 1792589647.9099147,
+    "ast_hash": "46ae93dd189dc44246fd9d0b57033fa2",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/seven-of-a-kind-real-note.webp": {
+    "mtime": 1792588999.9178698,
+    "seen": 1792589647.9099147,
+    "ast_hash": "5d9a46b2214e7427db20f4734232387a",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/six-of-a-kind-real-note.jpg": {
+    "mtime": 1792589000.850774,
+    "seen": 1792589647.9099147,
+    "ast_hash": "f005af7fc15a0f5365e7334cc0a32b55",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/solid-real-note.webp": {
+    "mtime": 1792589000.4494498,
+    "seen": 1792589647.9099147,
+    "ast_hash": "63b1849e1b24b2c15c093ced720d83c0",
+    "semantic_hash": ""
+  },
+  "public/images/patterns/trinary-real-note.webp": {
+    "mtime": 1792589042.0756943,
+    "seen": 1792589647.9099147,
+    "ast_hash": "ad49a00b26950489284174496e386b1e",
     "semantic_hash": ""
   }
 }

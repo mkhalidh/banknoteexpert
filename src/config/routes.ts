@@ -1,3 +1,5 @@
+import { siloAGuides } from "@/content/silo-a-guides";
+
 /**
  * Single source of truth for every route on the site.
  * sitemap.ts, the header nav and the footer ALL read from this file.
@@ -131,6 +133,7 @@ export const routes: RouteEntry[] = [
     changeFrequency: "monthly",
     indexable: true,
   },
+  ...siloAGuides.map(({ meta }) => ({ path: meta.path, title: meta.title, description: meta.description, silo: "fancy-serial-numbers" as const, pageType: "guide" as const, priority: 0.8, changeFrequency: "monthly" as const, indexable: true })),
   {
     path: "/fancy-serial-numbers/low-serial-number/",
     title: "Low Serial Number Dollar Bill: Rarity and Value",
