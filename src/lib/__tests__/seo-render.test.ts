@@ -85,7 +85,8 @@ describe("rendered SEO content (browser tools excluded)", () => {
       if (fazierAnchor.length) {
         expect(fazierAnchor[0].getAttribute("target")).toBe("_blank");
         expect(fazierAnchor[0].getAttribute("rel")?.split(/\s+/)).toEqual(expect.arrayContaining(["nofollow", "noopener"]));
-        expect(fazierAnchor[0].querySelector("img")?.getAttribute("src")).toContain("fazier.com/api/v1/public/badges/launch_badges.svg");
+        const expectedBadgeSrc = ["https://fazier.com/api/v1/", "/public/badges/", "launch_badges", ".svg?badge_type=featured&theme=light"].join("");
+        expect(fazierAnchor[0].querySelector("img")?.getAttribute("src")).toBe(expectedBadgeSrc);
       }
       const viesearchAnchor = [...doc.querySelectorAll('a[href="https://viesearch.com/"]')];
       expect(viesearchAnchor.length, file).toBe(file.endsWith("/app/page.tsx") ? 1 : 0);

@@ -984,9 +984,9 @@
     "semantic_hash": ""
   },
   "src/components/content/FeaturedOn.tsx": {
-    "mtime": 1792594224.8388214,
-    "seen": 1792594296.4194355,
-    "ast_hash": "2f3058c8d8e66e113891f9a2118f96ea",
+    "mtime": 1792595790.581662,
+    "seen": 1792595980.1465795,
+    "ast_hash": "2462cf2d9fde24d7529568f29c391063",
     "semantic_hash": ""
   },
   "src/config/page-dates.ts": {
@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792594224.8645935,
-    "seen": 1792594296.4194355,
-    "ast_hash": "30c1b8a29dfab08970cbff97e904e1fd",
+    "mtime": 1792595790.6145744,
+    "seen": 1792595980.1465795,
+    "ast_hash": "6f6269750e56bbd8e913ad3854b69c64",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {

@@ -1,7 +1,7 @@
 # Graph Report - banknoteexpert  (2026-10-21)
 
 ## Corpus Check
-- 227 files · ~290,696 words
+- 227 files · ~290,707 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 9, .css 2, .ico 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bd035c14`
+- Built from commit: `33dc5bb3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
