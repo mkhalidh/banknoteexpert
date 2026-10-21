@@ -39893,7 +39893,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/lib/__tests__/seo-render.test.ts",
-      "source_location": "L151",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -40482,5 +40482,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bd035c148e1aecca1a50eb04e7edb6a24fd8f65d"
+  "built_at_commit": "33dc5bb3372d82d63611600d51ced16dea5b7cf2"
 }
