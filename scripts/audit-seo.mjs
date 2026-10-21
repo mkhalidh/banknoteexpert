@@ -88,6 +88,10 @@ if (!metadataOnly) {
       const raw = link.getAttribute("href");
       const url = new URL(raw, origin + path);
       if (!/^(www\.)?banknoteexpert\.com$/.test(url.hostname)) {
+        if (url.hostname === "viesearch.com") {
+          check(link.relList.contains("nofollow") && link.relList.contains("noopener") && link.target === "_blank", `${path}: Viesearch link must use target=_blank and rel=nofollow noopener`);
+          continue;
+        }
         check(!/^https?:$/.test(url.protocol), `${path}: external link not allowed ${raw}`);
         continue;
       }

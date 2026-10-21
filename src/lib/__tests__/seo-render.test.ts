@@ -78,7 +78,7 @@ describe("rendered SEO content (browser tools excluded)", () => {
       expect(doc.querySelectorAll("h1"), file).toHaveLength(1);
       const externalAnchors = [...doc.querySelectorAll("a[href]")].filter(anchor => {
         const url = new URL(anchor.getAttribute("href")!, "https://www.banknoteexpert.com/");
-        return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname) && url.hostname !== "fazier.com";
+        return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname) && url.hostname !== "fazier.com" && url.hostname !== "viesearch.com";
       });
       const fazierAnchor = [...doc.querySelectorAll('a[href="FAZIER_LAUNCH_URL"]')];
       expect(fazierAnchor.length, file).toBe(file.endsWith("/app/page.tsx") ? 1 : 0);
@@ -86,6 +86,13 @@ describe("rendered SEO content (browser tools excluded)", () => {
         expect(fazierAnchor[0].getAttribute("target")).toBe("_blank");
         expect(fazierAnchor[0].getAttribute("rel")?.split(/\s+/)).toEqual(expect.arrayContaining(["nofollow", "noopener"]));
         expect(fazierAnchor[0].querySelector("img")?.getAttribute("src")).toContain("fazier.com/api/v1/public/badges/launch_badges.svg");
+      }
+      const viesearchAnchor = [...doc.querySelectorAll('a[href="https://viesearch.com/"]')];
+      expect(viesearchAnchor.length, file).toBe(file.endsWith("/app/page.tsx") ? 1 : 0);
+      if (viesearchAnchor.length) {
+        expect(viesearchAnchor[0].getAttribute("target")).toBe("_blank");
+        expect(viesearchAnchor[0].getAttribute("rel")?.split(/\s+/)).toEqual(expect.arrayContaining(["nofollow", "noopener"]));
+        expect(viesearchAnchor[0].querySelector("img")?.getAttribute("alt")).toBe("Featured on Viesearch");
       }
       expect(externalAnchors, file).toHaveLength(0);
       if (file.endsWith("/fancy-serial-numbers/binary/page.tsx")) {

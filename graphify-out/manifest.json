@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "scripts/audit-seo.mjs": {
-    "mtime": 1792592329.2606602,
-    "seen": 1792592372.4715269,
-    "ast_hash": "f0dcf07834d990fe4903c10adc06a1f0",
+    "mtime": 1792592986.6971185,
+    "seen": 1792593080.9777806,
+    "ast_hash": "b712343681317482ce729a3fa23a0ed7",
     "semantic_hash": ""
   },
   "scripts/capture-phase1-baseline.mjs": {
@@ -984,9 +984,9 @@
     "semantic_hash": ""
   },
   "src/components/content/FeaturedOn.tsx": {
-    "mtime": 1792589956.725678,
-    "seen": 1792590017.4061253,
-    "ast_hash": "558039f28d982c5fdeaa1f47715dbca2",
+    "mtime": 1792592986.6911347,
+    "seen": 1792593080.9787776,
+    "ast_hash": "69960346902cb7fdd4882f5d3631b97c",
     "semantic_hash": ""
   },
   "src/config/page-dates.ts": {
@@ -1098,9 +1098,9 @@
     "semantic_hash": ""
   },
   "src/lib/__tests__/seo-render.test.ts": {
-    "mtime": 1792589975.867859,
-    "seen": 1792590017.4061253,
-    "ast_hash": "a195f1bf61f5b1b6985cbeb52eb31bb7",
+    "mtime": 1792592986.6961217,
+    "seen": 1792593080.9787776,
+    "ast_hash": "cca46f95d33f8e6625b13583ff1d6d55",
     "semantic_hash": ""
   },
   "SEO-FIX-REPORT.md": {
