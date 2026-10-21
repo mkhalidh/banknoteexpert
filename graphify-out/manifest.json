@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "scripts/audit-seo.mjs": {
-    "mtime": 1792422572.2710469,
-    "seen": 1792422595.3694077,
-    "ast_hash": "8b8a0bf33fb4c3ec646b2358410da783",
+    "mtime": 1792592329.2606602,
+    "seen": 1792592372.4715269,
+    "ast_hash": "f0dcf07834d990fe4903c10adc06a1f0",
     "semantic_hash": ""
   },
   "scripts/capture-phase1-baseline.mjs": {
