@@ -272,7 +272,9 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
 /* "Featured on" badge row — sits at the foot of the home page, above the footer. */
 .featured-on {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 14px;
   margin-top: 56px;
@@ -281,6 +283,7 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
   text-align: center;
 }
 .featured-on-label {
+  flex: 0 0 100%;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
@@ -293,6 +296,7 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
   border-radius: 14px;
   box-shadow: 0 1px 2px rgba(20, 56, 43, 0.08), 0 8px 24px rgba(20, 56, 43, 0.08);
 }
+.featured-on > a { display: inline-flex; }
 .featured-on-img {
   width: clamp(190px, 58vw, 260px);
   height: auto;

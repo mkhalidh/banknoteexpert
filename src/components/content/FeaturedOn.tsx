@@ -19,7 +19,7 @@ export function FeaturedOn() {
           />
         </span>
       </a>
-      <a href="FAZIER_LAUNCH_URL" target="_blank" rel="nofollow noopener" aria-label="Banknote Expert - Featured on Fazier">
+      <a href="https://fazier.com/" target="_blank" rel="nofollow noopener" aria-label="Banknote Expert - Featured on Fazier">
         <img
           src="https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
           alt="Banknote Expert - Featured on Fazier"

@@ -80,7 +80,7 @@ describe("rendered SEO content (browser tools excluded)", () => {
         const url = new URL(anchor.getAttribute("href")!, "https://www.banknoteexpert.com/");
         return /^https?:$/.test(url.protocol) && !/^(www\.)?banknoteexpert\.com$/.test(url.hostname) && url.hostname !== "fazier.com" && url.hostname !== "viesearch.com";
       });
-      const fazierAnchor = [...doc.querySelectorAll('a[href="FAZIER_LAUNCH_URL"]')];
+      const fazierAnchor = [...doc.querySelectorAll('a[href="https://fazier.com/"]')];
       expect(fazierAnchor.length, file).toBe(file.endsWith("/app/page.tsx") ? 1 : 0);
       if (fazierAnchor.length) {
         expect(fazierAnchor[0].getAttribute("target")).toBe("_blank");
