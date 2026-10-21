@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "src/config/routes.ts": {
-    "mtime": 1792589367.1082916,
-    "seen": 1792589647.9089174,
-    "ast_hash": "e64341a498ceb9932bc52b7d1ec54276",
+    "mtime": 1792591839.5102441,
+    "seen": 1792592237.4102015,
+    "ast_hash": "6c8370ee594ace8f50e494e01396d4fb",
     "semantic_hash": ""
   },
   "src/config/site.ts": {

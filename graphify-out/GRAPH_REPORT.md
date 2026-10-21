@@ -1,28 +1,28 @@
 # Graph Report - banknoteexpert  (2026-10-21)
 
 ## Corpus Check
-- 227 files · ~289,850 words
+- 227 files · ~290,272 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: (none) 9, .css 2, .ico 1)
 
 ## Summary
-- 1085 nodes · 2387 edges · 87 communities (86 shown, 1 thin omitted)
+- 1085 nodes · 2385 edges · 87 communities (86 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9c38f942`
+- Built from commit: `ca440162`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - value.ts
-- buildMetadata
+- next
 - fancy-serial-numbers/page.tsx
 - patterns.ts
 - seo.ts
 - audit-links.ts
-- next
+- layout.tsx
 - RelatedPages.tsx
 - AI Fix Plan: banknoteexpert.com SEO issues
 - validate-phase1.mjs
@@ -43,7 +43,7 @@
 - ContentSections.tsx
 - Waline comment moderation implementation guide
 - 2-dollar-bill-serial-number-lookup/page.tsx
-- scoreSerial
+- buildMetadata
 - StarNoteLookup.tsx
 - audit-seo.mjs
 - binary/page.tsx
@@ -65,7 +65,7 @@
 - ladder/opengraph-image.tsx
 - index.ts
 - low-serial-number/opengraph-image.tsx
-- site.ts
+- page-schema.ts
 - fancy-serial-numbers/opengraph-image.tsx
 - radar/opengraph-image.tsx
 - methodology/opengraph-image.tsx
@@ -74,7 +74,7 @@
 - terms/opengraph-image.tsx
 - tools/opengraph-image.tsx
 - where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx
-- seo-render.test.ts
+- scoreSerial
 - Next.js agent rules and saved Graphify map guidance
 - postcss.config.mjs
 - SEO implementation report with production acceptance pending
@@ -134,12 +134,12 @@
 ## Communities (87 total, 1 thin omitted)
 
 ### Community 0 - "value.ts"
-Cohesion: 0.15
-Nodes (23): SoldSamples(), Page(), Cell(), formatUsd(), maxHigh(), patternLabel(), ValueRangeTable(), NoteCondition (+15 more)
+Cohesion: 0.14
+Nodes (25): SoldSamples(), Page(), Cell(), formatUsd(), maxHigh(), patternLabel(), ValueRangeTable(), NoteCondition (+17 more)
 
-### Community 1 - "buildMetadata"
-Cohesion: 0.08
-Nodes (24): metadata, metadata, metadata, metadata, metadata, metadata, metadata, metadata (+16 more)
+### Community 1 - "next"
+Cohesion: 0.09
+Nodes (22): next, metadata, metadata, metadata, metadata, metadata, metadata, metadata (+14 more)
 
 ### Community 2 - "fancy-serial-numbers/page.tsx"
 Cohesion: 0.06
@@ -150,16 +150,16 @@ Cohesion: 0.05
 Nodes (31): PatternGrid(), blockIsRadar(), DAYS_IN_MONTH, distinctCount(), isBinaryRadar(), isBirthday(), isFourRepeat(), isFullLadder() (+23 more)
 
 ### Community 4 - "seo.ts"
-Cohesion: 0.23
-Nodes (11): robots(), sitemap(), pageModified, pagePublished, AUTHOR_BIO, AUTHOR_SAME_AS, PUBLISHED_ISO, homeFaqs (+3 more)
+Cohesion: 0.26
+Nodes (8): robots(), sitemap(), pageModified, pagePublished, homeFaqs, pageContents, BuildMetadataParams, SITE_URL
 
 ### Community 5 - "audit-links.ts"
 Cohesion: 0.07
 Nodes (33): adjacency, anchorByTarget, APP_DIR, broken, COMPONENTS_DIR, depth, extractLinks(), hardcoded (+25 more)
 
-### Community 6 - "next"
-Cohesion: 0.10
-Nodes (20): next, src_app_globals, dynamic, geistMono, geistSans, metadata, serifDisplay, metadata (+12 more)
+### Community 6 - "layout.tsx"
+Cohesion: 0.12
+Nodes (16): src_app_globals, dynamic, geistMono, geistSans, metadata, serifDisplay, metadata, page (+8 more)
 
 ### Community 7 - "RelatedPages.tsx"
 Cohesion: 0.23
@@ -241,9 +241,9 @@ Nodes (10): Documented opt-in lazy comment widget on six high-traffic pages, Wal
 Cohesion: 0.29
 Nodes (8): metadata, Page(), patternLinks, sectionById(), seriesRows, content, patternLinkLabels, patternPageIds
 
-### Community 27 - "scoreSerial"
-Cohesion: 0.24
-Nodes (10): clamp(), patternSatisfied(), scoreSerial(), tierFor(), detect(), ids(), primary(), ids() (+2 more)
+### Community 27 - "buildMetadata"
+Cohesion: 0.22
+Nodes (5): metadata, TOOLS, metadata, LastUpdated(), buildMetadata()
 
 ### Community 28 - "StarNoteLookup.tsx"
 Cohesion: 0.15
@@ -275,7 +275,7 @@ Nodes (6): Banknote Expert, Brand Commitments, Capabilities and Constraints, Evi
 
 ### Community 35 - "app/page.tsx"
 Cohesion: 0.06
-Nodes (33): Colors, Components, Design System: Banknote Expert, Do's and Don'ts, Elevation & Depth, Layout, Overview, Shapes (+25 more)
+Nodes (31): Colors, Components, Design System: Banknote Expert, Do's and Don'ts, Elevation & Depth, Layout, Overview, Shapes (+23 more)
 
 ### Community 36 - "Breadcrumbs.tsx"
 Cohesion: 0.23
@@ -322,16 +322,16 @@ Cohesion: 0.53
 Nodes (4): alt, contentType, Image(), size
 
 ### Community 47 - "index.ts"
-Cohesion: 0.18
-Nodes (16): fail(), ParsedSerial, ParseError, ParseErrorCode, ParseResult, AXIS_OF, COMBO_BONUS, COMBO_CAP (+8 more)
+Cohesion: 0.19
+Nodes (15): fail(), ParsedSerial, ParseError, ParseErrorCode, ParseResult, parseSerial(), AXIS_OF, COMBO_BONUS (+7 more)
 
 ### Community 48 - "low-serial-number/opengraph-image.tsx"
 Cohesion: 0.53
 Nodes (4): alt, contentType, Image(), size
 
-### Community 49 - "site.ts"
+### Community 49 - "page-schema.ts"
 Cohesion: 0.15
-Nodes (12): metadata, ArticleByline(), AuthorDetails(), LastUpdated(), ArticleSchemaProps, AUTHOR_NAME, authorDetails, LAST_UPDATED (+4 more)
+Nodes (15): ArticleByline(), AuthorDetails(), ArticleSchemaProps, JsonLd(), JsonLdProps, AUTHOR_BIO, AUTHOR_NAME, AUTHOR_SAME_AS (+7 more)
 
 ### Community 50 - "fancy-serial-numbers/opengraph-image.tsx"
 Cohesion: 0.53
@@ -365,9 +365,9 @@ Nodes (4): alt, contentType, Image(), size
 Cohesion: 0.53
 Nodes (4): alt, contentType, Image(), size
 
-### Community 58 - "seo-render.test.ts"
-Cohesion: 0.15
-Nodes (8): ref_node_module, react-dom, vitest, siloAGuides, patternsById, detect(), { JSDOM }, pages
+### Community 58 - "scoreSerial"
+Cohesion: 0.10
+Nodes (19): ref_node_module, react-dom, vitest, siloAGuides, patternsById, clamp(), patternSatisfied(), scoreSerial() (+11 more)
 
 ### Community 59 - "Next.js agent rules and saved Graphify map guidance"
 Cohesion: 0.50
@@ -398,8 +398,8 @@ Cohesion: 0.17
 Nodes (10): @waline/client, metadata, Page(), premiumRows, sectionById(), v1976, Comments(), src_components_comments_comments_theme (+2 more)
 
 ### Community 67 - "FancySerialChecker.tsx"
-Cohesion: 0.17
-Nodes (17): react, easeOut(), SCORE_TIER_STYLES, ScoreMeter(), TwoDollarSerialLookup(), formatUsd(), patternLabel(), ValueResultPanel() (+9 more)
+Cohesion: 0.13
+Nodes (18): react, NavItem, easeOut(), SCORE_TIER_STYLES, ScoreMeter(), TwoDollarSerialLookup(), formatUsd(), patternLabel() (+10 more)
 
 ### Community 68 - "app/opengraph-image.tsx"
 Cohesion: 0.53
@@ -491,15 +491,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `README placeholder check:data gate warns but exits zero` and `Documented real BEP dataset: 438 runs, seven denominations, 15 series, extracted 2026-09-12`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
-- **Why does `next` connect `next` to `buildMetadata`, `fancy-serial-numbers/page.tsx`, `patterns.ts`, `seo.ts`, `RelatedPages.tsx`, `package.json`, `2-dollar-bill-value/page.tsx`, `pages.ts`, `routes.ts`, `[...all].ts`, `ContentSections.tsx`, `2-dollar-bill-serial-number-lookup/page.tsx`, `StarNoteLookup.tsx`, `binary/page.tsx`, `star-note-lookup/page.tsx`, `app/page.tsx`, `Breadcrumbs.tsx`, `site.ts`, `super-radar/page.tsx`, `birthday-note/page.tsx`, `security-headers.mjs`, `social-image.tsx`, `1976-2-dollar-bill-value/page.tsx`, `FancySerialChecker.tsx`, `broken-ladder/page.tsx`, `low-serial-number/page.tsx`?**
-  _High betweenness centrality (0.248) - this node is a cross-community bridge._
-- **Why does `getRoute()` connect `routes.ts` to `fancy-serial-numbers/page.tsx`, `seo.ts`, `next`, `RelatedPages.tsx`, `socialImage`, `app/page.tsx`, `Breadcrumbs.tsx`, `1976-2-dollar-bill-value/opengraph-image.tsx`, `2-dollar-bill-serial-number-lookup/opengraph-image.tsx`, `2-dollar-bill-value/opengraph-image.tsx`, `about/opengraph-image.tsx`, `about-the-author/opengraph-image.tsx`, `blog/opengraph-image.tsx`, `fancy-serial-number-value/opengraph-image.tsx`, `birthday-note/opengraph-image.tsx`, `ladder/opengraph-image.tsx`, `low-serial-number/opengraph-image.tsx`, `fancy-serial-numbers/opengraph-image.tsx`, `radar/opengraph-image.tsx`, `methodology/opengraph-image.tsx`, `privacy/opengraph-image.tsx`, `star-note-lookup/opengraph-image.tsx`, `terms/opengraph-image.tsx`, `tools/opengraph-image.tsx`, `where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx`, `broken-ladder/page.tsx`, `broken-ladder/opengraph-image.tsx`, `binary-radar/opengraph-image.tsx`, `binary/twitter-image.tsx`, `bookends/opengraph-image.tsx`, `bookends/twitter-image.tsx`, `five-of-a-kind/opengraph-image.tsx`, `radar-repeater/opengraph-image.tsx`, `seven-of-a-kind/opengraph-image.tsx`, `seven-of-a-kind/twitter-image.tsx`, `six-of-a-kind/opengraph-image.tsx`, `six-of-a-kind/twitter-image.tsx`, `solid/opengraph-image.tsx`, `super-radar/opengraph-image.tsx`, `trinary/twitter-image.tsx`?**
-  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `next` connect `next` to `fancy-serial-numbers/page.tsx`, `patterns.ts`, `seo.ts`, `layout.tsx`, `RelatedPages.tsx`, `package.json`, `2-dollar-bill-value/page.tsx`, `pages.ts`, `routes.ts`, `[...all].ts`, `ContentSections.tsx`, `2-dollar-bill-serial-number-lookup/page.tsx`, `buildMetadata`, `StarNoteLookup.tsx`, `binary/page.tsx`, `star-note-lookup/page.tsx`, `app/page.tsx`, `Breadcrumbs.tsx`, `page-schema.ts`, `super-radar/page.tsx`, `birthday-note/page.tsx`, `security-headers.mjs`, `social-image.tsx`, `1976-2-dollar-bill-value/page.tsx`, `FancySerialChecker.tsx`, `broken-ladder/page.tsx`, `low-serial-number/page.tsx`?**
+  _High betweenness centrality (0.255) - this node is a cross-community bridge._
+- **Why does `getRoute()` connect `routes.ts` to `fancy-serial-numbers/page.tsx`, `layout.tsx`, `RelatedPages.tsx`, `socialImage`, `app/page.tsx`, `Breadcrumbs.tsx`, `1976-2-dollar-bill-value/opengraph-image.tsx`, `2-dollar-bill-serial-number-lookup/opengraph-image.tsx`, `2-dollar-bill-value/opengraph-image.tsx`, `about/opengraph-image.tsx`, `about-the-author/opengraph-image.tsx`, `blog/opengraph-image.tsx`, `fancy-serial-number-value/opengraph-image.tsx`, `birthday-note/opengraph-image.tsx`, `ladder/opengraph-image.tsx`, `low-serial-number/opengraph-image.tsx`, `page-schema.ts`, `fancy-serial-numbers/opengraph-image.tsx`, `radar/opengraph-image.tsx`, `methodology/opengraph-image.tsx`, `privacy/opengraph-image.tsx`, `star-note-lookup/opengraph-image.tsx`, `terms/opengraph-image.tsx`, `tools/opengraph-image.tsx`, `where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx`, `broken-ladder/page.tsx`, `broken-ladder/opengraph-image.tsx`, `binary-radar/opengraph-image.tsx`, `binary/twitter-image.tsx`, `bookends/opengraph-image.tsx`, `bookends/twitter-image.tsx`, `five-of-a-kind/opengraph-image.tsx`, `radar-repeater/opengraph-image.tsx`, `seven-of-a-kind/opengraph-image.tsx`, `seven-of-a-kind/twitter-image.tsx`, `six-of-a-kind/opengraph-image.tsx`, `six-of-a-kind/twitter-image.tsx`, `solid/opengraph-image.tsx`, `super-radar/opengraph-image.tsx`, `trinary/twitter-image.tsx`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **Why does `socialImage()` connect `socialImage` to `routes.ts`, `1976-2-dollar-bill-value/opengraph-image.tsx`, `2-dollar-bill-serial-number-lookup/opengraph-image.tsx`, `2-dollar-bill-value/opengraph-image.tsx`, `about/opengraph-image.tsx`, `about-the-author/opengraph-image.tsx`, `blog/opengraph-image.tsx`, `fancy-serial-number-value/opengraph-image.tsx`, `birthday-note/opengraph-image.tsx`, `ladder/opengraph-image.tsx`, `low-serial-number/opengraph-image.tsx`, `fancy-serial-numbers/opengraph-image.tsx`, `radar/opengraph-image.tsx`, `methodology/opengraph-image.tsx`, `privacy/opengraph-image.tsx`, `star-note-lookup/opengraph-image.tsx`, `terms/opengraph-image.tsx`, `tools/opengraph-image.tsx`, `where-is-the-serial-number-on-a-dollar-bill/opengraph-image.tsx`, `social-image.tsx`, `app/opengraph-image.tsx`, `broken-ladder/opengraph-image.tsx`, `binary-radar/opengraph-image.tsx`, `binary/twitter-image.tsx`, `bookends/opengraph-image.tsx`, `bookends/twitter-image.tsx`, `five-of-a-kind/opengraph-image.tsx`, `radar-repeater/opengraph-image.tsx`, `seven-of-a-kind/opengraph-image.tsx`, `seven-of-a-kind/twitter-image.tsx`, `six-of-a-kind/opengraph-image.tsx`, `six-of-a-kind/twitter-image.tsx`, `solid/opengraph-image.tsx`, `super-radar/opengraph-image.tsx`, `trinary/twitter-image.tsx`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
   _367 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `value.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.14814814814814814 - nodes in this community are weakly interconnected._
-- **Should `buildMetadata` be split into smaller, more focused modules?**
-  _Cohesion score 0.07822410147991543 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1425287356321839 - nodes in this community are weakly interconnected._
+- **Should `next` be split into smaller, more focused modules?**
+  _Cohesion score 0.09102564102564102 - nodes in this community are weakly interconnected._
