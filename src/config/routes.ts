@@ -132,6 +132,54 @@ export const routes: RouteEntry[] = [
     indexable: true,
   },
   {
+    path: "/fancy-serial-numbers/solid/",
+    title: "Solid Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a solid serial number on a dollar bill? See real examples, detector-based odds, value factors and verified sold ranges by condition.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/trinary/",
+    title: "Trinary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a trinary serial number on a dollar bill? Learn the detector definition, compare true trinary and binary, see examples and check verified value data.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/seven-of-a-kind/",
+    title: "Seven of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a seven of a kind serial number on a dollar bill? Compare seven in a row, see detector-based odds, examples and verified value data.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/six-of-a-kind/",
+    title: "Six of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a six of a kind serial number? Learn how the detector defines it, compare near solid terms, see exact odds and check value data.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/five-of-a-kind/",
+    title: "Five of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a five of a kind serial number? See examples, compare five, six and seven repeats, check exact odds and review value factors.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/binary-radar/",
+    title: "Binary Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a binary radar serial number? Learn the two-digit palindrome rule, examples, exact detector odds and honest value guidance.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/bookends/",
+    title: "Bookends Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a bookends serial number? See the site's two-digit rule, compare three-digit bookends with radar and repeater patterns, and review value evidence.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
+    path: "/fancy-serial-numbers/four-pairs/",
+    title: "Quad Doubles (Four Pairs) Serial Number: What It Is, Rarity & Value | Banknote Expert",
+    description: "What is a quad doubles serial number? Learn the AABBCCDD rule, compare it with double quad, see examples and check verified value data.",
+    silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
+  },
+  {
     path: "/fancy-serial-numbers/low-serial-number/",
     title: "Low Serial Number Dollar Bill: Rarity and Value",
     description:

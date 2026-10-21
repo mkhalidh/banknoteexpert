@@ -139,7 +139,15 @@ export default function Page() {
           </Link>{", and the "}
           <Link href={radarRepeaterGuide.path} className="link-accent">
             radar repeater serial number guide
-          </Link>. The rest are explained on the hub.
+          </Link>. Explore dedicated guides for {" "}
+          <Link href="/fancy-serial-numbers/solid/" className="link-accent">solid</Link>, {" "}
+          <Link href="/fancy-serial-numbers/trinary/" className="link-accent">trinary</Link>, {" "}
+          <Link href="/fancy-serial-numbers/seven-of-a-kind/" className="link-accent">seven of a kind</Link>, {" "}
+          <Link href="/fancy-serial-numbers/six-of-a-kind/" className="link-accent">six of a kind</Link>, {" "}
+          <Link href="/fancy-serial-numbers/five-of-a-kind/" className="link-accent">five of a kind</Link>, {" "}
+          <Link href="/fancy-serial-numbers/binary-radar/" className="link-accent">binary radar</Link>, {" "}
+          <Link href="/fancy-serial-numbers/bookends/" className="link-accent">bookends</Link>, and {" "}
+          <Link href="/fancy-serial-numbers/four-pairs/" className="link-accent">quad doubles</Link>.
         </p>
         <div className="mt-6">
           <PatternGrid />

@@ -17,6 +17,15 @@ export function FeaturedOn() {
           loading="lazy"
         />
       </span>
+      <a href="FAZIER_LAUNCH_URL" target="_blank" rel="nofollow noopener" aria-label="Banknote Expert - Featured on Fazier">
+        <img
+          src="https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
+          alt="Banknote Expert - Featured on Fazier"
+          width="250"
+          loading="lazy"
+          className="featured-on-img"
+        />
+      </a>
     </section>
   );
 }

@@ -2,6 +2,14 @@
 // Keep these dates in sync when publishing substantive content changes.
 // Pages omitted here use the original site-wide publication date.
 export const pagePublished: Record<string, string> = {
+  "/fancy-serial-numbers/solid/": "2026-10-21",
+  "/fancy-serial-numbers/trinary/": "2026-10-21",
+  "/fancy-serial-numbers/seven-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/six-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/five-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/binary-radar/": "2026-10-21",
+  "/fancy-serial-numbers/bookends/": "2026-10-21",
+  "/fancy-serial-numbers/four-pairs/": "2026-10-21",
   "/fancy-serial-numbers/broken-ladder/": "2026-10-14",
   "/fancy-serial-numbers/binary/": "2026-10-19",
   "/fancy-serial-numbers/super-radar/": "2026-10-19",
@@ -9,6 +17,14 @@ export const pagePublished: Record<string, string> = {
 };
 
 export const pageModified: Record<string, string> = {
+  "/fancy-serial-numbers/solid/": "2026-10-21",
+  "/fancy-serial-numbers/trinary/": "2026-10-21",
+  "/fancy-serial-numbers/seven-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/six-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/five-of-a-kind/": "2026-10-21",
+  "/fancy-serial-numbers/binary-radar/": "2026-10-21",
+  "/fancy-serial-numbers/bookends/": "2026-10-21",
+  "/fancy-serial-numbers/four-pairs/": "2026-10-21",
   "/": "2026-10-15",
   "/fancy-serial-numbers/": "2026-10-14",
   "/fancy-serial-numbers/radar/": "2026-10-14",

@@ -369,6 +369,14 @@ export const patternOrder: string[] = [
 
 /** Dedicated spoke pages, linked down from the hub. */
 export const spokeLinks = [
+  { href: "/fancy-serial-numbers/solid/", label: "Solid serial numbers", description: "Eight matching digits, detector odds and verified sale bands." },
+  { href: "/fancy-serial-numbers/trinary/", label: "Trinary serial numbers", description: "Exactly three distinct digits, with true-trinary examples." },
+  { href: "/fancy-serial-numbers/seven-of-a-kind/", label: "Seven of a Kind serial numbers", description: "Seven repeated digits, position rules and odds." },
+  { href: "/fancy-serial-numbers/six-of-a-kind/", label: "Six of a Kind serial numbers", description: "The six-repeat detector rule and near-solid terminology." },
+  { href: "/fancy-serial-numbers/five-of-a-kind/", label: "Five of a Kind serial numbers", description: "A common repeat pattern and its honest value context." },
+  { href: "/fancy-serial-numbers/binary-radar/", label: "Binary Radar serial numbers", description: "Two distinct digits arranged as a palindrome." },
+  { href: "/fancy-serial-numbers/bookends/", label: "Bookends serial numbers", description: "The site's two-digit bookends rule and comparisons." },
+  { href: "/fancy-serial-numbers/four-pairs/", label: "Quad Doubles serial numbers", description: "Four adjacent pairs, also called Four Pairs." },
   {
     href: "/fancy-serial-numbers/radar-repeater/",
     label: "Radar repeater serial numbers",

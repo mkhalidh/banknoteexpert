@@ -31,6 +31,38 @@ for (const route of routes) {
       title: "Radar Repeater Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
       description: "What is a radar repeater serial number on a dollar bill? Learn the definition, see examples, check the rarity odds, and find what radar repeater notes actually sold for.",
     },
+    "/fancy-serial-numbers/solid/": {
+      title: "Solid Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a solid serial number on a dollar bill? See real examples, detector-based odds, value factors and verified sold ranges by condition.",
+    },
+    "/fancy-serial-numbers/trinary/": {
+      title: "Trinary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a trinary serial number on a dollar bill? Learn the detector definition, compare true trinary and binary, see examples and check verified value data.",
+    },
+    "/fancy-serial-numbers/seven-of-a-kind/": {
+      title: "Seven of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a seven of a kind serial number on a dollar bill? Compare seven in a row, see detector-based odds, examples and verified value data.",
+    },
+    "/fancy-serial-numbers/six-of-a-kind/": {
+      title: "Six of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a six of a kind serial number? Learn how the detector defines it, compare near solid terms, see exact odds and check value data.",
+    },
+    "/fancy-serial-numbers/five-of-a-kind/": {
+      title: "Five of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a five of a kind serial number? See examples, compare five, six and seven repeats, check exact odds and review value factors.",
+    },
+    "/fancy-serial-numbers/binary-radar/": {
+      title: "Binary Radar Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a binary radar serial number? Learn the two-digit palindrome rule, examples, exact detector odds and honest value guidance.",
+    },
+    "/fancy-serial-numbers/bookends/": {
+      title: "Bookends Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a bookends serial number? See the site's two-digit rule, compare three-digit bookends with radar and repeater patterns, and review value evidence.",
+    },
+    "/fancy-serial-numbers/four-pairs/": {
+      title: "Quad Doubles (Four Pairs) Serial Number: What It Is, Rarity & Value | Banknote Expert",
+      description: "What is a quad doubles serial number? Learn the AABBCCDD rule, compare it with double quad, see examples and check verified value data.",
+    },
   }[route.path];
   check(title && (requestedMetadata ? title === requestedMetadata.title : title.length <= 60) && !titles.has(title), `${route.path}: missing, duplicate or long title (${title.length})`);
   check(description && (requestedMetadata ? description === requestedMetadata.description : description.length <= 160) && !descriptions.has(description), `${route.path}: missing, duplicate or long description (${description?.length})`);
