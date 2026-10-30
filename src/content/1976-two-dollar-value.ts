@@ -98,6 +98,32 @@ export const content: PageContent = {
       ],
     },
     {
+      id: "by-district",
+      heading: "1976 $2 star notes by district",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "District decides how scarce a 1976 star is. Most Federal Reserve districts printed more than one star run for the series, but three printed only a single 640,000-note run: Richmond, Minneapolis and Kansas City. Those three are the recognised keys of the 1976 star set, which is why a Minneapolis or Kansas City star is worth more than one from a large district in the same grade.",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "The table below lists the star notes printed by district for the 1976 series, from our print run data (BEP production records). Where our own recorded sales do not support a per-district price we do not invent one; use the run size as the scarcity signal and the note's condition to judge the rest.",
+        },
+        {
+          kind: "richtext",
+          segments: [
+            "For the full star picture across every series, see the ",
+            { href: "/2-dollar-bill-value/star-notes/", label: "$2 star note value guide" },
+            ", and to read the exact run for your note use the ",
+            { href: "/star-note-lookup/", label: "star note lookup" },
+            ".",
+          ],
+        },
+      ],
+    },
+    {
       id: "first-day",
       heading: "First-day postmarked 1976 notes",
       blocks: [
@@ -227,6 +253,15 @@ export const content: PageContent = {
           text:
             "Keeping one as a memento is fine, but do not expect a windfall. Unless it is uncirculated, a star, an error, or carries a low or fancy serial, it is ordinary currency worth two dollars. Check the serial first, and if it comes back ordinary there is no shame in spending it.",
         },
+        { kind: "subheading", text: "Is a 1976 $2 bill with a stamp worth more?" },
+        {
+          kind: "richtext",
+          segments: [
+            "Usually only a little. A stamp with an April 13, 1976 postmark makes a first day of issue souvenir, which carries a small premium over face value rather than a large one. See the ",
+            { href: "/2-dollar-bill-value/1976-postage-stamp/", label: "1976 $2 bill with postage stamp guide" },
+            " for the full detail.",
+          ],
+        },
       ],
     },
   ],
@@ -235,6 +270,16 @@ export const content: PageContent = {
       href: "/2-dollar-bill-value/",
       label: "$2 bill value guide",
       description: "Values for every $2 series, seal colour and condition.",
+    },
+    {
+      href: "/2-dollar-bill-value/star-notes/",
+      label: "$2 star note value",
+      description: "What $2 star notes are worth, with 1976 runs by district.",
+    },
+    {
+      href: "/2-dollar-bill-value/1976-postage-stamp/",
+      label: "1976 $2 bill with postage stamp",
+      description: "What a stamped, postmarked first-day 1976 note is worth.",
     },
     {
       href: "/2-dollar-bill-serial-number-lookup/",

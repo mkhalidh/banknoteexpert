@@ -9,6 +9,7 @@ import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { TwoDollarValueChart } from "@/components/content/TwoDollarValueChart";
 import { ScarcestStarCallout } from "@/components/content/ScarcestStarCallout";
+import { TwoDollarClusterNav } from "@/components/content/TwoDollarClusterNav";
 import { Comments } from "@/components/comments/Comments";
 import { twoDollarSeries } from "@/data/two-dollar-series";
 import { patternsById } from "@/lib/serial/patterns";
@@ -124,6 +125,9 @@ export default function Page() {
 
       {/* Section 10, FAQ */}
       <ContentSections sections={sectionById("faq")} />
+
+      {/* Cluster nav: links down to every built $2 child page */}
+      <TwoDollarClusterNav currentPath={content.meta.path} />
 
       {/* Section 11 */}
       <RelatedPages links={content.related} />

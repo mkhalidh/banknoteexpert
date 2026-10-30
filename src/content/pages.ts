@@ -17,6 +17,8 @@ import { content as c15 } from "@/content/broken-ladder";
 import { content as c16 } from "@/content/binary";
 import { content as c17 } from "@/content/super-radar";
 import { content as c18 } from "@/content/radar-repeater";
+import { content as c19 } from "@/content/two-dollar-star-notes";
+import { content as c20 } from "@/content/1976-postage-stamp";
 import { siloAGuides } from "@/content/silo-a-guides";
 
-export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, ...siloAGuides];
+export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, ...siloAGuides];

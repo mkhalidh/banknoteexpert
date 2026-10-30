@@ -269,6 +269,28 @@ export const routes: RouteEntry[] = [
     changeFrequency: "monthly",
     indexable: true,
   },
+  {
+    path: "/2-dollar-bill-value/star-notes/",
+    title: "$2 Star Note Value: Prices by Series and Print Run",
+    description:
+      "What a $2 star note is worth by series, which are rarest, and how print run size drives value.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/1976-postage-stamp/",
+    title: "1976 $2 Bill With Postage Stamp: Value and Facts",
+    description:
+      "Is a 1976 $2 bill with a postage stamp worth more? First day of issue facts, how to spot one, and the premium most carry.",
+    silo: "two-dollar-bills",
+    pageType: "guide",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
 
   {
     path: "/blog/",

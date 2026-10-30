@@ -20,7 +20,11 @@ export function RelatedPages({
       <ul className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {links.map((link) => (
           <li key={`${link.href}-${link.label}`} className="card card-hover p-4">
-            <Link href={link.href} className="link-accent text-base font-semibold">
+            <Link
+              href={link.href}
+              data-navigation-link="true"
+              className="link-accent text-base font-semibold"
+            >
               {link.label}
             </Link>
             {link.description ? (

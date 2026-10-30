@@ -175,6 +175,29 @@ export const STAR_NOTE_RUNS: StarNoteRun[] = [
   { denomination: 2, series: "2017A", frbLetter: "L", frbName: "San Francisco", rangeStart: 9600001, rangeEnd: 9664000, runSize: 64000, isFullRun: false, sourcePdfUrl: "https://www.bep.gov/system/files/documents/1-October%20FY24%20End%20of%20the%20Month%20Report%2011-6-2023.pdf", source: "BEP Monthly Production Report" },
   { denomination: 2, series: "2017A", frbLetter: "L", frbName: "San Francisco", rangeStart: 12800001, rangeEnd: 13440000, runSize: 640000, isFullRun: false, sourcePdfUrl: "https://www.bep.gov/system/files/documents/1-October%20FY24%20End%20of%20the%20Month%20Report%2011-6-2023.pdf", source: "BEP Monthly Production Report" },
   { denomination: 2, series: "2021", frbLetter: "E", frbName: "Richmond", rangeStart: 1, rangeEnd: 3200000, runSize: 3200000, isFullRun: true, sourcePdfUrl: "https://www.bep.gov/system/files/documents/October%202025%20Monthly%20Production%20Report.pdf", source: "BEP Monthly Production Report" },
+  // --- MANUALLY APPENDED (not produced by the BEP parser) -------------------
+  // Series 1976 $2 Federal Reserve STAR notes. The online BEP monthly reports
+  // only reach back to FY2003, so 1976 is sourced from uspapermoney.info's Series
+  // 1976 $2 page (BEP production records), verified Oct 2026 against its series-
+  // statistics table. Star notes ran contiguously from *00000001 per district in
+  // standard 640,000-note runs; rangeEnd is the district's star total (E/I/J one
+  // 640,000 run; A/C/D/F/G/H/K two; L three; B four), summing to 15,360,000 / 24
+  // runs. runSize here is the district STAR TOTAL (reflects collector scarcity:
+  // Richmond/Minneapolis/Kansas City are the scarce single-run districts). A future
+  // BEP-parser regen of this file must preserve these rows.
+  { denomination: 2, series: "1976", frbLetter: "A", frbName: "Boston", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "B", frbName: "New York", rangeStart: 1, rangeEnd: 2560000, runSize: 2560000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "C", frbName: "Philadelphia", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "D", frbName: "Cleveland", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "E", frbName: "Richmond", rangeStart: 1, rangeEnd: 640000, runSize: 640000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "F", frbName: "Atlanta", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "G", frbName: "Chicago", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "H", frbName: "St. Louis", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "I", frbName: "Minneapolis", rangeStart: 1, rangeEnd: 640000, runSize: 640000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "J", frbName: "Kansas City", rangeStart: 1, rangeEnd: 640000, runSize: 640000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "K", frbName: "Dallas", rangeStart: 1, rangeEnd: 1280000, runSize: 1280000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  { denomination: 2, series: "1976", frbLetter: "L", frbName: "San Francisco", rangeStart: 1, rangeEnd: 1920000, runSize: 1920000, isFullRun: false, sourcePdfUrl: "http://www.uspapermoney.info/serials/f1976_b.html", source: "BEP production records via uspapermoney.info" },
+  // --- end manual 1976 $2 block --------------------------------------------
   { denomination: 5, series: "1999", frbLetter: "F", frbName: "Atlanta", rangeStart: 16000001, rangeEnd: 19200000, runSize: 3200000, isFullRun: true, sourcePdfUrl: "https://www.bep.gov/media/5951/download?inline", source: "BEP Monthly Production Report" },
   { denomination: 5, series: "1999", frbLetter: "F", frbName: "Atlanta", rangeStart: 19200001, rangeEnd: 19840000, runSize: 640000, isFullRun: false, sourcePdfUrl: "https://www.bep.gov/media/1286/download?inline", source: "BEP Monthly Production Report" },
   { denomination: 5, series: "1999", frbLetter: "G", frbName: "Chicago", rangeStart: 1, rangeEnd: 3200000, runSize: 3200000, isFullRun: true, sourcePdfUrl: "https://www.bep.gov/media/1166/download?inline", source: "BEP Monthly Production Report" },
@@ -480,6 +503,7 @@ export const STAR_NOTE_COVERAGE: Record<string, string[]> = {
     "2021"
   ],
   "2": [
+    "1976",
     "2003",
     "2003A",
     "2009",

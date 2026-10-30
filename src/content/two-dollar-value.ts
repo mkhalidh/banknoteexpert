@@ -293,6 +293,12 @@ export const content: PageContent = {
           text:
             "No. The denomination is still printed and remains in active production, so $2 bills are not rare. They are just seen less often because they circulate lightly and people keep them.",
         },
+        { kind: "subheading", text: "Were $2 bills printed in 1975 or 1978?" },
+        {
+          kind: "paragraph",
+          text:
+            "No. There is no Series 1975 or Series 1978 $2 bill. Small-size $2 notes jump from the 1963 and 1963A red seals to the Series 1976 green seal, then to Series 1995 and later. The series year is the design year, not the exact print date, so people searching for a 1975 or 1978 $2 almost always have a Series 1976 note.",
+        },
         { kind: "subheading", text: "Which $2 bills are worth money?" },
         {
           kind: "paragraph",

@@ -7,8 +7,11 @@ import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { TwoDollarSerialLookup } from "@/components/tools/TwoDollarSerialLookup";
+import { TwoDollarClusterNav } from "@/components/content/TwoDollarClusterNav";
 import { Comments } from "@/components/comments/Comments";
 import { TWO_DOLLAR_VALUES } from "@/data/two-dollar-values";
+import { STAR_NOTE_RUNS } from "@/data/star-notes/runs";
+import { rarityForRunSize } from "@/lib/star-note/lookup";
 import { content } from "@/content/1976-two-dollar-value";
 
 export const metadata: Metadata = buildMetadata({
@@ -19,6 +22,15 @@ export const metadata: Metadata = buildMetadata({
 
 const money = (n: number) => `$${Math.round(n)}`;
 const v1976 = TWO_DOLLAR_VALUES.find((v) => v.series === "1976");
+
+const runs1976 = STAR_NOTE_RUNS.filter(
+  (r) => r.denomination === 2 && r.series === "1976",
+).sort((a, b) => a.runSize - b.runSize);
+const districtRows = runs1976.map((r) => [
+  `${r.frbLetter} ${r.frbName}`,
+  r.runSize.toLocaleString("en-US"),
+  rarityForRunSize(r.runSize),
+]);
 
 const conditionRows: string[][] = v1976
   ? [
@@ -90,6 +102,19 @@ export default function Page() {
       <ContentSections sections={sectionById("why-common")} />
       <ContentSections sections={sectionById("design")} />
       <ContentSections sections={sectionById("star-notes")} />
+
+      {/* By-district 1976 star runs from our print run data */}
+      <div>
+        <ContentSections sections={sectionById("by-district")} />
+        <div className="mt-4">
+          <ComparisonTable
+            caption="1976 $2 star notes printed by Federal Reserve district"
+            columns={["District", "Star notes printed", "Rarity tier"]}
+            rows={districtRows}
+          />
+        </div>
+      </div>
+
       <ContentSections sections={sectionById("first-day")} />
       <ContentSections sections={sectionById("serials")} />
       <ContentSections sections={sectionById("errors")} />
@@ -97,6 +122,8 @@ export default function Page() {
       <ContentSections sections={sectionById("check-your-note")} />
       <ContentSections sections={sectionById("how-we-estimate")} />
       <ContentSections sections={sectionById("faq")} />
+
+      <TwoDollarClusterNav currentPath={content.meta.path} />
 
       <RelatedPages links={content.related} />
 
