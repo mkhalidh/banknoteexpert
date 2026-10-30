@@ -291,6 +291,39 @@ export const routes: RouteEntry[] = [
     changeFrequency: "monthly",
     indexable: true,
   },
+  {
+    path: "/2-dollar-bill-value/1928/",
+    title: "1928 $2 Bill Value: Red Seal Prices by Series and Star Notes",
+    description:
+      "What a 1928 $2 red seal bill is worth by series (1928 to 1928G) and star notes, with recorded prices by condition.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/1953/",
+    title: "1953 $2 Bill Value: Red Seal Prices and Star Notes",
+    description:
+      "What a 1953 $2 red seal bill is worth across 1953, 1953A, 1953B and 1953C, plus star notes and the silver-certificate question.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/1963-red-seal/",
+    title: "1963 $2 Bill Value: Red Seal Prices, 1963 vs 1963A",
+    description:
+      "What a 1963 $2 red seal bill is worth, how 1963 and 1963A compare by print run, and why it was the last red seal $2.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
 
   {
     path: "/blog/",

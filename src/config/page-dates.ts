@@ -16,6 +16,9 @@ export const pagePublished: Record<string, string> = {
   "/fancy-serial-numbers/radar-repeater/": "2026-10-19",
   "/2-dollar-bill-value/star-notes/": "2026-10-29",
   "/2-dollar-bill-value/1976-postage-stamp/": "2026-10-29",
+  "/2-dollar-bill-value/1928/": "2026-10-30",
+  "/2-dollar-bill-value/1953/": "2026-10-30",
+  "/2-dollar-bill-value/1963-red-seal/": "2026-10-30",
 };
 
 export const pageModified: Record<string, string> = {
@@ -44,6 +47,9 @@ export const pageModified: Record<string, string> = {
   "/2-dollar-bill-value/": "2026-10-29",
   "/2-dollar-bill-value/star-notes/": "2026-10-29",
   "/2-dollar-bill-value/1976-postage-stamp/": "2026-10-29",
+  "/2-dollar-bill-value/1928/": "2026-10-30",
+  "/2-dollar-bill-value/1953/": "2026-10-30",
+  "/2-dollar-bill-value/1963-red-seal/": "2026-10-30",
   "/1976-2-dollar-bill-value/": "2026-10-29",
   "/blog/": "2026-10-14",
   "/about-the-author/": "2026-10-03",

@@ -11,9 +11,12 @@ import { getRoute } from "@/config/routes";
  */
 const CLUSTER_PATHS = [
   "/2-dollar-bill-value/",
-  "/2-dollar-bill-value/star-notes/",
-  "/2-dollar-bill-value/1976-postage-stamp/",
+  "/2-dollar-bill-value/1928/",
+  "/2-dollar-bill-value/1953/",
+  "/2-dollar-bill-value/1963-red-seal/",
   "/1976-2-dollar-bill-value/",
+  "/2-dollar-bill-value/1976-postage-stamp/",
+  "/2-dollar-bill-value/star-notes/",
   "/2-dollar-bill-serial-number-lookup/",
 ];
 

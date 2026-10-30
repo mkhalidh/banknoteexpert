@@ -1,8 +1,32 @@
+import Link from "next/link";
 import {
   TWO_DOLLAR_VALUES,
   TWO_DOLLAR_VALUES_UPDATED,
   type TwoDollarValue,
 } from "@/data/two-dollar-values";
+
+/**
+ * Series to its dedicated cluster child page. Rows link to their year guide so
+ * the parent chart doubles as cluster navigation. Add entries as later batches
+ * build the remaining year pages (1995, 2003, 2009, 2013, 2017A).
+ */
+const SERIES_PAGE: Record<string, string> = {
+  "1928": "/2-dollar-bill-value/1928/",
+  "1928A": "/2-dollar-bill-value/1928/",
+  "1928B": "/2-dollar-bill-value/1928/",
+  "1928C": "/2-dollar-bill-value/1928/",
+  "1928D": "/2-dollar-bill-value/1928/",
+  "1928E": "/2-dollar-bill-value/1928/",
+  "1928F": "/2-dollar-bill-value/1928/",
+  "1928G": "/2-dollar-bill-value/1928/",
+  "1953": "/2-dollar-bill-value/1953/",
+  "1953A": "/2-dollar-bill-value/1953/",
+  "1953B": "/2-dollar-bill-value/1953/",
+  "1953C": "/2-dollar-bill-value/1953/",
+  "1963": "/2-dollar-bill-value/1963-red-seal/",
+  "1963A": "/2-dollar-bill-value/1963-red-seal/",
+  "1976": "/1976-2-dollar-bill-value/",
+};
 
 function money(n: number): string {
   return `$${n.toLocaleString("en-US", {
@@ -22,7 +46,13 @@ function Row({ row }: { row: TwoDollarValue }) {
   return (
     <tr className="border-b border-[var(--border-soft)] align-top">
       <th scope="row" className="py-2 pr-4 text-left font-medium">
-        {row.series}
+        {SERIES_PAGE[row.series] ? (
+          <Link href={SERIES_PAGE[row.series]} data-navigation-link="true" className="link-accent">
+            {row.series}
+          </Link>
+        ) : (
+          row.series
+        )}
         {row.correction ? (
           <sup title="Adjusted for consistency" className="ml-0.5 text-amber-600">
             †
