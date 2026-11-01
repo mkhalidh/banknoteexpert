@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/2003/",
-    title: "2003 $2 Bill Value: 2003 vs 2003A and Star Notes",
+    title: "2003 $2 Bill Value Chart: 2003 vs 2003A",
     description:
-      "What a 2003 or 2003A $2 bill is worth, how the two differ, and the star note print runs that drive the real premiums.",
-    h1: "2003 $2 Bill Value: How Much Is It Worth?",
+      "Use the 2003 $2 bill value chart to compare 2003 and 2003A notes, star note runs, condition and collectible serial numbers.",
+    h1: "2003 $2 Bill Value Chart: 2003 vs 2003A",
     primaryKeyword: "2003 $2 bill value",
     lead:
-      "A 2003 $2 bill is almost always worth exactly $2. It is a modern green seal Federal Reserve Note, issued in two sub-series, 2003 and 2003A. The premium sits in star notes, low or fancy serials and uncirculated grade, and some 2003 and 2003A star runs are genuinely scarce.",
+      "A regular circulated 2003 or 2003A $2 bill is usually worth $2. The value chart separates the two series and condition levels. Small star-note runs, low or fancy serial numbers and crisp uncirculated grade are the main reasons one can be worth more.",
+  },
+  valueIntro: {
+    defaultSeries: "2003",
+    verdict: "Most circulated 2003 and 2003A $2 bills are worth face value. The valuable exceptions are scarce star-note runs, collectible serial numbers, genuine errors and clean uncirculated notes. Compare the series and chart before pricing yours.",
+    identification: {
+      title: "2003 and 2003A green seal $2 note identification",
+      series: "2003 or 2003A",
+      seal: "Green seal",
+      noteType: "Federal Reserve Note",
+      marker: "B01234567A",
+      accent: "green",
+    },
   },
   takeaways: [
     "Ordinary circulated 2003 and 2003A $2 bills are worth face value.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Are 2003 and 2003A $2 bills rare?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Star notes are where it gets interesting: some 2003 and 2003A star runs were small. The charts below show recorded value ranges and the star print runs by district, and you can check your own serial with the tool further down.",
+            "Star notes are where it gets interesting because some 2003 and 2003A star runs were small. The charts above show recorded value ranges and star print runs by district, and the tool at the top checks your own serial.",
         },
       ],
     },
@@ -48,7 +60,7 @@ export const content: PageContent = {
     },
     {
       id: "vs-2003a",
-      heading: "2003 vs 2003A: what is the difference?",
+      heading: "How to identify 2003 vs 2003A $2 bills",
       blocks: [
         {
           kind: "paragraph",
@@ -70,7 +82,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serials on a 2003 $2",
+      heading: "2003 $2 bill serial number and star checks",
       blocks: [
         {
           kind: "richtext",
@@ -92,12 +104,12 @@ export const content: PageContent = {
     },
     {
       id: "keep-sell",
-      heading: "Should you keep or spend it?",
+      heading: "What increases or decreases 2003 $2 bill value?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "An ordinary circulated 2003 or 2003A $2 is worth face value and can be spent. Keep it only if it is a star note, has a low or fancy serial, or is crisp uncirculated. Check the serial first, because a scarce 2003A star is worth setting aside rather than spending.",
+            "Value increases with a scarce star-note run, a low or fancy serial, a genuine printing error and crisp uncirculated condition. Folds, stains, writing, tears and a common serial reduce collector interest. A plain circulated 2003 or 2003A note remains worth face value.",
         },
       ],
     },

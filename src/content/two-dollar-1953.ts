@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/1953/",
-    title: "1953 $2 Bill Value: Red Seal Prices and Star Notes",
+    title: "1953 $2 Bill Value: Red Seal and Silver Certificate Facts",
     description:
-      "What a 1953 $2 red seal bill is worth across 1953, 1953A, 1953B and 1953C, plus star notes, and whether it is a silver certificate.",
-    h1: "1953 $2 Bill Value: How Much Is It Worth?",
+      "Check 1953 $2 bill value for 1953, 1953A, 1953B and 1953C red seals. Compare prices, star notes and the silver certificate question.",
+    h1: "1953 $2 Bill Value: Red Seal Prices and Star Notes",
     primaryKeyword: "1953 $2 bill value",
     lead:
-      "A 1953 $2 bill is a red seal United States Note, more common than the 1928 series, so most circulated examples carry only a small premium over face value. The real value sits in uncirculated notes and star notes. A red seal 1953 is a Legal Tender Note, not a silver certificate.",
+      "A 1953 $2 bill is a red seal United States Note, not a silver certificate. Most circulated 1953, 1953A, 1953B and 1953C notes carry a modest premium. Crisp uncirculated notes, star notes and collectible serial numbers are the examples most likely to be worth more.",
+  },
+  valueIntro: {
+    defaultSeries: "1953",
+    verdict: "Most circulated 1953 red seal $2 bills carry a modest premium over $2. Uncirculated notes, star notes and special serial numbers are stronger. Despite a common misconception, this note is a Legal Tender Note and not a silver certificate.",
+    identification: {
+      title: "1953 red seal $2 United States Note identification",
+      series: "1953 to 1953C",
+      seal: "Red seal",
+      noteType: "Legal Tender Note",
+      marker: "A01234567A",
+      accent: "red",
+    },
   },
   takeaways: [
     "The 1953 $2 is a red seal United States Note, not a silver certificate.",
@@ -90,7 +102,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serial numbers on a 1953 $2",
+      heading: "1953 $2 bill serial number and star checks",
       blocks: [
         {
           kind: "richtext",

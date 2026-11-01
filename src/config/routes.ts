@@ -271,9 +271,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/star-notes/",
-    title: "$2 Star Note Value: Prices by Series and Print Run",
+    title: "$2 Star Note Value: 1976 and Other Series Prices",
     description:
-      "What a $2 star note is worth by series, which are rarest, and how print run size drives value.",
+      "Check $2 star note value by series, print run and condition. Compare 1976 star notes, learn what the star means and check your serial number.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -282,9 +282,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/1976-postage-stamp/",
-    title: "1976 $2 Bill With Postage Stamp: Value and Facts",
+    title: "1976 $2 Bill With Postage Stamp: Value and Postmark",
     description:
-      "Is a 1976 $2 bill with a postage stamp worth more? First day of issue facts, how to spot one, and the premium most carry.",
+      "See what a 1976 $2 bill with a postage stamp and postmark may be worth. Learn first-day issue facts, identification checks and value factors.",
     silo: "two-dollar-bills",
     pageType: "guide",
     priority: 0.6,
@@ -293,9 +293,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/1928/",
-    title: "1928 $2 Bill Value: Red Seal Prices by Series and Star Notes",
+    title: "1928 $2 Bill Value: 1928F, 1928G and Star Notes",
     description:
-      "What a 1928 $2 red seal bill is worth by series (1928 to 1928G) and star notes, with recorded prices by condition.",
+      "Check 1928 $2 bill value across series 1928 to 1928G. Compare red seal prices, star notes, condition and serial numbers before selling.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -304,9 +304,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/1953/",
-    title: "1953 $2 Bill Value: Red Seal Prices and Star Notes",
+    title: "1953 $2 Bill Value: Red Seal and Silver Certificate Facts",
     description:
-      "What a 1953 $2 red seal bill is worth across 1953, 1953A, 1953B and 1953C, plus star notes and the silver-certificate question.",
+      "Check 1953 $2 bill value for 1953, 1953A, 1953B and 1953C red seals. Compare prices, star notes and the silver certificate question.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -315,9 +315,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/1963-red-seal/",
-    title: "1963 $2 Bill Value: Red Seal Prices, 1963 vs 1963A",
+    title: "1963 $2 Bill Value: Red Seal, Red Ink and 1963A",
     description:
-      "What a 1963 $2 red seal bill is worth, how 1963 and 1963A compare by print run, and why it was the last red seal $2.",
+      "Check 1963 $2 bill value for red seal and red ink notes. Compare 1963 with 1963A, star notes, condition and collectible serial numbers.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -326,9 +326,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/1995/",
-    title: "1995 $2 Bill Value: Prices and Star Notes",
+    title: "1995 $2 Bill Value and Serial Number Lookup",
     description:
-      "What a 1995 $2 bill is worth. Ordinary notes are face value; the premium sits in star notes, fancy serials and uncirculated grade.",
+      "Check 1995 $2 bill value and run a free serial number lookup. Compare regular notes, star notes, fancy serials and uncirculated examples.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -337,9 +337,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/2003/",
-    title: "2003 $2 Bill Value: 2003 vs 2003A and Star Notes",
+    title: "2003 $2 Bill Value Chart: 2003 vs 2003A",
     description:
-      "What a 2003 or 2003A $2 bill is worth, how the two differ, and the star note print runs that drive the real premiums.",
+      "Use the 2003 $2 bill value chart to compare 2003 and 2003A notes, star note runs, condition and collectible serial numbers.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -348,9 +348,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/2009/",
-    title: "2009 $2 Bill Value: Prices and Star Notes",
+    title: "2009 $2 Bill Value and Serial Number Lookup",
     description:
-      "What a 2009 $2 bill is worth. Ordinary notes are face value; star notes, fancy serials and uncirculated grade carry the premium.",
+      "Check 2009 $2 bill value and use the serial number lookup. Compare ordinary notes, star runs, fancy serials and uncirculated examples.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -359,9 +359,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/2013/",
-    title: "2013 $2 Bill Value: Prices and Star Notes",
+    title: "2013 $2 Bill Value, Star Notes and Serial Lookup",
     description:
-      "What a 2013 $2 bill is worth. Most are face value; the value lives in star notes, fancy serials and crisp uncirculated notes.",
+      "Check what a 2013 $2 bill is worth, compare star note print runs and use the serial number lookup for low or fancy numbers.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,
@@ -370,9 +370,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/2-dollar-bill-value/2017a/",
-    title: "2017A $2 Bill Value: Prices and Star Notes",
+    title: "2017 and 2017A $2 Bill Value and Serial Lookup",
     description:
-      "What a 2017 and 2017A $2 bill is worth, with star note print runs by district and the serials that add a premium.",
+      "Check 2017 and 2017A $2 bill value, star note runs and serial numbers. Most notes are worth $2 unless condition or rarity adds a premium.",
     silo: "two-dollar-bills",
     pageType: "value",
     priority: 0.6,

@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/2017a/",
-    title: "2017A $2 Bill Value: Prices and Star Notes",
+    title: "2017 and 2017A $2 Bill Value and Serial Lookup",
     description:
-      "What a 2017 and 2017A $2 bill is worth, with star note print runs by district and the serials that add a premium.",
-    h1: "2017A $2 Bill Value: How Much Is It Worth?",
+      "Check 2017 and 2017A $2 bill value, star note runs and serial numbers. Most notes are worth $2 unless condition or rarity adds a premium.",
+    h1: "2017 and 2017A $2 Bill Value and Serial Lookup",
     primaryKeyword: "2017A $2 bill value",
     lead:
-      "A 2017A $2 bill is almost always worth exactly $2. It is a current green seal Federal Reserve Note, so ordinary notes are common. The premium sits in star notes, low or fancy serials and uncirculated grade, and several 2017A star runs by district are genuinely small.",
+      "A regular circulated 2017A $2 bill is usually worth $2. Searchers often type 2017, although the printed series is 2017A. Use the serial lookup below to find a star or fancy number, then compare the district run and condition.",
+  },
+  valueIntro: {
+    defaultSeries: "2017A",
+    verdict: "Most circulated 2017 and 2017A $2 bills are worth face value. Several 2017A star-note runs are smaller, and low or fancy serial numbers, genuine errors and crisp uncirculated condition can add value.",
+    identification: {
+      title: "2017A green seal $2 Federal Reserve Note identification",
+      series: "Printed series 2017A",
+      seal: "Green seal",
+      noteType: "Federal Reserve Note",
+      marker: "B01234567A",
+      accent: "green",
+    },
   },
   takeaways: [
     "Ordinary circulated 2017 and 2017A $2 bills are worth face value.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Is it a 2017 or 2017A $2 bill?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The 2017A notes worth more are star notes, notes with a low or patterned serial, and crisp uncirculated examples. Star notes matter most here, because several 2017A district star runs were printed in small numbers. The charts below show value ranges and the star runs by district.",
+            "The 2017A notes worth more are star notes, notes with a low or patterned serial, and crisp uncirculated examples. Star notes matter most because several district runs were printed in small numbers. The charts above show value ranges and star runs by district.",
         },
       ],
     },
@@ -82,7 +94,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serials on a 2017A $2",
+      heading: "2017 and 2017A $2 bill serial number lookup",
       blocks: [
         {
           kind: "richtext",
@@ -96,12 +108,12 @@ export const content: PageContent = {
     },
     {
       id: "keep-sell",
-      heading: "Should you keep or spend it?",
+      heading: "What increases or decreases 2017A $2 bill value?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "An ordinary circulated 2017 or 2017A $2 is worth face value and can be spent. Keep it only if it is a star note, has a low or fancy serial, or is crisp uncirculated. With several small 2017A star runs, checking the serial first is worth the minute it takes.",
+            "Value increases with a small district star run, a low or fancy serial, a genuine printing error and crisp uncirculated condition. Folds, stains, writing, tears and a common serial decrease collector interest. A plain circulated 2017A note remains worth face value.",
         },
       ],
     },

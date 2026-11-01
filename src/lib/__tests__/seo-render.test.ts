@@ -10,12 +10,15 @@ import { Footer } from "@/components/layout/Footer";
 import { scoreSerial } from "@/lib/serial/score";
 import { patternsById } from "@/lib/serial/patterns";
 import { siloAGuides } from "@/content/silo-a-guides";
+import { pageContents } from "@/content/pages";
 import { existsSync } from "node:fs";
 
 // Verify server content without browser-only checker/widget initialization.
 vi.mock("@/components/tools/FancySerialChecker", () => ({ FancySerialChecker: () => null }));
 vi.mock("@/components/tools/StarNoteLookup", () => ({ StarNoteLookup: () => null }));
-vi.mock("@/components/tools/TwoDollarSerialLookup", () => ({ TwoDollarSerialLookup: () => null }));
+vi.mock("@/components/tools/TwoDollarSerialLookup", () => ({
+  TwoDollarSerialLookup: () => React.createElement("div", { "data-two-dollar-tool": "true" }),
+}));
 vi.mock("@/components/comments/Comments", () => ({ Comments: () => null }));
 vi.mock("next/image", () => ({ default: (props: { src: string; alt: string }) => React.createElement("img", { src: props.src, alt: props.alt }) }));
 vi.stubGlobal("React", React);
@@ -24,6 +27,44 @@ const pages = import.meta.glob("../../app/**/page.tsx") as Record<string, () => 
 const normalize = (text: string | null) => (text ?? "").replace(/\s+/g, " ").trim();
 
 describe("rendered SEO content (browser tools excluded)", () => {
+  it("uses the ladder-style intro on every new $2 value page", async () => {
+    const paths = [
+      "/2-dollar-bill-value/star-notes/",
+      "/2-dollar-bill-value/1976-postage-stamp/",
+      "/2-dollar-bill-value/1928/",
+      "/2-dollar-bill-value/1953/",
+      "/2-dollar-bill-value/1963-red-seal/",
+      "/2-dollar-bill-value/1995/",
+      "/2-dollar-bill-value/2003/",
+      "/2-dollar-bill-value/2009/",
+      "/2-dollar-bill-value/2013/",
+      "/2-dollar-bill-value/2017a/",
+    ];
+
+    for (const path of paths) {
+      const page = await pages[`../../app${path.slice(0, -1)}/page.tsx`]();
+      const doc = new JSDOM(renderToStaticMarkup(React.createElement(page.default))).window.document;
+      const tool = doc.querySelector("header [data-two-dollar-tool]");
+      const verdict = doc.querySelector("#quick-value-verdict");
+      const figure = doc.querySelector("figure.article-cover");
+      const takeaways = doc.querySelector("aside.key-takeaways");
+      expect(tool, path).not.toBeNull();
+      expect(verdict, path).not.toBeNull();
+      expect(figure?.querySelector('svg[role="img"]'), path).not.toBeNull();
+      expect(figure?.querySelector("figcaption")?.textContent, path).toContain("Identification diagram");
+      expect(takeaways, path).not.toBeNull();
+      expect(verdict!.compareDocumentPosition(figure!) & 4, path).toBeTruthy();
+      expect(figure!.compareDocumentPosition(takeaways!) & 4, path).toBeTruthy();
+      expect(existsSync(`src/app${path}opengraph-image.tsx`), path).toBe(true);
+      expect(existsSync(`src/app${path}twitter-image.tsx`), path).toBe(true);
+      const content = pageContents.find(item => item.meta.path === path)!;
+      const route = routes.find(item => item.path === path)!;
+      expect(page.metadata.title, path).toBe(route.title);
+      expect(page.metadata.description, path).toBe(route.description);
+      expect(JSON.stringify(content), path).not.toContain(String.fromCharCode(0x2014));
+    }
+  });
+
   it("shows a real note photo with a matching serial on each pattern guide", async () => {
     const guides = [
       ["binary", "77555775", "binary"],

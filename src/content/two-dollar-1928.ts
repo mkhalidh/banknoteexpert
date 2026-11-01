@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/1928/",
-    title: "1928 $2 Bill Value: Red Seal Prices and Star Notes",
+    title: "1928 $2 Bill Value: 1928F, 1928G and Star Notes",
     description:
-      "What a 1928 $2 red seal bill is worth by series from 1928 to 1928G, plus star notes and grading, with recorded prices by condition.",
-    h1: "1928 $2 Bill Value: How Much Is It Worth?",
+      "Check 1928 $2 bill value across series 1928 to 1928G. Compare red seal prices, star notes, condition and serial numbers before selling.",
+    h1: "1928 $2 Bill Value by Series and Condition",
     primaryKeyword: "1928 $2 bill value",
     lead:
-      "A 1928 $2 bill is a red seal United States Note and the first small-size two-dollar note, so it carries a genuine collector premium. A well-worn example is usually worth a modest amount over face, while crisp uncirculated notes, scarce sub-series and star notes reach much more. Condition and the exact 1928 series letter decide the price.",
+      "A 1928 $2 bill is the first small-size red seal United States Note and normally carries a collector premium. Value changes across 1928 through 1928G, including the frequently checked 1928F and 1928G issues. Condition, the exact series letter, a star and the serial number decide the price.",
+  },
+  valueIntro: {
+    defaultSeries: "1928",
+    verdict: "A genuine 1928 red seal $2 bill is usually worth more than face value. Worn regular notes start lower, while crisp examples, scarcer sub-series such as 1928F or 1928G, star notes and special serial numbers can sell for more.",
+    identification: {
+      title: "1928 red seal $2 United States Note identification",
+      series: "1928 to 1928G",
+      seal: "Red seal",
+      noteType: "Legal Tender Note",
+      marker: "A01234567A",
+      accent: "red",
+    },
   },
   takeaways: [
     "The 1928 $2 is a red seal United States Note, not a silver certificate.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Are all 1928 $2 bills valuable?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "How much more depends on two things: the exact sub-series letter (1928 through 1928G) and the grade. The value chart below gives recorded ranges by series and condition, with a separate chart for star notes, and you can check your own serial for a star or a fancy pattern with the tool further down.",
+            "How much more depends on the exact sub-series letter, from 1928 through 1928G, and the grade. The value charts above give recorded ranges by series and condition, while the tool at the top checks your own serial for a star or fancy pattern.",
         },
       ],
     },
@@ -84,7 +96,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serial numbers on a 1928 $2",
+      heading: "1928 $2 bill serial number and star checks",
       blocks: [
         {
           kind: "richtext",

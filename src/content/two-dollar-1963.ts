@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/1963-red-seal/",
-    title: "1963 $2 Bill Value: Red Seal Prices, 1963 vs 1963A",
+    title: "1963 $2 Bill Value: Red Seal, Red Ink and 1963A",
     description:
-      "What a 1963 $2 red seal bill is worth, how 1963 and 1963A compare by print run, why it was the last red seal $2, and if it is still legal tender.",
-    h1: "1963 $2 Red Seal Bill Value: How Much Is It Worth?",
+      "Check 1963 $2 bill value for red seal and red ink notes. Compare 1963 with 1963A, star notes, condition and collectible serial numbers.",
+    h1: "1963 $2 Bill Value: Red Seal, Red Ink and 1963A",
     primaryKeyword: "1963 $2 bill value",
     lead:
-      "A 1963 $2 red seal bill is a common United States Note, so most circulated examples carry only a small premium over face value. It matters as the last red seal $2 ever issued. The 1963A is scarcer than the 1963 in regular notes, and star notes and high grade carry the real premiums.",
+      "A 1963 $2 red seal bill is a United States Note with red Treasury seal and serial ink. Most circulated examples carry a modest premium. The 1963A regular issue is scarcer than 1963, while star notes, high grade and collectible serial numbers bring the stronger premiums.",
+  },
+  valueIntro: {
+    defaultSeries: "1963",
+    verdict: "A circulated 1963 red seal $2 bill usually has a modest premium. The scarcer 1963A issue, star notes, crisp grade and special serial numbers can be worth more. Red ink is normal for this United States Note and does not by itself make it rare.",
+    identification: {
+      title: "1963 red seal and red serial ink $2 note identification",
+      series: "1963 or 1963A",
+      seal: "Red seal and ink",
+      noteType: "Legal Tender Note",
+      marker: "A01234567A",
+      accent: "red",
+    },
   },
   takeaways: [
     "The 1963 $2 is a red seal United States Note, not a silver certificate.",
@@ -20,18 +32,18 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Does red ink make a 1963 $2 bill valuable?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "A 1963 $2 bill is a red seal United States Note and a common series, so an ordinary circulated example is worth only a small premium over its two-dollar face value. Its significance is historical: 1963 and 1963A were the last red seal $2 notes issued, after which the denomination paused in 1966 and did not return until the green seal bicentennial note of 1976.",
+            "The red Treasury seal and red serial ink are normal features of a 1963 $2 United States Note. Red ink alone does not make the bill rare. Its significance is historical: 1963 and 1963A were the last red seal $2 notes before the green seal denomination returned in 1976.",
         },
         {
           kind: "paragraph",
           text:
-            "Value above face comes from grade, star notes and special serials. The 1963A is scarcer than the 1963 in regular notes, which can add a little, but both remain modest unless uncirculated or a star. The chart below shows recorded ranges by sub-series and condition.",
+            "Value above face comes from grade, star notes and special serials. The 1963A is scarcer than the 1963 in regular notes, but both remain modest unless uncirculated or a star. The charts above show recorded ranges by sub-series and condition.",
         },
       ],
     },
@@ -48,7 +60,7 @@ export const content: PageContent = {
     },
     {
       id: "vs-1963a",
-      heading: "1963 vs 1963A: print runs and scarcity",
+      heading: "How to identify 1963 vs 1963A red seal $2 bills",
       blocks: [
         {
           kind: "paragraph",
@@ -102,7 +114,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serial numbers on a 1963 $2",
+      heading: "1963 $2 bill serial number and star checks",
       blocks: [
         {
           kind: "richtext",

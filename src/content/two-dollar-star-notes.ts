@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/star-notes/",
-    title: "$2 Star Note Value: Prices by Series and Print Run",
+    title: "$2 Star Note Value: 1976 and Other Series Prices",
     description:
-      "What a $2 star note is worth by series, which are rarest, and how print run size drives value. See recorded prices and check your own $2 star note.",
-    h1: "$2 Star Note Value: How Much Is a $2 Star Note Worth?",
+      "Check $2 star note value by series, print run and condition. Compare 1976 star notes, learn what the star means and check your serial number.",
+    h1: "$2 Star Note Value by Series, Run Size and Condition",
     primaryKeyword: "$2 star note value",
     lead:
-      "A $2 star note is worth more than face value only when its print run was small or its grade is high. Common green-seal star runs sell for a few dollars over face, while scarce red-seal stars and short runs reach the hundreds. Print run size, not the star alone, decides the price.",
+      "A $2 star note can be worth more than face value when its print run is small, its condition is strong or its serial forms a collectible pattern. For a 1976 $2 star note or any other series, the district and run size matter more than the star alone.",
+  },
+  valueIntro: {
+    defaultSeries: "1976",
+    verdict: "A common circulated $2 star note may bring only a small premium. Scarce print runs, red-seal series, crisp grade and a collectible serial can raise the value. Start with the series and serial lookup, then compare the recorded chart below.",
+    identification: {
+      title: "$2 star note with a star at the end of the serial number",
+      series: "Check the printed series",
+      seal: "Red or green seal",
+      noteType: "Replacement star note",
+      marker: "A01234567★",
+      accent: "mixed",
+    },
   },
   takeaways: [
     "A star replaces the suffix letter and marks a replacement note, printed in smaller numbers.",
@@ -91,7 +103,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serial-stars",
-      heading: "Fancy serial numbers on $2 star notes",
+      heading: "$2 star note serial number checks",
       blocks: [
         {
           kind: "richtext",

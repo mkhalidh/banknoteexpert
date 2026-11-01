@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/1995/",
-    title: "1995 $2 Bill Value: Prices and Star Notes",
+    title: "1995 $2 Bill Value and Serial Number Lookup",
     description:
-      "What a 1995 $2 bill is worth. Ordinary notes are face value; the premium sits in star notes, fancy serials and uncirculated grade.",
-    h1: "1995 $2 Bill Value: How Much Is It Worth?",
+      "Check 1995 $2 bill value and run a free serial number lookup. Compare regular notes, star notes, fancy serials and uncirculated examples.",
+    h1: "1995 $2 Bill Value and Serial Number Lookup",
     primaryKeyword: "1995 $2 bill value",
     lead:
-      "A 1995 $2 bill is almost always worth exactly $2. It is a modern green seal Federal Reserve Note, printed in ordinary quantities, so a circulated example is common currency. A 1995 note is worth more only when it is a star note, carries a low or fancy serial, or is in crisp uncirculated condition.",
+      "A regular circulated 1995 $2 bill is usually worth $2. Use the 1995 $2 serial number lookup below to check for a star, low number or fancy pattern. Crisp uncirculated condition can also add a premium.",
+  },
+  valueIntro: {
+    defaultSeries: "1995",
+    verdict: "An ordinary circulated 1995 $2 bill is normally worth face value. A star at the end of the serial, a low or fancy serial number, an error or crisp uncirculated condition is needed for a meaningful collector premium.",
+    identification: {
+      title: "1995 green seal $2 Federal Reserve Note identification",
+      series: "Series 1995",
+      seal: "Green seal",
+      noteType: "Federal Reserve Note",
+      marker: "B01234567A",
+      accent: "green",
+    },
   },
   takeaways: [
     "Ordinary circulated 1995 $2 bills are worth face value; the series is not rare.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Is a 1995 $2 bill rare or worth more than $2?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "The 1995 notes worth more than $2 are the exceptions: star notes, notes with a low or patterned serial, and crisp uncirculated examples. The chart below shows recorded ranges, and you can check your own serial with the tool further down.",
+            "The 1995 notes worth more than $2 are the exceptions: star notes, notes with a low or patterned serial, and crisp uncirculated examples. The chart above shows recorded ranges, and the tool at the top checks your own serial.",
         },
       ],
     },
@@ -82,7 +94,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serials on a 1995 $2",
+      heading: "1995 $2 bill serial number lookup",
       blocks: [
         {
           kind: "richtext",
@@ -96,12 +108,12 @@ export const content: PageContent = {
     },
     {
       id: "keep-sell",
-      heading: "Should you keep or spend it?",
+      heading: "What increases or decreases 1995 $2 bill value?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "Unless your 1995 $2 is a star note, has a low or fancy serial, or is crisp uncirculated, it is ordinary currency worth two dollars, and there is no harm in spending it. Keep one as a memento if you like, but check the serial first so you do not spend a genuinely collectible note by mistake.",
+            "Value increases with a star, a low or fancy serial, a genuine printing error and crisp uncirculated condition. Heavy folds, stains, writing, tears and an ordinary serial decrease collector interest. A plain circulated 1995 note remains ordinary currency worth two dollars.",
         },
       ],
     },

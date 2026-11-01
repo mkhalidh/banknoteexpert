@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/2009/",
-    title: "2009 $2 Bill Value: Prices and Star Notes",
+    title: "2009 $2 Bill Value and Serial Number Lookup",
     description:
-      "What a 2009 $2 bill is worth. Ordinary notes are face value; star notes, fancy serials and uncirculated grade carry the premium.",
-    h1: "2009 $2 Bill Value: How Much Is It Worth?",
+      "Check 2009 $2 bill value and use the serial number lookup. Compare ordinary notes, star runs, fancy serials and uncirculated examples.",
+    h1: "2009 $2 Bill Value and Serial Number Lookup",
     primaryKeyword: "2009 $2 bill value",
     lead:
-      "A 2009 $2 bill is almost always worth exactly $2. It is a modern green seal Federal Reserve Note printed in ordinary numbers. The premium sits in star notes, low or fancy serials and crisp uncirculated grade, and a couple of 2009 star runs are on the smaller side.",
+      "A regular circulated 2009 $2 bill is usually worth $2. Use the 2009 $2 serial number lookup below to check the eight digits and final character. Star notes, low or fancy serials and crisp uncirculated grade can add a premium.",
+  },
+  valueIntro: {
+    defaultSeries: "2009",
+    verdict: "An ordinary circulated 2009 $2 bill is normally worth face value. Smaller star-note runs, a star serial, a low or fancy serial number, a genuine error or crisp uncirculated condition can make an example collectible.",
+    identification: {
+      title: "2009 green seal $2 Federal Reserve Note identification",
+      series: "Series 2009",
+      seal: "Green seal",
+      noteType: "Federal Reserve Note",
+      marker: "B01234567A",
+      accent: "green",
+    },
   },
   takeaways: [
     "Ordinary circulated 2009 $2 bills are worth face value.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Is a 2009 $2 bill rare or worth more than $2?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "Star notes are the most dependable premium, and a couple of 2009 district star runs are on the smaller side. The charts below show recorded value ranges and the star runs by district, and you can check your own serial below.",
+            "Star notes are the most dependable premium, and a couple of 2009 district star runs are on the smaller side. The charts above show recorded value ranges and star runs by district, and the tool at the top checks your own serial.",
         },
       ],
     },
@@ -82,7 +94,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serials on a 2009 $2",
+      heading: "2009 $2 bill serial number lookup",
       blocks: [
         {
           kind: "richtext",
@@ -96,12 +108,12 @@ export const content: PageContent = {
     },
     {
       id: "keep-sell",
-      heading: "Should you keep or spend it?",
+      heading: "What increases or decreases 2009 $2 bill value?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "An ordinary circulated 2009 $2 is worth face value and can be spent. Keep it only if it is a star note, has a low or fancy serial, or is crisp uncirculated. Check the serial first so a scarce star does not get spent by accident.",
+            "Value increases with a smaller star-note run, a low or fancy serial, a genuine printing error and crisp uncirculated condition. Folds, stains, writing, tears and a common serial decrease collector interest. A plain circulated 2009 note remains worth face value.",
         },
       ],
     },

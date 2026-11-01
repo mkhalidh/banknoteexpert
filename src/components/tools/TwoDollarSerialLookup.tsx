@@ -12,8 +12,17 @@ import { twoDollarSeries, getTwoDollarSeries } from "@/data/two-dollar-series";
 
 const DEFAULT_SERIES = "1976";
 
-export function TwoDollarSerialLookup() {
-  const [series, setSeries] = useState(DEFAULT_SERIES);
+export function TwoDollarSerialLookup({
+  defaultSeries = DEFAULT_SERIES,
+  syncUrl = true,
+}: {
+  defaultSeries?: string;
+  syncUrl?: boolean;
+}) {
+  const initialSeries = getTwoDollarSeries(defaultSeries)
+    ? defaultSeries
+    : DEFAULT_SERIES;
+  const [series, setSeries] = useState(initialSeries);
   const [raw, setRaw] = useState("");
   const [submitted, setSubmitted] = useState("");
   const seriesId = useId();
@@ -22,6 +31,7 @@ export function TwoDollarSerialLookup() {
 
   // Read ?series= and ?serial= once on mount so a shared link shows its result.
   useEffect(() => {
+    if (!syncUrl) return;
     const params = new URLSearchParams(window.location.search);
     const initialSeries = params.get("series");
     const initialSerial = params.get("serial");
@@ -33,10 +43,11 @@ export function TwoDollarSerialLookup() {
       setRaw(initialSerial);
       setSubmitted(initialSerial);
     }
-  }, []);
+  }, [syncUrl]);
 
   // Keep the URL shareable without a re-render or Next navigation.
   useEffect(() => {
+    if (!syncUrl) return;
     const url = new URL(window.location.href);
     url.searchParams.set("series", series);
     const trimmed = submitted.trim();
@@ -46,7 +57,7 @@ export function TwoDollarSerialLookup() {
       url.searchParams.delete("serial");
     }
     window.history.replaceState(null, "", url);
-  }, [series, submitted]);
+  }, [series, submitted, syncUrl]);
 
   const seriesInfo = useMemo(() => getTwoDollarSeries(series), [series]);
   const parsed = useMemo(

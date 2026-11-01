@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/2013/",
-    title: "2013 $2 Bill Value: Prices and Star Notes",
+    title: "2013 $2 Bill Value, Star Notes and Serial Lookup",
     description:
-      "What a 2013 $2 bill is worth. Most are face value; the value lives in star notes, fancy serials and crisp uncirculated notes.",
-    h1: "2013 $2 Bill Value: How Much Is It Worth?",
+      "Check what a 2013 $2 bill is worth, compare star note print runs and use the serial number lookup for low or fancy numbers.",
+    h1: "2013 $2 Bill Value, Star Notes and Serial Lookup",
     primaryKeyword: "2013 $2 bill value",
     lead:
-      "A 2013 $2 bill is almost always worth exactly $2. It is one of the most searched modern $2 notes, but it is a common green seal Federal Reserve Note. A 2013 note is worth more only as a star note, with a low or fancy serial, or in crisp uncirculated condition.",
+      "A regular circulated 2013 $2 bill is usually worth $2. Use the 2013 serial lookup first, then compare star-note evidence, condition and the value chart below to see whether your note has a premium.",
+  },
+  valueIntro: {
+    defaultSeries: "2013",
+    verdict: "Most circulated 2013 $2 bills are worth face value. A star at the end of the serial, a low or fancy number, a genuine printing error or crisp uncirculated condition can add a collector premium.",
+    identification: {
+      title: "2013 green seal $2 Federal Reserve Note identification",
+      series: "Series 2013",
+      seal: "Green seal",
+      noteType: "Federal Reserve Note",
+      marker: "B01234567A",
+      accent: "green",
+    },
   },
   takeaways: [
     "Ordinary circulated 2013 $2 bills are worth face value.",
@@ -20,8 +32,8 @@ export const content: PageContent = {
   ],
   sections: [
     {
-      id: "answer",
-      heading: "The short answer",
+      id: "common-question",
+      heading: "Is a 2013 $2 bill rare or worth more than $2?",
       blocks: [
         {
           kind: "paragraph",
@@ -31,7 +43,7 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text:
-            "A 2013 note climbs above face only when it is a star note, carries a low or patterned serial, or is crisp uncirculated. The chart below shows the recorded range, and you can check your own serial with the tool further down.",
+            "A 2013 note climbs above face only when it is a star note, carries a low or patterned serial, or is crisp uncirculated. The chart above shows the recorded range, and the tool at the top checks your own serial.",
         },
       ],
     },
@@ -82,7 +94,7 @@ export const content: PageContent = {
     },
     {
       id: "fancy-serials",
-      heading: "Fancy and low serials on a 2013 $2",
+      heading: "2013 $2 bill serial number lookup",
       blocks: [
         {
           kind: "richtext",
@@ -96,12 +108,12 @@ export const content: PageContent = {
     },
     {
       id: "keep-sell",
-      heading: "Should you keep or spend it?",
+      heading: "What increases or decreases 2013 $2 bill value?",
       blocks: [
         {
           kind: "paragraph",
           text:
-            "An ordinary circulated 2013 $2 is worth face value and can be spent. Keep it only if it is a star note, has a low or fancy serial, or is crisp uncirculated. Checking the serial takes under a minute and tells you which it is.",
+            "Value increases with a star, a low or fancy serial, a genuine printing error and crisp uncirculated condition. Folds, stains, writing, tears and a common serial decrease collector interest. A plain circulated 2013 note remains worth face value.",
         },
       ],
     },

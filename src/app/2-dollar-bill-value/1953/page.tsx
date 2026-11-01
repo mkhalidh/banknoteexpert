@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
-import { Byline } from "@/components/content/Byline";
 import { ContentSections } from "@/components/content/ContentSections";
-import { KeyTakeaways } from "@/components/content/KeyTakeaways";
+import { TwoDollarValueIntro } from "@/components/content/TwoDollarValueIntro";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { FaqItem } from "@/components/content/FaqItem";
 import { TwoDollarClusterNav } from "@/components/content/TwoDollarClusterNav";
@@ -40,15 +39,7 @@ export default function Page() {
         ]}
       />
 
-      <header>
-        <h1 className="text-display">{content.meta.h1}</h1>
-        <Byline path={content.meta.path} className="mt-3 text-sm text-zinc-500" />
-        <p className="mt-3 max-w-2xl text-lead">{content.meta.lead}</p>
-      </header>
-
-      <KeyTakeaways items={content.takeaways} />
-
-      <ContentSections sections={sectionById("answer")} />
+      <TwoDollarValueIntro content={content} />
 
       <div>
         <ContentSections sections={sectionById("value-chart")} />

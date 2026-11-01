@@ -41,6 +41,22 @@ export interface ContentMeta {
 
 export interface PageContent {
   meta: ContentMeta;
+  /** Optional above-the-fold data for the $2 value-guide template. */
+  valueIntro?: {
+    /** Series selected when the embedded $2 serial checker first loads. */
+    defaultSeries: string;
+    /** Direct value answer shown before the long-form guide. */
+    verdict: string;
+    /** Labels used by the accessible note-identification diagram. */
+    identification: {
+      title: string;
+      series: string;
+      seal: string;
+      noteType: string;
+      marker: string;
+      accent: "red" | "green" | "mixed";
+    };
+  };
   /** Bullet points for the KeyTakeaways box. */
   takeaways: string[];
   sections: ContentSection[];

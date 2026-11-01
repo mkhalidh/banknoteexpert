@@ -3,13 +3,25 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/2-dollar-bill-value/1976-postage-stamp/",
-    title: "1976 $2 Bill With Postage Stamp: Value and Facts",
+    title: "1976 $2 Bill With Postage Stamp: Value and Postmark",
     description:
-      "Is a 1976 $2 bill with a postage stamp worth more? What first day of issue notes are, how to spot a real April 13 1976 postmark, and the premium they carry.",
-    h1: "1976 $2 Bill With a Postage Stamp: What Is It Worth?",
+      "See what a 1976 $2 bill with a postage stamp and postmark may be worth. Learn first-day issue facts, identification checks and value factors.",
+    h1: "1976 $2 Bill With Postage Stamp and Postmark Value",
     primaryKeyword: "1976 $2 bill with postage stamp value",
     lead:
-      "A 1976 $2 bill with a postage stamp and postmark usually sells for a small premium over face value, not a fortune. These are first day of issue souvenirs that collectors made on April 13, 1976, and many survive, so the stamp and postmark add novelty rather than rarity.",
+      "A 1976 $2 bill with a postage stamp and April 13, 1976 postmark is usually a first-day issue souvenir. Most carry a modest premium rather than a large one. Condition, the postmark location, the envelope and the note's own serial number decide whether it stands out.",
+  },
+  valueIntro: {
+    defaultSeries: "1976",
+    verdict: "Most postmarked 1976 $2 bills are collectible souvenirs, not rare currency. A clean note, clear April 13, 1976 cancellation, original cover, unusual postmark or special serial can add value, but the stamp alone does not guarantee a high price.",
+    identification: {
+      title: "1976 $2 bill with postage stamp and April 13, 1976 postmark",
+      series: "Series 1976",
+      seal: "Green seal",
+      noteType: "First-day souvenir",
+      marker: "POSTMARK: APR 13 1976",
+      accent: "green",
+    },
   },
   takeaways: [
     "A stamped, postmarked 1976 $2 bill is a first day of issue souvenir, not a rare note.",
