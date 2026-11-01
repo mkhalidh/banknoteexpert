@@ -24,6 +24,14 @@ export const homeFaqs = [
     "answer": "No. This dollar bill checker analyzes serial-number patterns for collector interest. It cannot inspect paper, ink, watermarks, security threads or other physical authentication features, so its result does not prove that a note is genuine."
   },
   {
+    "question": "How do I check a $1 bill serial number?",
+    "answer": "Find the two matching serials printed in green on the front of the $1 bill, then enter the eight digits between the letters into the checker. Keep any zeros at the beginning. You can also enter the full serial with its prefix and suffix, and include the star if the note has one."
+  },
+  {
+    "question": "Can a serial number alone tell me what my bill is worth?",
+    "answer": "No. A serial number can reveal a collectible pattern, but value also depends on the bill's condition, denomination, series, issuing district and current buyer demand. Use the checker's recorded-sale range as a research starting point, then compare notes with the same features and grade."
+  },
+  {
     "question": "What do the digits mean versus the letters?",
     "answer": "The letters and the digits do different jobs. The one or two prefix letters identify the series and the Federal Reserve district; the suffix letter, or star, simply continues the count within a print run. The eight digits in the middle are the serial proper, and they are the only part scored for a pattern. So when people talk about a collectible pattern, they mean those eight digits, not the surrounding letters."
   },

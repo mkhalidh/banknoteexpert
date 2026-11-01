@@ -44,6 +44,12 @@ export default function Page() {
           it matches a collectible pattern, how rare it is, and roughly what it
           may be worth.
         </p>
+        <ul className="checker-trust-strip" aria-label="Checker facts">
+          <li>No signup</li>
+          <li>Runs locally</li>
+          <li>40+ patterns checked</li>
+          <li>Recorded-sales evidence</li>
+        </ul>
         <div className="mt-6">
           {/* Section 2, result panel lives inside the checker component */}
           <FancySerialChecker />
@@ -53,6 +59,29 @@ export default function Page() {
           is uploaded.
         </p>
       </header>
+
+      <section aria-labelledby="how-to-check-serial">
+        <h2 id="how-to-check-serial" className="text-h2">
+          How to check a dollar bill serial number
+        </h2>
+        <ol className="home-steps mt-5">
+          <li>
+            <strong>Enter the serial exactly</strong>
+            <span>Use the eight digits from the front of the bill and keep every leading zero.</span>
+          </li>
+          <li>
+            <strong>Review the pattern and rarity</strong>
+            <span>See whether the number matches a collectible pattern and how often that pattern can occur.</span>
+          </li>
+          <li>
+            <strong>Compare the value evidence</strong>
+            <span>Use the recorded sales as guidance, then account for condition, denomination and series.</span>
+          </li>
+        </ol>
+        <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+          A serial number can identify collector interest, but it cannot price a bill by itself. Physical condition, series, denomination and verified market demand still matter.
+        </p>
+      </section>
 
       <section aria-labelledby="banknote-serial-number-checker">
         <h2 id="banknote-serial-number-checker" className="text-h2">

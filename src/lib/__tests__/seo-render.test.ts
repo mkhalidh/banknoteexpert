@@ -238,6 +238,14 @@ describe("rendered SEO content (browser tools excluded)", () => {
     expect(names).not.toContain("Palindrome Radar");
     expect(names).not.toContain("Super Repeater");
     expect(names).toContain("Radar");
+    const disclosures = [...home.querySelectorAll("details.content-disclosure")];
+    expect(disclosures.map(details => details.querySelector("summary")?.textContent)).toEqual([
+      "View all fancy serial number patterns",
+      "Browse all banknote tools and guides",
+    ]);
+    expect(disclosures.every(details => !details.hasAttribute("open"))).toBe(true);
+    expect(home.querySelectorAll(".content-directory > .pattern-grid > .pattern-card")).toHaveLength(6);
+    expect(home.querySelectorAll(".content-directory > .all-tools-grid > li")).toHaveLength(3);
     for (const row of home.querySelectorAll("table tbody tr")) {
       const cells = [...row.querySelectorAll("td")];
       expect(cells.some(cell => !cell.textContent?.includes("no recorded sales"))).toBe(true);

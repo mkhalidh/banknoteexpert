@@ -135,12 +135,16 @@ describe("SEO publication contracts", () => {
     const questions = homeFaqs.map(item => item.question);
 
     expect(homepage?.title).toBe("Banknote Serial Number Checker for US Dollar Bills");
-    expect(homepage?.description).toContain("Free banknote serial number checker");
+    expect(homepage?.description).toBe(
+      "Enter a US dollar bill serial number to find fancy patterns, rarity odds and recorded-sales value ranges. Check if it may be worth more than face value.",
+    );
     expect(tools?.title).toBe("Banknote Serial Number Tools & Checkers");
     expect(app?.name).toBe("Banknote Serial Number Checker");
     expect(app?.alternateName).toEqual(["Fancy Serial Number Checker", "Dollar Bill Serial Number Checker"]);
     expect(questions).toContain("What does a banknote serial number checker do?");
     expect(questions).toContain("Does this dollar bill checker detect counterfeit money?");
+    expect(questions).toContain("How do I check a $1 bill serial number?");
+    expect(questions).toContain("Can a serial number alone tell me what my bill is worth?");
     expect(pageModified["/"]).toBe("2026-11-01");
     expect(pageModified["/tools/"]).toBe("2026-11-01");
   });

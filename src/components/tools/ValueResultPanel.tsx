@@ -1,8 +1,23 @@
+import Link from "next/link";
 import {
   CONDITION_LABELS,
   VALUE_PATTERN_LABELS,
   type ValueResult,
 } from "@/lib/serial/value";
+
+function EvidenceLinks() {
+  return (
+    <p className="result-evidence-links">
+      <Link href="/fancy-serial-number-value/" className="link-accent">
+        Review the recorded-sales value guide
+      </Link>
+      <span aria-hidden="true">&middot;</span>
+      <Link href="/methodology/" className="link-accent">
+        See the valuation methodology
+      </Link>
+    </p>
+  );
+}
 
 function formatUsd(amount: number): string {
   return `$${amount.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
@@ -28,6 +43,7 @@ export function ValueResultPanel({ result }: { result: ValueResult }) {
       <div>
         <h3 className="text-sm font-semibold">Estimated value</h3>
         <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{message}</p>
+        <EvidenceLinks />
       </div>
     );
   }
@@ -72,6 +88,7 @@ export function ValueResultPanel({ result }: { result: ValueResult }) {
       <p className="mt-1 text-xs text-zinc-500">
         Ranges are guidance, not an appraisal. Last updated {result.updated}.
       </p>
+      <EvidenceLinks />
     </div>
   );
 }

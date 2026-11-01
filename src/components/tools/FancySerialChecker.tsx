@@ -9,6 +9,12 @@ import { ValueResultPanel } from "@/components/tools/ValueResultPanel";
 import { ScoreMeter } from "@/components/tools/ScoreMeter";
 import { AlertIcon, CheckCircleIcon, StarIcon, XIcon } from "@/components/ui/icons";
 
+const exampleSerials = [
+  { label: "Ladder", serial: "12345678" },
+  { label: "Radar", serial: "12344321" },
+  { label: "Low serial", serial: "00000042" },
+];
+
 export function FancySerialChecker() {
   const [raw, setRaw] = useState("");
   const [submitted, setSubmitted] = useState("");
@@ -58,6 +64,11 @@ export function FancySerialChecker() {
     setSubmitted("");
   }
 
+  function checkExample(serial: string) {
+    setRaw(serial);
+    setSubmitted(serial);
+  }
+
   return (
     <div>
       <form
@@ -101,14 +112,31 @@ export function FancySerialChecker() {
         </div>
         <button
           type="submit"
-          className="btn-primary mt-1 h-[52px] shrink-0 self-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:mt-7"
+          className="checker-submit btn-primary mt-1 h-[52px] shrink-0 self-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:mt-7"
         >
           Check
         </button>
       </form>
 
-      {/* Result region: height reserved up front so there is zero layout shift. */}
-      <div aria-live="polite" className="checker-result card mt-6 min-h-[22rem] p-5">
+      <div className="checker-examples" aria-label="Example serial numbers">
+        <span>Try an example:</span>
+        {exampleSerials.map((example) => (
+          <button
+            key={example.serial}
+            type="button"
+            className="checker-example-button"
+            onClick={() => checkExample(example.serial)}
+          >
+            <span>{example.label}</span>
+            <code>{example.serial}</code>
+          </button>
+        ))}
+      </div>
+
+      <div
+        aria-live="polite"
+        className={`checker-result card mt-6 p-5 ${analysis || errorMessage ? "checker-result-active" : "checker-result-empty"}`}
+      >
         {errorMessage ? (
           <p
             id={errorId}
@@ -127,8 +155,6 @@ export function FancySerialChecker() {
           </p>
         ) : (
           <div key={analysis.normalized} className="animate-in flex flex-col gap-5">
-            <ScoreMeter score={analysis.score.score} tier={analysis.score.tier} />
-
             <div>
               <h3 className="text-sm font-semibold">Matched patterns</h3>
               {analysis.score.matches.length === 0 ? (
@@ -161,6 +187,8 @@ export function FancySerialChecker() {
             </div>
 
             <ValueResultPanel result={analysis.value} />
+
+            <ScoreMeter score={analysis.score.score} tier={analysis.score.tier} />
 
             {analysis.isStar ? (
               <div className="flex items-start gap-2 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm dark:border-amber-700/60 dark:bg-amber-950/30">

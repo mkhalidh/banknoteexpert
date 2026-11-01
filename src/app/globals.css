@@ -327,8 +327,33 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
 .site-main form button[aria-label="Clear serial number"] { width: 36px; height: 36px; right: 8px; }
 .home-page > header { background: var(--surface); border: 1px solid var(--border-soft); border-radius: 6px; padding: 32px !important; box-shadow: 0 8px 24px -18px rgb(15 56 42 / 25%); }
 .checker-result { background: var(--paper); border-color: var(--border-soft); }
-.checker-result:has(> p) { min-height: 8rem; display: flex; align-items: center; padding: 24px; }
+.checker-result-empty { min-height: 8rem; display: flex; align-items: center; padding: 24px; }
+.checker-result-active { min-height: 22rem; }
 .checker-result:has(> p) > p { max-width: 68ch; }
+.checker-trust-strip { display: flex; flex-wrap: wrap; gap: 8px 0; margin-top: 18px; color: var(--muted); font-size: 0.78rem; font-weight: 650; list-style: none; }
+.checker-trust-strip li { display: flex; align-items: center; }
+.checker-trust-strip li + li::before { content: ""; width: 3px; height: 3px; margin: 0 10px; border-radius: 50%; background: var(--accent); opacity: 0.75; }
+.checker-examples { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; color: var(--muted); font-size: 0.75rem; }
+.checker-example-button { display: inline-flex; min-height: 38px; align-items: center; gap: 7px; border: 1px solid var(--border-soft); border-radius: 4px; background: var(--surface); padding: 7px 10px; color: var(--foreground); transition: border-color 160ms ease, background-color 160ms ease; }
+.checker-example-button:hover { border-color: var(--accent); background: var(--treasury-tint); }
+.checker-example-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.checker-example-button span { font-weight: 650; }
+.checker-example-button code { color: var(--muted); font-size: 0.72rem; }
+.result-evidence-links { display: flex; flex-wrap: wrap; gap: 5px 9px; margin-top: 10px; font-size: 0.75rem; }
+.home-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; list-style: none; counter-reset: home-step; }
+.home-steps li { position: relative; min-width: 0; padding-top: 18px; border-top: 2px solid var(--border-soft); counter-increment: home-step; }
+.home-steps li::before { content: "0" counter(home-step); display: block; margin-bottom: 10px; color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; }
+.home-steps strong, .home-steps span { display: block; }
+.home-steps strong { font-size: 0.95rem; }
+.home-steps span { margin-top: 6px; color: var(--muted); font-size: 0.83rem; line-height: 1.65; }
+.content-directory { display: grid; gap: 18px; }
+.content-disclosure { border-top: 1px solid var(--border-soft); }
+.content-disclosure > summary { display: flex; min-height: 48px; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; gap: 16px; color: var(--accent); font-size: 0.9rem; font-weight: 700; }
+.content-disclosure > summary::-webkit-details-marker { display: none; }
+.content-disclosure > summary::after { content: "+"; color: var(--muted); font-family: var(--font-mono); font-size: 1.1rem; font-weight: 500; }
+.content-disclosure[open] > summary::after { content: "−"; }
+.content-disclosure > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.content-disclosure-body { padding-top: 4px; }
 .home-page > section { padding-top: 10px; }
 .home-page #find-serial + div { align-items: start; gap: 36px; }
 .home-page #find-serial + div > div { font-size: 0.925rem; line-height: 1.85; }
@@ -439,7 +464,15 @@ button:disabled { cursor: not-allowed; opacity: 0.55; }
   .text-display { font-size: 2rem; line-height: 1.17; }
   .text-h2 { font-size: 1.5rem; }
   .text-lead { font-size: 0.94rem; line-height: 1.8; }
-  .checker-result:has(> p) { padding: 20px; min-height: 9rem; }
+  .checker-result-empty { padding: 18px; min-height: 7rem; }
+  .checker-result-active { min-height: 20rem; }
+  .checker-submit { width: 100%; }
+  .checker-examples { align-items: stretch; }
+  .checker-examples > span { width: 100%; }
+  .checker-example-button { min-height: 44px; flex: 1 1 9rem; justify-content: space-between; }
+  .checker-trust-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; }
+  .checker-trust-strip li + li::before { display: none; }
+  .home-steps { grid-template-columns: 1fr; gap: 18px; }
   .takeaway-list, .contents-nav ol, .pattern-directory { grid-template-columns: 1fr; }
   .key-takeaways { padding: 22px; }
   .takeaway-list { gap: 16px; }

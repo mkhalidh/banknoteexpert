@@ -49,7 +49,7 @@ export const routes: RouteEntry[] = [
     path: "/",
     title: "Banknote Serial Number Checker for US Dollar Bills",
     description:
-      "Free banknote serial number checker for US dollar bills. Find fancy patterns, rarity, star notes and estimated collectible value from the 8-digit serial.",
+      "Enter a US dollar bill serial number to find fancy patterns, rarity odds and recorded-sales value ranges. Check if it may be worth more than face value.",
     silo: "home",
     pageType: "home",
     priority: 1.0,
