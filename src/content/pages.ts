@@ -22,6 +22,11 @@ import { content as c20 } from "@/content/1976-postage-stamp";
 import { content as c21 } from "@/content/two-dollar-1928";
 import { content as c22 } from "@/content/two-dollar-1953";
 import { content as c23 } from "@/content/two-dollar-1963";
+import { content as c24 } from "@/content/two-dollar-1995";
+import { content as c25 } from "@/content/two-dollar-2003";
+import { content as c26 } from "@/content/two-dollar-2009";
+import { content as c27 } from "@/content/two-dollar-2013";
+import { content as c28 } from "@/content/two-dollar-2017a";
 import { siloAGuides } from "@/content/silo-a-guides";
 
-export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, ...siloAGuides];
+export const pageContents = [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, ...siloAGuides];

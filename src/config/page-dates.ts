@@ -19,6 +19,11 @@ export const pagePublished: Record<string, string> = {
   "/2-dollar-bill-value/1928/": "2026-10-30",
   "/2-dollar-bill-value/1953/": "2026-10-30",
   "/2-dollar-bill-value/1963-red-seal/": "2026-10-30",
+  "/2-dollar-bill-value/1995/": "2026-11-01",
+  "/2-dollar-bill-value/2003/": "2026-11-01",
+  "/2-dollar-bill-value/2009/": "2026-11-01",
+  "/2-dollar-bill-value/2013/": "2026-11-01",
+  "/2-dollar-bill-value/2017a/": "2026-11-01",
 };
 
 export const pageModified: Record<string, string> = {
@@ -50,6 +55,11 @@ export const pageModified: Record<string, string> = {
   "/2-dollar-bill-value/1928/": "2026-10-30",
   "/2-dollar-bill-value/1953/": "2026-10-30",
   "/2-dollar-bill-value/1963-red-seal/": "2026-10-30",
+  "/2-dollar-bill-value/1995/": "2026-11-01",
+  "/2-dollar-bill-value/2003/": "2026-11-01",
+  "/2-dollar-bill-value/2009/": "2026-11-01",
+  "/2-dollar-bill-value/2013/": "2026-11-01",
+  "/2-dollar-bill-value/2017a/": "2026-11-01",
   "/1976-2-dollar-bill-value/": "2026-10-29",
   "/blog/": "2026-10-14",
   "/about-the-author/": "2026-10-03",

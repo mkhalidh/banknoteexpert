@@ -16,6 +16,11 @@ const CLUSTER_PATHS = [
   "/2-dollar-bill-value/1963-red-seal/",
   "/1976-2-dollar-bill-value/",
   "/2-dollar-bill-value/1976-postage-stamp/",
+  "/2-dollar-bill-value/1995/",
+  "/2-dollar-bill-value/2003/",
+  "/2-dollar-bill-value/2009/",
+  "/2-dollar-bill-value/2013/",
+  "/2-dollar-bill-value/2017a/",
   "/2-dollar-bill-value/star-notes/",
   "/2-dollar-bill-serial-number-lookup/",
 ];

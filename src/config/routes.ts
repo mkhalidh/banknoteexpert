@@ -324,6 +324,61 @@ export const routes: RouteEntry[] = [
     changeFrequency: "monthly",
     indexable: true,
   },
+  {
+    path: "/2-dollar-bill-value/1995/",
+    title: "1995 $2 Bill Value: Prices and Star Notes",
+    description:
+      "What a 1995 $2 bill is worth. Ordinary notes are face value; the premium sits in star notes, fancy serials and uncirculated grade.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/2003/",
+    title: "2003 $2 Bill Value: 2003 vs 2003A and Star Notes",
+    description:
+      "What a 2003 or 2003A $2 bill is worth, how the two differ, and the star note print runs that drive the real premiums.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/2009/",
+    title: "2009 $2 Bill Value: Prices and Star Notes",
+    description:
+      "What a 2009 $2 bill is worth. Ordinary notes are face value; star notes, fancy serials and uncirculated grade carry the premium.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/2013/",
+    title: "2013 $2 Bill Value: Prices and Star Notes",
+    description:
+      "What a 2013 $2 bill is worth. Most are face value; the value lives in star notes, fancy serials and crisp uncirculated notes.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
+  {
+    path: "/2-dollar-bill-value/2017a/",
+    title: "2017A $2 Bill Value: Prices and Star Notes",
+    description:
+      "What a 2017 and 2017A $2 bill is worth, with star note print runs by district and the serials that add a premium.",
+    silo: "two-dollar-bills",
+    pageType: "value",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    indexable: true,
+  },
 
   {
     path: "/blog/",

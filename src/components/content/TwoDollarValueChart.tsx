@@ -26,6 +26,12 @@ const SERIES_PAGE: Record<string, string> = {
   "1963": "/2-dollar-bill-value/1963-red-seal/",
   "1963A": "/2-dollar-bill-value/1963-red-seal/",
   "1976": "/1976-2-dollar-bill-value/",
+  "1995": "/2-dollar-bill-value/1995/",
+  "2003": "/2-dollar-bill-value/2003/",
+  "2003A": "/2-dollar-bill-value/2003/",
+  "2009": "/2-dollar-bill-value/2009/",
+  "2013": "/2-dollar-bill-value/2013/",
+  "2017A": "/2-dollar-bill-value/2017a/",
 };
 
 function money(n: number): string {
