@@ -60,3 +60,6 @@ next-env.d.ts
 
 # Claude Code local memory workspace (not a project artifact)
 /memory/
+
+# Local GSC SEO working strategy
+/SEO-STRATEGY.md
