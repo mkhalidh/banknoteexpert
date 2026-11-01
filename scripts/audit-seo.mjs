@@ -36,8 +36,8 @@ for (const route of routes) {
       description: "What is a solid serial number on a dollar bill? See real examples, detector-based odds, value factors and verified sold ranges by condition.",
     },
     "/fancy-serial-numbers/trinary/": {
-      title: "Trinary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
-      description: "What is a trinary serial number on a dollar bill? Learn the detector definition, compare true trinary and binary, see examples and check verified value data.",
+      title: "Trinary Serial Number: Meaning, Rarity and Value",
+      description: "A trinary note uses exactly three distinct digits in its eight-digit serial. See examples, rarity odds, value factors and check your serial for free.",
     },
     "/fancy-serial-numbers/seven-of-a-kind/": {
       title: "Seven of a Kind Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
