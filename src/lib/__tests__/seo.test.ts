@@ -128,6 +128,23 @@ describe("SEO publication contracts", () => {
     }
   });
 
+  it("assigns checker query intent to the homepage without duplicating the tools directory", () => {
+    const homepage = routes.find(route => route.path === "/");
+    const tools = routes.find(route => route.path === "/tools/");
+    const app = pageGraph("/", [])["@graph"].find(node => node["@type"] === "WebApplication");
+    const questions = homeFaqs.map(item => item.question);
+
+    expect(homepage?.title).toBe("Banknote Serial Number Checker for US Dollar Bills");
+    expect(homepage?.description).toContain("Free banknote serial number checker");
+    expect(tools?.title).toBe("Banknote Serial Number Tools & Checkers");
+    expect(app?.name).toBe("Banknote Serial Number Checker");
+    expect(app?.alternateName).toEqual(["Fancy Serial Number Checker", "Dollar Bill Serial Number Checker"]);
+    expect(questions).toContain("What does a banknote serial number checker do?");
+    expect(questions).toContain("Does this dollar bill checker detect counterfeit money?");
+    expect(pageModified["/"]).toBe("2026-11-01");
+    expect(pageModified["/tools/"]).toBe("2026-11-01");
+  });
+
   it("uses detector-derived odds for the new guide patterns and registers visible FAQs", () => {
     expect(patternsById.solid.rarityOdds).toBe("1 in 10,000,000");
     expect(patternsById.trinary.rarityOdds).toBe("1 in 144");

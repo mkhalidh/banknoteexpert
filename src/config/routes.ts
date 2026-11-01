@@ -47,9 +47,9 @@ export interface RouteEntry {
 export const routes: RouteEntry[] = [
   {
     path: "/",
-    title: "Banknote Expert: US Banknote Serial Number Tools",
+    title: "Banknote Serial Number Checker for US Dollar Bills",
     description:
-      "Free tools to check US banknote serial numbers for fancy patterns, star notes and collectible value.",
+      "Free banknote serial number checker for US dollar bills. Find fancy patterns, rarity, star notes and estimated collectible value from the 8-digit serial.",
     silo: "home",
     pageType: "home",
     priority: 1.0,

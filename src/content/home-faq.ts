@@ -12,6 +12,18 @@ export const homeFaqs = [
     "answer": "Yes. This fancy serial number checker is completely free, with no account, no sign-up and no limit on how many notes you check. Everything runs in your browser, so your serial numbers are never sent to a server or stored. You can bookmark or share a result, since the serial is saved in the page address, and run as many notes as you like."
   },
   {
+    "question": "What does a banknote serial number checker do?",
+    "answer": "A banknote serial number checker reads the eight digits on a note and tests their order against collectible patterns such as radars, repeaters, ladders, solids, binary numbers, birthday dates and low serials. Banknote Expert also reports approximate rarity odds and an estimated value range for the matched pattern."
+  },
+  {
+    "question": "Can I check any US dollar bill denomination?",
+    "answer": "Yes. The same eight-digit pattern check works for $1, $2, $5, $10, $20, $50 and $100 US notes. Enter the digits between the prefix and suffix letters, preserve any leading zeros, and include the star if the serial ends with one. Denomination, series and condition still need to be considered separately when estimating value."
+  },
+  {
+    "question": "Does this dollar bill checker detect counterfeit money?",
+    "answer": "No. This dollar bill checker analyzes serial-number patterns for collector interest. It cannot inspect paper, ink, watermarks, security threads or other physical authentication features, so its result does not prove that a note is genuine."
+  },
+  {
     "question": "What do the digits mean versus the letters?",
     "answer": "The letters and the digits do different jobs. The one or two prefix letters identify the series and the Federal Reserve district; the suffix letter, or star, simply continues the count within a print run. The eight digits in the middle are the serial proper, and they are the only part scored for a pattern. So when people talk about a collectible pattern, they mean those eight digits, not the surrounding letters."
   },

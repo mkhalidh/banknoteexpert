@@ -15,10 +15,11 @@ import { AllToolsGrid } from "@/components/content/AllToolsGrid";
 import { FaqItem } from "@/components/content/FaqItem";
 import { Comments } from "@/components/comments/Comments";
 
+const homeRoute = getRoute("/");
+
 export const metadata: Metadata = buildMetadata({
-  title: "Fancy Serial Number Checker: Free US Dollar Bill Lookup",
-  description:
-    "Free fancy serial number checker for US dollar bills. Detect radar, repeater, ladder, solid and binary patterns, get a 0–100 rarity score and value range.",
+  title: homeRoute.title,
+  description: homeRoute.description,
   path: "/",
   ogImage: "/social/home/opengraph-image/",
 });
@@ -52,6 +53,24 @@ export default function Page() {
           is uploaded.
         </p>
       </header>
+
+      <section aria-labelledby="banknote-serial-number-checker">
+        <h2 id="banknote-serial-number-checker" className="text-h2">
+          Free banknote serial number checker for US dollar bills
+        </h2>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          Banknote Expert is a free banknote serial number checker for US dollar
+          bills. Enter the eight digits from your note to check for fancy serial
+          patterns, see rarity odds and review an estimated collectible value
+          range based on the matched pattern and condition.
+        </p>
+        <p className="mt-3 text-zinc-700 dark:text-zinc-300">
+          You can use it as a dollar bill checker for collectible serial numbers
+          on $1, $2, $5, $10, $20, $50 and $100 notes. It checks number patterns,
+          star status and collector interest. It does not authenticate currency
+          or determine whether a bill is counterfeit.
+        </p>
+      </section>
 
       {/* Section 3, where to find the serial number */}
       <section aria-labelledby="find-serial">
