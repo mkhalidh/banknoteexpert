@@ -53,7 +53,7 @@ describe("SEO publication contracts", () => {
     const descriptions = new Set();
     for (const route of routes) {
       const meta = pageContents.find(page => page.meta.path === route.path)?.meta ?? route;
-      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/", "/fancy-serial-numbers/solid/", "/fancy-serial-numbers/trinary/", "/fancy-serial-numbers/seven-of-a-kind/", "/fancy-serial-numbers/six-of-a-kind/", "/fancy-serial-numbers/five-of-a-kind/", "/fancy-serial-numbers/binary-radar/", "/fancy-serial-numbers/bookends/", "/fancy-serial-numbers/four-pairs/"].includes(route.path) })).not.toThrow();
+      expect(() => buildMetadata({ ...meta, allowLongMetadata: ["/fancy-serial-numbers/binary/", "/fancy-serial-numbers/super-radar/", "/fancy-serial-numbers/radar-repeater/", "/fancy-serial-numbers/solid/", "/fancy-serial-numbers/seven-of-a-kind/", "/fancy-serial-numbers/six-of-a-kind/", "/fancy-serial-numbers/five-of-a-kind/", "/fancy-serial-numbers/binary-radar/", "/fancy-serial-numbers/bookends/", "/fancy-serial-numbers/four-pairs/"].includes(route.path) })).not.toThrow();
       expect(titles.has(meta.title)).toBe(false);
       expect(descriptions.has(meta.description)).toBe(false);
       titles.add(meta.title); descriptions.add(meta.description);
@@ -66,6 +66,65 @@ describe("SEO publication contracts", () => {
       expect(types).not.toContain("Product");
       expect(types).not.toContain("AggregateRating");
       JSON.parse(JSON.stringify(graph));
+    }
+  });
+
+  it("keeps the GSC phase-one metadata, FAQs and modified dates synchronized", () => {
+    const targets = [
+      {
+        path: "/where-is-the-serial-number-on-a-dollar-bill/",
+        title: "Where Is the Serial Number on a Dollar Bill? Diagrams",
+        description: "Find the serial number on the front of $1, $2, $5, $10, $20, $50 and $100 bills with labeled diagrams. Learn what the letters, digits and star mean.",
+        questions: [
+          "Where is the serial number on a dollar bill?",
+          "Is the serial number on the front or back?",
+          "Are both printed serial numbers the same?",
+          "Where is the serial number on a $20 bill?",
+          "Is the series year the serial number?",
+        ],
+      },
+      {
+        path: "/fancy-serial-numbers/trinary/",
+        title: "Trinary Serial Number: Meaning, Rarity and Value",
+        description: "A trinary note uses exactly three distinct digits in its eight-digit serial. See examples, rarity odds, value factors and check your serial for free.",
+        questions: [
+          "What is a trinary note?",
+          "What is a true trinary note?",
+          "How rare is a trinary serial number?",
+          "How much will a trinary serial number sell for?",
+          "Are trinary notes worth more than binary?",
+          "Should I buy a trinary serial number bill?",
+          "Where can I sell a trinary note?",
+        ],
+      },
+      {
+        path: "/fancy-serial-numbers/birthday-note/",
+        title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
+        description: "A birthday note uses its eight-digit serial as a real MMDDYYYY date. See examples, rarity, value factors and check whether your dollar bill matches a date.",
+        questions: [
+          "What does birthday bill mean?",
+          "How do I identify a birthday note?",
+          "What date format counts as a birthday note?",
+          "Are birthday notes worth money?",
+          "Which birthday dates are most valuable?",
+        ],
+      },
+    ] as const;
+
+    for (const target of targets) {
+      const route = routes.find(item => item.path === target.path);
+      const content = pageContents.find(item => item.meta.path === target.path);
+      const faq = pageGraph(target.path, [
+        { name: "Home", path: "/" },
+        { name: target.title, path: target.path },
+      ])["@graph"].find(item => item["@type"] === "FAQPage");
+      const mainEntity = faq?.mainEntity as { name: string }[] | undefined;
+      expect(route?.title).toBe(target.title);
+      expect(route?.description).toBe(target.description);
+      expect(content?.meta.title).toBe(target.title);
+      expect(content?.meta.description).toBe(target.description);
+      expect(mainEntity?.map(item => item.name)).toEqual(target.questions);
+      expect(pageModified[target.path]).toBe("2026-11-01");
     }
   });
 

@@ -3,9 +3,9 @@ import type { PageContent, ContentSection } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/where-is-the-serial-number-on-a-dollar-bill/",
-    title: "Where Is the Serial Number on a Dollar Bill? $1-$100 Guide",
+    title: "Where Is the Serial Number on a Dollar Bill? Diagrams",
     description:
-      "Find serial numbers on $1, $2, $20 and $100 bills. See where they appear on the front, what the letters and star mean, and how to check the eight digits.",
+      "Find the serial number on the front of $1, $2, $5, $10, $20, $50 and $100 bills with labeled diagrams. Learn what the letters, digits and star mean.",
     h1: "Where Is the Serial Number on a Dollar Bill?",
     primaryKeyword: "where is the serial number on a dollar bill",
     lead:
@@ -70,6 +70,57 @@ export const content: PageContent = {
           kind: "paragraph",
           text:
             "No. The series year is a small label such as Series 2017A; it identifies a design or signature change, not your bill's unique serial. The large corner numerals show the denomination. A separate Federal Reserve indicator and tiny plate numbers are also different from the green serial printed twice on the front.",
+        },
+      ],
+    },
+    {
+      id: "faq",
+      heading: "Dollar bill serial number FAQs",
+      blocks: [
+        {
+          kind: "subheading",
+          text: "Where is the serial number on a dollar bill?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "The green serial number is printed twice on the front of a U.S. bill. On $1 and $2 notes, it appears at the upper right and lower left. On redesigned $5, $10, $20, $50 and $100 notes, it appears at the upper left and lower right.",
+        },
+        {
+          kind: "subheading",
+          text: "Is the serial number on the front or back?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "It is on the front, or portrait side, of a Federal Reserve note. The back does not carry the bill's serial number.",
+        },
+        {
+          kind: "subheading",
+          text: "Are both printed serial numbers the same?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Yes. The two printed serial numbers on a standard note should match exactly, including the prefix, eight digits and final letter or star.",
+        },
+        {
+          kind: "subheading",
+          text: "Where is the serial number on a $20 bill?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "On a redesigned $20 bill, look for the green serial at the upper left and lower right of the front. Either copy gives you the same complete serial number.",
+        },
+        {
+          kind: "subheading",
+          text: "Is the series year the serial number?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "No. The series year identifies a design or signature change. The serial number is the separate green letter-and-digit string printed twice on the front.",
         },
       ],
     },

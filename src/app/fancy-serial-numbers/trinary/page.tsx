@@ -3,5 +3,5 @@ import { buildMetadata } from "@/lib/seo";
 import { PatternGuidePage } from "@/components/content/PatternGuidePage";
 import { trinary as content } from "@/content/silo-a-guides";
 
-export const metadata: Metadata = buildMetadata({ ...content.meta, allowLongMetadata: true });
+export const metadata: Metadata = buildMetadata(content.meta);
 export default function Page() { return <PatternGuidePage content={content} />; }

@@ -139,8 +139,8 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/fancy-serial-numbers/trinary/",
-    title: "Trinary Serial Number on a Dollar Bill: What It Is, Rarity & Value | Banknote Expert",
-    description: "What is a trinary serial number on a dollar bill? Learn the detector definition, compare true trinary and binary, see examples and check verified value data.",
+    title: "Trinary Serial Number: Meaning, Rarity and Value",
+    description: "A trinary note uses exactly three distinct digits in its eight-digit serial. See examples, rarity odds, value factors and check your serial for free.",
     silo: "fancy-serial-numbers", pageType: "guide", priority: 0.8, changeFrequency: "monthly", indexable: true,
   },
   {
@@ -194,7 +194,7 @@ export const routes: RouteEntry[] = [
     path: "/fancy-serial-numbers/birthday-note/",
     title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     description:
-      "Check whether a banknote serial number matches a birthday in MMDDYY or similar date formats.",
+      "A birthday note uses its eight-digit serial as a real MMDDYYYY date. See examples, rarity, value factors and check whether your dollar bill matches a date.",
     silo: "fancy-serial-numbers",
     pageType: "tool",
     priority: 0.8,
@@ -225,9 +225,9 @@ export const routes: RouteEntry[] = [
   },
   {
     path: "/where-is-the-serial-number-on-a-dollar-bill/",
-    title: "Where Is the Serial Number on a Dollar Bill? $1-$100 Guide",
+    title: "Where Is the Serial Number on a Dollar Bill? Diagrams",
     description:
-      "Find serial numbers on $1, $2, $20 and $100 bills. See where they appear on the front, what the letters and star mean, and how to check the eight digits.",
+      "Find the serial number on the front of $1, $2, $5, $10, $20, $50 and $100 bills with labeled diagrams. Learn what the letters, digits and star mean.",
     silo: "fancy-serial-numbers",
     pageType: "guide",
     priority: 0.7,

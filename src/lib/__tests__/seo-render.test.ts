@@ -154,7 +154,18 @@ describe("rendered SEO content (browser tools excluded)", () => {
           expect(row.querySelectorAll("td")[0]?.textContent).toBe("");
           expect(row.querySelectorAll("td")[1]?.textContent).toBe("");
         }
-      } else if (["solid", "trinary", "seven-of-a-kind", "six-of-a-kind", "five-of-a-kind", "binary-radar", "bookends", "four-pairs"].some(slug => file.endsWith(`/fancy-serial-numbers/${slug}/page.tsx`))) {
+      } else if (file.endsWith("/fancy-serial-numbers/trinary/page.tsx")) {
+        expect(page.metadata.title).toBe("Trinary Serial Number: Meaning, Rarity and Value");
+        expect(page.metadata.description).toBe("A trinary note uses exactly three distinct digits in its eight-digit serial. See examples, rarity odds, value factors and check your serial for free.");
+        const valueTable = [...doc.querySelectorAll("table")].find(table => table.querySelector("caption")?.textContent?.includes("Recorded Trinary"));
+        expect(valueTable).toBeDefined();
+        for (const row of valueTable!.querySelectorAll("tbody tr")) {
+          expect(row.querySelectorAll("td")[0]?.textContent).toBe("No recorded sales");
+          expect(row.querySelectorAll("td")[1]?.textContent).toBe("No verified sample");
+        }
+        expect(doc.querySelector("#faq")?.textContent).toContain("What is a trinary note?");
+        expect(doc.querySelector("#faq h2")?.textContent).toBe("Trinary serial number FAQs");
+      } else if (["solid", "seven-of-a-kind", "six-of-a-kind", "five-of-a-kind", "binary-radar", "bookends", "four-pairs"].some(slug => file.endsWith(`/fancy-serial-numbers/${slug}/page.tsx`))) {
         expect(page.metadata.title).toContain("| Banknote Expert");
         expect(page.metadata.description.length, file).toBeLessThanOrEqual(160);
         expect(doc.querySelector("figure.article-cover figcaption")?.textContent).toContain("Image: eBay listing");

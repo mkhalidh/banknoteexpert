@@ -28,7 +28,7 @@ export const pagePublished: Record<string, string> = {
 
 export const pageModified: Record<string, string> = {
   "/fancy-serial-numbers/solid/": "2026-10-21",
-  "/fancy-serial-numbers/trinary/": "2026-10-21",
+  "/fancy-serial-numbers/trinary/": "2026-11-01",
   "/fancy-serial-numbers/seven-of-a-kind/": "2026-10-21",
   "/fancy-serial-numbers/six-of-a-kind/": "2026-10-21",
   "/fancy-serial-numbers/five-of-a-kind/": "2026-10-21",
@@ -44,10 +44,10 @@ export const pageModified: Record<string, string> = {
   "/fancy-serial-numbers/super-radar/": "2026-10-19",
   "/fancy-serial-numbers/radar-repeater/": "2026-10-19",
   "/fancy-serial-numbers/low-serial-number/": "2026-10-15",
-  "/fancy-serial-numbers/birthday-note/": "2026-10-06",
+  "/fancy-serial-numbers/birthday-note/": "2026-11-01",
   "/fancy-serial-number-value/": "2026-10-14",
   "/2-dollar-bill-serial-number-lookup/": "2026-10-15",
-  "/where-is-the-serial-number-on-a-dollar-bill/": "2026-10-15",
+  "/where-is-the-serial-number-on-a-dollar-bill/": "2026-11-01",
   "/star-note-lookup/": "2026-10-15",
   "/2-dollar-bill-value/": "2026-10-29",
   "/2-dollar-bill-value/star-notes/": "2026-11-01",

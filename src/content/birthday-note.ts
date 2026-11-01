@@ -3,9 +3,9 @@ import type { PageContent } from "@/content/types";
 export const content: PageContent = {
   meta: {
     path: "/fancy-serial-numbers/birthday-note/",
-    title: "Birthday Note Dollar Bill: What It Is and What It's Worth",
+    title: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     description:
-      "What a birthday note dollar bill is, how the eight digits spell a date, how common they are, and what collectors really pay. Check your own serial free.",
+      "A birthday note uses its eight-digit serial as a real MMDDYYYY date. See examples, rarity, value factors and check whether your dollar bill matches a date.",
     h1: "Birthday Note Dollar Bill: Meaning, Rarity and Value",
     primaryKeyword: "birthday note dollar bill",
     lead:
@@ -21,7 +21,7 @@ export const content: PageContent = {
   sections: [
     {
       id: "what-is",
-      heading: "What makes a serial a birthday note",
+      heading: "What Is a Birthday Note Dollar Bill?",
       blocks: [
         {
           kind: "paragraph",
@@ -147,6 +147,57 @@ export const content: PageContent = {
             "Scan the eight-digit serial on each note against those target digits.",
             "Set aside any near miss, since a note one digit away may still suit an adjacent date you also value.",
           ],
+        },
+      ],
+    },
+    {
+      id: "faq",
+      heading: "Birthday note dollar bill FAQs",
+      blocks: [
+        {
+          kind: "subheading",
+          text: "What does birthday bill mean?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "A simple answer to birthday bills meaning is that the eight serial digits form a real calendar date. For example, 07041976 reads as July 4, 1976 when grouped as MMDDYYYY.",
+        },
+        {
+          kind: "subheading",
+          text: "How do I identify a birthday note?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Read all eight serial digits, split them into month, day and four-digit year, then confirm that the result is a valid calendar date. Keep any leading zeros when you check it.",
+        },
+        {
+          kind: "subheading",
+          text: "What date format counts as a birthday note?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "This guide uses MMDDYYYY, with two digits for the month, two for the day and four for the year. The month and day must form a real date, including the correct leap-year rule for February 29.",
+        },
+        {
+          kind: "subheading",
+          text: "Are birthday notes worth money?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Most circulated birthday notes are worth close to face value because valid dates are common and demand is personal. Strong condition, a broadly meaningful date or another fancy serial pattern can improve collector appeal.",
+        },
+        {
+          kind: "subheading",
+          text: "Which birthday dates are most valuable?",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Dates with broad historic interest, clean round years or an overlapping pattern can attract more buyers. The note's denomination, condition and comparable completed sales still matter more than the date alone.",
         },
       ],
     },

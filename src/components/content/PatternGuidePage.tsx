@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
@@ -16,12 +15,13 @@ type GuideProps = PageContent & { examples: readonly (readonly [string, string])
 const money = (value: number) => `$${value.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 export function PatternGuidePage({ content }: { content: GuideProps }) {
   const { meta, sections } = content;
+  const showNoRecordedSales = meta.path === "/fancy-serial-numbers/trinary/";
   const faqBlocks = sections.find(section => section.id === "faq")!.blocks;
   const faqs = faqBlocks.flatMap((block, index) => {
     const answer = faqBlocks[index + 1];
     return block.kind === "subheading" && answer?.kind === "paragraph" ? [{ question: block.text, answer: answer.text }] : [];
   });
-  const name = meta.h1.replace(" Serial Number", "");
+  const name = showNoRecordedSales ? "Trinary" : meta.h1.replace(" Serial Number", "");
   return <article className="editorial-page flex flex-col gap-10">
     <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Fancy Serial Numbers", path: "/fancy-serial-numbers/" }, { name, path: meta.path }]} />
     <header>
@@ -44,7 +44,7 @@ export function PatternGuidePage({ content }: { content: GuideProps }) {
         <thead><tr className="border-b border-[var(--border-soft)] text-left"><th scope="col" className="py-2 pr-4">Condition</th><th scope="col" className="py-2 pr-4">Recorded range</th><th scope="col" className="py-2 pr-4">Sample</th></tr></thead>
         <tbody>{ALL_CONDITIONS.map(condition => {
           const cell = valueCell(meta.path.endsWith("solid/") ? "solid" : meta.path.endsWith("four-pairs/") ? "four-pairs" : meta.path.split("/").filter(Boolean).at(-1)!, condition);
-          return <tr key={condition} className="border-b border-[var(--border-soft)]"><th scope="row" className="py-2 pr-4 text-left font-medium">{CONDITION_LABELS[condition]}</th><td className="py-2 pr-4">{cell.status === "ok" ? `${money(cell.band.low)} to ${money(cell.band.high)}` : ""}</td><td className="py-2 pr-4">{cell.status === "ok" ? `${cell.band.sampleSize} sales, ${cell.band.confidence}` : ""}</td></tr>;
+          return <tr key={condition} className="border-b border-[var(--border-soft)]"><th scope="row" className="py-2 pr-4 text-left font-medium">{CONDITION_LABELS[condition]}</th><td className="py-2 pr-4">{cell.status === "ok" ? `${money(cell.band.low)} to ${money(cell.band.high)}` : showNoRecordedSales ? "No recorded sales" : ""}</td><td className="py-2 pr-4">{cell.status === "ok" ? `${cell.band.sampleSize} sales, ${cell.band.confidence}` : showNoRecordedSales ? "No verified sample" : ""}</td></tr>;
         })}</tbody>
       </table></div>}
       {section.id === "check" && <div className="card mt-6 p-5">
