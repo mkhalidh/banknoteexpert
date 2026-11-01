@@ -10,6 +10,8 @@ import { ScarcestStarCallout } from "@/components/content/ScarcestStarCallout";
 import { StarNoteLookup } from "@/components/tools/StarNoteLookup";
 import { Comments } from "@/components/comments/Comments";
 import { patternsById } from "@/lib/serial/patterns";
+import { STAR_NOTE_RUNS } from "@/data/star-notes/runs";
+import { rarityForRunSize } from "@/lib/star-note/lookup";
 import {
   content,
   rarityTierRows,
@@ -31,6 +33,29 @@ const patternLinks = patternPageIds.map((id) => ({
 
 const sectionById = (id: string) =>
   content.sections.filter((section) => section.id === id);
+
+/** Smallest star runs in the dataset, grouped by denomination + series + run size. */
+const rarestGroups = new Map<
+  string,
+  { denomination: number; series: string; runSize: number; districts: string[] }
+>();
+for (const run of STAR_NOTE_RUNS) {
+  const key = `${run.denomination}|${run.series}|${run.runSize}`;
+  const group =
+    rarestGroups.get(key) ??
+    { denomination: run.denomination, series: run.series, runSize: run.runSize, districts: [] };
+  group.districts.push(run.frbName);
+  rarestGroups.set(key, group);
+}
+const rarestRows = [...rarestGroups.values()]
+  .sort((a, b) => a.runSize - b.runSize)
+  .slice(0, 8)
+  .map((g) => [
+    `$${g.denomination} Series ${g.series}`,
+    g.districts.length === 1 ? g.districts[0] : `${g.districts.length} districts`,
+    g.runSize.toLocaleString("en-US"),
+    rarityForRunSize(g.runSize),
+  ]);
 
 /** Inline SVG showing the star at the end of a serial number. */
 function StarSerialDiagram() {
@@ -100,8 +125,13 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Answer-first value section */}
+      <ContentSections sections={sectionById("worth")} />
+
       {/* Section 4 */}
       <ContentSections sections={sectionById("what-makes-valuable")} />
+
+      <ContentSections sections={sectionById("run-size")} />
 
       {/* Section 5, rarity tiers table */}
       <div>
@@ -119,6 +149,21 @@ export default function Page() {
           />
         </div>
       </div>
+
+      {/* Rarest star notes in the dataset */}
+      <div>
+        <ContentSections sections={sectionById("rarest")} />
+        <div className="mt-4">
+          <ComparisonTable
+            caption="Smallest recorded star note runs in our BEP dataset"
+            columns={["Note", "District(s)", "Star notes printed", "Rarity tier"]}
+            rows={rarestRows}
+          />
+        </div>
+      </div>
+
+      {/* $2 star notes cross-link */}
+      <ContentSections sections={sectionById("two-dollar-stars")} />
 
       {/* Section 6, pattern pages from the registry href */}
       <div>

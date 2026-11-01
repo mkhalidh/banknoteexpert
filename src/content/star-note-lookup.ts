@@ -72,6 +72,58 @@ export const content: PageContent = {
       ],
     },
     {
+      id: "worth",
+      heading: "How Much Is My Star Note Worth?",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "Most star notes are worth a small premium over face value, and a minority from small print runs or in top grade are worth substantially more. For a common, large-run star in circulated condition the honest answer is often just a dollar or two above face. The value climbs with a smaller run, a higher grade, or a fancy serial in the same digits.",
+        },
+        {
+          kind: "paragraph",
+          text:
+            "Be realistic about selling. A dealer pays below retail, marketplace fees take a cut, and posting a single note eats into a small premium, so a common star is usually worth keeping or spending rather than selling. A genuinely scarce small-run star, or one in gem condition, is where a sale or grading can pay off. Use the lookup above to see which you have before deciding.",
+        },
+      ],
+    },
+    {
+      id: "run-size",
+      heading: "What Run Size Counts as Rare?",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "Star value is driven by print run size. A standard full star run is 3,200,000 notes. In our data a run at or below 640,000 notes counts as scarce, and a run at or below 320,000 notes is very rare. The fewer replacement notes printed in a batch, the scarcer any single note from it is, which is exactly what the lookup above measures from the BEP production reports.",
+        },
+      ],
+    },
+    {
+      id: "rarest",
+      heading: "Rarest Star Notes in Our Data",
+      blocks: [
+        {
+          kind: "paragraph",
+          text:
+            "The smallest star runs in our BEP dataset are listed below, by denomination, series and district. These are the scarcest batches we have recorded, and a note from one of them is the kind worth setting aside. One caveat: the smallest $2 Series 2003 figures are reported as early partial monthly production, so treat those very small runs as provisional rather than final totals.",
+        },
+      ],
+    },
+    {
+      id: "two-dollar-stars",
+      heading: "$2 Star Notes",
+      blocks: [
+        {
+          kind: "richtext",
+          segments: [
+            "The $2 denomination has some of the most collected star notes. The 1976 bicentennial stars from Richmond, Minneapolis and Kansas City each came from a single 640,000-note run, which makes them the scarce keys of that series. For $2 star values and print runs by series, see the ",
+            { href: "/2-dollar-bill-value/star-notes/", label: "$2 star note value guide" },
+            ".",
+          ],
+        },
+      ],
+    },
+    {
       id: "rarity-tiers",
       heading: "Star note rarity tiers",
       blocks: [
@@ -148,6 +200,30 @@ export const content: PageContent = {
           kind: "paragraph",
           text:
             "No, and it is important to be honest about that. Many star notes come from large print runs and carry only a small premium over face value. It is the notes from small runs, or in top condition, or with a fancy serial, that command real money. A star note checker like this one exists precisely to tell the two apart.",
+        },
+        { kind: "subheading", text: "How do I know if my star note is from a rare run?" },
+        {
+          kind: "paragraph",
+          text:
+            "Enter the denomination, series and serial into the lookup above. It matches your serial to its print run and classifies that run as very rare, rare, uncommon or common. A run at or below 640,000 notes is scarce, and one at or below 320,000 notes is very rare.",
+        },
+        { kind: "subheading", text: "How much will I actually get if I sell my star note?" },
+        {
+          kind: "paragraph",
+          text:
+            "Usually less than a headline price. A common star brings only a small premium, and dealer margins, fees and shipping eat into it, so a common note is often better kept or spent. A scarce small-run star in high grade is where a sale is worth the effort.",
+        },
+        { kind: "subheading", text: "Should I get my star note graded?" },
+        {
+          kind: "paragraph",
+          text:
+            "Only when the likely value justifies it. Grading, shipping and selling fees add up, so grade a star only if it is from a small run, in high grade, or carries a fancy serial. For a common circulated star, grading usually costs more than it adds.",
+        },
+        { kind: "subheading", text: "What does the star mean on older pre-1976 bills?" },
+        {
+          kind: "paragraph",
+          text:
+            "The same thing it means today: a replacement note. The star has marked replacements across small-size US currency for decades, including the red seal $2 notes of 1928 to 1963. It always replaces the suffix letter and signals a note printed to swap out one spoiled in production.",
         },
         { kind: "subheading", text: "What is a star note worth?" },
         {

@@ -19,6 +19,20 @@ export const content: PageContent = {
   ],
   sections: [
     {
+      id: "what-is-ladder-note",
+      heading: "What Is a Ladder Note?",
+      blocks: [
+        {
+          kind: "paragraph",
+          text: "A ladder note is a banknote whose serial number runs in a straight sequence, such as 12345678 or 87654321. Collectors call these ladder notes because the digits climb or fall like the rungs of a ladder. On Banknote Expert a true ladder means all eight digits ascend or descend by one with no wrap from 9 to 0, which only six serials satisfy, giving odds of about 1 in 16,666,667.",
+        },
+        {
+          kind: "paragraph",
+          text: "That strict definition is what separates ladder notes worth chasing from ordinary serials that merely look tidy. The value chart below shows what each kind of ladder has actually sold for, using recorded sales only.",
+        },
+      ],
+    },
+    {
       id: "true-ladder",
       heading: "True ladders: six possible eight-digit sequences",
       blocks: [
@@ -33,6 +47,40 @@ export const content: PageContent = {
         {
           kind: "paragraph",
           text: "Because the definition is so unforgiving, a genuine example needs no interpretation. You either have all eight digits marching in order, or you do not. That black-and-white quality is a big part of the appeal: there is nothing to argue about, and nothing to dilute the achievement of finding one.",
+        },
+      ],
+    },
+    {
+      id: "ladder-bill-vs-note",
+      heading: "Ladder Bill vs Ladder Note: Same Thing?",
+      blocks: [
+        {
+          kind: "paragraph",
+          text: "Yes, a ladder bill and a ladder note are the same thing. Collectors use bill and note interchangeably, so a ladder dollar bill means exactly what a ladder note means. Whether you say ladder bill, ladder dollar bill, ladder note or ladder serial number, you are describing a serial whose eight digits run in sequence. The denomination does not change the definition: a ladder on a $1, $5, $20 or $100 note is judged by the same eight-digit rule.",
+        },
+      ],
+    },
+    {
+      id: "types-of-ladders",
+      heading: "Types of Ladder Serial Numbers",
+      blocks: [
+        {
+          kind: "paragraph",
+          text: "Collectors use many names for ladders and near-ladders. Here is the market vocabulary, and, importantly, which ones the Banknote Expert checker actually flags as a ladder so this guide never contradicts the tool:",
+        },
+        {
+          kind: "list",
+          items: [
+            "True or perfect ladder: all eight digits in one unbroken run, such as 12345678. The checker flags this as a ladder.",
+            "Near ladder or broken ladder: six or seven digits in sequence but not the full eight, such as 12345687. The checker flags this as a broken ladder.",
+            "Scattered, mixed or chunky ladder: the digits are present but out of order, such as 13245768. The checker does not flag these as a ladder.",
+            "Wrap-around ladder, such as 56789012, which runs past 9 to 0. The checker does not count wrap-around, so it is not flagged as a true ladder.",
+            "Up-and-down ladder, such as 23456765, which rises then falls. The checker does not flag this as a ladder.",
+          ],
+        },
+        {
+          kind: "paragraph",
+          text: "So the checker recognises two of these as patterns: the true ladder and the broken ladder. The rest are collector terms rather than detector patterns, which keeps the tool and this guide consistent.",
         },
       ],
     },
@@ -125,6 +173,37 @@ export const content: PageContent = {
             { href: "/", label: "free checker on our homepage" },
             " and let it flag the pattern for you in a second. It is the quickest way to confirm what you have before you get your hopes up.",
           ],
+        },
+      ],
+    },
+    {
+      id: "faq",
+      heading: "Ladder serial number FAQs",
+      blocks: [
+        { kind: "subheading", text: "Is 1234567 a ladder serial number?" },
+        {
+          kind: "paragraph",
+          text: "Not on its own, because a US serial number has eight digits and 1234567 is only seven. As the full eight-digit serial 01234567 it is a true ladder. If seven digits run in sequence inside an eight-digit serial but the whole thing is not a full ladder, such as 12345687, it counts as a broken ladder instead.",
+        },
+        { kind: "subheading", text: "Is a descending ladder rarer than an ascending ladder?" },
+        {
+          kind: "paragraph",
+          text: "No. Ascending ladders like 12345678 and descending ladders like 87654321 are equally rare by the detector: both are among the six full eight-digit ladders, so each has the same roughly 1 in 16,666,667 odds. Collector demand can nudge prices either way, but the rarity is the same.",
+        },
+        { kind: "subheading", text: "What is a wrap-around ladder?" },
+        {
+          kind: "paragraph",
+          text: "A wrap-around ladder is a serial that keeps counting past 9 back to 0, such as 56789012. Some collectors like them, but the Banknote Expert checker does not treat a 9-to-0 wrap as a sequence, so a wrap-around serial is not flagged as a true ladder here.",
+        },
+        { kind: "subheading", text: "How much is a ladder note worth?" },
+        {
+          kind: "paragraph",
+          text: "It depends on which kind of ladder it is and its condition. True ladders are the strongest, with uncirculated examples in our recorded sales reaching well into four figures, while near and broken ladders are worth far less. The value chart on this page shows recorded ranges by type and condition, with honest blanks where we have no sales.",
+        },
+        { kind: "subheading", text: "What is the difference between a ladder and a broken ladder?" },
+        {
+          kind: "paragraph",
+          text: "A true ladder has all eight digits in one unbroken sequence. A broken ladder has a run of six or seven sequential digits but falls short of a full eight-digit ladder. The true ladder is far rarer and far more valuable; the broken ladder is more common and more affordable.",
         },
       ],
     },

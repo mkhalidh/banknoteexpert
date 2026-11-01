@@ -47,6 +47,10 @@ export default function Page() {
           {/* Section 2, result panel lives inside the checker component */}
           <FancySerialChecker />
         </div>
+        <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+          Free, no sign up, and it runs entirely in your browser; nothing you type
+          is uploaded.
+        </p>
       </header>
 
       {/* Section 3, where to find the serial number */}
@@ -96,15 +100,17 @@ export default function Page() {
         </h2>
         <p className="mt-3 text-zinc-700 dark:text-zinc-300">
           For a one dollar bill serial number check, enter the eight digits
-          between its letters into the checker above. The same fancy serial
-          number check works for $2, $5, $10, $20, $50 and $100 bills: you can
+          between its letters into the checker above. This dollar serial number
+          lookup works the same for $2, $5, $10, $20, $50 and $100 bills: you can
           type the digits alone or the full serial with its prefix and suffix.
           The tool looks for rare bill serial numbers, including repeating,
           mirrored, sequential and unusually low digit patterns.
         </p>
         <p className="mt-3 text-zinc-700 dark:text-zinc-300">
-          A $100 bill serial number lookup or $10 dollar bill serial number
-          lookup here checks the digit pattern in the same way as a $1 bill.
+          Checking dollar bill serial numbers works the same across every
+          denomination: a $100 bill serial number lookup or $10 dollar bill
+          serial number lookup here checks the digit pattern in the same way as a
+          $1 bill.
           The result does not depend on which denomination you hold, so compare
           your note&rsquo;s series year, condition and denomination separately
           before deciding what it may be worth. Older notes can also have
