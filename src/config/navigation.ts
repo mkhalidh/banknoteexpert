@@ -6,15 +6,26 @@ export const fancyArticles = links(["/fancy-serial-numbers/", "/fancy-serial-num
   .map(link => ({ ...link, label: ({ "/fancy-serial-numbers/solid/": "Solid serial numbers", "/fancy-serial-numbers/trinary/": "Trinary serial numbers", "/fancy-serial-numbers/seven-of-a-kind/": "Seven of a Kind serial numbers", "/fancy-serial-numbers/six-of-a-kind/": "Six of a Kind serial numbers", "/fancy-serial-numbers/five-of-a-kind/": "Five of a Kind serial numbers", "/fancy-serial-numbers/binary-radar/": "Binary Radar serial numbers", "/fancy-serial-numbers/bookends/": "Bookends serial numbers", "/fancy-serial-numbers/four-pairs/": "Quad Doubles serial numbers" } as Record<string, string>)[link.path] ?? link.label }));
 export const toolLinks = links(["/", "/fancy-serial-numbers/radar/", "/fancy-serial-numbers/ladder/", "/fancy-serial-numbers/low-serial-number/", "/fancy-serial-numbers/birthday-note/", "/star-note-lookup/", "/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/"]);
 export const companyLinks = links(["/methodology/", "/privacy/", "/about/", "/about-the-author/", "/terms/"]);
+/** $2 bill cluster, short labels for the navbar dropdown and blog column. */
+export const twoDollarLinks = [
+  { path: "/2-dollar-bill-value/", label: "$2 bill value guide" },
+  { path: "/2-dollar-bill-value/star-notes/", label: "$2 star note value" },
+  { path: "/2-dollar-bill-value/1928/", label: "1928 $2 bill value" },
+  { path: "/2-dollar-bill-value/1953/", label: "1953 $2 bill value" },
+  { path: "/2-dollar-bill-value/1963-red-seal/", label: "1963 $2 red seal value" },
+  { path: "/1976-2-dollar-bill-value/", label: "1976 $2 bill value" },
+  { path: "/2-dollar-bill-value/1976-postage-stamp/", label: "1976 $2 postage stamp" },
+  { path: "/2-dollar-bill-serial-number-lookup/", label: "$2 serial number lookup" },
+];
 export const navigation = [
   { label: "Serial Number Checker", path: "/", columns: [{ label: "Fancy Serial Numbers", path: "/", links: toolLinks.slice(0, 5) }, { label: "Related guides", path: "/blog/#fancy-serial-numbers", links: fancyArticles }] },
   { label: "Patterns", path: "/fancy-serial-numbers/", columns: [{ label: "Pattern guides", path: "/fancy-serial-numbers/", links: fancyArticles }] },
   { label: "Star Note Lookup", path: "/star-note-lookup/", columns: [{ label: "Star Note Lookup", path: "/star-note-lookup/", links: links(["/star-note-lookup/"]) }] },
-  { label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", columns: [{ label: "$2 Bills", path: "/2-dollar-bill-serial-number-lookup/", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/", "/1976-2-dollar-bill-value/"]) }] },
+  { label: "$2 Bills", path: "/2-dollar-bill-value/", columns: [{ label: "$2 Bills", path: "/2-dollar-bill-value/", links: twoDollarLinks }] },
   { label: "Blog", path: "/blog/", columns: [
     { label: "Fancy Serial Numbers", path: "/blog/#fancy-serial-numbers", links: fancyArticles },
     { label: "Star Notes", path: "/blog/#star-notes", links: links(["/star-note-lookup/"]) },
-    { label: "$2 Bills", path: "/blog/#two-dollar-bills", links: links(["/2-dollar-bill-serial-number-lookup/", "/2-dollar-bill-value/", "/1976-2-dollar-bill-value/"]) },
+    { label: "$2 Bills", path: "/blog/#two-dollar-bills", links: twoDollarLinks },
     { label: "Company", path: "/about/", links: companyLinks },
   ] },
 ];

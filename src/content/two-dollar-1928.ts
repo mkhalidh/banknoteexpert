@@ -164,5 +164,6 @@ export const content: PageContent = {
     { href: "/2-dollar-bill-value/1963-red-seal/", label: "1963 $2 red seal value", description: "The last red seal $2 issue." },
     { href: "/2-dollar-bill-value/star-notes/", label: "$2 star note value", description: "What $2 star notes are worth and how rarity works." },
     { href: "/2-dollar-bill-serial-number-lookup/", label: "$2 serial number lookup", description: "Check your 1928 serial for patterns." },
+    { href: "/methodology/", label: "How we estimate value", description: "Our sources, confidence levels and limits." },
   ],
 };

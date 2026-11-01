@@ -265,6 +265,11 @@ export const content: PageContent = {
       description: "What $2 notes, including star notes, are actually worth.",
     },
     {
+      href: "/2-dollar-bill-value/star-notes/",
+      label: "$2 star note value",
+      description: "Prices and print runs for $2 star notes by series.",
+    },
+    {
       href: "/fancy-serial-numbers/low-serial-number/",
       label: "Low serial numbers",
       description: "A low serial on a star note stacks two premiums.",

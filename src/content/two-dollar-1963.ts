@@ -166,5 +166,6 @@ export const content: PageContent = {
     { href: "/2-dollar-bill-value/1953/", label: "1953 $2 bill value", description: "The middle red seal series and its sub-series." },
     { href: "/1976-2-dollar-bill-value/", label: "1976 $2 bill value", description: "The green seal bicentennial note that followed." },
     { href: "/2-dollar-bill-value/star-notes/", label: "$2 star note value", description: "What $2 star notes are worth and how rarity works." },
+    { href: "/methodology/", label: "How we estimate value", description: "Our sources, confidence levels and limits." },
   ],
 };

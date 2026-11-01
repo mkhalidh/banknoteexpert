@@ -6,6 +6,7 @@ import { KeyTakeaways } from "@/components/content/KeyTakeaways";
 import { ComparisonTable } from "@/components/content/ComparisonTable";
 import { RelatedPages } from "@/components/content/RelatedPages";
 import { Byline } from "@/components/content/Byline";
+import { TwoDollarClusterNav } from "@/components/content/TwoDollarClusterNav";
 import { TwoDollarSerialLookup } from "@/components/tools/TwoDollarSerialLookup";
 import { Comments } from "@/components/comments/Comments";
 import { twoDollarSeries } from "@/data/two-dollar-series";
@@ -99,6 +100,8 @@ export default function Page() {
 
       {/* Section 8, FAQ */}
       <ContentSections sections={sectionById("faq")} />
+
+      <TwoDollarClusterNav currentPath={content.meta.path} />
 
       <RelatedPages links={content.related} />
 
