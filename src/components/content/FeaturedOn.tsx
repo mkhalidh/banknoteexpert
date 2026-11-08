@@ -19,13 +19,20 @@ export function FeaturedOn() {
           />
         </span>
       </a>
-      <a href="https://fazier.com/" target="_blank" rel="nofollow noopener" aria-label="Banknote Expert - Featured on Fazier">
+      <a href="https://fazier.com/launches/www.banknoteexpert.com" target="_blank">
         <img
-          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
-          alt="Banknote Expert - Featured on Fazier"
-          width="250"
+          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=neutral"
+          alt="Fazier badge"
+          width={250}
+        />
+      </a>
+      <a href="https://twelve.tools" target="_blank" rel="nofollow noopener">
+        <img
+          src="https://twelve.tools/badge0-white.svg"
+          alt="Featured on Twelve Tools"
+          width={148}
+          height={40}
           loading="lazy"
-          className="featured-on-img"
         />
       </a>
     </section>
