@@ -35,10 +35,11 @@ export function FeaturedOn() {
           loading="lazy"
         />
       </a>
+      {/* Startup Fame requires a dofollow link for verification — do not add rel="nofollow". */}
       <a
         href="https://startupfa.me/s/banknote-expert?utm_source=www.banknoteexpert.com"
         target="_blank"
-        rel="nofollow noopener"
+        rel="noopener"
       >
         <img
           src="https://startupfa.me/images/logo-dark.webp"
