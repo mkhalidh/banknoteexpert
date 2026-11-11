@@ -35,6 +35,19 @@ export function FeaturedOn() {
           loading="lazy"
         />
       </a>
+      <a
+        href="https://startupfa.me/s/banknote-expert?utm_source=www.banknoteexpert.com"
+        target="_blank"
+        rel="nofollow noopener"
+      >
+        <img
+          src="https://startupfa.me/images/logo-dark.webp"
+          alt="Startup Fame"
+          width={208}
+          height={36}
+          loading="lazy"
+        />
+      </a>
     </section>
   );
 }
